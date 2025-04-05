@@ -1,0 +1,10 @@
+@layer base {
+    html,
+    :root {
+        @apply bg-surface text-on-surface;
+    }
+
+    body {
+        @apply text-body-m;
+    }
+}

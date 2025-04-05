@@ -1,0 +1,15 @@
+/* Form elements */
+@custom-variant disabled (&:is(:disabled, [data-disabled]));
+
+/* Checkbox, Radio, Switch */
+@custom-variant ui-unchecked (&[data-state="unchecked"]);
+@custom-variant ui-checked (&[data-state="checked"]);
+/* Checkbox */
+@custom-variant ui-indeterminate (&[data-state="indeterminate"]);
+/* Toggle */
+@custom-variant ui-on (&[data-state="on"]);
+@custom-variant ui-off (&[data-state="off"]);
+
+/* Slider */
+@custom-variant ui-horizontal (&[data-orientation="horizontal"]);
+@custom-variant ui-vertical (&[data-orientation="vertical"]);

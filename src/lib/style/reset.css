@@ -1,0 +1,8 @@
+@theme {
+    --color-*: initial;
+    --shadow-*: initial;
+    --ease-*: initial;
+    --radius-*: initial;
+    --text-*: initial;
+    --breakpoint-*: initial;
+}

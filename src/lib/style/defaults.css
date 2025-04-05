@@ -1,0 +1,16 @@
+@theme {
+    --default-icon-size: calc(6 * var(--spacing));
+    --default-icon-fill: 0;
+    --default-icon-grade: 0;
+
+    --default-transition-timing-function: var(--ease-emphasized);
+}
+
+@layer theme {
+    html,
+    :root {
+        @variant dark {
+            --default-icon-grade: -25;
+        }
+    }
+}

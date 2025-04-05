@@ -1,0 +1,408 @@
+@theme {
+    /* Color Palette */
+    --color-primary-0: #000000;
+    --color-primary-4: #13003a;
+    --color-primary-5: #160041;
+    --color-primary-6: #190048;
+    --color-primary-10: #22005d;
+    --color-primary-12: #260561;
+    --color-primary-15: #2d1067;
+    --color-primary-17: #31166c;
+    --color-primary-20: #381e72;
+    --color-primary-22: #3c2377;
+    --color-primary-25: #432b7e;
+    --color-primary-30: #4f378a;
+    --color-primary-35: #5b4397;
+    --color-primary-40: #6750a4;
+    --color-primary-50: #8069bf;
+    --color-primary-60: #9a83db;
+    --color-primary-70: #b69df8;
+    --color-primary-80: #cfbcff;
+    --color-primary-90: #e9ddff;
+    --color-primary-92: #eee4ff;
+    --color-primary-94: #f3eaff;
+    --color-primary-95: #f6eeff;
+    --color-primary-96: #f8f1ff;
+    --color-primary-98: #fdf7ff;
+    --color-primary-99: #fffbff;
+    --color-primary-100: #ffffff;
+
+    --color-secondary-0: #000000;
+    --color-secondary-4: #100b1d;
+    --color-secondary-5: #130e20;
+    --color-secondary-6: #151022;
+    --color-secondary-10: #1e192b;
+    --color-secondary-12: #221d2f;
+    --color-secondary-15: #282336;
+    --color-secondary-17: #2c273a;
+    --color-secondary-20: #332d41;
+    --color-secondary-22: #373245;
+    --color-secondary-25: #3e384c;
+    --color-secondary-30: #4a4458;
+    --color-secondary-35: #564f64;
+    --color-secondary-40: #625b71;
+    --color-secondary-50: #7b748a;
+    --color-secondary-60: #958da4;
+    --color-secondary-70: #b0a7c0;
+    --color-secondary-80: #cbc2db;
+    --color-secondary-90: #e8def8;
+    --color-secondary-92: #eee4fe;
+    --color-secondary-94: #f3eaff;
+    --color-secondary-95: #f6eeff;
+    --color-secondary-96: #f8f1ff;
+    --color-secondary-98: #fdf7ff;
+    --color-secondary-99: #fffbff;
+    --color-secondary-100: #ffffff;
+
+    --color-tertiary-0: #000000;
+    --color-tertiary-4: #210410;
+    --color-tertiary-5: #240612;
+    --color-tertiary-6: #270815;
+    --color-tertiary-10: #31101d;
+    --color-tertiary-12: #361421;
+    --color-tertiary-15: #3d1b27;
+    --color-tertiary-17: #421f2c;
+    --color-tertiary-20: #4a2532;
+    --color-tertiary-22: #4f2936;
+    --color-tertiary-25: #56303d;
+    --color-tertiary-30: #633b48;
+    --color-tertiary-35: #704654;
+    --color-tertiary-40: #7e5260;
+    --color-tertiary-50: #996a79;
+    --color-tertiary-60: #b58392;
+    --color-tertiary-70: #d29dad;
+    --color-tertiary-80: #efb8c8;
+    --color-tertiary-90: #ffd9e3;
+    --color-tertiary-92: #ffe1e8;
+    --color-tertiary-94: #ffe8ed;
+    --color-tertiary-95: #ffecf0;
+    --color-tertiary-96: #fff0f2;
+    --color-tertiary-98: #fff8f8;
+    --color-tertiary-99: #fffbff;
+    --color-tertiary-100: #ffffff;
+
+    --color-neutral-0: #000000;
+    --color-neutral-4: #0f0e11;
+    --color-neutral-5: #121014;
+    --color-neutral-6: #141316;
+    --color-neutral-10: #1c1b1e;
+    --color-neutral-12: #201f22;
+    --color-neutral-15: #272529;
+    --color-neutral-17: #2b292d;
+    --color-neutral-20: #313033;
+    --color-neutral-22: #363438;
+    --color-neutral-25: #3d3b3e;
+    --color-neutral-30: #48464a;
+    --color-neutral-35: #545156;
+    --color-neutral-40: #605d62;
+    --color-neutral-50: #79767a;
+    --color-neutral-60: #938f94;
+    --color-neutral-70: #aeaaae;
+    --color-neutral-80: #cac5ca;
+    --color-neutral-90: #e6e1e6;
+    --color-neutral-92: #ece7eb;
+    --color-neutral-94: #f2ecf1;
+    --color-neutral-95: #f4eff4;
+    --color-neutral-96: #f7f2f7;
+    --color-neutral-98: #fdf8fd;
+    --color-neutral-99: #fffbff;
+    --color-neutral-100: #ffffff;
+
+    --color-neutral-variant-0: #000000;
+    --color-neutral-variant-4: #0f0d14;
+    --color-neutral-variant-5: #121017;
+    --color-neutral-variant-6: #14121a;
+    --color-neutral-variant-10: #1d1a22;
+    --color-neutral-variant-12: #211e26;
+    --color-neutral-variant-15: #27242d;
+    --color-neutral-variant-17: #2b2931;
+    --color-neutral-variant-20: #322f38;
+    --color-neutral-variant-22: #36333c;
+    --color-neutral-variant-25: #3d3a43;
+    --color-neutral-variant-30: #49454e;
+    --color-neutral-variant-35: #54515a;
+    --color-neutral-variant-40: #615d66;
+    --color-neutral-variant-50: #7a757f;
+    --color-neutral-variant-60: #948f99;
+    --color-neutral-variant-70: #afa9b4;
+    --color-neutral-variant-80: #cac4cf;
+    --color-neutral-variant-90: #e7e0eb;
+    --color-neutral-variant-92: #ece6f1;
+    --color-neutral-variant-94: #f2ebf7;
+    --color-neutral-variant-95: #f5eefa;
+    --color-neutral-variant-96: #f8f1fd;
+    --color-neutral-variant-98: #fdf7ff;
+    --color-neutral-variant-99: #fffbff;
+    --color-neutral-variant-100: #ffffff;
+
+    --color-error-0: #000000;
+    --color-error-4: #280001;
+    --color-error-5: #2d0001;
+    --color-error-6: #310001;
+    --color-error-10: #410002;
+    --color-error-12: #490002;
+    --color-error-15: #540003;
+    --color-error-17: #5c0004;
+    --color-error-20: #690005;
+    --color-error-22: #710005;
+    --color-error-25: #7e0007;
+    --color-error-30: #93000a;
+    --color-error-35: #a80710;
+    --color-error-40: #ba1a1a;
+    --color-error-50: #de3730;
+    --color-error-60: #ff5449;
+    --color-error-70: #ff897d;
+    --color-error-80: #ffb4ab;
+    --color-error-90: #ffdad6;
+    --color-error-92: #ffe2de;
+    --color-error-94: #ffe9e6;
+    --color-error-95: #ffedea;
+    --color-error-96: #fff0ee;
+    --color-error-98: #fff8f7;
+    --color-error-99: #fffbff;
+    --color-error-100: #ffffff;
+
+    /* Color Scheme */
+    --color-primary: var(--color-primary-40);
+    --color-on-primary: var(--color-primary-100);
+    --color-primary-container: var(--color-primary-90);
+    --color-on-primary-container: var(--color-primary-30);
+
+    --color-secondary: var(--color-secondary-40);
+    --color-on-secondary: var(--color-secondary-100);
+    --color-secondary-container: var(--color-secondary-90);
+    --color-on-secondary-container: var(--color-secondary-30);
+
+    --color-tertiary: var(--color-tertiary-40);
+    --color-on-tertiary: var(--color-tertiary-100);
+    --color-tertiary-container: var(--color-tertiary-90);
+    --color-on-tertiary-container: var(--color-tertiary-30);
+
+    --color-error: var(--color-error-40);
+    --color-on-error: var(--color-error-100);
+    --color-error-container: var(--color-error-90);
+    --color-on-error-container: var(--color-error-30);
+
+    --color-surface: var(--color-neutral-98);
+    --color-on-surface: var(--color-neutral-10);
+    --color-surface-variant: var(--color-neutral-variant-90);
+    --color-on-surface-variant: var(--color-neutral-variant-30);
+    --color-surface-container-lowest: var(--color-neutral-100);
+    --color-surface-container-low: var(--color-neutral-96);
+    --color-surface-container: var(--color-neutral-94);
+    --color-surface-container-high: var(--color-neutral-92);
+    --color-surface-container-highest: var(--color-neutral-90);
+    --color-inverse-surface: var(--color-neutral-20);
+    --color-inverse-on-surface: var(--color-neutral-95);
+    --color-surface-tint: var(--color-primary);
+
+    --color-outline: var(--color-neutral-variant-50);
+    --color-outline-variant: var(--color-neutral-variant-80);
+
+    /* Elevation */
+    --shadow-1: 0 1px 2px 0 rgb(0 0 0 / 30%), 0 1px 3px 1px rgb(0 0 0 / 15%);
+    --shadow-2: 0 1px 2px 0 rgb(0 0 0 / 30%), 0 2px 6px 2px rgb(0 0 0 / 15%);
+    --shadow-3: 0 1px 3px 0 rgb(0 0 0 / 30%), 0 4px 8px 3px rgb(0 0 0 / 15%);
+    --shadow-4: 0 2px 3px 0 rgb(0 0 0 / 30%), 0 6px 10px 4px rgb(0 0 0 / 15%);
+    --shadow-5: 0 4px 4px 0 rgb(0 0 0 / 30%), 0 8px 12px 6px rgb(0 0 0 / 15%);
+
+    /* Icons */
+    --font-icon: "Material Symbols Outlined";
+
+    /* Motion */
+    /* Created with https://linear-easing-generator.netlify.app/ (thanks Jake <3) */
+    --ease-emphasized: linear(
+        0,
+        0.002,
+        0.01 3.6%,
+        0.02 4.9%,
+        0.034,
+        0.053,
+        0.074,
+        0.1,
+        0.128 11.4%,
+        0.194 13.4%,
+        0.271 15%,
+        0.344 16.1%,
+        0.477 17.5%,
+        0.544 18.3%,
+        0.607,
+        0.66 20.6%,
+        0.717 22.4%,
+        0.765 24.6%,
+        0.788,
+        0.808,
+        0.827,
+        0.845 30.4%,
+        0.865 32.6%,
+        0.883,
+        0.9 37.7%,
+        0.916 40.6%,
+        0.929 43.8%,
+        0.942 47.2%,
+        0.953 51%,
+        0.963 55%,
+        0.979 64%,
+        0.991 74.4%,
+        0.998 86.4%,
+        1
+    );
+    --ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+    --ease-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+    --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+    --ease-standard-decelerate: cubic-bezier(0, 0, 0, 1);
+    --ease-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
+
+    --duration-short1: 50ms;
+    --duration-short2: 100ms;
+    --duration-short3: 150ms;
+    --duration-short4: 200ms;
+    --duration-medium1: 250ms;
+    --duration-medium2: 300ms;
+    --duration-medium3: 350ms;
+    --duration-medium4: 400ms;
+    --duration-long1: 450ms;
+    --duration-long2: 500ms;
+    --duration-long3: 550ms;
+    --duration-long4: 600ms;
+    --duration-extra-long1: 700ms;
+    --duration-extra-long2: 800ms;
+    --duration-extra-long3: 900ms;
+    --duration-extra-long4: 1000ms;
+
+    /* Shape */
+    /* Not standard, used for checkboxes and sliders */
+    --radius-xxs: 0.125rem;
+    --radius-xs: 0.25rem;
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.75rem;
+
+    /* Typography */
+    --font-sans: "Roboto", sans-serif;
+
+    --text-display-l: calc(57 * 0.0625rem);
+    --text-display-l--font-weight: 400;
+    --text-display-l--letter-spacing: calc(-0.25 / 57 * 1rem);
+    --text-display-l--line-height: calc(64 / 57);
+
+    --text-display-m: calc(45 * 0.0625rem);
+    --text-display-m--font-weight: 400;
+    --text-display-m--letter-spacing: calc(0 / 45 * 1rem);
+    --text-display-m--line-height: calc(52 / 45);
+
+    --text-display-s: calc(36 * 0.0625rem);
+    --text-display-s--font-weight: 400;
+    --text-display-s--letter-spacing: calc(0 / 36 * 1rem);
+    --text-display-s--line-height: calc(44 / 36);
+
+    --text-headline-l: calc(32 * 0.0625rem);
+    --text-headline-l--font-weight: 400;
+    --text-headline-l--letter-spacing: calc(0 / 32 * 1rem);
+    --text-headline-l--line-height: calc(40 / 32);
+
+    --text-headline-m: calc(28 * 0.0625rem);
+    --text-headline-m--font-weight: 400;
+    --text-headline-m--letter-spacing: calc(0 / 28 * 1rem);
+    --text-headline-m--line-height: calc(36 / 28);
+
+    --text-headline-s: calc(24 * 0.0625rem);
+    --text-headline-s--font-weight: 400;
+    --text-headline-s--letter-spacing: calc(0 / 24 * 1rem);
+    --text-headline-s--line-height: calc(32 / 24);
+
+    --text-title-l: calc(22 * 0.0625rem);
+    --text-title-l--font-weight: 400;
+    --text-title-l--letter-spacing: calc(0 / 22 * 1rem);
+    --text-title-l--line-height: calc(28 / 22);
+
+    --text-title-m: calc(16 * 0.0625rem);
+    --text-title-m--font-weight: 500;
+    --text-title-m--letter-spacing: calc(0.15 / 16 * 1rem);
+    --text-title-m--line-height: calc(24 / 16);
+
+    --text-title-s: calc(14 * 0.0625rem);
+    --text-title-s--font-weight: 500;
+    --text-title-s--letter-spacing: calc(0.1 / 14 * 1rem);
+    --text-title-s--line-height: calc(20 / 14);
+
+    --text-body-l: calc(16 * 0.0625rem);
+    --text-body-l--font-weight: 400;
+    --text-body-l--letter-spacing: calc(0.5 / 16 * 1rem);
+    --text-body-l--line-height: calc(24 / 16);
+
+    --text-body-m: calc(14 * 0.0625rem);
+    --text-body-m--font-weight: 400;
+    --text-body-m--letter-spacing: calc(0.25 / 14 * 1rem);
+    --text-body-m--line-height: calc(20 / 14);
+
+    --text-body-s: calc(12 * 0.0625rem);
+    --text-body-s--font-weight: 400;
+    --text-body-s--letter-spacing: calc(0.4 / 12 * 1rem);
+    --text-body-s--line-height: calc(16 / 12);
+
+    --text-label-l: calc(14 * 0.0625rem);
+    --text-label-l--font-weight: 500;
+    --text-label-l--letter-spacing: calc(0.1 / 14 * 1rem);
+    --text-label-l--line-height: calc(20 / 14);
+
+    --text-label-m: calc(12 * 0.0625rem);
+    --text-label-m--font-weight: 500;
+    --text-label-m--letter-spacing: calc(0.5 / 12 * 1rem);
+    --text-label-m--line-height: calc(16 / 12);
+
+    --text-label-s: calc(11 * 0.0625rem);
+    --text-label-s--font-weight: 500;
+    --text-label-s--letter-spacing: calc(0.5 / 11 * 1rem);
+    --text-label-s--line-height: calc(16 / 11);
+
+    /* Size classes */
+    --breakpoint-compact: 0rem; /* 0px */
+    --breakpoint-medium: 37.5rem; /* 600px */
+    --breakpoint-expanded: 52.5rem; /* 840px */
+    --breakpoint-large: 75rem; /* 1200px */
+    --breakpoint-xlarge: 100rem; /* 1600px */
+}
+
+@layer theme {
+    html,
+    :root {
+        @variant dark {
+            --color-primary: var(--color-primary-80);
+            --color-on-primary: var(--color-primary-20);
+            --color-primary-container: var(--color-primary-30);
+            --color-on-primary-container: var(--color-primary-90);
+
+            --color-secondary: var(--color-secondary-80);
+            --color-on-secondary: var(--color-secondary-20);
+            --color-secondary-container: var(--color-secondary-30);
+            --color-on-secondary-container: var(--color-secondary-90);
+
+            --color-tertiary: var(--color-tertiary-80);
+            --color-on-tertiary: var(--color-tertiary-20);
+            --color-tertiary-container: var(--color-tertiary-30);
+            --color-on-tertiary-container: var(--color-tertiary-90);
+
+            --color-error: var(--color-error-80);
+            --color-on-error: var(--color-error-20);
+            --color-error-container: var(--color-error-30);
+            --color-on-error-container: var(--color-error-90);
+
+            --color-surface: var(--color-neutral-6);
+            --color-on-surface: var(--color-neutral-90);
+            --color-surface-variant: var(--color-neutral-variant-30);
+            --color-on-surface-variant: var(--color-neutral-variant-80);
+            --color-surface-container-lowest: var(--color-neutral-4);
+            --color-surface-container-low: var(--color-neutral-10);
+            --color-surface-container: var(--color-neutral-12);
+            --color-surface-container-high: var(--color-neutral-17);
+            --color-surface-container-highest: var(--color-neutral-22);
+            --color-inverse-surface: var(--color-neutral-90);
+            --color-inverse-on-surface: var(--color-neutral-20);
+
+            --color-outline: var(--color-neutral-variant-60);
+            --color-outline-variant: var(--color-neutral-variant-30);
+        }
+    }
+}
