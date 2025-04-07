@@ -1,5 +1,13 @@
+<script module lang="ts">
+    import { tv } from "$lib/style.js";
+
+    export const variants = tv({
+        base: "icon inline-block select-none align-middle",
+    });
+</script>
+
 <script lang="ts">
-    import { twMerge, type ClassProps } from "$lib/style.js";
+    import type { ClassProps } from "$lib/style.js";
     import type { HTMLAttributes } from "svelte/elements";
     import type { MaterialSymbol } from "material-symbols";
 
@@ -16,6 +24,4 @@
     > = $props();
 </script>
 
-<span class={twMerge("icon inline-block select-none", className)} {...props}
-    >{icon}</span
->
+<span class={variants({ className })} {...props}>{icon}</span>
