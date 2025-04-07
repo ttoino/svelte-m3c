@@ -30,6 +30,9 @@
                 tertiary: {},
                 error: {},
             },
+            icon: {
+                true: { base: "pl-4" },
+            },
         },
         compoundVariants: [
             {
@@ -120,10 +123,16 @@
                 color: "error",
                 class: { base: "focus:border-error" },
             },
+            {
+                variant: "text",
+                icon: true,
+                class: { base: "pr-4" },
+            },
         ],
         defaultVariants: {
             variant: "text",
             color: "primary",
+            icon: false,
         },
     });
 </script>
@@ -132,21 +141,42 @@
     import { Button } from "bits-ui";
     import type { VariantProps } from "$lib/style.js";
     import StateLayer from "./StateLayer.svelte";
+    import type { MaterialSymbol } from "material-symbols";
+    import Icon from "./Icon.svelte";
 
     let {
         ref = $bindable(),
         class: className,
+        iconClass,
+        stateLayerClass,
         variant,
         color,
         children,
+        icon,
         ...props
-    }: VariantProps<Button.RootProps, typeof variants> = $props();
+    }: VariantProps<
+        Button.RootProps,
+        typeof variants,
+        "class" | "iconClass" | "stateLayerClass",
+        {
+            icon?: MaterialSymbol;
+        }
+    > = $props();
 
-    let { base, stateLayer } = $derived(variants({ variant, color }));
+    let classes = $derived(
+        variants({ variant, color, icon: icon !== undefined }),
+    );
 </script>
 
-<Button.Root class={base({ className })} bind:ref {...props}>
-    <StateLayer target={ref} class={stateLayer()} />
+<Button.Root class={classes.base({ className })} bind:ref {...props}>
+    <StateLayer
+        target={ref}
+        class={classes.stateLayer({ class: stateLayerClass })}
+    />
+
+    {#if icon}
+        <Icon {icon} class={iconClass} />
+    {/if}
 
     {@render children?.()}
 </Button.Root>
