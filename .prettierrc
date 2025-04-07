@@ -13,6 +13,12 @@
             "options": {
                 "parser": "svelte"
             }
+        },
+        {
+            "files": ".github/**/*.yml",
+            "options": {
+                "tabWidth": 2
+            }
         }
     ]
 }
