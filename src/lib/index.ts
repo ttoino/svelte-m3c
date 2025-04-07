@@ -5,6 +5,10 @@ import Icon from "./components/Icon.svelte";
 import IconButton from "./components/IconButton.svelte";
 import List from "./components/List.svelte";
 import ListItem from "./components/ListItem.svelte";
+import Menu from "./components/Menu.svelte";
+import MenuItem from "./components/MenuItem.svelte";
+import MenuList from "./components/MenuList.svelte";
+import MenuTrigger from "./components/MenuTrigger.svelte";
 import NavigationDrawer from "./components/NavigationDrawer.svelte";
 import NavigationDrawerItem from "./components/NavigationDrawerItem.svelte";
 import NavigationRail from "./components/NavigationRail.svelte";
@@ -36,6 +40,10 @@ export {
     IconButton,
     List,
     ListItem,
+    Menu,
+    MenuItem,
+    MenuList,
+    MenuTrigger,
     NavigationDrawer,
     NavigationDrawerItem,
     NavigationRail,
