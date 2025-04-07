@@ -34,6 +34,12 @@
 
     let {
         class: className,
+        leadingClass,
+        textClass,
+        labelTextClass,
+        supportingTextClass,
+        trailingClass,
+        stateLayerClass,
         lines,
         leading,
         labelText,
@@ -43,7 +49,13 @@
     }: VariantProps<
         WithoutChildren<HTMLAttributes<HTMLDivElement>>,
         typeof variants,
-        "class",
+        | "class"
+        | "leadingClass"
+        | "textClass"
+        | "labelTextClass"
+        | "supportingTextClass"
+        | "trailingClass"
+        | "stateLayerClass",
         {
             lines?: number;
             leading?: Snippet;
@@ -63,27 +75,31 @@
     <StateLayer class={classes.stateLayer()} />
 
     {#if leading}
-        <div class={classes.leading()}>
+        <div class={classes.leading({ class: leadingClass })}>
             {@render leading()}
         </div>
     {/if}
 
     {#if labelText || supportingText}
-        <div class={classes.text()} bind:this={textEl}>
+        <div class={classes.text({ class: textClass })} bind:this={textEl}>
             {#if labelText}
-                <span class={classes.labelText()}>{@render labelText()}</span>
+                <span class={classes.labelText({ class: labelTextClass })}
+                    >{@render labelText()}</span
+                >
             {/if}
 
             {#if supportingText}
-                <span class={classes.supportingText()}
-                    >{@render supportingText()}</span
+                <span
+                    class={classes.supportingText({
+                        class: supportingTextClass,
+                    })}>{@render supportingText()}</span
                 >
             {/if}
         </div>
     {/if}
 
     {#if trailing}
-        <div class={classes.trailing()}>
+        <div class={classes.trailing({ class: trailingClass })}>
             {@render trailing()}
         </div>
     {/if}
