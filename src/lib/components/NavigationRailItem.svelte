@@ -3,8 +3,9 @@
 
     export const variants = tv({
         slots: {
-            item: "h-14 flex flex-col items-center justify-center relative group/state-layer text-on-surface group/navigation-rail-item gap-1",
-            activeIndicator: "w-14 rounded-full relative flex items-center justify-center",
+            item: "group/state-layer text-on-surface group/navigation-rail-item relative flex h-14 flex-col items-center justify-center gap-1",
+            activeIndicator:
+                "relative flex w-14 items-center justify-center rounded-full",
             stateLayer: "absolute inset-0 rounded-full",
             icon: "transition-colors",
             label: "text-label-m transition-colors",
@@ -13,7 +14,7 @@
             hideLabel: {
                 true: {
                     activeIndicator: "h-14",
-                    label: "opacity-0 absolute inset-0",
+                    label: "absolute inset-0 opacity-0",
                 },
                 false: {
                     activeIndicator: "h-8",
@@ -23,7 +24,7 @@
             active: {
                 false: {
                     icon: "text-on-surface-variant group-hover/navigation-rail-item:text-on-surface group-focus-within/navigation-rail-item:text-on-surface",
-                    label: "text-on-surface-variant group-hover/navigation-rail-item:text-on-surface group-focus-within/navigation-rail-item:text-on-surface"
+                    label: "text-on-surface-variant group-hover/navigation-rail-item:text-on-surface group-focus-within/navigation-rail-item:text-on-surface",
                 },
                 true: {
                     activeIndicator: "bg-secondary-container",
@@ -31,7 +32,7 @@
                     label: "text-on-surface",
                 },
             },
-        }
+        },
     });
 </script>
 
@@ -50,24 +51,29 @@
         active = false,
         children,
         ...props
-    }: VariantProps<HTMLAttributes<HTMLDivElement>, typeof variants, "class", {
-        icon: MaterialSymbol,
-        href: string,
-        active?: boolean,
-    }> = $props();
+    }: VariantProps<
+        HTMLAttributes<HTMLDivElement>,
+        typeof variants,
+        "class",
+        {
+            icon: MaterialSymbol;
+            href: string;
+            active?: boolean;
+        }
+    > = $props();
 
-    let classes = $derived(variants({hideLabel, active}));
+    let classes = $derived(variants({ hideLabel, active }));
 
     let target: HTMLElement | null = $state(null);
 </script>
 
-<div class={classes.item({className})} {...props}>
+<div class={classes.item({ className })} {...props}>
     <div class={classes.activeIndicator()}>
         <StateLayer {target} class={classes.stateLayer()} />
 
         <Icon {icon} class={classes.icon()} />
     </div>
-    
+
     <a bind:this={target} {href} class={classes.label()}>
         {@render children?.()}
     </a>

@@ -89,4 +89,3 @@ export const cssPaletteFromImage = async (image: string | HTMLImageElement) => {
 
     return cssPaletteFromTheme(theme);
 };
-

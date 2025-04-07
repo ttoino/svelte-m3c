@@ -4,7 +4,7 @@
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
-        base: "w-20 bg-surface flex flex-col justify-center gap-3",
+        base: "bg-surface flex w-20 flex-col justify-center gap-3",
     });
 </script>
 
@@ -19,6 +19,6 @@
     }: VariantProps<HTMLAttributes<HTMLElement>, typeof variants> = $props();
 </script>
 
-<nav class={variants({className})} {...props}>
-{@render children?.()}
+<nav class={variants({ className })} {...props}>
+    {@render children?.()}
 </nav>
