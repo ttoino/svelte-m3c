@@ -13,6 +13,7 @@ import NavigationDrawer from "./components/NavigationDrawer.svelte";
 import NavigationDrawerItem from "./components/NavigationDrawerItem.svelte";
 import NavigationRail from "./components/NavigationRail.svelte";
 import NavigationRailItem from "./components/NavigationRailItem.svelte";
+import Progress from "./components/Progress.svelte";
 import Provider from "./components/Provider.svelte";
 import ScrollArea from "./components/ScrollArea.svelte";
 import SegmentedButton from "./components/SegmentedButton.svelte";
@@ -48,6 +49,7 @@ export {
     NavigationDrawerItem,
     NavigationRail,
     NavigationRailItem,
+    Progress,
     Provider,
     ScrollArea,
     SegmentedButton,
