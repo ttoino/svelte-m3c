@@ -52,6 +52,7 @@ export {
     Progress,
     Provider,
     ScrollArea,
+    SearchBar,
     SegmentedButton,
     SegmentedButtonGroup,
     Slider,
