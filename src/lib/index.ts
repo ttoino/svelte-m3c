@@ -57,6 +57,7 @@ export {
     Slider,
     StateLayer,
     Switch,
+    TextField,
     ToggleIconButton,
     Tooltip,
     TooltipRoot,
