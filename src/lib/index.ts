@@ -15,6 +15,8 @@ import NavigationRail from "./components/NavigationRail.svelte";
 import NavigationRailItem from "./components/NavigationRailItem.svelte";
 import Progress from "./components/Progress.svelte";
 import Provider from "./components/Provider.svelte";
+import Radio from "./components/Radio.svelte";
+import RadioGroup from "./components/RadioGroup.svelte";
 import ScrollArea from "./components/ScrollArea.svelte";
 import SearchBar from "./components/SearchBar.svelte";
 import SegmentedButton from "./components/SegmentedButton.svelte";
@@ -53,6 +55,8 @@ export {
     NavigationRailItem,
     Progress,
     Provider,
+    Radio,
+    RadioGroup,
     ScrollArea,
     SearchBar,
     SegmentedButton,
