@@ -1,5 +1,13 @@
+<script module lang="ts">
+    import { tv } from "$lib/style.js";
+
+    export const variants = tv({
+        base: "inline-flex flex-row",
+    });
+</script>
+
 <script lang="ts">
-    import { twMerge, type ClassProps } from "$lib/style.js";
+    import { type ClassProps } from "$lib/style.js";
     import { ToggleGroup } from "bits-ui";
 
     let {
@@ -11,7 +19,7 @@
 </script>
 
 <ToggleGroup.Root
-    class={twMerge("inline-flex flex-row", className)}
+    class={variants({ className })}
     bind:ref
     bind:value={value as never}
     {...props}

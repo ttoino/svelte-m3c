@@ -3,7 +3,7 @@
 
     export const variants = tv({
         slots: {
-            root: "bg-surface min-h-[calc(var(--spacing)*(10+4*var(--lines))))] group/list-item group/state-layer text-on-surface relative flex flex-row gap-4 px-4",
+            container: "bg-surface min-h-[calc(var(--spacing)*(10+4*var(--lines))))] group/list-item group/state-layer text-on-surface relative flex flex-row gap-4 px-4",
             leading:
                 "group-disabled/list-item:text-on-surface/38 shrink-0 has-[video]:-ml-4 has-[img]:h-14 has-[video]:h-16",
             text: "flex flex-grow flex-col justify-center self-stretch",
@@ -17,8 +17,8 @@
         },
         variants: {
             threeOrMoreLines: {
-                false: { root: "items-center py-2" },
-                true: { root: "items-start py-3" },
+                false: { container: "items-center py-2" },
+                true: { container: "items-start py-3" },
             },
         },
     });
@@ -33,7 +33,7 @@
     import { getLines } from "$lib/elements.js";
 
     let {
-        class: className,
+        containerClass,
         leadingClass,
         textClass,
         labelTextClass,
@@ -49,7 +49,7 @@
     }: VariantProps<
         WithoutChildren<HTMLAttributes<HTMLDivElement>>,
         typeof variants,
-        | "class"
+        | "containerClass"
         | "leadingClass"
         | "textClass"
         | "labelTextClass"
@@ -62,6 +62,7 @@
             labelText?: Snippet;
             supportingText?: Snippet;
             trailing?: Snippet;
+            threeOrMoreLines?: never;
         }
     > = $props();
 
@@ -71,7 +72,7 @@
     let classes = $derived(variants({ threeOrMoreLines: finalLines >= 3 }));
 </script>
 
-<div class={classes.root({ className })} style="--lines: {lines}" {...props}>
+<div class={classes.container({ class: containerClass })} style="--lines: {lines}" {...props}>
     <StateLayer class={classes.stateLayer()} />
 
     {#if leading}

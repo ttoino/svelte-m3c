@@ -3,22 +3,24 @@
 
     export const variants = tv({
         slots: {
-            base: "group/state-layer focus-visible:outline-secondary disabled:text-on-surface/38 disabled:inset-shadow-transparent relative inline-flex h-10 w-10 cursor-pointer items-center justify-center overflow-clip rounded-full transition-all focus-visible:outline focus-visible:outline-offset-2 disabled:cursor-default",
+            container:
+                "group/state-layer focus-visible:outline-secondary disabled:text-on-surface/38 disabled:inset-shadow-transparent relative inline-flex h-10 w-10 cursor-pointer items-center justify-center overflow-clip rounded-full transition-all focus-visible:outline focus-visible:outline-offset-2 disabled:cursor-default",
             stateLayer: "absolute inset-0",
         },
         variants: {
             variant: {
                 filled: {
-                    base: "disabled:bg-on-surface/12",
+                    container: "disabled:bg-on-surface/12",
                 },
                 tonal: {
-                    base: "disabled:bg-on-surface/12",
+                    container: "disabled:bg-on-surface/12",
                 },
                 outlined: {
-                    base: "border-outline text-on-surface-variant disabled:border-on-surface/12 border",
+                    container:
+                        "border-outline text-on-surface-variant disabled:border-on-surface/12 border",
                 },
                 standard: {
-                    base: "text-on-surface-variant",
+                    container: "text-on-surface-variant",
                 },
             },
             color: {
@@ -32,48 +34,52 @@
             {
                 variant: "filled",
                 color: "primary",
-                class: { base: "bg-primary text-on-primary" },
+                class: { container: "bg-primary text-on-primary" },
             },
             {
                 variant: "tonal",
                 color: "primary",
                 class: {
-                    base: "bg-primary-container text-on-primary-container",
+                    container: "bg-primary-container text-on-primary-container",
                 },
             },
             {
                 variant: "filled",
                 color: "secondary",
-                class: { base: "bg-secondary text-on-secondary" },
+                class: { container: "bg-secondary text-on-secondary" },
             },
             {
                 variant: "tonal",
                 color: "secondary",
                 class: {
-                    base: "bg-secondary-container text-on-secondary-container",
+                    container:
+                        "bg-secondary-container text-on-secondary-container",
                 },
             },
             {
                 variant: "filled",
                 color: "tertiary",
-                class: { base: "bg-tertiary text-on-tertiary" },
+                class: { container: "bg-tertiary text-on-tertiary" },
             },
             {
                 variant: "tonal",
                 color: "tertiary",
                 class: {
-                    base: "bg-tertiary-container text-on-tertiary-container",
+                    container:
+                        "bg-tertiary-container text-on-tertiary-container",
                 },
             },
             {
                 variant: "filled",
                 color: "error",
-                class: { base: "bg-error text-on-error" },
+                class: { container: "bg-error text-on-error" },
             },
             {
                 variant: "tonal",
                 color: "error",
-                class: { base: "bg-error-container text-on-error-container" },
+                class: {
+                    container: "bg-error-container text-on-error-container",
+                },
             },
         ],
         defaultVariants: {
@@ -94,7 +100,8 @@
     import TooltipTrigger from "./TooltipTrigger.svelte";
 
     let {
-        class: className,
+        containerClass,
+        stateLayerClass,
         ref = $bindable(null),
         variant,
         color,
@@ -104,21 +111,28 @@
     }: VariantProps<
         WithoutChildren<Button.RootProps>,
         typeof variants,
-        "class",
+        "containerClass" | "stateLayerClass",
         {
             icon: MaterialSymbol;
             tooltip?: string;
         }
     > = $props();
 
-    let { base, stateLayer } = $derived(variants({ variant, color }));
+    let classes = $derived(variants({ variant, color }));
 </script>
 
 {#snippet iconButton(additionalProps: Record<string, unknown> = {})}
     {@const mergedProps = mergeProps(props, additionalProps)}
 
-    <Button.Root class={base({ className })} bind:ref {...mergedProps}>
-        <StateLayer target={ref} class={stateLayer()} />
+    <Button.Root
+        class={classes.container({ class: containerClass })}
+        bind:ref
+        {...mergedProps}
+    >
+        <StateLayer
+            target={ref}
+            class={classes.stateLayer({ class: stateLayerClass })}
+        />
 
         <Icon {icon} />
     </Button.Root>

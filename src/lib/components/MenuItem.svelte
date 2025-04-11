@@ -5,7 +5,7 @@
     export const variants = tv({
         extend: base,
         slots: {
-            root: "bg-surface-container cursor-pointer",
+            container: "bg-surface-container cursor-pointer",
         },
         defaultVariants: {
             threeOrMoreLines: false,
@@ -21,7 +21,7 @@
 
     let {
         ref = $bindable(null),
-        class: className,
+        containerClass,
         leadingClass,
         textClass,
         trailingClass,
@@ -33,7 +33,7 @@
     }: VariantProps<
         ContextMenu.ItemProps & DropdownMenu.ItemProps,
         typeof variants,
-        | "class"
+        | "containerClass"
         | "leadingClass"
         | "textClass"
         | "trailingClass"
@@ -52,7 +52,7 @@
     let Base = $derived(type === "context" ? ContextMenu : DropdownMenu);
 </script>
 
-<Base.Item bind:ref class={classes.root({ className })} {...props}>
+<Base.Item bind:ref class={classes.container({ class: containerClass })} {...props}>
     <StateLayer class={classes.stateLayer()} />
 
     {#if leading}

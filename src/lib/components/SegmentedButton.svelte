@@ -2,17 +2,17 @@
     import { tv } from "$lib/style.js";
     import { variants as baseButton } from "./Button.svelte";
 
-    const { base, stateLayer } = baseButton({ variant: "outlined" });
+    const base = baseButton({ variant: "outlined" });
     export const variants = tv({
         slots: {
-            base: [
-                base(),
+            container: [
+                base.container(),
                 "group/segmented-button not-first:-ml-px text-on-surface ui-on:bg-secondary-container !border-outline ui-on:text-on-secondary-container rounded-none px-4 first:rounded-l-full last:rounded-r-full disabled:-z-10",
             ],
             iconWrapper: "grid place-items-center",
             unselectedIcon: "group-ui-on/segmented-button:opacity-0",
             selectedIcon: "group-ui-off/segmented-button:opacity-0 icon-filled",
-            stateLayer: stateLayer(),
+            stateLayer: base.stateLayer(),
         },
         compoundSlots: [
             {
@@ -39,32 +39,46 @@
     import type { ClassProps } from "$lib/style.js";
 
     let {
-        class: className,
+        containerClass,
+        iconWrapperClass,
         iconClass,
+        stateLayerClass,
         children: originalChildren,
         ref = $bindable(null),
         icon,
         ...props
     }: ClassProps<
         ToggleGroup.ItemProps,
-        "class" | "iconClass",
+        "containerClass" | "iconWrapperClass" | "iconClass" | "stateLayerClass",
         {
             icon?: MaterialSymbol;
         }
     > = $props();
 
-    let { base, iconWrapper, unselectedIcon, selectedIcon, stateLayer } =
-        $derived(variants({ icon: icon !== undefined }));
+    let classes = $derived(variants({ icon: icon !== undefined }));
 </script>
 
-<ToggleGroup.Item class={base({ className })} bind:ref {...props}>
+<ToggleGroup.Item
+    class={classes.container({ class: containerClass })}
+    bind:ref
+    {...props}
+>
     {#snippet children(childrenProps)}
-        <StateLayer target={ref} class={stateLayer()} />
+        <StateLayer
+            target={ref}
+            class={classes.stateLayer({ class: stateLayerClass })}
+        />
 
-        <span class={iconWrapper()}>
-            <Icon class={selectedIcon({ class: iconClass })} icon="check" />
+        <span class={classes.iconWrapper({ class: iconWrapperClass })}>
+            <Icon
+                class={classes.selectedIcon({ class: iconClass })}
+                icon="check"
+            />
             {#if icon !== undefined}
-                <Icon class={unselectedIcon({ class: iconClass })} {icon} />
+                <Icon
+                    class={classes.unselectedIcon({ class: iconClass })}
+                    {icon}
+                />
             {/if}
         </span>
 

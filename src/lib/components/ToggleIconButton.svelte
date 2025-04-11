@@ -5,18 +5,21 @@
     export const variants = tv({
         extend: baseVariants,
         slots: {
-            base: "ui-on:icon-filled ui-on:icon-grade-high whitespace-nowrap",
+            container:
+                "ui-on:icon-filled ui-on:icon-grade-high whitespace-nowrap",
         },
         variants: {
             variant: {
                 filled: {
-                    base: "ui-off:bg-surface-container-highest",
+                    container: "ui-off:bg-surface-container-highest",
                 },
                 tonal: {
-                    base: "ui-off:bg-surface-container-highest ui-off:text-on-surface-variant",
+                    container:
+                        "ui-off:bg-surface-container-highest ui-off:text-on-surface-variant",
                 },
                 outlined: {
-                    base: "ui-on:bg-inverse-surface ui-on:text-inverse-on-surface ui-on:disabled:bg-on-surface/12 ui-on:border-none bg-transparent",
+                    container:
+                        "ui-on:bg-inverse-surface ui-on:text-inverse-on-surface ui-on:disabled:bg-on-surface/12 ui-on:border-none bg-transparent",
                 },
             },
         },
@@ -24,42 +27,42 @@
             {
                 variant: "filled",
                 color: "primary",
-                class: { base: "ui-off:text-primary" },
+                class: { container: "ui-off:text-primary" },
             },
             {
                 variant: "standard",
                 color: "primary",
-                class: { base: "ui-on:text-primary" },
+                class: { container: "ui-on:text-primary" },
             },
             {
                 variant: "filled",
                 color: "secondary",
-                class: { base: "ui-off:text-secondary" },
+                class: { container: "ui-off:text-secondary" },
             },
             {
                 variant: "standard",
                 color: "secondary",
-                class: { base: "ui-on:text-secondary" },
+                class: { container: "ui-on:text-secondary" },
             },
             {
                 variant: "filled",
                 color: "tertiary",
-                class: { base: "ui-off:text-tertiary" },
+                class: { container: "ui-off:text-tertiary" },
             },
             {
                 variant: "standard",
                 color: "tertiary",
-                class: { base: "ui-on:text-tertiary" },
+                class: { container: "ui-on:text-tertiary" },
             },
             {
                 variant: "filled",
                 color: "error",
-                class: { base: "ui-off:text-error" },
+                class: { container: "ui-off:text-error" },
             },
             {
                 variant: "standard",
                 color: "error",
-                class: { base: "ui-on:text-error" },
+                class: { container: "ui-on:text-error" },
             },
         ],
     });
@@ -73,7 +76,8 @@
     import type { MaterialSymbol } from "material-symbols";
 
     let {
-        class: className,
+        containerClass,
+        stateLayerClass,
         variant,
         color,
         icon,
@@ -83,17 +87,25 @@
     }: VariantProps<
         WithoutChildren<Toggle.RootProps>,
         typeof variants,
-        "class",
+        "containerClass" | "stateLayerClass",
         {
             icon: MaterialSymbol;
         }
     > = $props();
 
-    const { base, stateLayer } = variants({ variant, color });
+    const classes = variants({ variant, color });
 </script>
 
-<Toggle.Root class={base({ className })} bind:ref bind:pressed {...props}>
-    <StateLayer target={ref} class={stateLayer()} />
+<Toggle.Root
+    class={classes.container({ class: containerClass })}
+    bind:ref
+    bind:pressed
+    {...props}
+>
+    <StateLayer
+        target={ref}
+        class={classes.stateLayer({ class: stateLayerClass })}
+    />
 
     <Icon class="transition-[font-variation-settings]" {icon} />
 </Toggle.Root>

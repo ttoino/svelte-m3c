@@ -3,25 +3,25 @@
 
     export const variants = tv({
         slots: {
-            base: "icon-4.5 text-label-l group/state-layer focus-visible:outline-secondary disabled:text-on-surface/38 relative inline-flex h-10 min-w-16 cursor-pointer items-center justify-center gap-2 overflow-clip whitespace-nowrap rounded-full px-6 transition-all focus-visible:outline focus-visible:outline-offset-2 disabled:cursor-default disabled:shadow-none",
+            container: "icon-4.5 text-label-l group/state-layer focus-visible:outline-secondary disabled:text-on-surface/38 relative inline-flex h-10 min-w-16 cursor-pointer items-center justify-center gap-2 overflow-clip whitespace-nowrap rounded-full px-6 transition-all focus-visible:outline focus-visible:outline-offset-2 disabled:cursor-default disabled:shadow-none",
             stateLayer: "absolute inset-0",
         },
         variants: {
             variant: {
                 elevated: {
-                    base: "bg-surface-container-low shadow-1 hover:shadow-2 active:shadow-1 disabled:bg-on-surface/12",
+                    container: "bg-surface-container-low shadow-1 hover:shadow-2 active:shadow-1 disabled:bg-on-surface/12",
                 },
                 filled: {
-                    base: "hover:shadow-1 disabled:bg-on-surface/12 active:shadow-none",
+                    container: "hover:shadow-1 disabled:bg-on-surface/12 active:shadow-none",
                 },
                 tonal: {
-                    base: "hover:shadow-1 disabled:bg-on-surface/12 active:shadow-none",
+                    container: "hover:shadow-1 disabled:bg-on-surface/12 active:shadow-none",
                 },
                 outlined: {
-                    base: "border-outline disabled:border-on-surface/12 border",
+                    container: "border-outline disabled:border-on-surface/12 border",
                 },
                 text: {
-                    base: "px-3",
+                    container: "px-3",
                 },
             },
             color: {
@@ -31,102 +31,102 @@
                 error: {},
             },
             icon: {
-                true: { base: "pl-4" },
+                true: { container: "pl-4" },
             },
         },
         compoundVariants: [
             {
                 variant: ["elevated", "outlined", "text"],
                 color: "primary",
-                class: { base: "text-primary" },
+                class: { container: "text-primary" },
             },
             {
                 variant: "filled",
                 color: "primary",
-                class: { base: "bg-primary text-on-primary" },
+                class: { container: "bg-primary text-on-primary" },
             },
             {
                 variant: "tonal",
                 color: "primary",
                 class: {
-                    base: "bg-primary-container text-on-primary-container",
+                    container: "bg-primary-container text-on-primary-container",
                 },
             },
             {
                 variant: "outlined",
                 color: "primary",
-                class: { base: "focus:border-primary" },
+                class: { container: "focus:border-primary" },
             },
             {
                 variant: ["elevated", "outlined", "text"],
                 color: "secondary",
-                class: { base: "text-secondary" },
+                class: { container: "text-secondary" },
             },
             {
                 variant: "filled",
                 color: "secondary",
-                class: { base: "bg-secondary text-on-secondary" },
+                class: { container: "bg-secondary text-on-secondary" },
             },
             {
                 variant: "tonal",
                 color: "secondary",
                 class: {
-                    base: "bg-secondary-container text-on-secondary-container",
+                    container: "bg-secondary-container text-on-secondary-container",
                 },
             },
             {
                 variant: "outlined",
                 color: "secondary",
-                class: { base: "focus:border-secondary" },
+                class: { container: "focus:border-secondary" },
             },
             {
                 variant: ["elevated", "outlined", "text"],
                 color: "tertiary",
-                class: { base: "text-tertiary" },
+                class: { container: "text-tertiary" },
             },
             {
                 variant: "filled",
                 color: "tertiary",
-                class: { base: "bg-tertiary text-on-tertiary" },
+                class: { container: "bg-tertiary text-on-tertiary" },
             },
             {
                 variant: "tonal",
                 color: "tertiary",
                 class: {
-                    base: "bg-tertiary-container text-on-tertiary-container",
+                    container: "bg-tertiary-container text-on-tertiary-container",
                 },
             },
             {
                 variant: "outlined",
                 color: "tertiary",
-                class: { base: "focus:border-tertiary" },
+                class: { container: "focus:border-tertiary" },
             },
             {
                 variant: ["elevated", "outlined", "text"],
                 color: "error",
-                class: { base: "text-error" },
+                class: { container: "text-error" },
             },
             {
                 variant: "filled",
                 color: "error",
-                class: { base: "bg-error text-on-error" },
+                class: { container: "bg-error text-on-error" },
             },
             {
                 variant: "tonal",
                 color: "error",
                 class: {
-                    base: "bg-error-container text-on-error-container",
+                    container: "bg-error-container text-on-error-container",
                 },
             },
             {
                 variant: "outlined",
                 color: "error",
-                class: { base: "focus:border-error" },
+                class: { container: "focus:border-error" },
             },
             {
                 variant: "text",
                 icon: true,
-                class: { base: "pr-4" },
+                class: { container: "pr-4" },
             },
         ],
         defaultVariants: {
@@ -146,7 +146,7 @@
 
     let {
         ref = $bindable(),
-        class: className,
+        containerClass,
         iconClass,
         stateLayerClass,
         variant,
@@ -157,7 +157,7 @@
     }: VariantProps<
         Button.RootProps,
         typeof variants,
-        "class" | "iconClass" | "stateLayerClass",
+        "containerClass" | "iconClass" | "stateLayerClass",
         {
             icon?: MaterialSymbol;
         }
@@ -168,7 +168,7 @@
     );
 </script>
 
-<Button.Root class={classes.base({ className })} bind:ref {...props}>
+<Button.Root class={classes.container({ class: containerClass })} bind:ref {...props}>
     <StateLayer
         target={ref}
         class={classes.stateLayer({ class: stateLayerClass })}
