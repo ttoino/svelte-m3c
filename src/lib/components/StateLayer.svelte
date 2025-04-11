@@ -1,5 +1,49 @@
+<script module lang="ts">
+    import { tv } from "$lib/style.js";
+
+    export const variants = tv({
+        slots: {
+            root: "@container/state-layer relative flex items-center justify-center overflow-clip",
+            state: "absolute inset-0 bg-current opacity-0 transition-[opacity,background-color]",
+            ripple: "pointer-events-none absolute size-[300cqmin] origin-center scale-0 rounded-full bg-current opacity-10 transition-[background-color]",
+        },
+        variants: {
+            hover: {
+                group: { state: "group-hover/state-layer:opacity-8" },
+                peer: { state: "peer-hover/state-layer:opacity-8" },
+                none: {},
+            },
+            focus: {
+                group: { state: "group-focus-within/state-layer:opacity-10" },
+                peer: { state: "peer-focus-within/state-layer:opacity-10" },
+                none: {},
+            },
+            active: {
+                group: { state: "group-active/state-layer:opacity-10" },
+                peer: { state: "peer-active/state-layer:opacity-10" },
+                none: {},
+            },
+            disabled: {
+                group: {
+                    root: "group-disabled/state-layer:pointer-events-none group-disabled/state-layer:opacity-0",
+                },
+                peer: {
+                    root: "peer-disabled/state-layer:pointer-events-none peer-disabled/state-layer:opacity-0",
+                },
+                none: {},
+            },
+        },
+        defaultVariants: {
+            hover: "group",
+            focus: "group",
+            active: "group",
+            disabled: "group",
+        },
+    });
+</script>
+
 <script lang="ts">
-    import { twMerge, type ClassProps } from "$lib/style.js";
+    import type { VariantProps } from "$lib/style.js";
     import type { HTMLAttributes, MouseEventHandler } from "svelte/elements";
     import { SvelteMap } from "svelte/reactivity";
 
@@ -10,15 +54,22 @@
         stateClass,
         rippleClass,
         target,
+        hover,
+        focus,
+        active,
+        disabled,
         ...props
-    }: ClassProps<
+    }: VariantProps<
         HTMLAttributes<HTMLDivElement>,
+        typeof variants,
         "class" | "commonClass" | "stateClass" | "rippleClass",
         {
             ref?: HTMLDivElement | null;
             target?: HTMLElement | null;
         }
     > = $props();
+
+    let classes = $derived(variants({ hover, focus, active, disabled }));
 
     let nextKey = 0;
     let currentRipple: number | null = $state(null);
@@ -60,32 +111,20 @@
     });
 </script>
 
-<div
-    class={twMerge(
-        "@container/state-layer relative flex items-center justify-center overflow-clip group-disabled/state-layer:pointer-events-none group-disabled/state-layer:opacity-0",
-        className,
-    )}
-    bind:this={ref}
-    {...props}
->
-    <div
-        class={twMerge(
-            "group-hover/state-layer:opacity-8 absolute inset-0 bg-current opacity-0 transition-[opacity,background-color] group-focus-within/state-layer:opacity-10 group-active/state-layer:opacity-10",
-            commonClass,
-            stateClass,
-        )}
-    ></div>
+<div class={classes.root({ className })} bind:this={ref} {...props}>
+    <div class={classes.state({ class: [commonClass, stateClass] })}></div>
 
     {#each ripples.entries() as [key, { x, y }] (key)}
         <div
-            class={twMerge(
-                "pointer-events-none absolute size-[300cqmin] origin-center scale-0 rounded-full bg-current opacity-10 transition-[background-color]",
-                key === currentRipple
-                    ? "animate-ripple-hold"
-                    : "animate-ripple",
-                commonClass,
-                rippleClass,
-            )}
+            class={classes.ripple({
+                class: [
+                    key === currentRipple
+                        ? "animate-ripple-hold"
+                        : "animate-ripple",
+                    commonClass,
+                    rippleClass,
+                ],
+            })}
             style={`translate: ${x}px ${y}px;`}
             onanimationend={({ animationName }) => {
                 if (!animationName.includes("hold")) ripples.delete(key);
