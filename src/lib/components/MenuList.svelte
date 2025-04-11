@@ -3,7 +3,7 @@
 
     export const variants = tv({
         extend: base,
-        base: "shadow-2 rounded-xs bg-surface-container"
+        base: "shadow-2 rounded-xs bg-surface-container",
     });
 </script>
 
@@ -21,8 +21,9 @@
             right: 16,
         },
         ...props
-    }: ClassProps<ContextMenu.ContentProps & DropdownMenu.ContentProps> =
-        $props();
+    }: ClassProps<
+        ContextMenu.ContentProps & DropdownMenu.ContentProps
+    > = $props();
 
     let type = getContext("menu.type");
 
@@ -34,6 +35,7 @@
         class={variants({
             className,
         })}
+        {collisionPadding}
         {...props}
     />
 </Base.Portal>

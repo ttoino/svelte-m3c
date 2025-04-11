@@ -52,8 +52,12 @@
     let Base = $derived(type === "context" ? ContextMenu : DropdownMenu);
 </script>
 
-<Base.Item bind:ref class={classes.container({ class: containerClass })} {...props}>
-    <StateLayer class={classes.stateLayer()} />
+<Base.Item
+    bind:ref
+    class={classes.container({ class: containerClass })}
+    {...props}
+>
+    <StateLayer class={classes.stateLayer({ class: stateLayerClass })} />
 
     {#if leading}
         <div class={classes.leading({ class: leadingClass })}>

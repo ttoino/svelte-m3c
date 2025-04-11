@@ -124,6 +124,15 @@
     {...props}
 >
     {#snippet children({ thumbs, ticks })}
+        {@const firstTick = ticks.at(0)}
+        {@const lastTick = ticks.at(-1)}
+        {@const renderedTicks =
+            !discrete && type === "single" && lastTick
+                ? [lastTick]
+                : !discrete && type === "multiple" && firstTick && lastTick
+                  ? [firstTick, lastTick]
+                  : ticks}
+
         <Slider.Range>
             {#snippet child({ props })}
                 {@const left = leftPattern.exec(props.style as string)?.[1]}
@@ -159,7 +168,7 @@
         {#each thumbs as index (index)}
             <Slider.Thumb class={handle()} {index} />
         {/each}
-        {#each discrete ? ticks : type === "multiple" ? [ticks[0], ticks.at(-1)!] : [ticks.at(-1)!] as index (index)}
+        {#each renderedTicks as index (index)}
             <Slider.Tick class={indicator()} {index} />
         {/each}
     {/snippet}

@@ -22,7 +22,6 @@
         containerClass,
         iconClass,
         stateLayerClass,
-        class: className,
         ...props
     }: VariantProps<
         RadioGroup.ItemProps,

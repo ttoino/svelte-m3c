@@ -53,14 +53,24 @@
 
     let {
         ref = $bindable(null),
-        class: className,
+        containerClass,
+        inputClass,
+        dummyLabelClass,
+        visualLabelClass,
+        stateLayerClass,
+        activeIndicatorClass,
         placeholder = "",
         variant,
         ...props
     }: VariantProps<
         HTMLAttributes<HTMLInputElement>,
         typeof variants,
-        "class",
+        | "containerClass"
+        | "inputClass"
+        | "dummyLabelClass"
+        | "visualLabelClass"
+        | "stateLayerClass"
+        | "activeIndicatorClass",
         {
             ref?: HTMLLabelElement | null;
         }
@@ -69,16 +79,20 @@
     let classes = $derived(variants({ variant }));
 </script>
 
-<label class={classes.container()} bind:this={ref}>
-    <span class={classes.dummyLabel()}>Label</span>
-    <input class={classes.input()} {placeholder} {...props} />
-    <span class={classes.visualLabel()}>Label</span>
+<label class={classes.container({ class: containerClass })} bind:this={ref}>
+    <span class={classes.dummyLabel({ class: dummyLabelClass })}>Label</span>
+    <input
+        class={classes.input({ class: inputClass })}
+        {placeholder}
+        {...props}
+    />
+    <span class={classes.visualLabel({ class: visualLabelClass })}>Label</span>
     <StateLayer
-        class={classes.stateLayer()}
+        class={classes.stateLayer({ class: stateLayerClass })}
         target={ref}
         disabled="peer"
         focus="none"
         active="none"
     />
-    <div class={classes.activeIndicator()}></div>
+    <div class={classes.activeIndicator({ class: activeIndicatorClass })}></div>
 </label>

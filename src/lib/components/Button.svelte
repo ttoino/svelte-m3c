@@ -3,22 +3,27 @@
 
     export const variants = tv({
         slots: {
-            container: "icon-4.5 text-label-l group/state-layer focus-visible:outline-secondary disabled:text-on-surface/38 relative inline-flex h-10 min-w-16 cursor-pointer items-center justify-center gap-2 overflow-clip whitespace-nowrap rounded-full px-6 transition-all focus-visible:outline focus-visible:outline-offset-2 disabled:cursor-default disabled:shadow-none",
+            container:
+                "icon-4.5 text-label-l group/state-layer focus-visible:outline-secondary disabled:text-on-surface/38 relative inline-flex h-10 min-w-16 cursor-pointer items-center justify-center gap-2 overflow-clip whitespace-nowrap rounded-full px-6 transition-all focus-visible:outline focus-visible:outline-offset-2 disabled:cursor-default disabled:shadow-none",
             stateLayer: "absolute inset-0",
         },
         variants: {
             variant: {
                 elevated: {
-                    container: "bg-surface-container-low shadow-1 hover:shadow-2 active:shadow-1 disabled:bg-on-surface/12",
+                    container:
+                        "bg-surface-container-low shadow-1 hover:shadow-2 active:shadow-1 disabled:bg-on-surface/12",
                 },
                 filled: {
-                    container: "hover:shadow-1 disabled:bg-on-surface/12 active:shadow-none",
+                    container:
+                        "hover:shadow-1 disabled:bg-on-surface/12 active:shadow-none",
                 },
                 tonal: {
-                    container: "hover:shadow-1 disabled:bg-on-surface/12 active:shadow-none",
+                    container:
+                        "hover:shadow-1 disabled:bg-on-surface/12 active:shadow-none",
                 },
                 outlined: {
-                    container: "border-outline disabled:border-on-surface/12 border",
+                    container:
+                        "border-outline disabled:border-on-surface/12 border",
                 },
                 text: {
                     container: "px-3",
@@ -71,7 +76,8 @@
                 variant: "tonal",
                 color: "secondary",
                 class: {
-                    container: "bg-secondary-container text-on-secondary-container",
+                    container:
+                        "bg-secondary-container text-on-secondary-container",
                 },
             },
             {
@@ -93,7 +99,8 @@
                 variant: "tonal",
                 color: "tertiary",
                 class: {
-                    container: "bg-tertiary-container text-on-tertiary-container",
+                    container:
+                        "bg-tertiary-container text-on-tertiary-container",
                 },
             },
             {
@@ -168,7 +175,11 @@
     );
 </script>
 
-<Button.Root class={classes.container({ class: containerClass })} bind:ref {...props}>
+<Button.Root
+    class={classes.container({ class: containerClass })}
+    bind:ref
+    {...props}
+>
     <StateLayer
         target={ref}
         class={classes.stateLayer({ class: stateLayerClass })}
