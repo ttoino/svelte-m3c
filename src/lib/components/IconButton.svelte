@@ -4,7 +4,7 @@
     export const variants = tv({
         slots: {
             container:
-                "group/state-layer focus-visible:outline-secondary disabled:text-on-surface/38 disabled:inset-shadow-transparent relative inline-flex h-10 w-10 cursor-pointer items-center justify-center overflow-clip rounded-full transition-all focus-visible:outline focus-visible:outline-offset-2 disabled:cursor-default",
+                "group/state-layer focus-visible:outline-secondary disabled:text-on-surface/38 disabled:inset-shadow-transparent relative inline-flex h-10 w-10 cursor-pointer items-center justify-center overflow-clip rounded-full transition-all focus-visible:outline focus-visible:outline-offset-2 disabled:cursor-default disabled:pointer-events-none",
             stateLayer: "absolute inset-0",
         },
         variants: {
