@@ -1,43 +1,45 @@
 <script module lang="ts">
     import { tv } from "$lib/style.js";
+
     import { variants as base } from "./ListItem.svelte";
 
     export const variants = tv({
+        defaultVariants: {
+            threeOrMoreLines: false,
+        },
         extend: base,
         slots: {
             container: "bg-surface-container cursor-pointer",
-        },
-        defaultVariants: {
-            threeOrMoreLines: false,
         },
     });
 </script>
 
 <script lang="ts">
-    import { ContextMenu, DropdownMenu } from "bits-ui";
     import { type VariantProps } from "$lib/style.js";
+    import { ContextMenu, DropdownMenu } from "bits-ui";
     import { getContext, type Snippet } from "svelte";
+
     import StateLayer from "./StateLayer.svelte";
 
     let {
-        ref = $bindable(null),
         containerClass,
-        leadingClass,
-        textClass,
-        trailingClass,
-        stateLayerClass,
         leading,
+        leadingClass,
+        ref = $bindable(null),
+        stateLayerClass,
         text,
+        textClass,
         trailing,
+        trailingClass,
         ...props
     }: VariantProps<
         ContextMenu.ItemProps & DropdownMenu.ItemProps,
         typeof variants,
         | "containerClass"
         | "leadingClass"
+        | "stateLayerClass"
         | "textClass"
-        | "trailingClass"
-        | "stateLayerClass",
+        | "trailingClass",
         {
             leading?: Snippet;
             text?: Snippet;

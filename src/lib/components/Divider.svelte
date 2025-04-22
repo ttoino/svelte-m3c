@@ -7,8 +7,9 @@
 </script>
 
 <script lang="ts">
-    import { type VariantProps } from "$lib/style.js";
     import type { HTMLAttributes } from "svelte/elements";
+
+    import { type VariantProps } from "$lib/style.js";
 
     let {
         class: className,

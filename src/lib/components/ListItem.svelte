@@ -5,16 +5,16 @@
         slots: {
             container:
                 "bg-surface min-h-[calc(var(--spacing)*(10+4*var(--lines))))] group/list-item group/state-layer text-on-surface relative flex flex-row gap-4 px-4",
-            leading:
-                "group-disabled/list-item:text-on-surface/38 shrink-0 has-[video]:-ml-4 has-[img]:h-14 has-[video]:h-16",
-            text: "flex flex-grow flex-col justify-center self-stretch",
             labelText:
                 "text-body-l group-disabled/list-item:text-on-surface/38",
+            leading:
+                "group-disabled/list-item:text-on-surface/38 shrink-0 has-[video]:-ml-4 has-[img]:h-14 has-[video]:h-16",
+            stateLayer: "absolute inset-0",
             supportingText:
                 "text-body-m text-on-surface-variant group-disabled/list-item:text-on-surface/38",
+            text: "flex flex-grow flex-col justify-center self-stretch",
             trailing:
                 "text-on-surface-variant text-label-s group-disabled/list-item:text-on-surface/38 shrink-0",
-            stateLayer: "absolute inset-0",
         },
         variants: {
             threeOrMoreLines: {
@@ -26,44 +26,46 @@
 </script>
 
 <script lang="ts">
-    import { type VariantProps } from "$lib/style.js";
     import type { WithoutChildren } from "bits-ui";
-    import type { HTMLAttributes } from "svelte/elements";
-    import StateLayer from "./StateLayer.svelte";
     import type { Snippet } from "svelte";
+    import type { HTMLAttributes } from "svelte/elements";
+
     import { getLines } from "$lib/elements.js";
+    import { type VariantProps } from "$lib/style.js";
+
+    import StateLayer from "./StateLayer.svelte";
 
     let {
         containerClass,
-        leadingClass,
-        textClass,
-        labelTextClass,
-        supportingTextClass,
-        trailingClass,
-        stateLayerClass,
-        lines,
-        leading,
         labelText,
+        labelTextClass,
+        leading,
+        leadingClass,
+        lines,
+        stateLayerClass,
         supportingText,
+        supportingTextClass,
+        textClass,
         trailing,
+        trailingClass,
         ...props
     }: VariantProps<
         WithoutChildren<HTMLAttributes<HTMLDivElement>>,
         typeof variants,
         | "containerClass"
-        | "leadingClass"
-        | "textClass"
         | "labelTextClass"
+        | "leadingClass"
+        | "stateLayerClass"
         | "supportingTextClass"
-        | "trailingClass"
-        | "stateLayerClass",
+        | "textClass"
+        | "trailingClass",
         {
-            lines?: number;
-            leading?: Snippet;
             labelText?: Snippet;
+            leading?: Snippet;
+            lines?: number;
             supportingText?: Snippet;
-            trailing?: Snippet;
             threeOrMoreLines?: never;
+            trailing?: Snippet;
         }
     > = $props();
 

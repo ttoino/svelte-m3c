@@ -3,46 +3,47 @@
 
     export const variants = tv({
         slots: {
+            corner: "",
             root: "size-full overflow-hidden",
-            viewport: "size-full max-h-full max-w-full",
             scrollbar:
                 "ui-vertical:w-2 ui-horizontal:h-2 ui-vertical:hover:w-3 ui-horizontal:hover:h-3 transition-all",
             thumb: "bg-on-surface/38 hover:bg-secondary size-full rounded-full transition-all",
-            corner: "",
+            viewport: "size-full max-h-full max-w-full",
         },
     });
 </script>
 
 <script lang="ts">
-    import { ScrollArea } from "bits-ui";
     import type { VariantProps } from "$lib/style.js";
+
+    import { ScrollArea } from "bits-ui";
 
     let {
         children,
-        ref = $bindable(null),
-        viewportRef = $bindable(null),
         class: className,
-        viewportClass,
-        scrollbarClass,
-        thumbClass,
         cornerClass,
         orientation = "vertical",
+        ref = $bindable(null),
+        scrollbarClass,
+        thumbClass,
+        viewportClass,
+        viewportRef = $bindable(null),
         ...props
     }: VariantProps<
         ScrollArea.RootProps,
         typeof variants,
         | "class"
-        | "viewportClass"
+        | "cornerClass"
         | "scrollbarClass"
         | "thumbClass"
-        | "cornerClass",
+        | "viewportClass",
         {
+            orientation?: "both" | "horizontal" | "vertical";
             viewportRef?: HTMLDivElement | null;
-            orientation?: "horizontal" | "vertical" | "both";
         }
     > = $props();
 
-    let { root, viewport, scrollbar, thumb, corner } = $derived(variants());
+    let { corner, root, scrollbar, thumb, viewport } = $derived(variants());
 </script>
 
 <ScrollArea.Root class={root({ className })} bind:ref {...props}>

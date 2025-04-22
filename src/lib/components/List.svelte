@@ -7,14 +7,15 @@
 </script>
 
 <script lang="ts">
-    import { type VariantProps } from "$lib/style.js";
     import type { WithElementRef } from "bits-ui";
     import type { HTMLAttributes } from "svelte/elements";
 
+    import { type VariantProps } from "$lib/style.js";
+
     let {
-        ref = $bindable(null),
-        class: className,
         children,
+        class: className,
+        ref = $bindable(null),
         ...props
     }: VariantProps<WithElementRef<HTMLAttributes<HTMLDivElement>>, typeof variants> = $props();
 </script>

@@ -1,6 +1,7 @@
 import { error } from "@sveltejs/kit";
-import type { EntryGenerator, PageLoad } from "./$types.js";
 import { type Component } from "svelte";
+
+import type { EntryGenerator, PageLoad } from "./$types.js";
 
 const glob = import.meta.glob<{
     default: Component;

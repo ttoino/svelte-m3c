@@ -2,17 +2,76 @@
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
+        compoundVariants: [
+            {
+                class: { container: "bg-primary text-on-primary" },
+                color: "primary",
+                variant: "filled",
+            },
+            {
+                class: {
+                    container: "bg-primary-container text-on-primary-container",
+                },
+                color: "primary",
+                variant: "tonal",
+            },
+            {
+                class: { container: "bg-secondary text-on-secondary" },
+                color: "secondary",
+                variant: "filled",
+            },
+            {
+                class: {
+                    container:
+                        "bg-secondary-container text-on-secondary-container",
+                },
+                color: "secondary",
+                variant: "tonal",
+            },
+            {
+                class: { container: "bg-tertiary text-on-tertiary" },
+                color: "tertiary",
+                variant: "filled",
+            },
+            {
+                class: {
+                    container:
+                        "bg-tertiary-container text-on-tertiary-container",
+                },
+                color: "tertiary",
+                variant: "tonal",
+            },
+            {
+                class: { container: "bg-error text-on-error" },
+                color: "error",
+                variant: "filled",
+            },
+            {
+                class: {
+                    container: "bg-error-container text-on-error-container",
+                },
+                color: "error",
+                variant: "tonal",
+            },
+        ],
+        defaultVariants: {
+            color: "primary",
+            variant: "standard",
+        },
         slots: {
             container:
                 "group/state-layer focus-visible:outline-secondary disabled:text-on-surface/38 disabled:inset-shadow-transparent relative inline-flex h-10 w-10 cursor-pointer items-center justify-center overflow-clip rounded-full transition-all focus-visible:outline focus-visible:outline-offset-2 disabled:cursor-default disabled:pointer-events-none",
             stateLayer: "absolute inset-0",
         },
         variants: {
+            color: {
+                error: {},
+                primary: {},
+                secondary: {},
+                tertiary: {},
+            },
             variant: {
                 filled: {
-                    container: "disabled:bg-on-surface/12",
-                },
-                tonal: {
                     container: "disabled:bg-on-surface/12",
                 },
                 outlined: {
@@ -22,91 +81,34 @@
                 standard: {
                     container: "text-on-surface-variant",
                 },
-            },
-            color: {
-                primary: {},
-                secondary: {},
-                tertiary: {},
-                error: {},
-            },
-        },
-        compoundVariants: [
-            {
-                variant: "filled",
-                color: "primary",
-                class: { container: "bg-primary text-on-primary" },
-            },
-            {
-                variant: "tonal",
-                color: "primary",
-                class: {
-                    container: "bg-primary-container text-on-primary-container",
+                tonal: {
+                    container: "disabled:bg-on-surface/12",
                 },
             },
-            {
-                variant: "filled",
-                color: "secondary",
-                class: { container: "bg-secondary text-on-secondary" },
-            },
-            {
-                variant: "tonal",
-                color: "secondary",
-                class: {
-                    container:
-                        "bg-secondary-container text-on-secondary-container",
-                },
-            },
-            {
-                variant: "filled",
-                color: "tertiary",
-                class: { container: "bg-tertiary text-on-tertiary" },
-            },
-            {
-                variant: "tonal",
-                color: "tertiary",
-                class: {
-                    container:
-                        "bg-tertiary-container text-on-tertiary-container",
-                },
-            },
-            {
-                variant: "filled",
-                color: "error",
-                class: { container: "bg-error text-on-error" },
-            },
-            {
-                variant: "tonal",
-                color: "error",
-                class: {
-                    container: "bg-error-container text-on-error-container",
-                },
-            },
-        ],
-        defaultVariants: {
-            variant: "standard",
-            color: "primary",
         },
     });
 </script>
 
 <script lang="ts">
-    import { Button, mergeProps, type WithoutChildren } from "bits-ui";
     import type { VariantProps } from "$lib/style.js";
+    import type { MaterialSymbol } from "material-symbols";
+
+    import { Button, mergeProps, type WithoutChildren } from "bits-ui";
+
     import Icon from "./Icon.svelte";
     import StateLayer from "./StateLayer.svelte";
-    import type { MaterialSymbol } from "material-symbols";
-    import TooltipRoot from "./TooltipRoot.svelte";
     import Tooltip from "./Tooltip.svelte";
+    import TooltipRoot from "./TooltipRoot.svelte";
     import TooltipTrigger from "./TooltipTrigger.svelte";
 
     let {
-        containerClass,
-        stateLayerClass,
-        ref = $bindable(null),
-        variant,
         color,
+        containerClass,
         icon,
+        ref = $bindable(null),
+        stateLayerClass,
         tooltip,
+        variant,
         ...props
     }: VariantProps<
         WithoutChildren<Button.RootProps>,
@@ -118,7 +120,7 @@
         }
     > = $props();
 
-    let classes = $derived(variants({ variant, color }));
+    let classes = $derived(variants({ color, variant }));
 </script>
 
 {#snippet iconButton(additionalProps: Record<string, unknown> = {})}

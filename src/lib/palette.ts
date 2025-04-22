@@ -1,7 +1,7 @@
 import {
+    type Theme,
     themeFromImage,
     themeFromSourceColor,
-    type Theme,
 } from "@material/material-color-utilities";
 
 const LEVELS = [
@@ -63,7 +63,7 @@ export const cssPaletteFromColor = (color: number | string) => {
 };
 
 export const tailwindPaletteFromImage = async (
-    image: string | HTMLImageElement,
+    image: HTMLImageElement | string,
 ) => {
     if (typeof image === "string") {
         const img = new Image();
@@ -77,7 +77,7 @@ export const tailwindPaletteFromImage = async (
     return tailwindPaletteFromTheme(theme);
 };
 
-export const cssPaletteFromImage = async (image: string | HTMLImageElement) => {
+export const cssPaletteFromImage = async (image: HTMLImageElement | string) => {
     if (typeof image === "string") {
         const img = new Image();
         img.src = image;

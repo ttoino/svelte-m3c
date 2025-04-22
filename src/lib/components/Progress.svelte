@@ -2,43 +2,43 @@
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
-        slots: {
-            root: "group/progress relative inline-flex",
-            activeIndicator: "",
-            track: "",
-            stopIndicator:
-                "bg-primary group-ui-indeterminate/progress:hidden absolute bottom-0 right-0 top-0 size-1 rounded-full",
-        },
         compoundSlots: [
             {
                 circular: false,
-                slots: ["activeIndicator", "track"],
                 class: "before:absolute before:bottom-0 before:top-0 before:rounded-full after:absolute after:bottom-0 after:top-0 after:rounded-full",
+                slots: ["activeIndicator", "track"],
             },
             {
                 circular: true,
-                slots: ["activeIndicator", "track"],
                 class: "stroke-(length:--spacing) origin-center fill-none transition-[stroke-dasharray,stroke-dashoffset] [cx:50%] [cy:50%] [r:calc((100%-var(--spacing))*0.5)] [stroke-linecap:round] [stroke-linejoin:round]",
+                slots: ["activeIndicator", "track"],
             },
         ],
+        defaultVariants: {
+            circular: false,
+        },
+        slots: {
+            activeIndicator: "",
+            root: "group/progress relative inline-flex",
+            stopIndicator:
+                "bg-primary group-ui-indeterminate/progress:hidden absolute bottom-0 right-0 top-0 size-1 rounded-full",
+            track: "",
+        },
         variants: {
             circular: {
                 false: {
-                    root: "animate-linear-indeterminate h-1 w-full",
                     activeIndicator:
                         "before:bg-primary after:bg-primary before:left-[calc(100%*mod(var(--offset),1))] before:right-[calc((100%-var(--spacing))*(1-min(mod(var(--offset),1)+var(--progress),1)))] after:left-0 after:right-[calc(100%*(1-max(mod(var(--offset),1)+var(--progress)-1,0)))]",
+                    root: "animate-linear-indeterminate h-1 w-full",
                     track: "before:bg-secondary-container after:bg-secondary-container before:left-[calc((100%-var(--spacing))*min(mod(var(--offset),1)+var(--progress),1)+var(--spacing)*2)] before:right-0 after:left-[max(100%*(mod(var(--offset),1)+var(--progress)-1)+var(--spacing),0%)] after:right-[calc(100%*(1-mod(var(--offset),1))+var(--spacing))]",
                 },
                 true: {
-                    root: "size-10",
                     activeIndicator:
                         "stroke-primary animate-circular-indeterminate -rotate-90 [stroke-dasharray:calc(var(--progress)*(var(--length)-var(--spacing)*2*(1-var(--full))))_var(--length)] [stroke-dashoffset:calc(var(--spacing)*(var(--full)-1))]",
+                    root: "size-10",
                     track: "stroke-secondary-container group-ui-indeterminate/progress:hidden rotate-90 -scale-x-100 [stroke-dasharray:calc(var(--length)-var(--progress)*(var(--length)-var(--spacing)*2)-var(--spacing)*4)_var(--length)] [stroke-dashoffset:--spacing(-1)]",
                 },
             },
-        },
-        defaultVariants: {
-            circular: false,
         },
     });
 </script>
@@ -48,20 +48,20 @@
     import { Progress } from "bits-ui";
 
     let {
-        ref = $bindable(null),
+        activeIndicatorClass,
         circular,
         class: className,
-        activeIndicatorClass,
-        trackClass,
-        stopIndicatorClass,
-        min = 0,
         max = 100,
+        min = 0,
+        ref = $bindable(null),
+        stopIndicatorClass,
+        trackClass,
         value = 0,
         ...props
     }: VariantProps<
         Progress.RootProps,
         typeof variants,
-        "class" | "activeIndicatorClass" | "trackClass" | "stopIndicatorClass"
+        "activeIndicatorClass" | "class" | "stopIndicatorClass" | "trackClass"
     > = $props();
 
     let classes = variants({ circular });
@@ -69,7 +69,7 @@
     let progress = $derived(value == null ? null : (value - min) / (max - min));
     let full = $derived(value == null || value >= max);
 
-    let geometry = $state<SVGGeometryElement | null>(null);
+    let geometry = $state<null | SVGGeometryElement>(null);
     let length = $state(0);
 
     $effect(() => {

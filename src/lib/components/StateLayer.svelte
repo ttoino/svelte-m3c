@@ -2,42 +2,42 @@
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
+        defaultVariants: {
+            active: "group",
+            disabled: "group",
+            focus: "group",
+            hover: "group",
+        },
         slots: {
+            ripple: "pointer-events-none absolute size-[300cqmin] origin-center scale-0 rounded-full bg-current opacity-10 transition-[background-color]",
             root: "@container/state-layer relative flex items-center justify-center overflow-clip",
             state: "absolute inset-0 bg-current opacity-0 transition-[opacity,background-color]",
-            ripple: "pointer-events-none absolute size-[300cqmin] origin-center scale-0 rounded-full bg-current opacity-10 transition-[background-color]",
         },
         variants: {
-            hover: {
-                group: { state: "group-hover/state-layer:opacity-8" },
-                peer: { state: "peer-hover/state-layer:opacity-8" },
-                none: {},
-            },
-            focus: {
-                group: { state: "group-focus-within/state-layer:opacity-10" },
-                peer: { state: "peer-focus-within/state-layer:opacity-10" },
-                none: {},
-            },
             active: {
                 group: { state: "group-active/state-layer:opacity-10" },
-                peer: { state: "peer-active/state-layer:opacity-10" },
                 none: {},
+                peer: { state: "peer-active/state-layer:opacity-10" },
             },
             disabled: {
                 group: {
                     root: "group-disabled/state-layer:pointer-events-none group-disabled/state-layer:opacity-0",
                 },
+                none: {},
                 peer: {
                     root: "peer-disabled/state-layer:pointer-events-none peer-disabled/state-layer:opacity-0",
                 },
-                none: {},
             },
-        },
-        defaultVariants: {
-            hover: "group",
-            focus: "group",
-            active: "group",
-            disabled: "group",
+            focus: {
+                group: { state: "group-focus-within/state-layer:opacity-10" },
+                none: {},
+                peer: { state: "peer-focus-within/state-layer:opacity-10" },
+            },
+            hover: {
+                group: { state: "group-hover/state-layer:opacity-8" },
+                none: {},
+                peer: { state: "peer-hover/state-layer:opacity-8" },
+            },
         },
     });
 </script>
@@ -45,34 +45,35 @@
 <script lang="ts">
     import type { VariantProps } from "$lib/style.js";
     import type { HTMLAttributes, MouseEventHandler } from "svelte/elements";
+
     import { SvelteMap } from "svelte/reactivity";
 
     let {
-        ref = $bindable(null),
+        active,
         class: className,
         commonClass,
-        stateClass,
-        rippleClass,
-        target,
-        hover,
-        focus,
-        active,
         disabled,
+        focus,
+        hover,
+        ref = $bindable(null),
+        rippleClass,
+        stateClass,
+        target,
         ...props
     }: VariantProps<
         HTMLAttributes<HTMLDivElement>,
         typeof variants,
-        "class" | "commonClass" | "stateClass" | "rippleClass",
+        "class" | "commonClass" | "rippleClass" | "stateClass",
         {
             ref?: HTMLDivElement | null;
             target?: HTMLElement | null;
         }
     > = $props();
 
-    let classes = $derived(variants({ hover, focus, active, disabled }));
+    let classes = $derived(variants({ active, disabled, focus, hover }));
 
     let nextKey = 0;
-    let currentRipple: number | null = $state(null);
+    let currentRipple: null | number = $state(null);
     let ripples = new SvelteMap<number, { x: number; y: number }>();
 
     const onmousedown: MouseEventHandler<HTMLElement> = ({

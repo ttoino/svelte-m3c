@@ -11,8 +11,8 @@
     import { Tooltip } from "bits-ui";
 
     let {
-        ref = $bindable(null),
         class: className,
+        ref = $bindable(null),
         ...props
     }: VariantProps<Tooltip.ContentProps, typeof variants> = $props();
 </script>

@@ -16,14 +16,15 @@
     import { type VariantProps } from "$lib/style.js";
     import { Checkbox } from "bits-ui";
     import { draw, fade } from "svelte/transition";
+
     import StateLayer from "./StateLayer.svelte";
 
     let {
-        ref = $bindable(null),
         checked = $bindable(false),
-        indeterminate = $bindable(false),
         containerClass,
         iconClass,
+        indeterminate = $bindable(false),
+        ref = $bindable(null),
         stateLayerClass,
         ...props
     }: VariantProps<

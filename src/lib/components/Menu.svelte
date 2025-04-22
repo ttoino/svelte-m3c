@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { ContextMenu, DropdownMenu } from "bits-ui";
     import { type ExtendProps } from "$lib/style.js";
+    import { ContextMenu, DropdownMenu } from "bits-ui";
     import { setContext } from "svelte";
 
     let {

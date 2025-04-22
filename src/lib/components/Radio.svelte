@@ -15,12 +15,13 @@
 <script lang="ts">
     import { type VariantProps } from "$lib/style.js";
     import { RadioGroup } from "bits-ui";
+
     import StateLayer from "./StateLayer.svelte";
 
     let {
-        ref = $bindable(null),
         containerClass,
         iconClass,
+        ref = $bindable(null),
         stateLayerClass,
         ...props
     }: VariantProps<

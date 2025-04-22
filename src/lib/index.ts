@@ -29,7 +29,6 @@ import ToggleIconButton from "./components/ToggleIconButton.svelte";
 import Tooltip from "./components/Tooltip.svelte";
 import TooltipRoot from "./components/TooltipRoot.svelte";
 import TooltipTrigger from "./components/TooltipTrigger.svelte";
-
 import {
     cssPaletteFromColor,
     cssPaletteFromImage,
@@ -40,6 +39,8 @@ import {
 export {
     Button,
     Checkbox,
+    cssPaletteFromColor,
+    cssPaletteFromImage,
     Divider,
     Icon,
     IconButton,
@@ -64,13 +65,11 @@ export {
     Slider,
     StateLayer,
     Switch,
+    tailwindPaletteFromColor,
+    tailwindPaletteFromImage,
     TextField,
     ToggleIconButton,
     Tooltip,
     TooltipRoot,
     TooltipTrigger,
-    cssPaletteFromColor,
-    cssPaletteFromImage,
-    tailwindPaletteFromColor,
-    tailwindPaletteFromImage,
 };

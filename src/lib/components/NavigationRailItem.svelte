@@ -3,24 +3,14 @@
 
     export const variants = tv({
         slots: {
-            item: "group/state-layer text-on-surface group/navigation-rail-item relative flex h-14 flex-col items-center justify-center gap-1",
             activeIndicator:
                 "relative flex w-14 items-center justify-center rounded-full",
-            stateLayer: "absolute inset-0 rounded-full",
             icon: "transition-colors",
+            item: "group/state-layer text-on-surface group/navigation-rail-item relative flex h-14 flex-col items-center justify-center gap-1",
             label: "text-label-m transition-colors",
+            stateLayer: "absolute inset-0 rounded-full",
         },
         variants: {
-            hideLabel: {
-                true: {
-                    activeIndicator: "h-14",
-                    label: "absolute inset-0 opacity-0",
-                },
-                false: {
-                    activeIndicator: "h-8",
-                    label: "after:absolute after:inset-0",
-                },
-            },
             active: {
                 false: {
                     icon: "text-on-surface-variant group-hover/navigation-rail-item:text-on-surface group-focus-within/navigation-rail-item:text-on-surface",
@@ -32,37 +22,49 @@
                     label: "text-on-surface",
                 },
             },
+            hideLabel: {
+                false: {
+                    activeIndicator: "h-8",
+                    label: "after:absolute after:inset-0",
+                },
+                true: {
+                    activeIndicator: "h-14",
+                    label: "absolute inset-0 opacity-0",
+                },
+            },
         },
     });
 </script>
 
 <script lang="ts">
-    import { type VariantProps } from "$lib/style.js";
-    import type { HTMLAttributes } from "svelte/elements";
-    import StateLayer from "./StateLayer.svelte";
-    import Icon from "./Icon.svelte";
     import type { MaterialSymbol } from "material-symbols";
+    import type { HTMLAttributes } from "svelte/elements";
+
+    import { type VariantProps } from "$lib/style.js";
+
+    import Icon from "./Icon.svelte";
+    import StateLayer from "./StateLayer.svelte";
 
     let {
-        class: className,
-        hideLabel,
-        icon,
-        href,
         active = false,
         children,
+        class: className,
+        hideLabel,
+        href,
+        icon,
         ...props
     }: VariantProps<
         HTMLAttributes<HTMLDivElement>,
         typeof variants,
         "class",
         {
-            icon: MaterialSymbol;
-            href: string;
             active?: boolean;
+            href: string;
+            icon: MaterialSymbol;
         }
     > = $props();
 
-    let classes = $derived(variants({ hideLabel, active }));
+    let classes = $derived(variants({ active, hideLabel }));
 
     let target: HTMLElement | null = $state(null);
 </script>

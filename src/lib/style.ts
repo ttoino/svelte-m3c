@@ -1,24 +1,19 @@
 import {
+    type ConfigExtension,
     extendTailwindMerge,
     validators,
-    type ConfigExtension,
 } from "tailwind-merge";
 import {
-    createTV,
-    type ClassValue,
     type VariantProps as BaseVariantProps,
+    type ClassValue,
+    createTV,
 } from "tailwind-variants";
 
-type ClassGroups = "icon-size" | "icon-fill" | "icon-grade";
+type ClassGroups = "icon-fill" | "icon-grade" | "icon-size";
 
 const twMergeConfig = {
     extend: {
         classGroups: {
-            "icon-size": [
-                {
-                    icon: [validators.isNumber, validators.isArbitraryLength],
-                },
-            ],
             "icon-fill": [
                 "icon-outline",
                 "icon-filled",
@@ -28,17 +23,23 @@ const twMergeConfig = {
             ],
             "icon-grade": [
                 {
+                    "-icon-grade": [validators.isInteger],
                     "icon-grade": [
                         "low",
                         "normal",
                         "high",
                         validators.isInteger,
                     ],
-                    "-icon-grade": [validators.isInteger],
+                },
+            ],
+            "icon-size": [
+                {
+                    icon: [validators.isNumber, validators.isArbitraryLength],
                 },
             ],
         },
         theme: {
+            breakpoint: ["compact", "medium", "expanded", "large", "xlarge"],
             color: [
                 "primary",
                 "on-primary",
@@ -71,7 +72,6 @@ const twMergeConfig = {
                 "outline",
                 "outline-variant",
             ],
-            shadow: ["1", "2", "3", "4", "5"],
             ease: [
                 "emphasized",
                 "emphasized-decelerate",
@@ -81,6 +81,7 @@ const twMergeConfig = {
                 "standard-accelerate",
             ],
             radius: ["xxs", "xs", "sm", "md", "lg", "xl"],
+            shadow: ["1", "2", "3", "4", "5"],
             text: [
                 "display-l",
                 "display-m",
@@ -98,7 +99,6 @@ const twMergeConfig = {
                 "label-m",
                 "label-s",
             ],
-            breakpoint: ["compact", "medium", "expanded", "large", "xlarge"],
         },
     },
 } satisfies ConfigExtension<ClassGroups, never>;
@@ -107,17 +107,17 @@ export const twMerge = extendTailwindMerge<ClassGroups>(twMergeConfig);
 
 export const tv = createTV({ twMergeConfig });
 
-export type ExtendProps<Base, Other extends Record<string, unknown>> = Omit<
-    Base,
-    keyof Other
-> &
-    Other;
-
 export type ClassProps<
     Base,
     Class extends string = "class",
     Other extends Record<string, unknown> = Record<never, never>,
 > = ExtendProps<Omit<Base, "class">, { [c in Class]?: ClassValue } & Other>;
+
+export type ExtendProps<Base, Other extends Record<string, unknown>> = Omit<
+    Base,
+    keyof Other
+> &
+    Other;
 
 export type VariantProps<
     Base,
