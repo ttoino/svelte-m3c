@@ -8,15 +8,17 @@
 
 <script lang="ts">
     import { type VariantProps } from "$lib/style.js";
+    import type { WithElementRef } from "bits-ui";
     import type { HTMLAttributes } from "svelte/elements";
 
     let {
+        ref = $bindable(null),
         class: className,
         children,
         ...props
-    }: VariantProps<HTMLAttributes<HTMLDivElement>, typeof variants> = $props();
+    }: VariantProps<WithElementRef<HTMLAttributes<HTMLDivElement>>, typeof variants> = $props();
 </script>
 
-<div class={variants({ className })} {...props}>
+<div class={variants({ className })} bind:this={ref} {...props}>
     {@render children?.()}
 </div>
