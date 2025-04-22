@@ -20,6 +20,7 @@
     let {
         children,
         ref = $bindable(null),
+        viewportRef = $bindable(null),
         class: className,
         viewportClass,
         scrollbarClass,
@@ -36,6 +37,7 @@
         | "thumbClass"
         | "cornerClass",
         {
+            viewportRef?: HTMLDivElement | null;
             orientation?: "horizontal" | "vertical" | "both";
         }
     > = $props();
@@ -46,6 +48,7 @@
 <ScrollArea.Root class={root({ className })} bind:ref {...props}>
     <ScrollArea.Viewport
         class={viewport({ class: viewportClass })}
+        bind:ref={viewportRef}
         {children}
     />
 
