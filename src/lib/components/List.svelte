@@ -17,7 +17,10 @@
         class: className,
         ref = $bindable(null),
         ...props
-    }: VariantProps<WithElementRef<HTMLAttributes<HTMLDivElement>>, typeof variants> = $props();
+    }: VariantProps<
+        WithElementRef<HTMLAttributes<HTMLDivElement>>,
+        typeof variants
+    > = $props();
 </script>
 
 <div class={variants({ className })} bind:this={ref} {...props}>

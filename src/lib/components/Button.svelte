@@ -106,7 +106,7 @@
         },
         slots: {
             container:
-                "icon-4.5 text-label-l group/state-layer focus-visible:outline-secondary disabled:text-on-surface/38 relative inline-flex h-10 min-w-16 cursor-pointer items-center justify-center gap-2 overflow-clip whitespace-nowrap rounded-full px-6 transition-all focus-visible:outline focus-visible:outline-offset-2 disabled:cursor-default disabled:shadow-none disabled:pointer-events-none",
+                "icon-4.5 text-label-l group/state-layer focus-visible:outline-secondary disabled:text-on-surface/38 relative inline-flex h-10 min-w-16 cursor-pointer items-center justify-center gap-2 overflow-clip whitespace-nowrap rounded-full px-6 transition-all focus-visible:outline focus-visible:outline-offset-2 disabled:pointer-events-none disabled:cursor-default disabled:shadow-none",
             stateLayer: "absolute inset-0",
         },
         variants: {
