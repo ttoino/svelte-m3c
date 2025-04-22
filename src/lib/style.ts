@@ -117,7 +117,7 @@ export type ClassProps<
     Base,
     Class extends string = "class",
     Other extends Record<string, unknown> = Record<never, never>,
-> = ExtendProps<Base, { [c in Class]?: ClassValue } & Other>;
+> = ExtendProps<Omit<Base, "class">, { [c in Class]?: ClassValue } & Other>;
 
 export type VariantProps<
     Base,
