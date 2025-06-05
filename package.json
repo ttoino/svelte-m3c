@@ -73,7 +73,7 @@
         "material-symbols": "^0.31.5",
         "mdsvex": "^0.12.6",
         "prettier": "^3.4.2",
-        "prettier-plugin-svelte": "^3.3.3",
+        "prettier-plugin-svelte": "^3.4.0",
         "prettier-plugin-tailwindcss": "^0.6.11",
         "publint": "^0.3.2",
         "svelte": "^5.33.2",
