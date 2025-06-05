@@ -65,6 +65,7 @@ export default ts.config(
             "svelte/no-inline-styles": "off",
             "svelte/no-unused-class-name": "off",
             "svelte/require-optimized-style-attribute": "off",
+            "svelte/valid-compile": "off",
         },
     },
     {
