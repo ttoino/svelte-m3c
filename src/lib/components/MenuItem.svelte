@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     import { variants as base } from "./ListItem.svelte";
@@ -15,13 +15,13 @@
 </script>
 
 <script lang="ts">
+    import { getMenuBase, isSubMenuTrigger } from "$lib/context/menu.js";
     import { type VariantProps } from "$lib/types/style.js";
     import { ContextMenu, DropdownMenu } from "bits-ui";
     import { type Snippet } from "svelte";
 
-    import StateLayer from "./StateLayer.svelte";
-    import { getMenuBase, isSubMenuTrigger } from "$lib/context/menu.js";
     import Icon from "./Icon.svelte";
+    import StateLayer from "./StateLayer.svelte";
 
     let {
         containerClass,
@@ -36,8 +36,8 @@
         ...props
     }: VariantProps<
         ContextMenu.ItemProps &
-            DropdownMenu.ItemProps &
             ContextMenu.SubTriggerProps &
+            DropdownMenu.ItemProps &
             DropdownMenu.SubTriggerProps,
         typeof variants,
         | "containerClass"
@@ -54,16 +54,16 @@
 
     let classes = $derived(variants());
 
-    let Base = getMenuBase();
+    const Base = getMenuBase();
 
-    let sub = isSubMenuTrigger();
+    const sub = isSubMenuTrigger();
 
     let Component = $derived(sub ? Base.SubTrigger : Base.Item);
 </script>
 
 <Component
-    bind:ref
     class={classes.container({ class: containerClass })}
+    bind:ref
     {...props}
 >
     <StateLayer class={classes.stateLayer({ class: stateLayerClass })} />

@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     // TODO: Search view
     import { tv } from "$lib/style.js";
 
@@ -54,8 +54,8 @@
     <div class={classes.labelContainer({})}>
         <input
             class={classes.input({})}
-            type="search"
             {placeholder}
+            type="search"
             {...props}
         />
         <span class={classes.label({})}>{@render label()}</span>

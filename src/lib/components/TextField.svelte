@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     // TODO: Outlined variant, error state, prefix, suffix, leading, trailing, supporting text, error text, character counter
     import { tv } from "$lib/style.js";
 
@@ -36,36 +36,38 @@
                         "bg-surface-container-highest has-disabled:bg-on-surface/4 rounded-t-xs py-2",
                     dummyWrapper: "-order-1",
                     stateLayer: "rounded-t-xs",
-                    visualLabel: "group-focus-within/text-field:top-2 peer-not-placeholder-shown/text-field-input:top-2",
+                    visualLabel:
+                        "peer-not-placeholder-shown/text-field-input:top-2 group-focus-within/text-field:top-2",
                 },
                 outlined: {
                     activeIndicator:
-                        "border-outline border-1 rounded-b-xs group-focus-within/text-field:border-2 !border-t-0 top-3",
+                        "border-outline border-1 rounded-b-xs top-3 !border-t-0 group-focus-within/text-field:border-2",
                     container: "rounded-xs py-4",
                     dummyLabel: [
-                        "px-2 flex flex-row relative",
-                        "before:absolute before:left-0 before:h-px before:rounded-r-full before:bg-outline before:w-1",
+                        "relative flex flex-row px-2",
+                        "before:bg-outline before:absolute before:left-0 before:h-px before:w-1 before:rounded-r-full",
                         "group-focus-within/text-field:before:!bg-primary group-hover/text-field:before:bg-on-surface peer-disabled/text-field-input:before:!bg-on-surface/38 group-focus-within/text-field:before:h-[2px]",
                         "",
-                        "after:absolute after:right-0 after:h-px after:rounded-l-full after:bg-outline after:w-1",
+                        "after:bg-outline after:absolute after:right-0 after:h-px after:w-1 after:rounded-l-full",
                         "group-focus-within/text-field:after:!bg-primary group-hover/text-field:after:bg-on-surface peer-disabled/text-field-input:after:!bg-on-surface/38 group-focus-within/text-field:after:h-[2px]",
                     ],
                     dummyWrapper: [
-                        "absolute top-0 left-0 right-0 h-3 flex flex-row",
-                        "before:w-2 before:h-full before:border-t-1 before:border-l-1 before:rounded-tl-xs before:border-outline",
-                        "group-focus-within/text-field:before:!border-primary group-hover/text-field:before:border-on-surface peer-disabled/text-field-input:before:!border-on-surface/38 group-focus-within/text-field:before:border-t-2 group-focus-within/text-field:before:border-l-2",
-                        "after:grow after:h-full after:border-t-1 after:border-r-1 after:rounded-tr-xs after:border-outline",
-                        "group-focus-within/text-field:after:!border-primary group-hover/text-field:after:border-on-surface peer-disabled/text-field-input:after:!border-on-surface/38 group-focus-within/text-field:after:border-t-2 group-focus-within/text-field:after:border-r-2",
+                        "absolute left-0 right-0 top-0 flex h-3 flex-row",
+                        "before:border-t-1 before:border-l-1 before:rounded-tl-xs before:border-outline before:h-full before:w-2",
+                        "group-focus-within/text-field:before:!border-primary group-hover/text-field:before:border-on-surface peer-disabled/text-field-input:before:!border-on-surface/38 group-focus-within/text-field:before:border-l-2 group-focus-within/text-field:before:border-t-2",
+                        "after:border-t-1 after:border-r-1 after:rounded-tr-xs after:border-outline after:h-full after:grow",
+                        "group-focus-within/text-field:after:!border-primary group-hover/text-field:after:border-on-surface peer-disabled/text-field-input:after:!border-on-surface/38 group-focus-within/text-field:after:border-r-2 group-focus-within/text-field:after:border-t-2",
                     ],
                     stateLayer: "rounded-xs",
-                    visualLabel: "group-focus-within/text-field:-top-2 peer-not-placeholder-shown/text-field-input:-top-2",
+                    visualLabel:
+                        "peer-not-placeholder-shown/text-field-input:-top-2 group-focus-within/text-field:-top-2",
                 },
             },
         },
     });
 </script>
 
-<script>
+<script lang="ts">
     import type { HTMLAttributes } from "svelte/elements";
 
     import { type VariantProps } from "$lib/types/style.js";
@@ -102,22 +104,23 @@
     let classes = $derived(variants({ variant }));
 </script>
 
-<label class={classes.container({ class: containerClass })} bind:this={ref}>
+<label bind:this={ref} class={classes.container({ class: containerClass })}>
     <input
         class={classes.input({ class: inputClass })}
         {placeholder}
         {...props}
     />
     <div class={classes.dummyWrapper({ class: dummyWrapperClass })}>
-        <span class={classes.dummyLabel({ class: dummyLabelClass })}>Label</span>
+        <span class={classes.dummyLabel({ class: dummyLabelClass })}>Label</span
+        >
     </div>
     <span class={classes.visualLabel({ class: visualLabelClass })}>Label</span>
     <StateLayer
         class={classes.stateLayer({ class: stateLayerClass })}
-        target={ref}
+        active="none"
         disabled="peer"
         focus="none"
-        active="none"
+        target={ref}
     />
     <div class={classes.activeIndicator({ class: activeIndicatorClass })}></div>
 </label>

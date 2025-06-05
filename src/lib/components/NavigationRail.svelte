@@ -1,6 +1,6 @@
 <!-- TODO: Merge navigation components? -->
 <!-- TODO: Maybe use navigation menu from bits ui? -->
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     export const variants = tv({

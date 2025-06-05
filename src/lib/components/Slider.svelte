@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
@@ -89,6 +89,7 @@
 
 <script lang="ts">
     import type { VariantProps } from "$lib/types/style.js";
+
     import { Slider } from "bits-ui";
 
     let {
@@ -117,21 +118,24 @@
 
 <Slider.Root
     class={root({ className })}
+    {step}
+    {type}
     bind:ref
     bind:value={value as never}
-    {type}
-    {step}
     {...props}
 >
     {#snippet children({ thumbs, ticks })}
         {@const firstTick = ticks.at(0)}
         {@const lastTick = ticks.at(-1)}
         {@const renderedTicks =
-            (!discrete && type !== "multiple" && lastTick !== undefined)
+            !discrete && type !== "multiple" && lastTick !== undefined
                 ? [lastTick]
-                : ((!discrete && type === "multiple" && firstTick !== undefined && lastTick !== undefined)
+                : !discrete &&
+                    type === "multiple" &&
+                    firstTick !== undefined &&
+                    lastTick !== undefined
                   ? [firstTick, lastTick]
-                  : ticks)}
+                  : ticks}
 
         <Slider.Range>
             {#snippet child({ props })}
@@ -143,23 +147,23 @@
                 <span class="contents">
                     {#if type === "multiple"}
                         <span
-                            class={inactiveTrack()}
                             style={left
                                 ? `right: calc(100% - ${left})`
                                 : top
                                   ? `top: calc(100% - ${bottom})`
                                   : ""}
+                            class={inactiveTrack()}
                         >
                         </span>
                     {/if}
                     <span class={activeTrack()} {...props}> </span>
                     <span
-                        class={inactiveTrack()}
                         style={right
                             ? `left: calc(100% - ${right})`
                             : bottom
                               ? `bottom: calc(100% - ${top})`
                               : ""}
+                        class={inactiveTrack()}
                     >
                     </span>
                 </span>

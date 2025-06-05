@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
@@ -52,25 +52,25 @@
         {#if indeterminate}
             <svg
                 class={classes.icon({ class: iconClass })}
-                xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 14 14"
+                xmlns="http://www.w3.org/2000/svg"
             >
                 <path
+                    d="M 2 7 H 12"
                     in:draw={{ duration: 300 }}
                     out:fade={{ duration: 300 }}
-                    d="M 2 7 H 12"
                 />
             </svg>
         {:else if checked}
             <svg
                 class={classes.icon({ class: iconClass })}
-                xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 14 14"
+                xmlns="http://www.w3.org/2000/svg"
             >
                 <path
+                    d="M 2.4 7.4 L 5 10 L 11.6 3.4"
                     in:draw={{ duration: 300 }}
                     out:fade={{ duration: 300 }}
-                    d="M 2.4 7.4 L 5 10 L 11.6 3.4"
                 />
             </svg>
         {/if}

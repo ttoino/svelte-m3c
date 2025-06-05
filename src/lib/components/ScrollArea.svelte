@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
@@ -7,7 +7,7 @@
             root: "size-full overflow-hidden",
             scrollbar:
                 "ui-vertical:w-2 ui-horizontal:h-2 ui-vertical:hover:w-3 ui-horizontal:hover:h-3 transition-all",
-            thumb: "bg-on-surface/38 hover:bg-secondary size-full rounded-full transition-all z-40",
+            thumb: "bg-on-surface/38 hover:bg-secondary z-40 size-full rounded-full transition-all",
             viewport: "size-full max-h-full max-w-full",
         },
     });
@@ -49,8 +49,8 @@
 <ScrollArea.Root class={root({ className })} bind:ref {...props}>
     <ScrollArea.Viewport
         class={viewport({ class: viewportClass })}
-        bind:ref={viewportRef}
         {children}
+        bind:ref={viewportRef}
     />
 
     {#if orientation === "horizontal" || orientation === "both"}

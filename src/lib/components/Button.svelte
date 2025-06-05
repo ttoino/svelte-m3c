@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
@@ -183,12 +183,12 @@
     {...props}
 >
     <StateLayer
-        target={ref}
         class={classes.stateLayer({ class: stateLayerClass })}
+        target={ref}
     />
 
     {#if icon}
-        <Icon {icon} class={iconClass} />
+        <Icon class={iconClass} {icon} />
     {/if}
 
     {@render children?.()}

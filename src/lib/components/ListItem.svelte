@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
@@ -76,8 +76,8 @@
 </script>
 
 <div
+    style:--lines={lines}
     class={classes.container({ class: containerClass })}
-    style="--lines: {lines}"
     {...props}
 >
     <StateLayer class={classes.stateLayer({ class: stateLayerClass })} />
@@ -89,7 +89,7 @@
     {/if}
 
     {#if labelText || supportingText}
-        <div class={classes.text({ class: textClass })} bind:this={textEl}>
+        <div bind:this={textEl} class={classes.text({ class: textClass })}>
             {#if labelText}
                 <span class={classes.labelText({ class: labelTextClass })}
                     >{@render labelText()}</span

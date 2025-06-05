@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
@@ -64,7 +64,7 @@
         "activeIndicatorClass" | "class" | "stopIndicatorClass" | "trackClass"
     > = $props();
 
-    let classes = variants({ circular });
+    const classes = variants({ circular });
 
     let progress = $derived(value == null ? null : (value - min) / (max - min));
     let full = $derived(value == null || value >= max);
@@ -79,8 +79,8 @@
 
 <Progress.Root
     class={classes.root({ className })}
-    {min}
     {max}
+    {min}
     {value}
     {...props}
 >
@@ -89,34 +89,34 @@
             {#if circular}
                 <svg class="size-full">
                     <circle
-                        class={classes.track({ class: trackClass })}
                         style={`
                             --length: ${length}px;
                             --progress: ${progress};
                         `}
+                        class={classes.track({ class: trackClass })}
                     />
                     <circle
                         bind:this={geometry}
-                        class={classes.activeIndicator({
-                            class: activeIndicatorClass,
-                        })}
                         style={`
                             --length: ${length}px;
                             --progress: ${progress};
                             --full: ${full ? 1 : 0};
                         `}
+                        class={classes.activeIndicator({
+                            class: activeIndicatorClass,
+                        })}
                     />
                 </svg>
             {:else}
                 <div
-                    class={classes.track({ class: trackClass })}
                     style={progress === null ? "" : `--progress: ${progress}`}
+                    class={classes.track({ class: trackClass })}
                 ></div>
                 <div
+                    style={progress === null ? "" : `--progress: ${progress}`}
                     class={classes.activeIndicator({
                         class: activeIndicatorClass,
                     })}
-                    style={progress === null ? "" : `--progress: ${progress}`}
                 ></div>
                 <div
                     class={classes.stopIndicator({

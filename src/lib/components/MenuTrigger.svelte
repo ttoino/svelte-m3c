@@ -4,7 +4,7 @@
 
     let props: ContextMenu.TriggerProps & DropdownMenu.TriggerProps = $props();
 
-    let type = getContext("menu.type");
+    const type = getContext("menu.type");
 
     let Base = $derived(type === "context" ? ContextMenu : DropdownMenu);
 </script>

@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
@@ -23,6 +23,6 @@
     > = $props();
 </script>
 
-<div class={variants({ className })} bind:this={ref} {...props}>
+<div bind:this={ref} class={variants({ className })} {...props}>
     {@render children?.()}
 </div>

@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
@@ -71,12 +71,12 @@
 
 <div class={classes.item({ className })} {...props}>
     <div class={classes.activeIndicator()}>
-        <StateLayer {target} class={classes.stateLayer()} />
+        <StateLayer class={classes.stateLayer()} {target} />
 
-        <Icon {icon} class={classes.icon()} />
+        <Icon class={classes.icon()} {icon} />
     </div>
 
-    <a bind:this={target} {href} class={classes.label()}>
+    <a bind:this={target} class={classes.label()} {href}>
         {@render children?.()}
     </a>
 </div>

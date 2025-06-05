@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     import { variants as baseButton } from "./Button.svelte";
@@ -68,8 +68,8 @@
 >
     {#snippet children(childrenProps)}
         <StateLayer
-            target={ref}
             class={classes.stateLayer({ class: stateLayerClass })}
+            target={ref}
         />
 
         <span class={classes.iconWrapper({ class: iconWrapperClass })}>

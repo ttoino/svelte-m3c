@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
@@ -57,11 +57,11 @@
 </script>
 
 <div class={classes.item({ className })} {...props}>
-    <StateLayer {target} class={classes.stateLayer()} />
+    <StateLayer class={classes.stateLayer()} {target} />
 
-    <Icon {icon} class={classes.icon()} />
+    <Icon class={classes.icon()} {icon} />
 
-    <a bind:this={target} {href} class={classes.label()}>
+    <a bind:this={target} class={classes.label()} {href}>
         {@render children?.()}
     </a>
 </div>

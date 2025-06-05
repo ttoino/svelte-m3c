@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
@@ -62,7 +62,7 @@
 
 <Switch.Root class={track({ className })} bind:ref bind:checked {...props}>
     <Switch.Thumb class={handle({ class: handleClass })}>
-        <StateLayer target={ref} class={stateLayer()} />
+        <StateLayer class={stateLayer()} target={ref} />
 
         {#if uncheckedIcon}
             <Icon class={uncheckedIconClass()} icon={uncheckedIcon} />

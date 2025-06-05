@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     import { variants as baseVariants } from "./IconButton.svelte";
@@ -106,8 +106,8 @@
     {...props}
 >
     <StateLayer
-        target={ref}
         class={classes.stateLayer({ class: stateLayerClass })}
+        target={ref}
     />
 
     <Icon class="transition-[font-variation-settings]" {icon} />

@@ -1,5 +1,6 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
+
     import { variants as base } from "./Divider.svelte";
 
     export const variants = tv({
@@ -9,9 +10,10 @@
 </script>
 
 <script lang="ts">
-    import { ContextMenu, DropdownMenu } from "bits-ui";
     import type { ClassProps } from "$lib/types/style.js";
+
     import { getMenuBase } from "$lib/context/menu.js";
+    import { ContextMenu, DropdownMenu } from "bits-ui";
 
     let {
         class: className,
@@ -19,7 +21,7 @@
     }: ClassProps<ContextMenu.SeparatorProps & DropdownMenu.SeparatorProps> =
         $props();
 
-    let Base = getMenuBase();
+    const Base = getMenuBase();
 </script>
 
 <Base.Separator

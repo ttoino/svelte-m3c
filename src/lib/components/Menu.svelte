@@ -1,4 +1,7 @@
 <script lang="ts">
+    import type { MenuType } from "$lib/types/menu.js";
+    import type { ExtendProps } from "$lib/types/style.js";
+
     import {
         getMenuBase,
         getMenuType,
@@ -7,8 +10,6 @@
         setSubMenu,
         setSubMenuTrigger,
     } from "$lib/context/menu.js";
-    import type { MenuType } from "$lib/types/menu.js";
-    import type { ExtendProps } from "$lib/types/style.js";
     import { ContextMenu, DropdownMenu } from "bits-ui";
 
     const originalType = getMenuType();
@@ -20,8 +21,8 @@
         ...props
     }: ExtendProps<
         ContextMenu.RootProps &
-            DropdownMenu.RootProps &
             ContextMenu.SubProps &
+            DropdownMenu.RootProps &
             DropdownMenu.SubProps,
         {
             type?: MenuType;
@@ -32,7 +33,7 @@
     setSubMenu();
     setSubMenuTrigger(sub);
 
-    let Base = getMenuBase();
+    const Base = getMenuBase();
 
     let Component = $derived(sub ? Base.Sub : Base.Root);
 </script>

@@ -1,4 +1,4 @@
-<script module lang="ts">
+<script lang="ts" module>
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
@@ -74,7 +74,7 @@
 
     let nextKey = 0;
     let currentRipple: null | number = $state(null);
-    let ripples = new SvelteMap<number, { x: number; y: number }>();
+    const ripples = new SvelteMap<number, { x: number; y: number }>();
 
     const onmousedown: MouseEventHandler<HTMLElement> = ({
         clientX,
@@ -112,11 +112,12 @@
     });
 </script>
 
-<div class={classes.root({ className })} bind:this={ref} {...props}>
+<div bind:this={ref} class={classes.root({ className })} {...props}>
     <div class={classes.state({ class: [commonClass, stateClass] })}></div>
 
     {#each ripples.entries() as [key, { x, y }] (key)}
         <div
+            style={`translate: ${x}px ${y}px;`}
             class={classes.ripple({
                 class: [
                     key === currentRipple
@@ -126,7 +127,6 @@
                     rippleClass,
                 ],
             })}
-            style={`translate: ${x}px ${y}px;`}
             onanimationend={({ animationName }) => {
                 if (!animationName.includes("hold")) ripples.delete(key);
             }}
