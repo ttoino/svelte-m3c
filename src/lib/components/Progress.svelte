@@ -44,7 +44,7 @@
 </script>
 
 <script lang="ts">
-    import { type VariantProps } from "$lib/style.js";
+    import { type VariantProps } from "$lib/types/style.js";
     import { Progress } from "bits-ui";
 
     let {

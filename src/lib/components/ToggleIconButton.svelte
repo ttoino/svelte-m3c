@@ -70,7 +70,7 @@
 </script>
 
 <script lang="ts">
-    import type { VariantProps } from "$lib/style.js";
+    import type { VariantProps } from "$lib/types/style.js";
     import type { MaterialSymbol } from "material-symbols";
 
     import { Toggle, type WithoutChildren } from "bits-ui";

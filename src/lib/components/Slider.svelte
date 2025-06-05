@@ -1,7 +1,7 @@
 <script module lang="ts">
     import { tv } from "$lib/style.js";
 
-    const variants = tv({
+    export const variants = tv({
         compoundSlots: [
             {
                 class: [
@@ -88,7 +88,7 @@
 </script>
 
 <script lang="ts">
-    import { type VariantProps } from "$lib/style.js";
+    import type { VariantProps } from "$lib/types/style.js";
     import { Slider } from "bits-ui";
 
     let {
@@ -127,11 +127,11 @@
         {@const firstTick = ticks.at(0)}
         {@const lastTick = ticks.at(-1)}
         {@const renderedTicks =
-            !discrete && type === "single" && lastTick
+            (!discrete && type !== "multiple" && lastTick !== undefined)
                 ? [lastTick]
-                : !discrete && type === "multiple" && firstTick && lastTick
+                : ((!discrete && type === "multiple" && firstTick !== undefined && lastTick !== undefined)
                   ? [firstTick, lastTick]
-                  : ticks}
+                  : ticks)}
 
         <Slider.Range>
             {#snippet child({ props })}

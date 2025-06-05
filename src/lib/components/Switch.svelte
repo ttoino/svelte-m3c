@@ -1,7 +1,7 @@
 <script module lang="ts">
     import { tv } from "$lib/style.js";
 
-    const variants = tv({
+    export const variants = tv({
         compoundSlots: [
             {
                 class: "absolute size-4 text-[1rem] transition-opacity",
@@ -28,7 +28,7 @@
 <script lang="ts">
     import type { MaterialSymbol } from "material-symbols";
 
-    import { type ClassProps } from "$lib/style.js";
+    import { type ClassProps } from "$lib/types/style.js";
     import { Switch } from "bits-ui";
 
     import Icon from "./Icon.svelte";

@@ -13,7 +13,7 @@
 </script>
 
 <script lang="ts">
-    import { type VariantProps } from "$lib/style.js";
+    import { type VariantProps } from "$lib/types/style.js";
     import { RadioGroup } from "bits-ui";
 
     import StateLayer from "./StateLayer.svelte";

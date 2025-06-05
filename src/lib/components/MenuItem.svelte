@@ -15,11 +15,13 @@
 </script>
 
 <script lang="ts">
-    import { type VariantProps } from "$lib/style.js";
+    import { type VariantProps } from "$lib/types/style.js";
     import { ContextMenu, DropdownMenu } from "bits-ui";
-    import { getContext, type Snippet } from "svelte";
+    import { type Snippet } from "svelte";
 
     import StateLayer from "./StateLayer.svelte";
+    import { getMenuBase, isSubMenuTrigger } from "$lib/context/menu.js";
+    import Icon from "./Icon.svelte";
 
     let {
         containerClass,
@@ -33,7 +35,10 @@
         trailingClass,
         ...props
     }: VariantProps<
-        ContextMenu.ItemProps & DropdownMenu.ItemProps,
+        ContextMenu.ItemProps &
+            DropdownMenu.ItemProps &
+            ContextMenu.SubTriggerProps &
+            DropdownMenu.SubTriggerProps,
         typeof variants,
         | "containerClass"
         | "leadingClass"
@@ -49,12 +54,14 @@
 
     let classes = $derived(variants());
 
-    let type = getContext("menu.type");
+    let Base = getMenuBase();
 
-    let Base = $derived(type === "context" ? ContextMenu : DropdownMenu);
+    let sub = isSubMenuTrigger();
+
+    let Component = $derived(sub ? Base.SubTrigger : Base.Item);
 </script>
 
-<Base.Item
+<Component
     bind:ref
     class={classes.container({ class: containerClass })}
     {...props}
@@ -75,9 +82,13 @@
         </div>
     {/if}
 
-    {#if trailing}
+    {#if trailing || sub}
         <div class={classes.trailing({ class: trailingClass })}>
-            {@render trailing()}
+            {#if trailing}
+                {@render trailing()}
+            {:else}
+                <Icon icon="arrow_right" />
+            {/if}
         </div>
     {/if}
-</Base.Item>
+</Component>

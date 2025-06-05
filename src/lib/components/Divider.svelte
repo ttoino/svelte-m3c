@@ -2,14 +2,14 @@
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
-        base: "bg-outline-variant h-px w-full",
+        base: "bg-outline-variant h-px w-full border-none",
     });
 </script>
 
 <script lang="ts">
     import type { HTMLAttributes } from "svelte/elements";
 
-    import { type VariantProps } from "$lib/style.js";
+    import { type VariantProps } from "$lib/types/style.js";
 
     let {
         class: className,

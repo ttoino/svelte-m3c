@@ -3,13 +3,9 @@ import {
     extendTailwindMerge,
     validators,
 } from "tailwind-merge";
-import {
-    type VariantProps as BaseVariantProps,
-    type ClassValue,
-    createTV,
-} from "tailwind-variants";
+import { createTV } from "tailwind-variants";
 
-type ClassGroups = "icon-fill" | "icon-grade" | "icon-size";
+import type { ClassGroups } from "./types/style.js";
 
 const twMergeConfig = {
     extend: {
@@ -106,22 +102,3 @@ const twMergeConfig = {
 export const twMerge = extendTailwindMerge<ClassGroups>(twMergeConfig);
 
 export const tv = createTV({ twMergeConfig });
-
-export type ClassProps<
-    Base,
-    Class extends string = "class",
-    Other extends Record<string, unknown> = Record<never, never>,
-> = ExtendProps<Omit<Base, "class">, { [c in Class]?: ClassValue } & Other>;
-
-export type ExtendProps<Base, Other extends Record<string, unknown>> = Omit<
-    Base,
-    keyof Other
-> &
-    Other;
-
-export type VariantProps<
-    Base,
-    TV extends () => unknown,
-    Class extends string = "class",
-    Other extends Record<string, unknown> = Record<never, never>,
-> = ClassProps<Base, Class, BaseVariantProps<TV> & Other>;

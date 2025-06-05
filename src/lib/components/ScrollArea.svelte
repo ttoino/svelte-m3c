@@ -7,14 +7,14 @@
             root: "size-full overflow-hidden",
             scrollbar:
                 "ui-vertical:w-2 ui-horizontal:h-2 ui-vertical:hover:w-3 ui-horizontal:hover:h-3 transition-all",
-            thumb: "bg-on-surface/38 hover:bg-secondary size-full rounded-full transition-all",
+            thumb: "bg-on-surface/38 hover:bg-secondary size-full rounded-full transition-all z-40",
             viewport: "size-full max-h-full max-w-full",
         },
     });
 </script>
 
 <script lang="ts">
-    import type { VariantProps } from "$lib/style.js";
+    import type { VariantProps } from "$lib/types/style.js";
 
     import { ScrollArea } from "bits-ui";
 

@@ -1,22 +1,40 @@
 <script lang="ts">
-    import { type ExtendProps } from "$lib/style.js";
+    import {
+        getMenuBase,
+        getMenuType,
+        isSubMenu,
+        setMenuType,
+        setSubMenu,
+        setSubMenuTrigger,
+    } from "$lib/context/menu.js";
+    import type { MenuType } from "$lib/types/menu.js";
+    import type { ExtendProps } from "$lib/types/style.js";
     import { ContextMenu, DropdownMenu } from "bits-ui";
-    import { setContext } from "svelte";
+
+    const originalType = getMenuType();
+    const sub = isSubMenu();
 
     let {
         open = $bindable(false),
-        type,
+        type = originalType ?? "dropdown",
         ...props
     }: ExtendProps<
-        ContextMenu.RootProps & DropdownMenu.RootProps,
+        ContextMenu.RootProps &
+            DropdownMenu.RootProps &
+            ContextMenu.SubProps &
+            DropdownMenu.SubProps,
         {
-            type: "context" | "dropdown";
+            type?: MenuType;
         }
     > = $props();
 
-    setContext("menu.type", type);
+    setMenuType(type);
+    setSubMenu();
+    setSubMenuTrigger(sub);
 
-    let Base = $derived(type === "context" ? ContextMenu : DropdownMenu);
+    let Base = getMenuBase();
+
+    let Component = $derived(sub ? Base.Sub : Base.Root);
 </script>
 
-<Base.Root bind:open {...props} />
+<Component bind:open {...props} />

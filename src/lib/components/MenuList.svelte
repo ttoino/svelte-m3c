@@ -1,16 +1,17 @@
 <script module lang="ts">
+    import { tv } from "$lib/style.js";
     import { variants as base } from "./List.svelte";
 
     export const variants = tv({
-        base: "shadow-2 rounded-xs bg-surface-container",
+        base: "shadow-2 rounded-xs bg-surface-container z-50",
         extend: base,
     });
 </script>
 
 <script lang="ts">
-    import { type ClassProps, tv } from "$lib/style.js";
+    import { type ClassProps } from "$lib/types/style.js";
     import { ContextMenu, DropdownMenu } from "bits-ui";
-    import { getContext } from "svelte";
+    import { getMenuBase, isSubMenu, setSubMenuTrigger } from "$lib/context/menu.js";
 
     let {
         class: className,
@@ -25,17 +26,19 @@
         ContextMenu.ContentProps & DropdownMenu.ContentProps
     > = $props();
 
-    let type = getContext("menu.type");
+    setSubMenuTrigger(false);
 
-    let Base = $derived(type === "context" ? ContextMenu : DropdownMenu);
+    let Base = getMenuBase();
+
+    let sub = isSubMenu();
+
+    let Component = $derived(sub ? Base.SubContent : Base.Content);
 </script>
 
-<Base.Portal>
-    <Base.Content
-        class={variants({
-            className,
-        })}
-        {collisionPadding}
-        {...props}
-    />
-</Base.Portal>
+<Component
+    class={variants({
+        className,
+    })}
+    {collisionPadding}
+    {...props}
+/>

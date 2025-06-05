@@ -31,7 +31,7 @@
     import type { HTMLAttributes } from "svelte/elements";
 
     import { getLines } from "$lib/elements.js";
-    import { type VariantProps } from "$lib/style.js";
+    import { type VariantProps } from "$lib/types/style.js";
 
     import StateLayer from "./StateLayer.svelte";
 

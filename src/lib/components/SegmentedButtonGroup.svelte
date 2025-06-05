@@ -7,7 +7,7 @@
 </script>
 
 <script lang="ts">
-    import { type ClassProps } from "$lib/style.js";
+    import { type ClassProps } from "$lib/types/style.js";
     import { ToggleGroup } from "bits-ui";
 
     let {

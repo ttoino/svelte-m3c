@@ -43,7 +43,7 @@
 </script>
 
 <script lang="ts">
-    import type { VariantProps } from "$lib/style.js";
+    import type { VariantProps } from "$lib/types/style.js";
     import type { HTMLAttributes, MouseEventHandler } from "svelte/elements";
 
     import { SvelteMap } from "svelte/reactivity";
