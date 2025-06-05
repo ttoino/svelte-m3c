@@ -31,12 +31,23 @@
         ".": {
             "types": "./dist/index.d.ts",
             "style": "./dist/style/index.css",
-            "svelte": "./dist/index.js"
+            "svelte": "./dist/index.js",
+            "default": "./dist/index.js"
         },
-        "./*": {
-            "types": "./dist/**/*.d.ts",
-            "style": "./dist/style/*.css",
-            "svelte": "./dist/**/*.svelte"
+        "./palette": {
+            "types": "./dist/palette.d.ts",
+            "svelte": "./dist/palette.js",
+            "default": "./dist/palette.js"
+        },
+        "./style": {
+            "types": "./dist/style.d.ts",
+            "svelte": "./dist/style.js",
+            "default": "./dist/style.js"
+        },
+        "./variants": {
+            "types": "./dist/variants.d.ts",
+            "svelte": "./dist/variants.js",
+            "default": "./dist/variants.js"
         }
     },
     "peerDependencies": {
