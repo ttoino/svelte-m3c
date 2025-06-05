@@ -60,6 +60,7 @@ export default ts.config(
                     script: ["ts"],
                 },
             ],
+            "svelte/consistent-selector-style": "off",
             "svelte/experimental-require-strict-events": "off",
             "svelte/no-inline-styles": "off",
             "svelte/no-unused-class-name": "off",
