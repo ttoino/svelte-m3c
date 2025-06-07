@@ -1,11 +1,31 @@
 <script lang="ts" module>
     import { tv } from "$lib/style.js";
 
-    import { variants as base } from "./IconButton.svelte";
+    import { variants as base } from "./Button.svelte";
 
     // TODO: Check if colors are correct
     export const variants = tv({
         compoundVariants: [
+            {
+                class: {container: "ui-on:bg-primary ui-on:text-on-primary"},
+                color: "primary",
+                variant: "elevated",
+            },
+            {
+                class: {container: "ui-on:bg-secondary ui-on:text-on-secondary"},
+                color: "secondary",
+                variant: "elevated",
+            },
+            {
+                class: {container: "ui-on:bg-tertiary ui-on:text-on-tertiary"},
+                color: "tertiary",
+                variant: "elevated",
+            },
+            {
+                class: {container: "ui-on:bg-error ui-on:text-on-error"},
+                color: "error",
+                variant: "elevated",
+            },
             {
                 class: {container: "bg-surface-container text-on-surface-variant ui-on:bg-primary ui-on:text-on-primary"},
                 color: "primary",
@@ -97,11 +117,9 @@
 
 <script lang="ts">
     import type { VariantProps } from "$lib/types/style.js";
-    import type { MaterialSymbol } from "material-symbols";
 
-    import { Toggle, ToggleGroup, type WithoutChildren } from "bits-ui";
+    import { Toggle, ToggleGroup } from "bits-ui";
 
-    import Icon from "./Icon.svelte";
     import StateLayer from "./StateLayer.svelte";
     import { getButtonColor, getButtonShape, getButtonSize, getButtonVariant, getIconButtonWidth, isInButtonGroup } from "$lib/context/button.js";
 
@@ -109,33 +127,28 @@
     const contextShape = getButtonShape();
     const contextSize = getButtonSize();
     const contextVariant = getButtonVariant();
-    const contextWidth = getIconButtonWidth();
 
     const inButtonGroup = isInButtonGroup();
     let Component = inButtonGroup ? ToggleGroup.Item : Toggle.Root
 
     let {
         color = contextColor,
+        children,
         containerClass,
-        icon,
         pressed = $bindable(false),
         ref = $bindable(null),
         stateLayerClass,
         variant = contextVariant,
         shape = contextShape,
         size = contextSize,
-        width = contextWidth,
         ...props
     }: VariantProps<
-        WithoutChildren<Toggle.RootProps & ToggleGroup.ItemProps>,
+        Toggle.RootProps & ToggleGroup.ItemProps,
         typeof variants,
-        "containerClass" | "stateLayerClass",
-        {
-            icon: MaterialSymbol;
-        }
+        "containerClass" | "stateLayerClass"
     > = $props();
 
-    const classes = variants({ color, variant, shape, size, width });
+    const classes = variants({ color, variant, shape, size });
 </script>
 
 <Component
@@ -144,10 +157,12 @@
     bind:pressed
     {...props}
 >
+    {#snippet children(args)}
     <StateLayer
         class={classes.stateLayer({ class: stateLayerClass })}
         target={ref}
     />
 
-    <Icon class="transition-[font-variation-settings]" {icon} />
+    {@render children?.(args)}
+    {/snippet}
 </Component>

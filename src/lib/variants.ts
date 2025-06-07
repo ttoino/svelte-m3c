@@ -1,4 +1,5 @@
 import { variants as button } from "./components/Button.svelte";
+import { variants as buttonGroup } from "./components/ButtonGroup.svelte";
 import { variants as checkbox } from "./components/Checkbox.svelte";
 import { variants as divider } from "./components/Divider.svelte";
 import { variants as icon } from "./components/Icon.svelte";
@@ -16,16 +17,16 @@ import { variants as progress } from "./components/Progress.svelte";
 import { variants as radio } from "./components/Radio.svelte";
 import { variants as scrollArea } from "./components/ScrollArea.svelte";
 import { variants as searchBar } from "./components/SearchBar.svelte";
-import { variants as segmentedButton } from "./components/SegmentedButton.svelte";
-import { variants as segmentedButtonGroup } from "./components/SegmentedButtonGroup.svelte";
 import { variants as slider } from "./components/Slider.svelte";
 import { variants as stateLayer } from "./components/StateLayer.svelte";
 import { variants as switchComponent } from "./components/Switch.svelte";
+import { variants as toggleButton } from "./components/ToggleButton.svelte";
 import { variants as toggleIconButton } from "./components/ToggleIconButton.svelte";
 import { variants as tooltip } from "./components/Tooltip.svelte";
 
 export {
     button,
+    buttonGroup,
     checkbox,
     divider,
     icon,
@@ -43,11 +44,10 @@ export {
     radio,
     scrollArea,
     searchBar,
-    segmentedButton,
-    segmentedButtonGroup,
     slider,
     stateLayer,
     switchComponent,
+    toggleButton,
     toggleIconButton,
     tooltip,
 };

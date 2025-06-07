@@ -13,3 +13,7 @@
 /* Slider */
 @custom-variant ui-horizontal (&[data-orientation="horizontal"]);
 @custom-variant ui-vertical (&[data-orientation="vertical"]);
+
+/* General */
+@custom-variant next (& + *);
+@custom-variant previous (:has(+ &));

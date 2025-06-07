@@ -1,4 +1,5 @@
 import Button from "./components/Button.svelte";
+import ButtonGroup from "./components/ButtonGroup.svelte";
 import Checkbox from "./components/Checkbox.svelte";
 import Divider from "./components/Divider.svelte";
 import Icon from "./components/Icon.svelte";
@@ -20,12 +21,11 @@ import Radio from "./components/Radio.svelte";
 import RadioGroup from "./components/RadioGroup.svelte";
 import ScrollArea from "./components/ScrollArea.svelte";
 import SearchBar from "./components/SearchBar.svelte";
-import SegmentedButton from "./components/SegmentedButton.svelte";
-import SegmentedButtonGroup from "./components/SegmentedButtonGroup.svelte";
 import Slider from "./components/Slider.svelte";
 import StateLayer from "./components/StateLayer.svelte";
 import Switch from "./components/Switch.svelte";
 import TextField from "./components/TextField.svelte";
+import ToggleButton from "./components/ToggleButton.svelte";
 import ToggleIconButton from "./components/ToggleIconButton.svelte";
 import Tooltip from "./components/Tooltip.svelte";
 import TooltipRoot from "./components/TooltipRoot.svelte";
@@ -33,6 +33,7 @@ import TooltipTrigger from "./components/TooltipTrigger.svelte";
 
 export {
     Button,
+    ButtonGroup,
     Checkbox,
     Divider,
     Icon,
@@ -54,12 +55,11 @@ export {
     RadioGroup,
     ScrollArea,
     SearchBar,
-    SegmentedButton,
-    SegmentedButtonGroup,
     Slider,
     StateLayer,
     Switch,
     TextField,
+    ToggleButton,
     ToggleIconButton,
     Tooltip,
     TooltipRoot,
