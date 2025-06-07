@@ -1,4 +1,10 @@
-import type { ButtonColor, ButtonShape, ButtonSize, ButtonVariant, IconButtonWidth } from "$lib/types/button.js";
+import type {
+    ButtonColor,
+    ButtonShape,
+    ButtonSize,
+    ButtonVariant,
+    IconButtonWidth,
+} from "$lib/types/button.js";
 
 import { getContext, setContext } from "svelte";
 
@@ -11,8 +17,7 @@ export const BUTTON_VARIANT = "button.variant";
 
 export const ICON_BUTTON_WIDTH = "icon-button.width";
 
-export const setButtonGroup = () =>
-    setContext(BUTTON_GROUP, true);
+export const setButtonGroup = () => setContext(BUTTON_GROUP, true);
 
 export const isInButtonGroup = () => !!getContext<boolean>(BUTTON_GROUP);
 

@@ -213,7 +213,12 @@
 <script lang="ts">
     import type { VariantProps } from "$lib/types/style.js";
 
-    import { getButtonColor, getButtonShape, getButtonSize, getButtonVariant } from "$lib/context/button.js";
+    import {
+        getButtonColor,
+        getButtonShape,
+        getButtonSize,
+        getButtonVariant,
+    } from "$lib/context/button.js";
     import { Button } from "bits-ui";
 
     import StateLayer from "./StateLayer.svelte";

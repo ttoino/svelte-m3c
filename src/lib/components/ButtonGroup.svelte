@@ -3,7 +3,7 @@
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
-        base: "inline-flex items-center justify-center *:active:w-(--width-active) *:active:next:w-(--width-right) *:active:previous:w-(--width-left)",
+        base: "*:active:w-(--width-active) *:active:next:w-(--width-right) *:active:previous:w-(--width-left) inline-flex items-center justify-center",
         variants: {
             size: {
                 "extra-large": "gap-2",
@@ -17,27 +17,45 @@
 </script>
 
 <script lang="ts">
+    import type {
+        ButtonColor,
+        ButtonShape,
+        ButtonVariant,
+        IconButtonWidth,
+    } from "$lib/types/button.js";
     import type { VariantProps } from "$lib/types/style.js";
-    import { ToggleGroup } from "bits-ui";
     import type { MouseEventHandler } from "svelte/elements";
-    import { setButtonColor, setButtonGroup, setButtonShape, setButtonSize, setButtonVariant, setIconButtonWidth } from "$lib/context/button.js";
-    import type { ButtonColor, ButtonShape, ButtonVariant, IconButtonWidth } from "$lib/types/button.js";
+
+    import {
+        setButtonColor,
+        setButtonGroup,
+        setButtonShape,
+        setButtonSize,
+        setButtonVariant,
+        setIconButtonWidth,
+    } from "$lib/context/button.js";
+    import { ToggleGroup } from "bits-ui";
 
     let {
         class: className,
         color = "primary",
+        onmousedown: baseOnmousedown,
         shape = "round",
         size = "small",
         variant = "filled",
         width = "default",
-        onmousedown: baseOnmousedown,
         ...props
-    }: VariantProps<ToggleGroup.RootProps, typeof variants, "class", {
-        color?: ButtonColor,
-        shape?: ButtonShape,
-        variant?: ButtonVariant,
-        width?: IconButtonWidth,
-    }> = $props();
+    }: VariantProps<
+        ToggleGroup.RootProps,
+        typeof variants,
+        "class",
+        {
+            color?: ButtonColor;
+            shape?: ButtonShape;
+            variant?: ButtonVariant;
+            width?: IconButtonWidth;
+        }
+    > = $props();
 
     setButtonGroup();
 
@@ -55,7 +73,7 @@
 
         while (button.parentElement !== group && button.parentElement) {
             button = button.parentElement;
-        };
+        }
 
         const normalWidth = button.clientWidth;
         const expandedWidth = normalWidth * 1.15;
@@ -67,14 +85,30 @@
         const right = button.nextElementSibling;
 
         if (left && right) {
-            group.style.setProperty("--width-left", `${left.clientWidth - offset}px`);
-            group.style.setProperty("--width-right", `${right.clientWidth - offset}px`);
+            group.style.setProperty(
+                "--width-left",
+                `${left.clientWidth - offset}px`,
+            );
+            group.style.setProperty(
+                "--width-right",
+                `${right.clientWidth - offset}px`,
+            );
         } else if (left) {
-            group.style.setProperty("--width-left", `${left.clientWidth - offset * 2}px`);
+            group.style.setProperty(
+                "--width-left",
+                `${left.clientWidth - offset * 2}px`,
+            );
         } else if (right) {
-            group.style.setProperty("--width-right", `${right.clientWidth - offset * 2}px`);
+            group.style.setProperty(
+                "--width-right",
+                `${right.clientWidth - offset * 2}px`,
+            );
         }
     };
 </script>
 
-<ToggleGroup.Root class={variants({ className, size })} {onmousedown} {...props} />
+<ToggleGroup.Root
+    class={variants({ className, size })}
+    {onmousedown}
+    {...props}
+/>

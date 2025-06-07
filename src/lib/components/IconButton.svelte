@@ -100,11 +100,17 @@
     import type { VariantProps } from "$lib/types/style.js";
     import type { MaterialSymbol } from "material-symbols";
 
+    import {
+        getButtonColor,
+        getButtonShape,
+        getButtonSize,
+        getButtonVariant,
+        getIconButtonWidth,
+    } from "$lib/context/button.js";
     import { Button, type WithoutChildren } from "bits-ui";
 
     import Icon from "./Icon.svelte";
     import StateLayer from "./StateLayer.svelte";
-    import { getButtonColor, getButtonShape, getButtonSize, getButtonVariant, getIconButtonWidth } from "$lib/context/button.js";
 
     const contextColor = getButtonColor();
     const contextShape = getButtonShape();

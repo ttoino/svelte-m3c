@@ -10,10 +10,10 @@ export type ButtonSize =
     | "small";
 
 export type ButtonVariant =
-    "elevated"
+    | "elevated"
     | "filled"
     | "outlined"
     | "text"
     | "tonal";
 
-    export type IconButtonWidth = "default" | "narrow" | "wide";
+export type IconButtonWidth = "default" | "narrow" | "wide";
