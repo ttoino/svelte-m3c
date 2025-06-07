@@ -116,6 +116,10 @@
     --icon-grade: calc(--value(integer) * -1);
 }
 
+@utility mask-shape-* {
+    mask-image: --value(--mask-*);
+}
+
 @utility prose {
     @apply text-body-m;
 
