@@ -55,7 +55,7 @@
         }
     > = $props();
 
-    const Component = strategy === "popover" ? Popover : Tooltip;
+    let Component = $derived(strategy === "popover" ? Popover : Tooltip);
 </script>
 
 {#snippet content()}

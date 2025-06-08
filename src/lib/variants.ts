@@ -6,9 +6,9 @@ import { variants as icon } from "./components/Icon.svelte";
 import { variants as iconButton } from "./components/IconButton.svelte";
 import { variants as list } from "./components/List.svelte";
 import { variants as listItem } from "./components/ListItem.svelte";
+import { variants as menu } from "./components/Menu.svelte";
 import { variants as menuDivider } from "./components/MenuDivider.svelte";
 import { variants as menuItem } from "./components/MenuItem.svelte";
-import { variants as menuList } from "./components/MenuList.svelte";
 import { variants as navigationDrawer } from "./components/NavigationDrawer.svelte";
 import { variants as navigationDrawerItem } from "./components/NavigationDrawerItem.svelte";
 import { variants as navigationRail } from "./components/NavigationRail.svelte";
@@ -33,9 +33,9 @@ export {
     iconButton,
     list,
     listItem,
+    menu,
     menuDivider,
     menuItem,
-    menuList,
     navigationDrawer,
     navigationDrawerItem,
     navigationRail,

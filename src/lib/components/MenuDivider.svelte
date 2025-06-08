@@ -12,8 +12,10 @@
 <script lang="ts">
     import type { ClassProps } from "$lib/types/style.js";
 
-    import { getMenuBase } from "$lib/context/menu.js";
+    import { getMenuStrategy } from "$lib/context/menu.js";
     import { ContextMenu, DropdownMenu } from "bits-ui";
+
+    const parentStrategy = getMenuStrategy();
 
     let {
         class: className,
@@ -21,10 +23,13 @@
     }: ClassProps<ContextMenu.SeparatorProps & DropdownMenu.SeparatorProps> =
         $props();
 
-    const Base = getMenuBase();
+    let strategy = $derived(parentStrategy?.() ?? "context");
+    let Component = $derived(
+        strategy === "context" ? ContextMenu.Separator : DropdownMenu.Separator,
+    );
 </script>
 
-<Base.Separator
+<Component
     class={variants({
         className,
     })}

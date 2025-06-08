@@ -15,13 +15,14 @@
 </script>
 
 <script lang="ts">
-    import { getMenuBase, isSubMenuTrigger } from "$lib/context/menu.js";
+    import { getMenuStrategy } from "$lib/context/menu.js";
     import { type VariantProps } from "$lib/types/style.js";
     import { ContextMenu, DropdownMenu } from "bits-ui";
     import { type Snippet } from "svelte";
 
-    import Icon from "./Icon.svelte";
     import StateLayer from "./StateLayer.svelte";
+
+    const parentStrategy = getMenuStrategy();
 
     let {
         containerClass,
@@ -54,11 +55,10 @@
 
     let classes = $derived(variants());
 
-    const Base = getMenuBase();
-
-    const sub = isSubMenuTrigger();
-
-    let Component = $derived(sub ? Base.SubTrigger : Base.Item);
+    let strategy = $derived(parentStrategy?.() ?? "context");
+    let Component = $derived(
+        strategy === "context" ? ContextMenu.Item : DropdownMenu.Item,
+    );
 </script>
 
 <Component
@@ -82,13 +82,9 @@
         </div>
     {/if}
 
-    {#if trailing || sub}
+    {#if trailing}
         <div class={classes.trailing({ class: trailingClass })}>
-            {#if trailing}
-                {@render trailing()}
-            {:else}
-                <Icon icon="arrow_right" />
-            {/if}
+            {@render trailing()}
         </div>
     {/if}
 </Component>

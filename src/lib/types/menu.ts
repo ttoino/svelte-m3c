@@ -1,1 +1,1 @@
-export type MenuType = "context" | "dropdown";
+export type MenuStrategy = "context" | "dropdown";
