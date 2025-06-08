@@ -28,8 +28,6 @@ import TextField from "./components/TextField.svelte";
 import ToggleButton from "./components/ToggleButton.svelte";
 import ToggleIconButton from "./components/ToggleIconButton.svelte";
 import Tooltip from "./components/Tooltip.svelte";
-import TooltipRoot from "./components/TooltipRoot.svelte";
-import TooltipTrigger from "./components/TooltipTrigger.svelte";
 
 export {
     Button,
@@ -62,6 +60,4 @@ export {
     ToggleButton,
     ToggleIconButton,
     Tooltip,
-    TooltipRoot,
-    TooltipTrigger,
 };
