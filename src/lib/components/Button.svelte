@@ -232,9 +232,9 @@
         children,
         color = contextColor,
         containerClass,
+        ref = $bindable(),
         shape = contextShape,
         size = contextSize,
-        // ref = $bindable(),
         stateLayerClass,
         variant = contextVariant,
         ...props
@@ -243,8 +243,6 @@
         typeof variants,
         "containerClass" | "stateLayerClass"
     > = $props();
-
-    let ref = $state<HTMLElement | null>(null);
 
     let classes = $derived(variants({ color, shape, size, variant }));
 </script>

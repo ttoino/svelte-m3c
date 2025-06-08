@@ -126,7 +126,6 @@
         shape = contextShape,
         size = contextSize,
         stateLayerClass,
-        tooltip,
         variant = contextVariant,
         width = contextWidth,
         ...props

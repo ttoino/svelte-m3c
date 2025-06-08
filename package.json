@@ -48,6 +48,9 @@
             "types": "./dist/variants.d.ts",
             "svelte": "./dist/variants.js",
             "default": "./dist/variants.js"
+        },
+        "./*": {
+            "style": "./dist/style/*.css"
         }
     },
     "peerDependencies": {

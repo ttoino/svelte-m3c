@@ -170,7 +170,6 @@
         getButtonShape,
         getButtonSize,
         getButtonVariant,
-        getIconButtonWidth,
         isInButtonGroup,
     } from "$lib/context/button.js";
     import { Toggle, ToggleGroup } from "bits-ui";
@@ -186,7 +185,7 @@
     const Component = inButtonGroup ? ToggleGroup.Item : Toggle.Root;
 
     let {
-        children,
+        children: baseChildren,
         color = contextColor,
         containerClass,
         pressed = $bindable(false),
@@ -217,6 +216,6 @@
             target={ref}
         />
 
-        {@render children(args)}
+        {@render baseChildren?.(args)}
     {/snippet}
 </Component>

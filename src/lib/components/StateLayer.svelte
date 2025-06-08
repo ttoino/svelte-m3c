@@ -1,4 +1,5 @@
 <script lang="ts" module>
+    // TODO: Investigate porting this to an attachment
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
@@ -46,6 +47,7 @@
     import type { VariantProps } from "$lib/types/style.js";
     import type { HTMLAttributes, MouseEventHandler } from "svelte/elements";
 
+    import { on } from "svelte/events";
     import { SvelteMap } from "svelte/reactivity";
 
     let {
@@ -99,14 +101,22 @@
         const el = target ?? ref;
 
         if (el) {
-            el.addEventListener("mousedown", onmousedown as never);
-            el.addEventListener("mouseup", onmouseupOrLeave as never);
-            el.addEventListener("mouseleave", onmouseupOrLeave as never);
+            const removeOnmousedown = on(el, "mousedown", onmousedown as never);
+            const removeOnmouseup = on(
+                el,
+                "mouseup",
+                onmouseupOrLeave as never,
+            );
+            const removeOnmouseleave = on(
+                el,
+                "mouseleave",
+                onmouseupOrLeave as never,
+            );
 
             return () => {
-                el.removeEventListener("mousedown", onmousedown as never);
-                el.removeEventListener("mouseup", onmouseupOrLeave as never);
-                el.removeEventListener("mouseleave", onmouseupOrLeave as never);
+                removeOnmousedown();
+                removeOnmouseup();
+                removeOnmouseleave();
             };
         }
     });

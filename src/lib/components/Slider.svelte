@@ -88,6 +88,7 @@
 </script>
 
 <script lang="ts">
+    // TODO: Add thumb tooltip
     import type { VariantProps } from "$lib/types/style.js";
 
     import { Slider } from "bits-ui";
