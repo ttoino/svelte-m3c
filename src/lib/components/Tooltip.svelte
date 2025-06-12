@@ -27,7 +27,6 @@
 
     let {
         class: className,
-        portal = true,
         portalProps,
         rootProps,
         strategy = "tooltip",
@@ -40,7 +39,6 @@
         typeof variants,
         "class",
         {
-            portal?: boolean;
             portalProps?: WithoutChildrenOrChild<
                 Popover.PortalProps & Tooltip.PortalProps
             >;
@@ -58,18 +56,13 @@
     let Component = $derived(strategy === "popover" ? Popover : Tooltip);
 </script>
 
-{#snippet content()}
-    <Component.Content class={variants({ className, variant })} {...props} />
-{/snippet}
-
 <Component.Root {...rootProps}>
     <Component.Trigger child={trigger} {...triggerProps} />
 
-    {#if portal}
-        <Component.Portal {...portalProps}>
-            {@render content()}
-        </Component.Portal>
-    {:else}
-        {@render content()}
-    {/if}
+    <Component.Portal {...portalProps}>
+        <Component.Content
+            class={variants({ className, variant })}
+            {...props}
+        />
+    </Component.Portal>
 </Component.Root>

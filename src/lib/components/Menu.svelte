@@ -25,7 +25,6 @@
 
     let {
         class: className,
-        portal = true,
         portalProps,
         rootProps,
         strategy: baseStrategy = "context",
@@ -37,7 +36,6 @@
         typeof variants,
         "class",
         {
-            portal?: boolean;
             portalProps?: WithoutChildrenOrChild<
                 ContextMenu.PortalProps & DropdownMenu.PortalProps
             >;
@@ -73,7 +71,7 @@
 <Root {...rootProps}>
     <Trigger child={trigger} {...triggerProps} />
 
-    {#if portal && !sub}
+    {#if !sub}
         <Component.Portal {...portalProps}>
             {@render content()}
         </Component.Portal>
