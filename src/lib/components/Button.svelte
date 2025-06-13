@@ -232,7 +232,7 @@
         children,
         color = contextColor,
         containerClass,
-        ref = $bindable(),
+        ref = $bindable(null),
         shape = contextShape,
         size = contextSize,
         stateLayerClass,

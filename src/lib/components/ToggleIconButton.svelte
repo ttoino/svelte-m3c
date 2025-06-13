@@ -148,7 +148,7 @@
         getButtonSize,
         getButtonVariant,
         getIconButtonWidth,
-        isInButtonGroup,
+        isInToggleButtonGroup,
     } from "$lib/context/button.js";
     import { Toggle, ToggleGroup, type WithoutChildren } from "bits-ui";
 
@@ -161,8 +161,8 @@
     const contextVariant = getButtonVariant();
     const contextWidth = getIconButtonWidth();
 
-    const inButtonGroup = isInButtonGroup();
-    const Component = inButtonGroup ? ToggleGroup.Item : Toggle.Root;
+    const inToggleButtonGroup = isInToggleButtonGroup();
+    const Component = inToggleButtonGroup ? ToggleGroup.Item : Toggle.Root;
 
     let {
         color = contextColor,

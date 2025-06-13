@@ -1,6 +1,6 @@
 import Button from "./components/Button.svelte";
-import ButtonGroup from "./components/ButtonGroup.svelte";
 import Checkbox from "./components/Checkbox.svelte";
+import ConnectedButtonGroup from "./components/ConnectedButtonGroup.svelte";
 import Divider from "./components/Divider.svelte";
 import Icon from "./components/Icon.svelte";
 import IconButton from "./components/IconButton.svelte";
@@ -20,6 +20,7 @@ import RadioGroup from "./components/RadioGroup.svelte";
 import ScrollArea from "./components/ScrollArea.svelte";
 import SearchBar from "./components/SearchBar.svelte";
 import Slider from "./components/Slider.svelte";
+import StandardButtonGroup from "./components/StandardButtonGroup.svelte";
 import StateLayer from "./components/StateLayer.svelte";
 import Switch from "./components/Switch.svelte";
 import TextField from "./components/TextField.svelte";
@@ -29,8 +30,8 @@ import Tooltip from "./components/Tooltip.svelte";
 
 export {
     Button,
-    ButtonGroup,
     Checkbox,
+    ConnectedButtonGroup,
     Divider,
     Icon,
     IconButton,
@@ -50,6 +51,7 @@ export {
     ScrollArea,
     SearchBar,
     Slider,
+    StandardButtonGroup,
     StateLayer,
     Switch,
     TextField,

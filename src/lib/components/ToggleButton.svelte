@@ -64,67 +64,31 @@
             },
             {
                 class: {
-                    container:
-                        "bg-primary-container text-on-primary-container ui-on:bg-primary ui-on:text-on-primary",
+                    container: "ui-on:bg-primary ui-on:text-on-primary",
                 },
                 color: "primary",
                 variant: "tonal",
             },
             {
                 class: {
-                    container:
-                        "bg-secondary-container text-on-secondary-container ui-on:bg-secondary ui-on:text-on-secondary",
+                    container: "ui-on:bg-secondary ui-on:text-on-secondary",
                 },
                 color: "secondary",
                 variant: "tonal",
             },
             {
                 class: {
-                    container:
-                        "bg-tertiary-container text-on-tertiary-container ui-on:bg-tertiary ui-on:text-on-tertiary",
+                    container: "ui-on:bg-tertiary ui-on:text-on-tertiary",
                 },
                 color: "tertiary",
                 variant: "tonal",
             },
             {
                 class: {
-                    container:
-                        "bg-error-container text-on-error-container ui-on:bg-error ui-on:text-on-error",
+                    container: "ui-on:bg-error ui-on:text-on-error",
                 },
                 color: "error",
                 variant: "tonal",
-            },
-            {
-                class: {
-                    container:
-                        "ui-on:bg-inverse-surface ui-on:outline-inverse-surface ui-on:text-inverse-on-surface",
-                },
-                color: "primary",
-                variant: "outlined",
-            },
-            {
-                class: {
-                    container:
-                        "ui-on:bg-inverse-surface ui-on:outline-inverse-surface ui-on:text-inverse-on-surface",
-                },
-                color: "secondary",
-                variant: "outlined",
-            },
-            {
-                class: {
-                    container:
-                        "ui-on:bg-inverse-surface ui-on:outline-inverse-surface ui-on:text-inverse-on-surface",
-                },
-                color: "tertiary",
-                variant: "outlined",
-            },
-            {
-                class: {
-                    container:
-                        "ui-on:bg-inverse-surface ui-on:outline-inverse-surface ui-on:text-inverse-on-surface",
-                },
-                color: "error",
-                variant: "outlined",
             },
             {
                 class: {
@@ -159,6 +123,14 @@
         slots: {
             container: "ui-on:icon-filled ui-on:icon-grade-high",
         },
+        variants: {
+            variant: {
+                outlined: {
+                    container:
+                        "ui-on:bg-inverse-surface ui-on:outline-inverse-surface ui-on:text-inverse-on-surface",
+                },
+            },
+        },
     });
 </script>
 
@@ -170,7 +142,7 @@
         getButtonShape,
         getButtonSize,
         getButtonVariant,
-        isInButtonGroup,
+        isInToggleButtonGroup,
     } from "$lib/context/button.js";
     import { Toggle, ToggleGroup } from "bits-ui";
 
@@ -181,8 +153,8 @@
     const contextSize = getButtonSize();
     const contextVariant = getButtonVariant();
 
-    const inButtonGroup = isInButtonGroup();
-    const Component = inButtonGroup ? ToggleGroup.Item : Toggle.Root;
+    const inToggleButtonGroup = isInToggleButtonGroup();
+    const Component = inToggleButtonGroup ? ToggleGroup.Item : Toggle.Root;
 
     let {
         children: baseChildren,
