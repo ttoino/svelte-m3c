@@ -13,7 +13,7 @@
 </script>
 
 <script lang="ts">
-    import { type VariantProps } from "$lib/types/style.js";
+    import { type WrapperProps } from "$lib/types/style.js";
     import { RadioGroup } from "bits-ui";
 
     import StateLayer from "./StateLayer.svelte";
@@ -24,11 +24,7 @@
         ref = $bindable(null),
         stateLayerClass,
         ...props
-    }: VariantProps<
-        RadioGroup.ItemProps,
-        typeof variants,
-        "containerClass" | "iconClass" | "stateLayerClass"
-    > = $props();
+    }: WrapperProps<RadioGroup.ItemProps, typeof variants> = $props();
 
     let classes = $derived(variants({}));
 </script>
@@ -39,7 +35,7 @@
     {...props}
 >
     <StateLayer
-        class={classes.stateLayer({ class: stateLayerClass })}
+        containerClass={classes.stateLayer({ class: stateLayerClass })}
         target={ref}
     />
 

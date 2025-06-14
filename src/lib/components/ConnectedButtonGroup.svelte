@@ -27,7 +27,7 @@
         ButtonVariant,
         IconButtonWidth,
     } from "$lib/types/button.js";
-    import type { VariantProps } from "$lib/types/style.js";
+    import type { WrapperProps } from "$lib/types/style.js";
 
     import {
         setButtonColor,
@@ -49,10 +49,9 @@
         variant,
         width,
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         ToggleGroup.RootProps,
         typeof variants,
-        "class",
         {
             color?: ButtonColor;
             shape?: ButtonShape;

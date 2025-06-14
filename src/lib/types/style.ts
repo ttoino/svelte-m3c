@@ -1,25 +1,20 @@
-import type {
-    VariantProps as BaseVariantProps,
-    ClassValue,
-} from "tailwind-variants";
+import type { ClassValue, VariantProps } from "tailwind-variants";
 
 export type ClassGroups = "icon-fill" | "icon-grade" | "icon-size";
 
-export type ClassProps<
+export type WrapperProps<
     Base,
-    Class extends string = "class",
+    TV extends (() => ClassValue) | (() => Record<string, () => ClassValue>),
     Other extends Record<string, unknown> = Record<never, never>,
-> = ExtendProps<Omit<Base, "class">, { [c in Class]?: ClassValue } & Other>;
-
-export type ExtendProps<Base, Other extends Record<string, unknown>> = Omit<
-    Base,
-    keyof Other
-> &
-    Other;
-
-export type VariantProps<
-    Base,
-    TV extends () => unknown,
-    Class extends string = "class",
-    Other extends Record<string, unknown> = Record<never, never>,
-> = ClassProps<Base, Class, BaseVariantProps<TV> & Other>;
+    Classes extends string = TV extends () => infer Return
+        ? Return extends Record<infer K, () => ClassValue>
+            ? K extends string
+                ? `${K}Class`
+                : never
+            : "class"
+        : never,
+> = {
+    [K in Classes]?: ClassValue;
+} & Omit<Base, "class" | Classes | keyof (Other & VariantProps<TV>)> &
+    Omit<Other, "class" | Classes | keyof VariantProps<TV>> &
+    Omit<VariantProps<TV>, "class" | Classes>;

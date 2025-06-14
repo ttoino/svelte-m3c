@@ -97,7 +97,7 @@
 </script>
 
 <script lang="ts">
-    import type { VariantProps } from "$lib/types/style.js";
+    import type { WrapperProps } from "$lib/types/style.js";
     import type { MaterialSymbol } from "material-symbols";
 
     import {
@@ -129,10 +129,9 @@
         variant = contextVariant,
         width = contextWidth,
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         WithoutChildren<Button.RootProps>,
         typeof variants,
-        "containerClass" | "stateLayerClass",
         {
             icon: MaterialSymbol;
         }
@@ -147,7 +146,7 @@
     {...props}
 >
     <StateLayer
-        class={classes.stateLayer({ class: stateLayerClass })}
+        containerClass={classes.stateLayer({ class: stateLayerClass })}
         target={ref}
     />
 

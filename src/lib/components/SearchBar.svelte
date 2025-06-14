@@ -17,7 +17,7 @@
 </script>
 
 <script lang="ts">
-    import type { VariantProps } from "$lib/types/style.js";
+    import type { WrapperProps } from "$lib/types/style.js";
     import type { Snippet } from "svelte";
     import type { HTMLAttributes } from "svelte/elements";
 
@@ -25,16 +25,21 @@
     import StateLayer from "./StateLayer.svelte";
 
     let {
-        class: className,
+        containerClass,
+        inputClass,
         label = defaultLabel,
+        labelClass,
+        labelContainerClass,
         leading = defaultLeading,
+        leadingClass,
         placeholder = "",
+        stateLayerClass,
         trailing,
+        trailingClass,
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         HTMLAttributes<HTMLInputElement>,
         typeof variants,
-        "class",
         {
             label?: Snippet;
             leading?: Snippet;
@@ -48,20 +53,25 @@
 {#snippet defaultLabel()}Search{/snippet}
 {#snippet defaultLeading()}<Icon icon="search" />{/snippet}
 
-<label class={classes.container({ className })}>
+<label class={classes.container({ class: containerClass })}>
     {@render leading()}
 
-    <div class={classes.labelContainer({})}>
+    <div class={classes.labelContainer({ class: labelContainerClass })}>
         <input
-            class={classes.input({})}
+            class={classes.input({ class: inputClass })}
             {placeholder}
             type="search"
             {...props}
         />
-        <span class={classes.label({})}>{@render label()}</span>
+        <span class={classes.label({ class: labelClass })}
+            >{@render label()}</span
+        >
     </div>
 
     {@render trailing?.()}
 
-    <StateLayer class={classes.stateLayer()} focus="none" />
+    <StateLayer
+        containerClass={classes.stateLayer({ class: stateLayerClass })}
+        focus="none"
+    />
 </label>

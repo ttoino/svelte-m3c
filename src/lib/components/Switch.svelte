@@ -28,7 +28,7 @@
 <script lang="ts">
     import type { MaterialSymbol } from "material-symbols";
 
-    import { type ClassProps } from "$lib/types/style.js";
+    import { type WrapperProps } from "$lib/types/style.js";
     import { Switch } from "bits-ui";
 
     import Icon from "./Icon.svelte";
@@ -37,38 +37,49 @@
     let {
         checked = $bindable(false),
         checkedIcon,
-        class: className,
+        checkedIconClass,
         handleClass,
         ref = $bindable(null),
+        stateLayerClass,
+        trackClass,
         uncheckedIcon,
+        uncheckedIconClass,
         ...props
-    }: ClassProps<
+    }: WrapperProps<
         Switch.RootProps,
-        "class" | "handleClass",
+        typeof variants,
         {
             checkedIcon?: MaterialSymbol;
             uncheckedIcon?: MaterialSymbol;
         }
     > = $props();
 
-    let {
-        checkedIcon: checkedIconClass,
-        handle,
-        stateLayer,
-        track,
-        uncheckedIcon: uncheckedIconClass,
-    } = $derived(variants({ withUncheckedIcon: !!uncheckedIcon }));
+    let classes = $derived(variants({ withUncheckedIcon: !!uncheckedIcon }));
 </script>
 
-<Switch.Root class={track({ className })} bind:ref bind:checked {...props}>
-    <Switch.Thumb class={handle({ class: handleClass })}>
-        <StateLayer class={stateLayer()} target={ref} />
+<Switch.Root
+    class={classes.track({ class: trackClass })}
+    bind:ref
+    bind:checked
+    {...props}
+>
+    <Switch.Thumb class={classes.handle({ class: handleClass })}>
+        <StateLayer
+            containerClass={classes.stateLayer({ class: stateLayerClass })}
+            target={ref}
+        />
 
         {#if uncheckedIcon}
-            <Icon class={uncheckedIconClass()} icon={uncheckedIcon} />
+            <Icon
+                class={classes.uncheckedIcon({ class: uncheckedIconClass })}
+                icon={uncheckedIcon}
+            />
         {/if}
         {#if checkedIcon}
-            <Icon class={checkedIconClass()} icon={checkedIcon} />
+            <Icon
+                class={classes.checkedIcon({ class: checkedIconClass })}
+                icon={checkedIcon}
+            />
         {/if}
     </Switch.Thumb>
 </Switch.Root>

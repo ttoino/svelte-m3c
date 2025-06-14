@@ -7,7 +7,7 @@
 </script>
 
 <script lang="ts">
-    import type { ClassProps } from "$lib/types/style.js";
+    import type { WrapperProps } from "$lib/types/style.js";
     import type { MaterialSymbol } from "material-symbols";
     import type { HTMLAttributes } from "svelte/elements";
 
@@ -15,9 +15,9 @@
         class: className,
         icon,
         ...props
-    }: ClassProps<
+    }: WrapperProps<
         HTMLAttributes<HTMLSpanElement>,
-        "class",
+        typeof variants,
         {
             icon: MaterialSymbol;
         }

@@ -1,9 +1,11 @@
 <script lang="ts" module>
-    // TODO: Connected variant
     import { tv } from "$lib/style.js";
 
     export const variants = tv({
         base: "*:active:w-(--width-active) *:active:next:w-(--width-right) *:active:previous:w-(--width-left) inline-flex items-center justify-center",
+        defaultVariants: {
+            size: "medium",
+        },
         variants: {
             size: {
                 "extra-large": "gap-2",
@@ -23,32 +25,30 @@
         ButtonVariant,
         IconButtonWidth,
     } from "$lib/types/button.js";
-    import type { VariantProps } from "$lib/types/style.js";
-    import type { MouseEventHandler } from "svelte/elements";
+    import type { WrapperProps } from "$lib/types/style.js";
+    import type { HTMLAttributes, MouseEventHandler } from "svelte/elements";
 
     import {
         setButtonColor,
-        setButtonGroup,
         setButtonShape,
         setButtonSize,
         setButtonVariant,
         setIconButtonWidth,
     } from "$lib/context/button.js";
-    import { ToggleGroup } from "bits-ui";
 
     let {
+        children,
         class: className,
-        color = "primary",
+        color,
         onmousedown: baseOnmousedown,
-        shape = "round",
-        size = "small",
-        variant = "filled",
-        width = "default",
+        shape,
+        size,
+        variant,
+        width,
         ...props
-    }: VariantProps<
-        ToggleGroup.RootProps,
+    }: WrapperProps<
+        HTMLAttributes<HTMLDivElement>,
         typeof variants,
-        "class",
         {
             color?: ButtonColor;
             shape?: ButtonShape;
@@ -56,8 +56,6 @@
             width?: IconButtonWidth;
         }
     > = $props();
-
-    setButtonGroup();
 
     setButtonColor(color);
     setButtonShape(shape);
@@ -107,8 +105,6 @@
     };
 </script>
 
-<ToggleGroup.Root
-    class={variants({ className, size })}
-    {onmousedown}
-    {...props}
-/>
+<div class={variants({ className, size })} {onmousedown} {...props}>
+    {@render children?.()}
+</div>

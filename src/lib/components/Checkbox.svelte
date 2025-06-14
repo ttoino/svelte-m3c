@@ -13,7 +13,7 @@
 </script>
 
 <script lang="ts">
-    import { type VariantProps } from "$lib/types/style.js";
+    import { type WrapperProps } from "$lib/types/style.js";
     import { Checkbox } from "bits-ui";
     import { draw, fade } from "svelte/transition";
 
@@ -27,14 +27,24 @@
         ref = $bindable(null),
         stateLayerClass,
         ...props
-    }: VariantProps<
-        Checkbox.RootProps,
-        typeof variants,
-        "containerClass" | "iconClass" | "stateLayerClass"
-    > = $props();
+    }: WrapperProps<Checkbox.RootProps, typeof variants> = $props();
 
     let classes = $derived(variants({}));
 </script>
+
+{#snippet icon(path: string)}
+    <svg
+        class={classes.icon({ class: iconClass })}
+        viewBox="0 0 14 14"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            d={path}
+            in:draw={{ duration: 300 }}
+            out:fade={{ duration: 300 }}
+        />
+    </svg>
+{/snippet}
 
 <Checkbox.Root
     class={classes.container({ class: containerClass })}
@@ -45,34 +55,14 @@
 >
     {#snippet children({ checked, indeterminate })}
         <StateLayer
-            class={classes.stateLayer({ class: stateLayerClass })}
+            containerClass={classes.stateLayer({ class: stateLayerClass })}
             target={ref}
         />
 
         {#if indeterminate}
-            <svg
-                class={classes.icon({ class: iconClass })}
-                viewBox="0 0 14 14"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M 2 7 H 12"
-                    in:draw={{ duration: 300 }}
-                    out:fade={{ duration: 300 }}
-                />
-            </svg>
+            {@render icon("M 2 7 H 12")}
         {:else if checked}
-            <svg
-                class={classes.icon({ class: iconClass })}
-                viewBox="0 0 14 14"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M 2.4 7.4 L 5 10 L 11.6 3.4"
-                    in:draw={{ duration: 300 }}
-                    out:fade={{ duration: 300 }}
-                />
-            </svg>
+            {@render icon("M 2.4 7.4 L 5 10 L 11.6 3.4")}
         {/if}
     {/snippet}
 </Checkbox.Root>

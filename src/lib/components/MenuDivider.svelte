@@ -10,7 +10,7 @@
 </script>
 
 <script lang="ts">
-    import type { ClassProps } from "$lib/types/style.js";
+    import type { WrapperProps } from "$lib/types/style.js";
 
     import { getMenuStrategy } from "$lib/context/menu.js";
     import { ContextMenu, DropdownMenu } from "bits-ui";
@@ -20,8 +20,10 @@
     let {
         class: className,
         ...props
-    }: ClassProps<ContextMenu.SeparatorProps & DropdownMenu.SeparatorProps> =
-        $props();
+    }: WrapperProps<
+        ContextMenu.SeparatorProps & DropdownMenu.SeparatorProps,
+        typeof variants
+    > = $props();
 
     let strategy = $derived(parentStrategy?.() ?? "context");
     let Component = $derived(

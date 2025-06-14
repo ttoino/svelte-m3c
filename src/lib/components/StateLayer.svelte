@@ -10,8 +10,9 @@
             hover: "group",
         },
         slots: {
+            container:
+                "@container/state-layer relative flex items-center justify-center overflow-clip",
             ripple: "pointer-events-none absolute size-[300cqmin] origin-center scale-0 rounded-full bg-current opacity-10 transition-[background-color]",
-            root: "@container/state-layer relative flex items-center justify-center overflow-clip",
             state: "absolute inset-0 bg-current opacity-0 transition-[opacity,background-color]",
         },
         variants: {
@@ -22,11 +23,13 @@
             },
             disabled: {
                 group: {
-                    root: "group-disabled/state-layer:pointer-events-none group-disabled/state-layer:opacity-0",
+                    container:
+                        "group-disabled/state-layer:pointer-events-none group-disabled/state-layer:opacity-0",
                 },
                 none: {},
                 peer: {
-                    root: "peer-disabled/state-layer:pointer-events-none peer-disabled/state-layer:opacity-0",
+                    container:
+                        "peer-disabled/state-layer:pointer-events-none peer-disabled/state-layer:opacity-0",
                 },
             },
             focus: {
@@ -44,7 +47,7 @@
 </script>
 
 <script lang="ts">
-    import type { VariantProps } from "$lib/types/style.js";
+    import type { WrapperProps } from "$lib/types/style.js";
     import type { HTMLAttributes, MouseEventHandler } from "svelte/elements";
 
     import { on } from "svelte/events";
@@ -52,8 +55,7 @@
 
     let {
         active,
-        class: className,
-        commonClass,
+        containerClass,
         disabled,
         focus,
         hover,
@@ -62,10 +64,9 @@
         stateClass,
         target,
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         HTMLAttributes<HTMLDivElement>,
         typeof variants,
-        "class" | "commonClass" | "rippleClass" | "stateClass",
         {
             ref?: HTMLDivElement | null;
             target?: HTMLElement | null;
@@ -122,8 +123,12 @@
     });
 </script>
 
-<div bind:this={ref} class={classes.root({ className })} {...props}>
-    <div class={classes.state({ class: [commonClass, stateClass] })}></div>
+<div
+    bind:this={ref}
+    class={classes.container({ class: containerClass })}
+    {...props}
+>
+    <div class={classes.state({ class: stateClass })}></div>
 
     {#each ripples.entries() as [key, { x, y }] (key)}
         <div
@@ -133,7 +138,6 @@
                     key === currentRipple
                         ? "animate-ripple-hold"
                         : "animate-ripple",
-                    commonClass,
                     rippleClass,
                 ],
             })}

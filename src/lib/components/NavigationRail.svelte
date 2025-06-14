@@ -11,13 +11,13 @@
 <script lang="ts">
     import type { HTMLAttributes } from "svelte/elements";
 
-    import { type VariantProps } from "$lib/types/style.js";
+    import { type WrapperProps } from "$lib/types/style.js";
 
     let {
         children,
         class: className,
         ...props
-    }: VariantProps<HTMLAttributes<HTMLElement>, typeof variants> = $props();
+    }: WrapperProps<HTMLAttributes<HTMLElement>, typeof variants> = $props();
 </script>
 
 <nav class={variants({ className })} {...props}>

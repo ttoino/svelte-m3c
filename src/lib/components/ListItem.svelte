@@ -31,7 +31,7 @@
     import type { HTMLAttributes } from "svelte/elements";
 
     import { getLines } from "$lib/elements.js";
-    import { type VariantProps } from "$lib/types/style.js";
+    import { type WrapperProps } from "$lib/types/style.js";
 
     import StateLayer from "./StateLayer.svelte";
 
@@ -49,16 +49,9 @@
         trailing,
         trailingClass,
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         WithoutChildren<HTMLAttributes<HTMLDivElement>>,
         typeof variants,
-        | "containerClass"
-        | "labelTextClass"
-        | "leadingClass"
-        | "stateLayerClass"
-        | "supportingTextClass"
-        | "textClass"
-        | "trailingClass",
         {
             labelText?: Snippet;
             leading?: Snippet;
@@ -80,7 +73,9 @@
     class={classes.container({ class: containerClass })}
     {...props}
 >
-    <StateLayer class={classes.stateLayer({ class: stateLayerClass })} />
+    <StateLayer
+        containerClass={classes.stateLayer({ class: stateLayerClass })}
+    />
 
     {#if leading}
         <div class={classes.leading({ class: leadingClass })}>

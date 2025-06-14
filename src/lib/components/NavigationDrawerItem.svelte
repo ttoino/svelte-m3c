@@ -3,8 +3,9 @@
 
     export const variants = tv({
         slots: {
+            container:
+                "group/state-layer text-on-surface group/navigation-rail-item relative -mx-4 flex h-14 flex-row items-center justify-start gap-3 rounded-full pl-4 pr-6",
             icon: "transition-colors",
-            item: "group/state-layer text-on-surface group/navigation-rail-item relative -mx-4 flex h-14 flex-row items-center justify-start gap-3 rounded-full pl-4 pr-6",
             label: "text-label-l transition-colors after:absolute after:inset-0",
             stateLayer: "absolute inset-0 rounded-full",
         },
@@ -28,7 +29,7 @@
     import type { MaterialSymbol } from "material-symbols";
     import type { HTMLAttributes } from "svelte/elements";
 
-    import { type VariantProps } from "$lib/types/style.js";
+    import { type WrapperProps } from "$lib/types/style.js";
 
     import Icon from "./Icon.svelte";
     import StateLayer from "./StateLayer.svelte";
@@ -36,14 +37,16 @@
     let {
         active = false,
         children,
-        class: className,
+        containerClass,
         href,
         icon,
+        iconClass,
+        labelClass,
+        stateLayerClass,
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         HTMLAttributes<HTMLDivElement>,
         typeof variants,
-        "class",
         {
             active?: boolean;
             href: string;
@@ -56,12 +59,15 @@
     let target: HTMLElement | null = $state(null);
 </script>
 
-<div class={classes.item({ className })} {...props}>
-    <StateLayer class={classes.stateLayer()} {target} />
+<div class={classes.container({ class: containerClass })} {...props}>
+    <StateLayer
+        containerClass={classes.stateLayer({ class: stateLayerClass })}
+        {target}
+    />
 
-    <Icon class={classes.icon()} {icon} />
+    <Icon class={classes.icon({ class: iconClass })} {icon} />
 
-    <a bind:this={target} class={classes.label()} {href}>
+    <a bind:this={target} class={classes.label({ class: labelClass })} {href}>
         {@render children?.()}
     </a>
 </div>

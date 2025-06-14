@@ -16,7 +16,7 @@
 
 <script lang="ts">
     import { getMenuStrategy } from "$lib/context/menu.js";
-    import { type VariantProps } from "$lib/types/style.js";
+    import { type WrapperProps } from "$lib/types/style.js";
     import { ContextMenu, DropdownMenu } from "bits-ui";
     import { type Snippet } from "svelte";
 
@@ -35,17 +35,12 @@
         trailing,
         trailingClass,
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         ContextMenu.ItemProps &
             ContextMenu.SubTriggerProps &
             DropdownMenu.ItemProps &
             DropdownMenu.SubTriggerProps,
         typeof variants,
-        | "containerClass"
-        | "leadingClass"
-        | "stateLayerClass"
-        | "textClass"
-        | "trailingClass",
         {
             leading?: Snippet;
             text?: Snippet;
@@ -66,7 +61,9 @@
     bind:ref
     {...props}
 >
-    <StateLayer class={classes.stateLayer({ class: stateLayerClass })} />
+    <StateLayer
+        containerClass={classes.stateLayer({ class: stateLayerClass })}
+    />
 
     {#if leading}
         <div class={classes.leading({ class: leadingClass })}>

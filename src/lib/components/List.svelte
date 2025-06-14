@@ -10,14 +10,14 @@
     import type { WithElementRef } from "bits-ui";
     import type { HTMLAttributes } from "svelte/elements";
 
-    import { type VariantProps } from "$lib/types/style.js";
+    import { type WrapperProps } from "$lib/types/style.js";
 
     let {
         children,
         class: className,
         ref = $bindable(null),
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         WithElementRef<HTMLAttributes<HTMLDivElement>>,
         typeof variants
     > = $props();

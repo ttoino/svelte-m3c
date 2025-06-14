@@ -5,8 +5,9 @@
         slots: {
             activeIndicator:
                 "relative flex w-14 items-center justify-center rounded-full",
+            container:
+                "group/state-layer text-on-surface group/navigation-rail-item relative flex h-14 flex-col items-center justify-center gap-1",
             icon: "transition-colors",
-            item: "group/state-layer text-on-surface group/navigation-rail-item relative flex h-14 flex-col items-center justify-center gap-1",
             label: "text-label-m transition-colors",
             stateLayer: "absolute inset-0 rounded-full",
         },
@@ -40,23 +41,26 @@
     import type { MaterialSymbol } from "material-symbols";
     import type { HTMLAttributes } from "svelte/elements";
 
-    import { type VariantProps } from "$lib/types/style.js";
+    import { type WrapperProps } from "$lib/types/style.js";
 
     import Icon from "./Icon.svelte";
     import StateLayer from "./StateLayer.svelte";
 
     let {
         active = false,
+        activeIndicatorClass,
         children,
-        class: className,
+        containerClass,
         hideLabel,
         href,
         icon,
+        iconClass,
+        labelClass,
+        stateLayerClass,
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         HTMLAttributes<HTMLDivElement>,
         typeof variants,
-        "class",
         {
             active?: boolean;
             href: string;
@@ -69,14 +73,17 @@
     let target: HTMLElement | null = $state(null);
 </script>
 
-<div class={classes.item({ className })} {...props}>
-    <div class={classes.activeIndicator()}>
-        <StateLayer class={classes.stateLayer()} {target} />
+<div class={classes.container({ class: containerClass })} {...props}>
+    <div class={classes.activeIndicator({ class: activeIndicatorClass })}>
+        <StateLayer
+            containerClass={classes.stateLayer({ class: stateLayerClass })}
+            {target}
+        />
 
-        <Icon class={classes.icon()} {icon} />
+        <Icon class={classes.icon({ class: iconClass })} {icon} />
     </div>
 
-    <a bind:this={target} class={classes.label()} {href}>
+    <a bind:this={target} class={classes.label({ class: labelClass })} {href}>
         {@render children?.()}
     </a>
 </div>

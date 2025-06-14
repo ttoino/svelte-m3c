@@ -35,6 +35,11 @@
         ],
         slots: {
             activeTrack: "bg-primary group-disabled/slider:bg-on-surface/38",
+            container: [
+                "group/slider relative flex cursor-pointer items-center disabled:cursor-default",
+                "ui-horizontal:min-w-86 ui-horizontal:flex-row ui-horizontal:h-11 ui-horizontal:mx-2",
+                "ui-vertical:min-h-86 ui-vertical:flex-col ui-vertical:w-11 ui-vertical:my-2",
+            ],
             handle: [
                 "bg-primary cursor-grab rounded-full outline-none transition-[width]",
                 "group-ui-horizontal/slider:h-11 group-ui-horizontal/slider:hover:w-1 group-ui-horizontal/slider:focus:w-0.5 group-ui-horizontal/slider:group-disabled/slider:!w-1",
@@ -46,11 +51,6 @@
                 "bg-secondary-container group-disabled/slider:bg-on-surface/12",
             indicator: [
                 "group-disabled/slider:bg-on-surface/38 group-disabled/slider:data-[bounded]:bg-inverse-on-surface/38 bg-on-secondary-container data-[bounded]:bg-on-primary data-[bounded]:not-has-[+.peer[data-bounded]]:!bg-transparent group-ui-horizontal/slider:!-translate-x-1/2 group-ui-vertical/slider:!translate-y-1/2 peer rounded-full transition-[width,height]",
-            ],
-            root: [
-                "group/slider relative flex cursor-pointer items-center disabled:cursor-default",
-                "ui-horizontal:min-w-86 ui-horizontal:flex-row ui-horizontal:h-11 ui-horizontal:mx-2",
-                "ui-vertical:min-h-86 ui-vertical:flex-col ui-vertical:w-11 ui-vertical:my-2",
             ],
         },
         variants: {
@@ -89,36 +89,37 @@
 
 <script lang="ts">
     // TODO: Add thumb tooltip
-    import type { VariantProps } from "$lib/types/style.js";
+    import type { WrapperProps } from "$lib/types/style.js";
 
     import { Slider } from "bits-ui";
 
     let {
-        class: className,
+        activeTrackClass,
         collapsible = false,
+        containerClass,
         discrete = false,
+        handleClass,
+        inactiveTrackClass,
+        indicatorClass,
         ref = $bindable(null),
         step = 1,
         type,
         value = $bindable(),
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         Slider.RootProps,
         typeof variants,
-        "class",
         {
             collapsible?: boolean;
             discrete?: boolean;
         }
     > = $props();
 
-    let { activeTrack, handle, inactiveTrack, indicator, root } = $derived(
-        variants({ collapsible, type }),
-    );
+    let classes = $derived(variants({ collapsible, type }));
 </script>
 
 <Slider.Root
-    class={root({ className })}
+    class={classes.container({ class: containerClass })}
     {step}
     {type}
     bind:ref
@@ -153,28 +154,42 @@
                                 : top
                                   ? `top: calc(100% - ${bottom})`
                                   : ""}
-                            class={inactiveTrack()}
+                            class={classes.inactiveTrack({
+                                class: inactiveTrackClass,
+                            })}
                         >
                         </span>
                     {/if}
-                    <span class={activeTrack()} {...props}> </span>
+                    <span
+                        class={classes.activeTrack({ class: activeTrackClass })}
+                        {...props}
+                    >
+                    </span>
                     <span
                         style={right
                             ? `left: calc(100% - ${right})`
                             : bottom
                               ? `bottom: calc(100% - ${top})`
                               : ""}
-                        class={inactiveTrack()}
+                        class={classes.inactiveTrack({
+                            class: inactiveTrackClass,
+                        })}
                     >
                     </span>
                 </span>
             {/snippet}
         </Slider.Range>
         {#each thumbs as index (index)}
-            <Slider.Thumb class={handle()} {index} />
+            <Slider.Thumb
+                class={classes.handle({ class: handleClass })}
+                {index}
+            />
         {/each}
         {#each renderedTicks as index (index)}
-            <Slider.Tick class={indicator()} {index} />
+            <Slider.Tick
+                class={classes.indicator({ class: indicatorClass })}
+                {index}
+            />
         {/each}
     {/snippet}
 </Slider.Root>

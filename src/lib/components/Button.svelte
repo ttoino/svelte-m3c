@@ -211,7 +211,7 @@
 </script>
 
 <script lang="ts">
-    import type { VariantProps } from "$lib/types/style.js";
+    import type { WrapperProps } from "$lib/types/style.js";
 
     import {
         getButtonColor,
@@ -238,11 +238,7 @@
         stateLayerClass,
         variant = contextVariant,
         ...props
-    }: VariantProps<
-        Button.RootProps,
-        typeof variants,
-        "containerClass" | "stateLayerClass"
-    > = $props();
+    }: WrapperProps<Button.RootProps, typeof variants> = $props();
 
     let classes = $derived(variants({ color, shape, size, variant }));
 </script>
@@ -253,7 +249,7 @@
     {...props}
 >
     <StateLayer
-        class={classes.stateLayer({ class: stateLayerClass })}
+        containerClass={classes.stateLayer({ class: stateLayerClass })}
         target={ref}
     />
 

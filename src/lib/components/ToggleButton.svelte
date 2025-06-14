@@ -135,7 +135,7 @@
 </script>
 
 <script lang="ts">
-    import type { VariantProps } from "$lib/types/style.js";
+    import type { WrapperProps } from "$lib/types/style.js";
 
     import {
         getButtonColor,
@@ -167,10 +167,9 @@
         stateLayerClass,
         variant = contextVariant,
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         Toggle.RootProps & ToggleGroup.ItemProps,
-        typeof variants,
-        "containerClass" | "stateLayerClass"
+        typeof variants
     > = $props();
 
     const classes = variants({ color, shape, size, variant });
@@ -184,7 +183,7 @@
 >
     {#snippet children(args)}
         <StateLayer
-            class={classes.stateLayer({ class: stateLayerClass })}
+            containerClass={classes.stateLayer({ class: stateLayerClass })}
             target={ref}
         />
 

@@ -19,7 +19,7 @@
         },
         slots: {
             activeIndicator: "",
-            root: "group/progress relative inline-flex",
+            container: "group/progress relative inline-flex",
             stopIndicator:
                 "bg-primary group-ui-indeterminate/progress:hidden absolute bottom-0 right-0 top-0 size-1 rounded-full",
             track: "",
@@ -44,13 +44,13 @@
 </script>
 
 <script lang="ts">
-    import { type VariantProps } from "$lib/types/style.js";
+    import { type WrapperProps } from "$lib/types/style.js";
     import { Progress } from "bits-ui";
 
     let {
         activeIndicatorClass,
         circular,
-        class: className,
+        containerClass,
         max = 100,
         min = 0,
         ref = $bindable(null),
@@ -58,11 +58,7 @@
         trackClass,
         value = 0,
         ...props
-    }: VariantProps<
-        Progress.RootProps,
-        typeof variants,
-        "activeIndicatorClass" | "class" | "stopIndicatorClass" | "trackClass"
-    > = $props();
+    }: WrapperProps<Progress.RootProps, typeof variants> = $props();
 
     const classes = variants({ circular });
 
@@ -78,7 +74,7 @@
 </script>
 
 <Progress.Root
-    class={classes.root({ className })}
+    class={classes.container({ class: containerClass })}
     {max}
     {min}
     {value}

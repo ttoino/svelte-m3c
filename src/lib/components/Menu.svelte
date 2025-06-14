@@ -11,7 +11,7 @@
 
 <script lang="ts">
     import type { MenuStrategy } from "$lib/types/menu.js";
-    import type { VariantProps } from "$lib/types/style.js";
+    import type { WrapperProps } from "$lib/types/style.js";
 
     import { getMenuStrategy, setMenuStrategy } from "$lib/context/menu.js";
     import {
@@ -31,10 +31,9 @@
         trigger,
         triggerProps,
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         WithoutChild<ContextMenu.ContentProps & DropdownMenu.ContentProps>,
         typeof variants,
-        "class",
         {
             portalProps?: WithoutChildrenOrChild<
                 ContextMenu.PortalProps & DropdownMenu.PortalProps

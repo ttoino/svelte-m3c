@@ -70,7 +70,7 @@
 <script lang="ts">
     import type { HTMLAttributes } from "svelte/elements";
 
-    import { type VariantProps } from "$lib/types/style.js";
+    import { type WrapperProps } from "$lib/types/style.js";
 
     import StateLayer from "./StateLayer.svelte";
 
@@ -86,16 +86,9 @@
         variant,
         visualLabelClass,
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         HTMLAttributes<HTMLInputElement>,
         typeof variants,
-        | "activeIndicatorClass"
-        | "containerClass"
-        | "dummyLabelClass"
-        | "dummyWrapperClass"
-        | "inputClass"
-        | "stateLayerClass"
-        | "visualLabelClass",
         {
             ref?: HTMLLabelElement | null;
         }
@@ -116,8 +109,8 @@
     </div>
     <span class={classes.visualLabel({ class: visualLabelClass })}>Label</span>
     <StateLayer
-        class={classes.stateLayer({ class: stateLayerClass })}
         active="none"
+        containerClass={classes.stateLayer({ class: stateLayerClass })}
         disabled="peer"
         focus="none"
         target={ref}

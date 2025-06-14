@@ -16,7 +16,7 @@
 </script>
 
 <script lang="ts">
-    import type { VariantProps } from "$lib/types/style.js";
+    import type { WrapperProps } from "$lib/types/style.js";
 
     import {
         Popover,
@@ -34,10 +34,9 @@
         triggerProps,
         variant,
         ...props
-    }: VariantProps<
+    }: WrapperProps<
         WithoutChild<Popover.ContentProps & Tooltip.ContentProps>,
         typeof variants,
-        "class",
         {
             portalProps?: WithoutChildrenOrChild<
                 Popover.PortalProps & Tooltip.PortalProps
