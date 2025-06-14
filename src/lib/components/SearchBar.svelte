@@ -54,7 +54,9 @@
 {#snippet defaultLeading()}<Icon icon="search" />{/snippet}
 
 <label class={classes.container({ class: containerClass })}>
-    {@render leading()}
+    <span class={classes.leading({ class: leadingClass })}>
+        {@render leading()}
+    </span>
 
     <div class={classes.labelContainer({ class: labelContainerClass })}>
         <input
@@ -63,12 +65,16 @@
             type="search"
             {...props}
         />
-        <span class={classes.label({ class: labelClass })}
-            >{@render label()}</span
-        >
+        <span class={classes.label({ class: labelClass })}>
+            {@render label()}
+        </span>
     </div>
 
-    {@render trailing?.()}
+    {#if trailing}
+        <span class={classes.trailing({ class: trailingClass })}>
+            {@render trailing()}
+        </span>
+    {/if}
 
     <StateLayer
         containerClass={classes.stateLayer({ class: stateLayerClass })}
