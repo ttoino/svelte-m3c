@@ -1,8 +1,7 @@
 <script lang="ts" module>
-    // TODO: Investigate porting this to an attachment
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants({
         defaultVariants: {
             active: "group",
             disabled: "group",
@@ -44,6 +43,7 @@
             },
         },
     });
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

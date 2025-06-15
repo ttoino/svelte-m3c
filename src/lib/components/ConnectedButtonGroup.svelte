@@ -1,7 +1,7 @@
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants({
         base: "inline-flex items-center justify-center gap-0.5",
         defaultVariants: {
             size: "medium",
@@ -18,6 +18,8 @@
             },
         },
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

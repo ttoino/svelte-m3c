@@ -1,7 +1,7 @@
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants({
         slots: {
             container:
                 "group/state-layer text-on-surface group/navigation-rail-item relative -mx-4 flex h-14 flex-row items-center justify-start gap-3 rounded-full pl-4 pr-6",
@@ -23,6 +23,8 @@
             },
         },
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

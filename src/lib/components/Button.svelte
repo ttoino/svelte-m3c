@@ -1,8 +1,8 @@
 <script lang="ts" module>
     // TODO: Material 3 Expressive
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants({
         compoundVariants: [
             // Primary colors
             {
@@ -208,6 +208,8 @@
             },
         },
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

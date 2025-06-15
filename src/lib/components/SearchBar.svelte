@@ -1,8 +1,8 @@
 <script lang="ts" module>
     // TODO: Search view
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants({
         slots: {
             container:
                 "shadow-3 bg-surface-container-highest group/state-layer max-w-180 relative flex h-14 w-full cursor-text flex-row items-center gap-4 rounded-full px-4",
@@ -14,6 +14,8 @@
             trailing: "text-on-surface-variant",
         },
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

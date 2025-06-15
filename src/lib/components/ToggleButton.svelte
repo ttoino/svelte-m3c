@@ -1,10 +1,9 @@
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    import { variants as base } from "./Button.svelte";
+    import { variantsConfig as base } from "./Button.svelte";
 
-    // TODO: Check if colors are correct
-    export const variants = tv({
+    export const variantsConfig = mergeVariants(base, {
         compoundVariants: [
             {
                 class: { container: "ui-on:bg-primary ui-on:text-on-primary" },
@@ -119,7 +118,6 @@
                 variant: "text",
             },
         ],
-        extend: base,
         slots: {
             container: "ui-on:icon-filled ui-on:icon-grade-high",
         },
@@ -132,6 +130,8 @@
             },
         },
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

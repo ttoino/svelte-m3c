@@ -1,7 +1,7 @@
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants({
         compoundSlots: [
             {
                 class: [
@@ -81,6 +81,8 @@
         },
     });
 
+    export const variants = tv(variantsConfig);
+
     const leftPattern = /left\s*:\s*([0-9.]+%)/;
     const rightPattern = /right\s*:\s*([0-9.]+%)/;
     const topPattern = /top\s*:\s*([0-9.]+%)/;
@@ -126,9 +128,9 @@
     bind:value={value as never}
     {...props}
 >
-    {#snippet children({ thumbs, ticks })}
-        {@const firstTick = ticks.at(0)}
-        {@const lastTick = ticks.at(-1)}
+    {#snippet children({ thumbItems, tickItems })}
+        {@const firstTick = tickItems.at(0)}
+        {@const lastTick = tickItems.at(-1)}
         {@const renderedTicks =
             !discrete && type !== "multiple" && lastTick !== undefined
                 ? [lastTick]
@@ -137,7 +139,7 @@
                     firstTick !== undefined &&
                     lastTick !== undefined
                   ? [firstTick, lastTick]
-                  : ticks}
+                  : tickItems}
 
         <Slider.Range>
             {#snippet child({ props })}
@@ -179,13 +181,13 @@
                 </span>
             {/snippet}
         </Slider.Range>
-        {#each thumbs as index (index)}
+        {#each thumbItems as { index } (index)}
             <Slider.Thumb
                 class={classes.handle({ class: handleClass })}
                 {index}
             />
         {/each}
-        {#each renderedTicks as index (index)}
+        {#each renderedTicks as { index } (index)}
             <Slider.Tick
                 class={classes.indicator({ class: indicatorClass })}
                 {index}

@@ -1,12 +1,13 @@
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    import { variants as base } from "./Divider.svelte";
+    import { variantsConfig as base } from "./Divider.svelte";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants(base, {
         base: "my-2",
-        extend: base,
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

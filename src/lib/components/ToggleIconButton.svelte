@@ -1,141 +1,19 @@
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    import { variants as base } from "./IconButton.svelte";
+    import { buttonToIconButtonConfig } from "./IconButton.svelte";
+    import { variantsConfig as base } from "./ToggleButton.svelte";
 
-    // TODO: Check if colors are correct
-    export const variants = tv({
-        compoundVariants: [
-            {
-                class: {
-                    container:
-                        "bg-surface-container text-on-surface-variant ui-on:bg-primary ui-on:text-on-primary",
-                },
-                color: "primary",
-                variant: "filled",
+    export const variantsConfig = mergeVariants(
+        mergeVariants(base, buttonToIconButtonConfig),
+        {
+            slots: {
+                container: "ui-on:icon-filled ui-on:icon-grade-high",
             },
-            {
-                class: {
-                    container:
-                        "bg-surface-container text-on-surface-variant ui-on:bg-secondary ui-on:text-on-secondary",
-                },
-                color: "secondary",
-                variant: "filled",
-            },
-            {
-                class: {
-                    container:
-                        "bg-surface-container text-on-surface-variant ui-on:bg-tertiary ui-on:text-on-tertiary",
-                },
-                color: "tertiary",
-                variant: "filled",
-            },
-            {
-                class: {
-                    container:
-                        "bg-surface-container text-on-surface-variant ui-on:bg-error ui-on:text-on-error",
-                },
-                color: "error",
-                variant: "filled",
-            },
-            {
-                class: {
-                    container:
-                        "bg-primary-container text-on-primary-container ui-on:bg-primary ui-on:text-on-primary",
-                },
-                color: "primary",
-                variant: "tonal",
-            },
-            {
-                class: {
-                    container:
-                        "bg-secondary-container text-on-secondary-container ui-on:bg-secondary ui-on:text-on-secondary",
-                },
-                color: "secondary",
-                variant: "tonal",
-            },
-            {
-                class: {
-                    container:
-                        "bg-tertiary-container text-on-tertiary-container ui-on:bg-tertiary ui-on:text-on-tertiary",
-                },
-                color: "tertiary",
-                variant: "tonal",
-            },
-            {
-                class: {
-                    container:
-                        "bg-error-container text-on-error-container ui-on:bg-error ui-on:text-on-error",
-                },
-                color: "error",
-                variant: "tonal",
-            },
-            {
-                class: {
-                    container:
-                        "ui-on:bg-inverse-surface ui-on:outline-inverse-surface ui-on:text-inverse-on-surface",
-                },
-                color: "primary",
-                variant: "outlined",
-            },
-            {
-                class: {
-                    container:
-                        "ui-on:bg-inverse-surface ui-on:outline-inverse-surface ui-on:text-inverse-on-surface",
-                },
-                color: "secondary",
-                variant: "outlined",
-            },
-            {
-                class: {
-                    container:
-                        "ui-on:bg-inverse-surface ui-on:outline-inverse-surface ui-on:text-inverse-on-surface",
-                },
-                color: "tertiary",
-                variant: "outlined",
-            },
-            {
-                class: {
-                    container:
-                        "ui-on:bg-inverse-surface ui-on:outline-inverse-surface ui-on:text-inverse-on-surface",
-                },
-                color: "error",
-                variant: "outlined",
-            },
-            {
-                class: {
-                    container: "text-on-surface-variant ui-on:text-primary",
-                },
-                color: "primary",
-                variant: "text",
-            },
-            {
-                class: {
-                    container: "text-on-surface-variant ui-on:text-secondary",
-                },
-                color: "secondary",
-                variant: "text",
-            },
-            {
-                class: {
-                    container: "text-on-surface-variant ui-on:text-tertiary",
-                },
-                color: "tertiary",
-                variant: "text",
-            },
-            {
-                class: {
-                    container: "text-on-surface-variant ui-on:text-error",
-                },
-                color: "error",
-                variant: "text",
-            },
-        ],
-        extend: base,
-        slots: {
-            container: "ui-on:icon-filled ui-on:icon-grade-high",
         },
-    });
+    );
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

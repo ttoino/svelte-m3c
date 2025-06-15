@@ -1,7 +1,7 @@
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants({
         compoundSlots: [
             {
                 class: "absolute size-4 text-[1rem] transition-opacity",
@@ -23,6 +23,8 @@
             },
         },
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

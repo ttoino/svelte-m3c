@@ -1,9 +1,9 @@
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    import { variants as base } from "./Button.svelte";
+    import { variantsConfig as base } from "./Button.svelte";
 
-    export const variants = tv({
+    export const buttonToIconButtonConfig = mergeVariants({
         compoundVariants: [
             {
                 class: { container: "px-1" },
@@ -79,7 +79,6 @@
         defaultVariants: {
             width: "default",
         },
-        extend: base,
         slots: {
             container: "min-w-0",
         },
@@ -94,6 +93,10 @@
             },
         },
     });
+
+    export const variantsConfig = mergeVariants(base, buttonToIconButtonConfig);
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

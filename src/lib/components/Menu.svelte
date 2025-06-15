@@ -1,12 +1,13 @@
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    import { variants as base } from "./List.svelte";
+    import { variantsConfig as base } from "./List.svelte";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants(base, {
         base: "shadow-2 rounded-xs bg-surface-container z-50",
-        extend: base,
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

@@ -1,7 +1,7 @@
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants({
         slots: {
             container:
                 "disabled:border-on-surface/38 group/radio group/state-layer border-on-surface-variant ui-checked:border-primary relative inline-flex size-5 cursor-pointer items-center justify-center rounded-full border-2 transition-colors disabled:cursor-default",
@@ -10,6 +10,8 @@
                 "group-ui-checked/state-layer:text-primary absolute size-10 rounded-full",
         },
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

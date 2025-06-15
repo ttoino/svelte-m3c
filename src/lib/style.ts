@@ -5,7 +5,8 @@ import {
 } from "tailwind-merge";
 import { createTV } from "tailwind-variants";
 
-import type { ClassGroups } from "./types/style.js";
+import type { ClassGroups, MergeVariants } from "./types/style.js";
+import type { Mutable, Prettify } from "./types/util.js";
 
 const twMergeConfig = {
     extend: {
@@ -102,3 +103,32 @@ const twMergeConfig = {
 export const twMerge = extendTailwindMerge<ClassGroups>(twMergeConfig);
 
 export const tv = createTV({ twMergeConfig });
+
+export const mergeVariants = <const Parent, const Child = undefined>(
+    parent: Parent,
+    child?: Child,
+): Prettify<Mutable<MergeVariants<Parent, Child>>> => {
+    if (parent === undefined || parent === null)
+        return child as MergeVariants<Parent, Child>;
+    if (child === undefined || child === null)
+        return parent as MergeVariants<Parent, Child>;
+
+    if (Array.isArray(parent) && Array.isArray(child)) {
+        return [...parent, ...child] as MergeVariants<Parent, Child>;
+    }
+
+    if (typeof parent === "object" && typeof child === "object") {
+        return Object.entries(child).reduce<Record<string, unknown>>(
+            (acc, [key, value]) => {
+                acc[key] = mergeVariants(
+                    (parent as Record<string, unknown>)[key],
+                    value,
+                );
+                return acc;
+            },
+            { ...parent } as Record<string, unknown>,
+        ) as MergeVariants<Parent, Child>;
+    }
+
+    return [parent, child] as MergeVariants<Parent, Child>;
+};

@@ -1,7 +1,7 @@
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants({
         slots: {
             container: "size-full overflow-hidden",
             corner: "",
@@ -11,6 +11,8 @@
             viewport: "size-full max-h-full max-w-full",
         },
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

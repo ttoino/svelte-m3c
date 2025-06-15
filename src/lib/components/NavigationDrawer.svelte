@@ -1,11 +1,13 @@
-<!-- TODO: Merge navigation components? -->
+<!-- TODO: Material 3 expressive -->
 <!-- TODO: Maybe use navigation menu from bits ui? -->
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants({
         base: "w-90 bg-surface flex flex-col justify-start px-7 py-4",
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

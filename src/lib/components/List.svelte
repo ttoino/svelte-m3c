@@ -1,9 +1,11 @@
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants({
         base: "width-full flex flex-col py-2",
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

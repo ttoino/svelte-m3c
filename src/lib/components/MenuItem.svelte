@@ -1,17 +1,18 @@
 <script lang="ts" module>
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    import { variants as base } from "./ListItem.svelte";
+    import { variantsConfig as base } from "./ListItem.svelte";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants(base, {
         defaultVariants: {
             threeOrMoreLines: false,
         },
-        extend: base,
         slots: {
             container: "bg-surface-container cursor-pointer",
         },
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">

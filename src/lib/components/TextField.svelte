@@ -1,8 +1,8 @@
 <script lang="ts" module>
     // TODO: Outlined variant, error state, prefix, suffix, leading, trailing, supporting text, error text, character counter
-    import { tv } from "$lib/style.js";
+    import { mergeVariants, tv } from "$lib/style.js";
 
-    export const variants = tv({
+    export const variantsConfig = mergeVariants({
         compoundSlots: [
             {
                 class: "select-none",
@@ -65,6 +65,8 @@
             },
         },
     });
+
+    export const variants = tv(variantsConfig);
 </script>
 
 <script lang="ts">
