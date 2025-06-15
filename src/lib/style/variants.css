@@ -1,4 +1,5 @@
 /* Form elements */
+@custom-variant active (&:is(:active, [data-active]));
 @custom-variant disabled (&:is(:disabled, [data-disabled]));
 
 /* Checkbox, Radio, Switch */
