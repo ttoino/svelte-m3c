@@ -75,7 +75,7 @@ export default ts.config(
 
         languageOptions: {
             parserOptions: {
-                extraFileExtensions: [".svelte", ".svx"],
+                extraFileExtensions: [".svelte"],
                 parser: ts.parser,
                 projectService: true,
                 svelteConfig,

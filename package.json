@@ -73,7 +73,6 @@
         "eslint-plugin-svelte": "^3.9.1",
         "globals": "^16.2.0",
         "material-symbols": "^0.31.5",
-        "mdsvex": "^0.12.6",
         "prettier": "^3.5.3",
         "prettier-plugin-svelte": "^3.4.0",
         "prettier-plugin-tailwindcss": "^0.6.12",
