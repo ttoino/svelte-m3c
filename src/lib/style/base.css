@@ -2,6 +2,7 @@
     html,
     :root {
         @apply bg-surface text-on-surface;
+        color-scheme: light dark;
     }
 
     body {
