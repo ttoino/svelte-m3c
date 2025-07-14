@@ -38,6 +38,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      css-paint-polyfill:
+        specifier: ^3.4.0
+        version: 3.4.0
       eslint:
         specifier: ^9.28.0
         version: 9.28.0(jiti@2.4.2)
@@ -56,6 +59,9 @@ importers:
       material-symbols:
         specifier: ^0.31.5
         version: 0.31.5
+      new-javascript:
+        specifier: ^0.4.7
+        version: 0.4.7
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -758,6 +764,9 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
+  css-paint-polyfill@3.4.0:
+    resolution: {integrity: sha512-B89ymLgMZie41d+QrD//5RWnwykvru5H9Yzd/MMJIgPdVsKB7t4lxuhIAyzy5FnoUbb0MztagNVRe9dI7kMbiA==}
+
   css.escape@1.5.1:
     resolution: {integrity: sha512-YUifsXXuknHlUsmlgyY0PKzgPOr7/FjCePfHNt0jxm83wHZi44VDMQ7/fGNkjY3/jV1MC+1CmZbaHzugyeRtpg==}
 
@@ -1158,6 +1167,9 @@ packages:
   natural-orderby@5.0.0:
     resolution: {integrity: sha512-kKHJhxwpR/Okycz4HhQKKlhWe4ASEfPgkSWNmKFHd7+ezuQlxkA5cM3+XkBPvm1gmHen3w53qsYAv+8GwRrBlg==}
     engines: {node: '>=18'}
+
+  new-javascript@0.4.7:
+    resolution: {integrity: sha512-6UXmdw67jMyhfhEz4vsG39eo6mkC+Psr4ZvHN6Qap/U/8rUDSklDrWsu2Zoi/l0SCRhih/5z6Zjv/lj0wfUTgA==}
 
   no-case@3.0.4:
     resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
@@ -2124,6 +2136,8 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
+  css-paint-polyfill@3.4.0: {}
+
   css.escape@1.5.1: {}
 
   cssesc@3.0.0: {}
@@ -2500,6 +2514,8 @@ snapshots:
   natural-compare@1.4.0: {}
 
   natural-orderby@5.0.0: {}
+
+  new-javascript@0.4.7: {}
 
   no-case@3.0.4:
     dependencies:

@@ -45,6 +45,33 @@
     mask-image: --value(--mask- *);
 }
 
+@utility paint-* {
+    background-image: paint(--value("arc", "arc-wave", "wave"));
+}
+
+@utility phase-* {
+    --phase: --value([percentage]);
+    --phase: calc(--value(number) * 1%);
+}
+
+@utility wavelength-* {
+    --wavelength: --value([length]);
+    --wavelength: --spacing(--value(number));
+}
+
+@utility amplitude-* {
+    --amplitude: --value([length]);
+    --amplitude: --spacing(--value(number));
+}
+
+@utility linecap-* {
+    stroke-linecap: --value('butt', 'round', 'square');
+}
+
+@utility linejoin-* {
+    stroke-linejoin: --value('miter', 'round', 'bevel');
+}
+
 @utility prose {
     @apply text-body-m;
 

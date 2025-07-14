@@ -1,0 +1,29 @@
+@property --start-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
+
+@property --end-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 360deg;
+}
+
+@property --phase {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
+}
+
+@property --wavelength {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 0px;
+}
+
+@property --amplitude {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 0px;
+}

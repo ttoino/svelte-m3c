@@ -5,7 +5,7 @@
         slots: {
             container:
                 "group/state-layer size-4.5 border-outline rounded-xxs not-ui-unchecked:bg-primary not-ui-unchecked:border-primary text-on-surface not-ui-unchecked:text-on-primary disabled:border-on-surface/38 disabled:not-ui-unchecked:bg-on-surface/38 disabled:not-ui-unchecked:border-transparent disabled:text-surface relative inline-flex cursor-pointer items-center justify-center border-2 transition-colors *:absolute disabled:cursor-default",
-            icon: "size-3.5 fill-none stroke-current stroke-2 [stroke-linecap:butt] [stroke-linejoin:square]",
+            icon: "size-3.5 fill-none stroke-current stroke-2 linecap-butt linejoin-square",
             stateLayer:
                 "group-not-ui-unchecked/state-layer:text-primary size-10 rounded-full",
         },

@@ -366,6 +366,17 @@
     --breakpoint-expanded: 52.5rem; /* 840px */
     --breakpoint-large: 75rem; /* 1200px */
     --breakpoint-xlarge: 100rem; /* 1600px */
+
+    /* Animation */
+    --animate-wave: wave 1s infinite linear;
+    @keyframes wave {
+        0% {
+            --phase: 0%;
+        }
+        100% {
+            --phase: 100%;
+        }
+    }
 }
 
 @theme inline {

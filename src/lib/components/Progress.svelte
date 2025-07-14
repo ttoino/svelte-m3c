@@ -1,45 +1,93 @@
 <script lang="ts" module>
+    // TODO: Linear indeterminate
     import { mergeVariants, tv } from "$lib/style.js";
+    import { browser } from "$app/environment";
+    import arcPaintWorklet from "$lib/paints/arc.js?url";
+    import arcWavePaintWorklet from "$lib/paints/arc-wave.js?url";
+    import wavePaintWorklet from "$lib/paints/wave.js?url";
+
+    if (browser) {
+        (async () => {
+            if (!CSS.paintWorklet) await import("css-paint-polyfill");
+            CSS.paintWorklet.addModule(arcPaintWorklet);
+            CSS.paintWorklet.addModule(arcWavePaintWorklet);
+            CSS.paintWorklet.addModule(wavePaintWorklet);
+        })();
+    }
 
     export const variantsConfig = mergeVariants({
-        compoundSlots: [
-            {
-                circular: false,
-                class: "before:absolute before:bottom-0 before:top-0 before:rounded-full after:absolute after:bottom-0 after:top-0 after:rounded-full",
-                slots: ["activeIndicator", "track"],
-            },
-            {
-                circular: true,
-                class: "stroke-(length:--spacing) origin-center fill-none transition-[stroke-dasharray,stroke-dashoffset] [cx:50%] [cy:50%] [r:calc((100%-var(--spacing))*0.5)] [stroke-linecap:round] [stroke-linejoin:round]",
-                slots: ["activeIndicator", "track"],
-            },
-        ],
         defaultVariants: {
             circular: false,
+            shape: "flat",
         },
         slots: {
-            activeIndicator: "",
-            container: "group/progress relative inline-flex",
-            stopIndicator:
-                "bg-primary group-ui-indeterminate/progress:hidden absolute bottom-0 right-0 top-0 size-1 rounded-full",
-            track: "",
+            container: "relative animate-indeterminate",
+            activeIndicator:
+                "stroke-primary stroke-4 linecap-round linejoin-round",
+            track: "stroke-secondary-container stroke-4 linecap-round linejoin-round",
+            stopIndicator: "",
         },
         variants: {
             circular: {
-                false: {
-                    activeIndicator:
-                        "before:bg-primary after:bg-primary before:left-[calc(100%*mod(var(--offset),1))] before:right-[calc((100%-var(--spacing))*(1-min(mod(var(--offset),1)+var(--progress),1)))] after:left-0 after:right-[calc(100%*(1-max(mod(var(--offset),1)+var(--progress)-1,0)))]",
-                    root: "animate-linear-indeterminate h-1 w-full",
-                    track: "before:bg-secondary-container after:bg-secondary-container before:left-[calc((100%-var(--spacing))*min(mod(var(--offset),1)+var(--progress),1)+var(--spacing)*2)] before:right-0 after:left-[max(100%*(mod(var(--offset),1)+var(--progress)-1)+var(--spacing),0%)] after:right-[calc(100%*(1-mod(var(--offset),1))+var(--spacing))]",
-                },
                 true: {
+                    track: "absolute inset-0 paint-arc",
+                    activeIndicator: "absolute inset-0 z-10",
+                    stopIndicator: "hidden",
+                },
+                false: {
+                    container:
+                        "w-full flex items-center justify-center gap-1 group/progress",
+                    track: "h-1 rounded-full bg-secondary-container grow-1",
                     activeIndicator:
-                        "stroke-primary animate-circular-indeterminate -rotate-90 [stroke-dasharray:calc(var(--progress)*(var(--length)-var(--spacing)*2*(1-var(--full))))_var(--length)] [stroke-dashoffset:calc(var(--spacing)*(var(--full)-1))]",
-                    root: "size-10",
-                    track: "stroke-secondary-container group-ui-indeterminate/progress:hidden rotate-90 -scale-x-100 [stroke-dasharray:calc(var(--length)-var(--progress)*(var(--length)-var(--spacing)*2)-var(--spacing)*4)_var(--length)] [stroke-dashoffset:--spacing(-1)]",
+                        "rounded-full w-[calc(var(--spacing)+var(--progress)*(100%-var(--spacing)))] shrink-0",
+                    stopIndicator:
+                        "size-1 rounded-full bg-primary absolute end-0 group-ui-indeterminate/progress:hidden",
+                },
+            },
+            shape: {
+                flat: {},
+                wavy: {
+                    activeIndicator: "animate-wave",
                 },
             },
         },
+        compoundVariants: [
+            {
+                circular: true,
+                shape: "flat",
+                class: {
+                    container: "size-10",
+                    track: "[--start-angle:calc(min(336deg*var(--progress)-54deg,258deg)+var(--offset)*360deg)] [--end-angle:calc(258deg+var(--offset)*360deg)]",
+                    activeIndicator:
+                        "paint-arc [--start-angle:calc(-78deg+var(--offset)*360deg)] [--end-angle:calc(336deg*var(--progress)-78deg+var(--offset)*360deg)]",
+                },
+            },
+            {
+                circular: true,
+                shape: "wavy",
+                class: {
+                    container: "size-12",
+                    track: "[--start-angle:calc(min(340deg*var(--progress)-60deg,260deg)+var(--offset)*360deg)] [--end-angle:calc(260deg+var(--offset)*360deg)]",
+                    activeIndicator:
+                        "paint-arc-wave wavelength-4 amplitude-0.5 [--start-angle:calc(-80deg+var(--offset)*360deg)] [--end-angle:calc(340deg*var(--progress)-80deg+var(--offset)*360deg)]",
+                },
+            },
+            {
+                circular: false,
+                shape: "flat",
+                class: {
+                    activeIndicator: "h-1 bg-primary",
+                },
+            },
+            {
+                circular: false,
+                shape: "wavy",
+                class: {
+                    activeIndicator:
+                        "h-2.5 wavelength-10 paint-wave animate-wave",
+                },
+            },
+        ],
     });
 
     export const variants = tv(variantsConfig);
@@ -56,13 +104,14 @@
         max = 100,
         min = 0,
         ref = $bindable(null),
+        shape,
         stopIndicatorClass,
         trackClass,
         value = 0,
         ...props
     }: WrapperProps<Progress.RootProps, typeof variants> = $props();
 
-    const classes = variants({ circular });
+    const classes = variants({ circular, shape });
 
     let progress = $derived(value == null ? null : (value - min) / (max - min));
     let full = $derived(value == null || value >= max);
@@ -80,61 +129,21 @@
     {max}
     {min}
     {value}
+    bind:ref
+    style={{
+        "--progress": progress,
+        "--full": full ? 1 : 0,
+    }}
     {...props}
 >
-    {#snippet child({ props })}
-        <div bind:this={ref} {...props}>
-            {#if circular}
-                <svg class="size-full">
-                    <circle
-                        style={`
-                            --length: ${length}px;
-                            --progress: ${progress};
-                        `}
-                        class={classes.track({ class: trackClass })}
-                    />
-                    <circle
-                        bind:this={geometry}
-                        style={`
-                            --length: ${length}px;
-                            --progress: ${progress};
-                            --full: ${full ? 1 : 0};
-                        `}
-                        class={classes.activeIndicator({
-                            class: activeIndicatorClass,
-                        })}
-                    />
-                </svg>
-            {:else}
-                <div
-                    style={progress === null ? "" : `--progress: ${progress}`}
-                    class={classes.track({ class: trackClass })}
-                ></div>
-                <div
-                    style={progress === null ? "" : `--progress: ${progress}`}
-                    class={classes.activeIndicator({
-                        class: activeIndicatorClass,
-                    })}
-                ></div>
-                <div
-                    class={classes.stopIndicator({
-                        class: stopIndicatorClass,
-                    })}
-                ></div>
-            {/if}
-        </div>
-    {/snippet}
+    <div class={classes.activeIndicator({ class: activeIndicatorClass })}></div>
+    <div class={classes.track({ class: trackClass })}></div>
+    <div class={classes.stopIndicator({ class: stopIndicatorClass })}></div>
 </Progress.Root>
 
 <style scoped>
-    [data-indeterminate] {
-        .animate-circular-indeterminate {
-            animation: circular-indeterminate 2.5s linear infinite both;
-        }
-
-        &.animate-linear-indeterminate {
-            animation: linear-indeterminate 2.5s linear infinite both;
-        }
+    :global([data-indeterminate].animate-indeterminate) {
+        animation: indeterminate 3s linear infinite both;
     }
 
     @property --progress {
@@ -149,24 +158,7 @@
         initial-value: 0;
     }
 
-    @keyframes circular-indeterminate {
-        0% {
-            rotate: 0deg;
-            stroke-dasharray: calc(var(--length) * 0.1), var(--length);
-        }
-
-        50% {
-            rotate: 360deg;
-            stroke-dasharray: calc(var(--length) * 0.9), var(--length);
-        }
-
-        100% {
-            rotate: 1080deg;
-            stroke-dasharray: calc(var(--length) * 0.1), var(--length);
-        }
-    }
-
-    @keyframes linear-indeterminate {
+    @keyframes indeterminate {
         0% {
             --progress: 0.1;
             --offset: 0;
