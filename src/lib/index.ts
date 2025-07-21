@@ -1,3 +1,4 @@
+import Badge from "./components/Badge.svelte";
 import Button from "./components/Button.svelte";
 import Checkbox from "./components/Checkbox.svelte";
 import ConnectedButtonGroup from "./components/ConnectedButtonGroup.svelte";
@@ -29,6 +30,7 @@ import ToggleIconButton from "./components/ToggleIconButton.svelte";
 import Tooltip from "./components/Tooltip.svelte";
 
 export {
+    Badge,
     Button,
     Checkbox,
     ConnectedButtonGroup,
