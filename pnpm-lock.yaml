@@ -57,8 +57,8 @@ importers:
         specifier: ^16.2.0
         version: 16.2.0
       material-symbols:
-        specifier: ^0.31.5
-        version: 0.31.5
+        specifier: ^0.33.0
+        version: 0.33.0
       new-javascript:
         specifier: ^0.4.7
         version: 0.4.7
@@ -1114,8 +1114,8 @@ packages:
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
-  material-symbols@0.31.5:
-    resolution: {integrity: sha512-0lt83e3ebmhnhBlHgrM5HmwdlYEwlmiRfpLY+Ije/C2muJQ//7A/AgvOiI7ttusc9FAgbj5q0MMRQWllRAD6GA==}
+  material-symbols@0.33.0:
+    resolution: {integrity: sha512-t9/Gz+14fClRgN7oVOt5CBuwsjFLxSNP9BRDyMrI5el3IZNvoD94IDGJha0YYivyAow24rCS0WOkAv4Dp+YjNg==}
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -2478,7 +2478,7 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  material-symbols@0.31.5: {}
+  material-symbols@0.33.0: {}
 
   merge2@1.4.1: {}
 
