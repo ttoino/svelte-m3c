@@ -98,6 +98,29 @@
                 color: "error",
                 variant: "outlined",
             },
+            // No color
+            {
+                class: { container: "text-on-surface" },
+                color: "none",
+                variant: ["elevated", "outlined", "text"],
+            },
+            {
+                class: { container: "bg-on-surface text-surface" },
+                color: "none",
+                variant: "filled",
+            },
+            {
+                class: {
+                    container: "bg-surface-container text-on-surface-container",
+                },
+                color: "none",
+                variant: "tonal",
+            },
+            {
+                class: { container: "focus:border-on-surface" },
+                color: "none",
+                variant: "outlined",
+            },
             // Square radii
             {
                 class: { container: "rounded-md" },
@@ -155,6 +178,7 @@
         variants: {
             color: {
                 error: {},
+                none: {},
                 primary: {},
                 secondary: {},
                 tertiary: {},

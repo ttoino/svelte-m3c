@@ -1,4 +1,9 @@
-export type ButtonColor = "error" | "primary" | "secondary" | "tertiary";
+export type ButtonColor =
+    | "error"
+    | "none"
+    | "primary"
+    | "secondary"
+    | "tertiary";
 
 export type ButtonShape = "round" | "square";
 
