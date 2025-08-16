@@ -1,3 +1,46 @@
+/* CSS Properties */
+
+@utility duration-* {
+    transition-duration: --value([*]);
+    transition-duration: --value(number)ms;
+    transition-duration: --value(--duration-*);
+}
+
+@utility linecap-* {
+    stroke-linecap: --value("butt", "round", "square");
+}
+
+@utility linejoin-* {
+    stroke-linejoin: --value("miter", "round", "bevel");
+}
+
+@utility mask-shape-* {
+    mask-image: --value(--mask-*);
+}
+
+@utility paint-* {
+    background-image: paint(--value("arc", "arc-wave", "wave"));
+}
+
+/* Custom Properties */
+
+@utility phase-* {
+    --phase: --value([percentage]);
+    --phase: calc(--value(number) * 1%);
+}
+
+@utility wavelength-* {
+    --wavelength: --value([length]);
+    --wavelength: --spacing(--value(number));
+}
+
+@utility amplitude-* {
+    --amplitude: --value([length]);
+    --amplitude: --spacing(--value(number));
+}
+
+/* Icons */
+
 @utility icon {
     @apply font-icon;
 
@@ -41,36 +84,7 @@
     --icon-grade: calc(--value(integer) * -1);
 }
 
-@utility mask-shape-* {
-    mask-image: --value(--mask-*);
-}
-
-@utility paint-* {
-    background-image: paint(--value("arc", "arc-wave", "wave"));
-}
-
-@utility phase-* {
-    --phase: --value([percentage]);
-    --phase: calc(--value(number) * 1%);
-}
-
-@utility wavelength-* {
-    --wavelength: --value([length]);
-    --wavelength: --spacing(--value(number));
-}
-
-@utility amplitude-* {
-    --amplitude: --value([length]);
-    --amplitude: --spacing(--value(number));
-}
-
-@utility linecap-* {
-    stroke-linecap: --value("butt", "round", "square");
-}
-
-@utility linejoin-* {
-    stroke-linejoin: --value("miter", "round", "bevel");
-}
+/* Prose */
 
 @utility prose {
     @apply text-body-m;
