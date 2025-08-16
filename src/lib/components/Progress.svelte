@@ -81,14 +81,16 @@
 </script>
 
 <script lang="ts">
+    import type { WrapperProps } from "$lib/types/style.js";
+
     import arcWavePaintWorklet from "$lib/paints/arc-wave.js?url";
     import arcPaintWorklet from "$lib/paints/arc.js?url";
     import wavePaintWorklet from "$lib/paints/wave.js?url";
-    import { type WrapperProps } from "$lib/types/style.js";
     import { Progress } from "bits-ui";
     import { onMount } from "svelte";
 
     onMount(async () => {
+        // eslint-disable-next-line svelte/@typescript-eslint/no-unnecessary-condition
         if (!CSS.paintWorklet) await import("css-paint-polyfill");
         CSS.paintWorklet.addModule(arcPaintWorklet);
         CSS.paintWorklet.addModule(arcWavePaintWorklet);
