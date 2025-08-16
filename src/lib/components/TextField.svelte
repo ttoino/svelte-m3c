@@ -85,6 +85,7 @@
         placeholder = "",
         ref = $bindable(null),
         stateLayerClass,
+        value = $bindable(""),
         variant,
         visualLabelClass,
         ...props
@@ -103,6 +104,7 @@
     <input
         class={classes.input({ class: inputClass })}
         {placeholder}
+        bind:value
         {...props}
     />
     <div class={classes.dummyWrapper({ class: dummyWrapperClass })}>

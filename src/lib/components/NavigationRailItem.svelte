@@ -40,7 +40,7 @@
 </script>
 
 <script lang="ts">
-    import type { MaterialSymbol } from "material-symbols";
+    import type { IconName } from "$lib/types/icon.js";
     import type { HTMLAttributes } from "svelte/elements";
 
     import { type WrapperProps } from "$lib/types/style.js";
@@ -66,7 +66,7 @@
         {
             active?: boolean;
             href: string;
-            icon: MaterialSymbol;
+            icon: IconName;
         }
     > = $props();
 

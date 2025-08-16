@@ -2,6 +2,7 @@
     // TODO: inset icon positioning
     // TODO: centered variant
     // FIXME: Handle does not go entirely to the edge of the track
+    // FIXME: Disabled collapsible still expands on hover
     import { mergeVariants, tv } from "$lib/style.js";
 
     export const variantsConfig = mergeVariants({
@@ -228,8 +229,8 @@
 </script>
 
 <script lang="ts">
+    import type { IconName } from "$lib/types/icon.js";
     import type { WrapperProps } from "$lib/types/style.js";
-    import type { MaterialSymbol } from "material-symbols";
 
     import { Slider } from "bits-ui";
 
@@ -258,7 +259,7 @@
         {
             collapsible?: boolean;
             discrete?: boolean;
-            icon?: MaterialSymbol;
+            icon?: IconName;
         }
     > = $props();
 

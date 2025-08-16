@@ -28,7 +28,7 @@
 </script>
 
 <script lang="ts">
-    import type { MaterialSymbol } from "material-symbols";
+    import type { IconName } from "$lib/types/icon.js";
 
     import { type WrapperProps } from "$lib/types/style.js";
     import { Switch } from "bits-ui";
@@ -51,8 +51,8 @@
         Switch.RootProps,
         typeof variants,
         {
-            checkedIcon?: MaterialSymbol;
-            uncheckedIcon?: MaterialSymbol;
+            checkedIcon?: IconName;
+            uncheckedIcon?: IconName;
         }
     > = $props();
 

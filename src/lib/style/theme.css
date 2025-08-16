@@ -381,41 +381,122 @@
 
 @theme inline {
     /* Color Scheme */
-    --color-primary: light-dark(var(--color-primary-40), var(--color-primary-80));
-    --color-on-primary: light-dark(var(--color-primary-100), var(--color-primary-20));
-    --color-primary-container: light-dark(var(--color-primary-90), var(--color-primary-30));
-    --color-on-primary-container: light-dark(var(--color-primary-30), var(--color-primary-90));
+    --color-primary: light-dark(
+        var(--color-primary-40),
+        var(--color-primary-80)
+    );
+    --color-on-primary: light-dark(
+        var(--color-primary-100),
+        var(--color-primary-20)
+    );
+    --color-primary-container: light-dark(
+        var(--color-primary-90),
+        var(--color-primary-30)
+    );
+    --color-on-primary-container: light-dark(
+        var(--color-primary-30),
+        var(--color-primary-90)
+    );
 
-    --color-secondary: light-dark(var(--color-secondary-40), var(--color-secondary-80));
-    --color-on-secondary: light-dark(var(--color-secondary-100), var(--color-secondary-20));
-    --color-secondary-container: light-dark(var(--color-secondary-90), var(--color-secondary-30));
-    --color-on-secondary-container: light-dark(var(--color-secondary-30), var(--color-secondary-90));
+    --color-secondary: light-dark(
+        var(--color-secondary-40),
+        var(--color-secondary-80)
+    );
+    --color-on-secondary: light-dark(
+        var(--color-secondary-100),
+        var(--color-secondary-20)
+    );
+    --color-secondary-container: light-dark(
+        var(--color-secondary-90),
+        var(--color-secondary-30)
+    );
+    --color-on-secondary-container: light-dark(
+        var(--color-secondary-30),
+        var(--color-secondary-90)
+    );
 
-    --color-tertiary: light-dark(var(--color-tertiary-40), var(--color-tertiary-80));
-    --color-on-tertiary: light-dark(var(--color-tertiary-100), var(--color-tertiary-20));
-    --color-tertiary-container: light-dark(var(--color-tertiary-90), var(--color-tertiary-30));
-    --color-on-tertiary-container: light-dark(var(--color-tertiary-30), var(--color-tertiary-90));
+    --color-tertiary: light-dark(
+        var(--color-tertiary-40),
+        var(--color-tertiary-80)
+    );
+    --color-on-tertiary: light-dark(
+        var(--color-tertiary-100),
+        var(--color-tertiary-20)
+    );
+    --color-tertiary-container: light-dark(
+        var(--color-tertiary-90),
+        var(--color-tertiary-30)
+    );
+    --color-on-tertiary-container: light-dark(
+        var(--color-tertiary-30),
+        var(--color-tertiary-90)
+    );
 
     --color-error: light-dark(var(--color-error-40), var(--color-error-80));
     --color-on-error: light-dark(var(--color-error-100), var(--color-error-20));
-    --color-error-container: light-dark(var(--color-error-90), var(--color-error-30));
-    --color-on-error-container: light-dark(var(--color-error-30), var(--color-error-90));
+    --color-error-container: light-dark(
+        var(--color-error-90),
+        var(--color-error-30)
+    );
+    --color-on-error-container: light-dark(
+        var(--color-error-30),
+        var(--color-error-90)
+    );
 
-    --color-surface: light-dark(var(--color-neutral-98), var(--color-neutral-6));
-    --color-on-surface: light-dark(var(--color-neutral-10), var(--color-neutral-90));
-    --color-surface-variant: light-dark(var(--color-neutral-variant-90), var(--color-neutral-variant-30));
-    --color-on-surface-variant: light-dark(var(--color-neutral-variant-30), var(--color-neutral-variant-80));
-    --color-surface-container-lowest: light-dark(var(--color-neutral-100), var(--color-neutral-4));
-    --color-surface-container-low: light-dark(var(--color-neutral-96), var(--color-neutral-10));
-    --color-surface-container: light-dark(var(--color-neutral-94), var(--color-neutral-12));
-    --color-surface-container-high: light-dark(var(--color-neutral-92), var(--color-neutral-17));
-    --color-surface-container-highest: light-dark(var(--color-neutral-90), var(--color-neutral-22));
-    --color-inverse-surface: light-dark(var(--color-neutral-20), var(--color-neutral-90));
-    --color-inverse-on-surface: light-dark(var(--color-neutral-95), var(--color-neutral-20));
+    --color-surface: light-dark(
+        var(--color-neutral-98),
+        var(--color-neutral-6)
+    );
+    --color-on-surface: light-dark(
+        var(--color-neutral-10),
+        var(--color-neutral-90)
+    );
+    --color-surface-variant: light-dark(
+        var(--color-neutral-variant-90),
+        var(--color-neutral-variant-30)
+    );
+    --color-on-surface-variant: light-dark(
+        var(--color-neutral-variant-30),
+        var(--color-neutral-variant-80)
+    );
+    --color-surface-container-lowest: light-dark(
+        var(--color-neutral-100),
+        var(--color-neutral-4)
+    );
+    --color-surface-container-low: light-dark(
+        var(--color-neutral-96),
+        var(--color-neutral-10)
+    );
+    --color-surface-container: light-dark(
+        var(--color-neutral-94),
+        var(--color-neutral-12)
+    );
+    --color-surface-container-high: light-dark(
+        var(--color-neutral-92),
+        var(--color-neutral-17)
+    );
+    --color-surface-container-highest: light-dark(
+        var(--color-neutral-90),
+        var(--color-neutral-22)
+    );
+    --color-inverse-surface: light-dark(
+        var(--color-neutral-20),
+        var(--color-neutral-90)
+    );
+    --color-inverse-on-surface: light-dark(
+        var(--color-neutral-95),
+        var(--color-neutral-20)
+    );
     --color-surface-tint: var(--color-primary);
 
-    --color-outline: light-dark(var(--color-neutral-variant-50), var(--color-neutral-variant-60));
-    --color-outline-variant: light-dark(var(--color-neutral-variant-80), var(--color-neutral-variant-30));
+    --color-outline: light-dark(
+        var(--color-neutral-variant-50),
+        var(--color-neutral-variant-60)
+    );
+    --color-outline-variant: light-dark(
+        var(--color-neutral-variant-80),
+        var(--color-neutral-variant-30)
+    );
 
     --color-scrim: var(--color-neutral-0);
 }

@@ -100,8 +100,8 @@
 </script>
 
 <script lang="ts">
+    import type { IconName } from "$lib/types/icon.js";
     import type { WrapperProps } from "$lib/types/style.js";
-    import type { MaterialSymbol } from "material-symbols";
 
     import {
         getButtonColor,
@@ -136,7 +136,7 @@
         WithoutChildren<Button.RootProps>,
         typeof variants,
         {
-            icon: MaterialSymbol;
+            icon: IconName;
         }
     > = $props();
 

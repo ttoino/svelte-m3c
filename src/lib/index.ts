@@ -1,3 +1,5 @@
+import type { IconName } from "./types/icon.js";
+
 import Badge from "./components/Badge.svelte";
 import Button from "./components/Button.svelte";
 import Checkbox from "./components/Checkbox.svelte";
@@ -40,6 +42,7 @@ export {
     Divider,
     Icon,
     IconButton,
+    type IconName,
     List,
     ListItem,
     Menu,

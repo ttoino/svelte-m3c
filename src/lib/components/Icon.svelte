@@ -9,8 +9,8 @@
 </script>
 
 <script lang="ts">
+    import type { IconName } from "$lib/types/icon.js";
     import type { WrapperProps } from "$lib/types/style.js";
-    import type { MaterialSymbol } from "material-symbols";
     import type { HTMLAttributes } from "svelte/elements";
 
     let {
@@ -21,7 +21,7 @@
         HTMLAttributes<HTMLSpanElement>,
         typeof variants,
         {
-            icon: MaterialSymbol;
+            icon: IconName;
         }
     > = $props();
 </script>

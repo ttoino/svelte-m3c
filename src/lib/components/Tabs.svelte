@@ -1,13 +1,14 @@
 <script lang="ts" module>
-    import { mergeVariants, tv } from "$lib/style.js";
     import type { WrapperProps } from "$lib/types/style.js";
+
+    import { mergeVariants, tv } from "$lib/style.js";
 
     export const variantsConfig = mergeVariants({
         slots: {
             container: "flex flex-col items-stretch",
+            content: "flex-1",
             divider: "absolute bottom-0 left-0 right-0",
             tabs: "overflow-x-auto *:flex-1 flex flex-row relative",
-            content: "flex-1",
         },
     });
 
@@ -15,29 +16,31 @@
 </script>
 
 <script lang="ts">
-    import { Tabs, type WithoutChildrenOrChild } from "bits-ui";
     import type { ComponentProps, Snippet } from "svelte";
+
+    import { Tabs, type WithoutChildrenOrChild } from "bits-ui";
+
     import Divider from "./Divider.svelte";
 
     let {
-        tabs,
-        content,
-        dividerProps,
-        dividerClass,
-        listProps,
         containerClass,
-        tabsClass,
+        content,
         contentClass,
+        dividerClass,
+        dividerProps,
+        listProps,
+        tabs,
+        tabsClass,
         value = $bindable(undefined),
         ...props
     }: WrapperProps<
         WithoutChildrenOrChild<Tabs.RootProps>,
         typeof variants,
         {
-            tabs?: Snippet;
             content?: Snippet;
-            listProps?: Omit<WithoutChildrenOrChild<Tabs.ListProps>, "class">;
             dividerProps?: Omit<ComponentProps<typeof Divider>, "class">;
+            listProps?: Omit<WithoutChildrenOrChild<Tabs.ListProps>, "class">;
+            tabs?: Snippet;
         }
     > = $props();
 
@@ -45,8 +48,8 @@
 </script>
 
 <Tabs.Root
-    bind:value
     class={classes.container({ class: containerClass })}
+    bind:value
     {...props}
 >
     <Tabs.List class={classes.tabs({ class: tabsClass })} {...listProps}>

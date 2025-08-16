@@ -23,8 +23,8 @@
             hideLabel: {
                 false: {},
                 true: {
-                    label: "sr-only",
                     container: "min-h-12",
+                    label: "sr-only",
                 },
             },
         },
@@ -34,31 +34,32 @@
 </script>
 
 <script lang="ts">
+    import type { IconName } from "$lib/types/icon.js";
     import type { WrapperProps } from "$lib/types/style.js";
 
     import { Tabs, type WithoutChild } from "bits-ui";
-    import StateLayer from "./StateLayer.svelte";
-    import type { MaterialSymbol } from "material-symbols";
+
     import Icon from "./Icon.svelte";
+    import StateLayer from "./StateLayer.svelte";
 
     let {
-        ref = $bindable(null),
+        activeIndicatorClass,
         children,
         containerClass,
         contentClass,
-        activeIndicatorClass,
         hideLabel = false,
-        iconClass,
         icon,
+        iconClass,
         labelClass,
+        ref = $bindable(null),
         stateLayerClass,
         ...props
     }: WrapperProps<
         WithoutChild<Tabs.TriggerProps>,
         typeof variants,
         {
-            icon?: MaterialSymbol;
             hasIcon?: never;
+            icon?: IconName;
         }
     > = $props();
 
@@ -66,8 +67,8 @@
 </script>
 
 <Tabs.Trigger
-    bind:ref
     class={classes.container({ class: containerClass })}
+    bind:ref
     {...props}
 >
     <StateLayer

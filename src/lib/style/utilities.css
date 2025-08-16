@@ -42,7 +42,7 @@
 }
 
 @utility mask-shape-* {
-    mask-image: --value(--mask- *);
+    mask-image: --value(--mask-*);
 }
 
 @utility paint-* {
@@ -65,11 +65,11 @@
 }
 
 @utility linecap-* {
-    stroke-linecap: --value('butt', 'round', 'square');
+    stroke-linecap: --value("butt", "round", "square");
 }
 
 @utility linejoin-* {
-    stroke-linejoin: --value('miter', 'round', 'bevel');
+    stroke-linejoin: --value("miter", "round", "bevel");
 }
 
 @utility prose {
