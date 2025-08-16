@@ -24,6 +24,9 @@ import Slider from "./components/Slider.svelte";
 import StandardButtonGroup from "./components/StandardButtonGroup.svelte";
 import StateLayer from "./components/StateLayer.svelte";
 import Switch from "./components/Switch.svelte";
+import Tab from "./components/Tab.svelte";
+import TabContent from "./components/TabContent.svelte";
+import Tabs from "./components/Tabs.svelte";
 import TextField from "./components/TextField.svelte";
 import ToggleButton from "./components/ToggleButton.svelte";
 import ToggleIconButton from "./components/ToggleIconButton.svelte";
@@ -56,6 +59,9 @@ export {
     StandardButtonGroup,
     StateLayer,
     Switch,
+    Tab,
+    TabContent,
+    Tabs,
     TextField,
     ToggleButton,
     ToggleIconButton,

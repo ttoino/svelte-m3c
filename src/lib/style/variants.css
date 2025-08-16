@@ -15,6 +15,10 @@
 @custom-variant ui-horizontal (&[data-orientation="horizontal"]);
 @custom-variant ui-vertical (&[data-orientation="vertical"]);
 
+/* Tabs */
+@custom-variant ui-active (&[data-state="active"]);
+@custom-variant ui-inactive (&[data-state="inactive"]);
+
 /* General */
 @custom-variant next (& + *);
 @custom-variant previous (:has(+ &));
