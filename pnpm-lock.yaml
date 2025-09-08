@@ -18,8 +18,8 @@ importers:
         specifier: ^3.4.0
         version: 3.4.0
       material-symbols:
-        specifier: ^0.34.1
-        version: 0.34.1
+        specifier: ^0.35.0
+        version: 0.35.0
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
@@ -1176,8 +1176,8 @@ packages:
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
-  material-symbols@0.34.1:
-    resolution: {integrity: sha512-CEvMJuhNHna8+nbXlSB+7dGoD+0bXEUnDSsaVM5qBUL5u4ekuX96PjvfFG/iNUtuairyW18fqV5e8GLP0Sagfg==}
+  material-symbols@0.35.0:
+    resolution: {integrity: sha512-9748qxR6mINzLEbICNoxIXqtIWSMG1xCNGpFXjOtScYshN0xb+xONU1XRUcGsOSlL5hBmJCknZfldHrGTTxhJw==}
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -2626,7 +2626,7 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  material-symbols@0.34.1: {}
+  material-symbols@0.35.0: {}
 
   merge2@1.4.1: {}
 
