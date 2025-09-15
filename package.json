@@ -60,7 +60,7 @@
         "@material/material-color-utilities": "^0.3.0",
         "bits-ui": "^2.9.4",
         "css-paint-polyfill": "^3.4.0",
-        "material-symbols": "^0.34.1",
+        "material-symbols": "^0.35.1",
         "tailwindcss": "^4.1.12",
         "tailwind-merge": "^3.3.1",
         "tailwind-variants": "^3.1.0"
