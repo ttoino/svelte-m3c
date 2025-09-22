@@ -58,7 +58,7 @@
     },
     "dependencies": {
         "@material/material-color-utilities": "^0.3.0",
-        "bits-ui": "^2.9.4",
+        "bits-ui": "^2.11.0",
         "css-paint-polyfill": "^3.4.0",
         "material-symbols": "^0.34.1",
         "tailwindcss": "^4.1.12",
