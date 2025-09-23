@@ -34,6 +34,11 @@
             "svelte": "./dist/index.js",
             "default": "./dist/index.js"
         },
+        "./paints/*": {
+            "types": "./dist/paints/*.d.ts",
+            "svelte": "./dist/paints/*.js",
+            "default": "./dist/paints/*.js"
+        },
         "./palette": {
             "types": "./dist/palette.d.ts",
             "svelte": "./dist/palette.js",
