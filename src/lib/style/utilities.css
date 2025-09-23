@@ -2,7 +2,7 @@
 
 @utility duration-* {
     transition-duration: --value([*]);
-    transition-duration: --value(number)ms;
+    transition-duration: --value(number) ms;
     transition-duration: --value(--duration-*);
 }
 
