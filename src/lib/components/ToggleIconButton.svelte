@@ -9,6 +9,7 @@
         {
             slots: {
                 container: "ui-on:icon-filled ui-on:icon-grade-high",
+                icon: "transition-[font-variation-settings]",
             },
         },
     );
@@ -17,8 +18,8 @@
 </script>
 
 <script lang="ts">
-    import type { IconName } from "$lib/types/icon.js";
     import type { WrapperProps } from "$lib/types/style.js";
+    import type { IconName } from "svelte-m3c";
 
     import {
         getButtonColor,
@@ -28,7 +29,7 @@
         getIconButtonWidth,
         isInToggleButtonGroup,
     } from "$lib/context/button.js";
-    import { Toggle, ToggleGroup, type WithoutChildren } from "bits-ui";
+    import { Toggle, ToggleGroup, type WithoutChildrenOrChild } from "bits-ui";
 
     import Icon from "./Icon.svelte";
     import StateLayer from "./StateLayer.svelte";
@@ -46,6 +47,7 @@
         color = contextColor,
         containerClass,
         icon,
+        iconClass,
         pressed = $bindable(false),
         ref = $bindable(null),
         shape = contextShape,
@@ -55,7 +57,7 @@
         width = contextWidth,
         ...props
     }: WrapperProps<
-        WithoutChildren<Toggle.RootProps & ToggleGroup.ItemProps>,
+        WithoutChildrenOrChild<Toggle.RootProps & ToggleGroup.ItemProps>,
         typeof variants,
         {
             icon: IconName;
@@ -76,5 +78,5 @@
         target={ref}
     />
 
-    <Icon class="transition-[font-variation-settings]" {icon} />
+    <Icon class={classes.icon({ class: iconClass })} {icon} />
 </Component>

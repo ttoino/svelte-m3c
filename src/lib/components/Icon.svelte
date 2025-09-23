@@ -9,8 +9,8 @@
 </script>
 
 <script lang="ts">
-    import type { IconName } from "$lib/types/icon.js";
     import type { WrapperProps } from "$lib/types/style.js";
+    import type { IconName } from "svelte-m3c";
     import type { HTMLAttributes } from "svelte/elements";
 
     let {

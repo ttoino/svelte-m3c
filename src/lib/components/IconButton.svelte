@@ -81,6 +81,7 @@
         },
         slots: {
             container: "min-w-0",
+            icon: "",
         },
         variants: {
             size: {
@@ -100,8 +101,8 @@
 </script>
 
 <script lang="ts">
-    import type { IconName } from "$lib/types/icon.js";
     import type { WrapperProps } from "$lib/types/style.js";
+    import type { IconName } from "svelte-m3c";
 
     import {
         getButtonColor,
@@ -110,7 +111,7 @@
         getButtonVariant,
         getIconButtonWidth,
     } from "$lib/context/button.js";
-    import { Button, type WithoutChildren } from "bits-ui";
+    import { Button, type WithoutChildrenOrChild } from "bits-ui";
 
     import Icon from "./Icon.svelte";
     import StateLayer from "./StateLayer.svelte";
@@ -125,6 +126,7 @@
         color = contextColor,
         containerClass,
         icon,
+        iconClass,
         ref = $bindable(null),
         shape = contextShape,
         size = contextSize,
@@ -133,7 +135,7 @@
         width = contextWidth,
         ...props
     }: WrapperProps<
-        WithoutChildren<Button.RootProps>,
+        WithoutChildrenOrChild<Button.RootProps>,
         typeof variants,
         {
             icon: IconName;
@@ -153,5 +155,5 @@
         target={ref}
     />
 
-    <Icon {icon} />
+    <Icon class={classes.icon({ class: iconClass })} {icon} />
 </Button.Root>
