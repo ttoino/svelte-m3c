@@ -1,0 +1,3 @@
+@import "$lib/style/imports.css";
+@import "tailwindcss" source("../src");
+@import "$lib/style/index.css";
