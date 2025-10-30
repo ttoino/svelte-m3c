@@ -22,6 +22,7 @@ export default defineConfig({
             use: { ...devices["Desktop Safari"] },
         },
     ],
+    reporter: process.env.CI ? "github" : "html",
     retries: process.env.CI ? 2 : 0,
     testDir: "./tests",
     use: {
