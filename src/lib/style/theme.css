@@ -283,7 +283,8 @@
     --mask-heart: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='286'><path d='M251.1.134c-21.661 0-40.987 10.168-53.619 26.063L160 67.513v-.134l-37.481-41.316C109.887 10.168 90.561 0 68.899 0 30.849 0 0 31.366 0 70.059c0 33.999 28.375 59.412 48.919 83.825q30.705 36.48 61.404 72.96l45.949 54.593 3.728 4.429V286l3.728-4.429 45.949-54.593q30.702-36.48 61.404-72.96C291.625 129.608 320 104.196 320 70.193 320 31.5 289.152.134 251.1.134'/></svg>");
 
     /* Typography */
-    --font-sans: "Roboto", sans-serif;
+    --font-mono: "Roboto Mono Variable", "Roboto Mono", monospace;
+    --font-sans: "Roboto Variable", "Roboto", sans-serif;
 
     --text-display-l: calc(57 * 0.0625rem);
     --text-display-l--font-weight: 400;
