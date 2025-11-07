@@ -222,9 +222,7 @@
                     container:
                         "border-outline disabled:border-on-surface/12 border",
                 },
-                text: {
-                    container: "px-3",
-                },
+                text: {},
                 tonal: {
                     container:
                         "hover:shadow-1 disabled:bg-on-surface/12 active:shadow-none",

@@ -27,7 +27,7 @@
             {
                 circular: false,
                 class: {
-                    activeIndicator: "h-1 bg-primary",
+                    activeIndicator: "rounded-full h-1 bg-primary",
                 },
                 shape: "flat",
             },
@@ -55,7 +55,7 @@
             circular: {
                 false: {
                     activeIndicator:
-                        "rounded-full w-[calc(var(--spacing)+var(--progress)*(100%-var(--spacing)))] shrink-0",
+                        "w-[calc(var(--spacing)+var(--progress)*(100%-var(--spacing)))] shrink-0",
                     container:
                         "w-full flex items-center justify-center gap-1 group/progress",
                     stopIndicator:

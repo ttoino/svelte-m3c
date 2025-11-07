@@ -19,7 +19,7 @@
                 "group/state-layer caret-primary group/text-field has-disabled:cursor-auto relative inline-flex cursor-text flex-col px-4",
             dummyLabel: "text-body-s text-transparent",
             dummyWrapper: "",
-            input: "text-on-surface text-body-l peer/text-field-input peer/state-layer focus:placeholder:text-on-surface-variant disabled:text-on-surface/38 z-10 outline-none transition-all placeholder:text-transparent placeholder:transition-colors",
+            input: "text-on-surface text-body-l peer/text-field-input peer/state-layer focus:placeholder:text-on-surface-variant disabled:text-on-surface/38 z-10 outline-none transition-all placeholder:text-transparent placeholder:transition-colors text-start",
             stateLayer: "absolute inset-0",
             visualLabel: [
                 "text-on-surface-variant text-body-l peer-disabled/text-field-input:text-on-surface/38 absolute top-1/2 -translate-y-1/2 transition-all",
@@ -70,6 +70,7 @@
 </script>
 
 <script lang="ts">
+    import type { Snippet } from "svelte";
     import type { HTMLAttributes } from "svelte/elements";
 
     import { type WrapperProps } from "$lib/types/style.js";
@@ -82,6 +83,7 @@
         dummyLabelClass,
         dummyWrapperClass,
         inputClass,
+        label,
         placeholder = "",
         ref = $bindable(null),
         stateLayerClass,
@@ -93,6 +95,7 @@
         HTMLAttributes<HTMLInputElement>,
         typeof variants,
         {
+            label?: Snippet;
             ref?: HTMLLabelElement | null;
         }
     > = $props();
@@ -108,10 +111,13 @@
         {...props}
     />
     <div class={classes.dummyWrapper({ class: dummyWrapperClass })}>
-        <span class={classes.dummyLabel({ class: dummyLabelClass })}>Label</span
-        >
+        <span class={classes.dummyLabel({ class: dummyLabelClass })}>
+            {@render label?.()}
+        </span>
     </div>
-    <span class={classes.visualLabel({ class: visualLabelClass })}>Label</span>
+    <span class={classes.visualLabel({ class: visualLabelClass })}>
+        {@render label?.()}
+    </span>
     <StateLayer
         active="none"
         containerClass={classes.stateLayer({ class: stateLayerClass })}

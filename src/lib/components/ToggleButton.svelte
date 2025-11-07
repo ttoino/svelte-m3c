@@ -172,7 +172,7 @@
         typeof variants
     > = $props();
 
-    const classes = variants({ color, shape, size, variant });
+    let classes = $derived(variants({ color, shape, size, variant }));
 </script>
 
 <Component
