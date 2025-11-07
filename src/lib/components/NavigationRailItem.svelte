@@ -40,7 +40,7 @@
 </script>
 
 <script lang="ts">
-    import type { IconName } from "svelte-m3c";
+    import type { IconName } from "$lib/index.js";
     import type { HTMLAttributes } from "svelte/elements";
 
     import { type WrapperProps } from "$lib/types/style.js";

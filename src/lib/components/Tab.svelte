@@ -34,8 +34,8 @@
 </script>
 
 <script lang="ts">
+    import type { IconName } from "$lib/index.js";
     import type { WrapperProps } from "$lib/types/style.js";
-    import type { IconName } from "svelte-m3c";
 
     import { Tabs, type WithoutChild } from "bits-ui";
 
