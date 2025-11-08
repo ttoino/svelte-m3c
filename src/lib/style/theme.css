@@ -284,82 +284,158 @@
 
     /* Typography */
     --font-mono: "Roboto Mono Variable", "Roboto Mono", monospace;
-    --font-sans: "Roboto Variable", "Roboto", sans-serif;
+    --font-plain: "Roboto Variable", "Roboto", sans-serif;
+    --font-brand: "Roboto Variable", "Roboto", sans-serif;
 
     --text-display-l: calc(57 * 0.0625rem);
     --text-display-l--font-weight: 400;
     --text-display-l--letter-spacing: calc(-0.25 / 57 * 1rem);
     --text-display-l--line-height: calc(64 / 57);
 
+    --text-display-l-emphasized: calc(57 * 0.0625rem);
+    --text-display-l-emphasized--font-weight: 500;
+    --text-display-l-emphasized--letter-spacing: calc(-0.25 / 57 * 1rem);
+    --text-display-l-emphasized--line-height: calc(64 / 57);
+
     --text-display-m: calc(45 * 0.0625rem);
     --text-display-m--font-weight: 400;
     --text-display-m--letter-spacing: calc(0 / 45 * 1rem);
     --text-display-m--line-height: calc(52 / 45);
+
+    --text-display-m-emphasized: calc(45 * 0.0625rem);
+    --text-display-m-emphasized--font-weight: 500;
+    --text-display-m-emphasized--letter-spacing: calc(0 / 45 * 1rem);
+    --text-display-m-emphasized--line-height: calc(52 / 45);
 
     --text-display-s: calc(36 * 0.0625rem);
     --text-display-s--font-weight: 400;
     --text-display-s--letter-spacing: calc(0 / 36 * 1rem);
     --text-display-s--line-height: calc(44 / 36);
 
+    --text-display-s-emphasized: calc(36 * 0.0625rem);
+    --text-display-s-emphasized--font-weight: 500;
+    --text-display-s-emphasized--letter-spacing: calc(0 / 36 * 1rem);
+    --text-display-s-emphasized--line-height: calc(44 / 36);
+
     --text-headline-l: calc(32 * 0.0625rem);
     --text-headline-l--font-weight: 400;
     --text-headline-l--letter-spacing: calc(0 / 32 * 1rem);
     --text-headline-l--line-height: calc(40 / 32);
+
+    --text-headline-l-emphasized: calc(32 * 0.0625rem);
+    --text-headline-l-emphasized--font-weight: 500;
+    --text-headline-l-emphasized--letter-spacing: calc(0 / 32 * 1rem);
+    --text-headline-l-emphasized--line-height: calc(40 / 32);
 
     --text-headline-m: calc(28 * 0.0625rem);
     --text-headline-m--font-weight: 400;
     --text-headline-m--letter-spacing: calc(0 / 28 * 1rem);
     --text-headline-m--line-height: calc(36 / 28);
 
+    --text-headline-m-emphasized: calc(28 * 0.0625rem);
+    --text-headline-m-emphasized--font-weight: 500;
+    --text-headline-m-emphasized--letter-spacing: calc(0 / 28 * 1rem);
+    --text-headline-m-emphasized--line-height: calc(36 / 28);
+
     --text-headline-s: calc(24 * 0.0625rem);
     --text-headline-s--font-weight: 400;
     --text-headline-s--letter-spacing: calc(0 / 24 * 1rem);
     --text-headline-s--line-height: calc(32 / 24);
+
+    --text-headline-s-emphasized: calc(24 * 0.0625rem);
+    --text-headline-s-emphasized--font-weight: 500;
+    --text-headline-s-emphasized--letter-spacing: calc(0 / 24 * 1rem);
+    --text-headline-s-emphasized--line-height: calc(32 / 24);
 
     --text-title-l: calc(22 * 0.0625rem);
     --text-title-l--font-weight: 400;
     --text-title-l--letter-spacing: calc(0 / 22 * 1rem);
     --text-title-l--line-height: calc(28 / 22);
 
+    --text-title-l-emphasized: calc(22 * 0.0625rem);
+    --text-title-l-emphasized--font-weight: 500;
+    --text-title-l-emphasized--letter-spacing: calc(0 / 22 * 1rem);
+    --text-title-l-emphasized--line-height: calc(28 / 22);
+
     --text-title-m: calc(16 * 0.0625rem);
     --text-title-m--font-weight: 500;
     --text-title-m--letter-spacing: calc(0.15 / 16 * 1rem);
     --text-title-m--line-height: calc(24 / 16);
+
+    --text-title-m-emphasized: calc(16 * 0.0625rem);
+    --text-title-m-emphasized--font-weight: 700;
+    --text-title-m-emphasized--letter-spacing: calc(0.15 / 16 * 1rem);
+    --text-title-m-emphasized--line-height: calc(24 / 16);
 
     --text-title-s: calc(14 * 0.0625rem);
     --text-title-s--font-weight: 500;
     --text-title-s--letter-spacing: calc(0.1 / 14 * 1rem);
     --text-title-s--line-height: calc(20 / 14);
 
+    --text-title-s-emphasized: calc(14 * 0.0625rem);
+    --text-title-s-emphasized--font-weight: 700;
+    --text-title-s-emphasized--letter-spacing: calc(0.1 / 14 * 1rem);
+    --text-title-s-emphasized--line-height: calc(20 / 14);
+
     --text-body-l: calc(16 * 0.0625rem);
     --text-body-l--font-weight: 400;
     --text-body-l--letter-spacing: calc(0.5 / 16 * 1rem);
     --text-body-l--line-height: calc(24 / 16);
+
+    --text-body-l-emphasized: calc(16 * 0.0625rem);
+    --text-body-l-emphasized--font-weight: 500;
+    --text-body-l-emphasized--letter-spacing: calc(0.5 / 16 * 1rem);
+    --text-body-l-emphasized--line-height: calc(24 / 16);
 
     --text-body-m: calc(14 * 0.0625rem);
     --text-body-m--font-weight: 400;
     --text-body-m--letter-spacing: calc(0.25 / 14 * 1rem);
     --text-body-m--line-height: calc(20 / 14);
 
+    --text-body-m-emphasized: calc(14 * 0.0625rem);
+    --text-body-m-emphasized--font-weight: 500;
+    --text-body-m-emphasized--letter-spacing: calc(0.25 / 14 * 1rem);
+    --text-body-m-emphasized--line-height: calc(20 / 14);
+
     --text-body-s: calc(12 * 0.0625rem);
     --text-body-s--font-weight: 400;
     --text-body-s--letter-spacing: calc(0.4 / 12 * 1rem);
     --text-body-s--line-height: calc(16 / 12);
+
+    --text-body-s-emphasized: calc(12 * 0.0625rem);
+    --text-body-s-emphasized--font-weight: 500;
+    --text-body-s-emphasized--letter-spacing: calc(0.4 / 12 * 1rem);
+    --text-body-s-emphasized--line-height: calc(16 / 12);
 
     --text-label-l: calc(14 * 0.0625rem);
     --text-label-l--font-weight: 500;
     --text-label-l--letter-spacing: calc(0.1 / 14 * 1rem);
     --text-label-l--line-height: calc(20 / 14);
 
+    --text-label-l-emphasized: calc(14 * 0.0625rem);
+    --text-label-l-emphasized--font-weight: 700;
+    --text-label-l-emphasized--letter-spacing: calc(0.1 / 14 * 1rem);
+    --text-label-l-emphasized--line-height: calc(20 / 14);
+
     --text-label-m: calc(12 * 0.0625rem);
     --text-label-m--font-weight: 500;
     --text-label-m--letter-spacing: calc(0.5 / 12 * 1rem);
     --text-label-m--line-height: calc(16 / 12);
 
+    --text-label-m-emphasized: calc(12 * 0.0625rem);
+    --text-label-m-emphasized--font-weight: 700;
+    --text-label-m-emphasized--letter-spacing: calc(0.5 / 12 * 1rem);
+    --text-label-m-emphasized--line-height: calc(16 / 12);
+
     --text-label-s: calc(11 * 0.0625rem);
     --text-label-s--font-weight: 500;
     --text-label-s--letter-spacing: calc(0.5 / 11 * 1rem);
     --text-label-s--line-height: calc(16 / 11);
+
+    --text-label-s-emphasized: calc(11 * 0.0625rem);
+    --text-label-s-emphasized--font-weight: 700;
+    --text-label-s-emphasized--letter-spacing: calc(0.5 / 11 * 1rem);
+    --text-label-s-emphasized--line-height: calc(16 / 11);
 
     /* Size classes */
     --breakpoint-compact: 0rem; /* 0px */
