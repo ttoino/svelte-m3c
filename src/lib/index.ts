@@ -22,6 +22,8 @@ import Radio from "./components/Radio.svelte";
 import RadioGroup from "./components/RadioGroup.svelte";
 import ScrollArea from "./components/ScrollArea.svelte";
 import SearchBar from "./components/SearchBar.svelte";
+import Select from "./components/Select.svelte";
+import SelectItem from "./components/SelectItem.svelte";
 import Slider from "./components/Slider.svelte";
 import StandardButtonGroup from "./components/StandardButtonGroup.svelte";
 import StateLayer from "./components/StateLayer.svelte";
@@ -58,6 +60,8 @@ export {
     RadioGroup,
     ScrollArea,
     SearchBar,
+    Select,
+    SelectItem,
     Slider,
     StandardButtonGroup,
     StateLayer,
