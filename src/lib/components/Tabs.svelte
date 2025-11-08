@@ -8,7 +8,7 @@
             container: "flex flex-col items-stretch",
             content: "flex-1",
             divider: "absolute bottom-0 left-0 right-0",
-            tabs: "overflow-x-auto *:flex-1 flex flex-row relative",
+            tabs: "relative flex flex-row overflow-x-auto *:flex-1",
         },
     });
 

@@ -2,7 +2,7 @@
     import { mergeVariants, tv } from "$lib/style.js";
 
     export const variantsConfig = mergeVariants({
-        base: "rounded-full bg-error text-on-error empty:size-1.5 not-empty:h-4 not-empty:min-w-4 inline-flex flex-row items-center justify-center gap-1 not-empty:px-1 text-label-s",
+        base: "bg-error text-on-error not-empty:h-4 not-empty:min-w-4 not-empty:px-1 text-label-s inline-flex flex-row items-center justify-center gap-1 rounded-full empty:size-1.5",
     });
 
     export const variants = tv(variantsConfig);

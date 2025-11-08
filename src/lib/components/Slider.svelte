@@ -156,13 +156,13 @@
                 "group-disabled/slider:bg-on-surface/38 group-disabled/slider:!cursor-default",
                 // "focus-visible:outline-secondary focus-visible:outline-solid focus-visible:outline focus-visible:outline-offset-2",
             ],
-            icon: "text-inverse-on-surface absolute group-disabled/slider:data-[bounded]:bg-inverse-on-surface/38",
+            icon: "text-inverse-on-surface group-disabled/slider:data-[bounded]:bg-inverse-on-surface/38 absolute",
             inactiveTrack:
                 "bg-secondary-container group-disabled/slider:bg-on-surface/12",
             stopIndicator:
                 "group-disabled/slider:bg-on-surface/38 group-disabled/slider:data-[bounded]:bg-inverse-on-surface/38 bg-on-secondary-container data-[bounded]:bg-on-primary data-[bounded]:not-has-[+.peer[data-bounded]]:!bg-transparent group-ui-horizontal/slider:!-translate-x-1/2 group-ui-vertical/slider:!translate-y-1/2 peer rounded-full transition-[width,height]",
             valueIndicator:
-                "bg-inverse-surface text-inverse-on-surface px-4 py-3 ui-horizontal:my-1 ui-vertical:mx-1 text-label-l rounded-full not-active:hidden group-disabled/slider:hidden transition-opacity starting:opacity-0",
+                "bg-inverse-surface text-inverse-on-surface ui-horizontal:my-1 ui-vertical:mx-1 text-label-l not-active:hidden starting:opacity-0 rounded-full px-4 py-3 transition-opacity group-disabled/slider:hidden",
         },
         variants: {
             collapsible: {
@@ -178,7 +178,7 @@
                         "group-ui-horizontal/slider:w-0 group-ui-horizontal/slider:group-hover/slider:w-1 group-ui-horizontal/slider:group-focus-within/slider:w-1 group-ui-horizontal/slider:group-disabled/slider:!w-0",
                         "group-ui-vertical/slider:h-0 group-ui-vertical/slider:group-hover/slider:h-1 group-ui-vertical/slider:group-focus-within/slider:h-1 group-ui-vertical/slider:group-disabled/slider:!h-0",
                     ],
-                    icon: "opacity-0 group-hover/slider:opacity-100 group-focus-within/slider:opacity-100 transition-opacity",
+                    icon: "opacity-0 transition-opacity group-focus-within/slider:opacity-100 group-hover/slider:opacity-100",
                     stopIndicator:
                         "size-0 group-focus-within/slider:size-1 group-hover/slider:size-1 group-disabled/slider:size-0",
                 },

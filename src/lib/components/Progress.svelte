@@ -8,9 +8,9 @@
                 circular: true,
                 class: {
                     activeIndicator:
-                        "paint-arc [--start-angle:calc(-78deg+var(--offset)*360deg)] [--end-angle:calc(336deg*var(--progress)-78deg+var(--offset)*360deg)]",
+                        "paint-arc [--end-angle:calc(336deg*var(--progress)-78deg+var(--offset)*360deg)] [--start-angle:calc(-78deg+var(--offset)*360deg)]",
                     container: "size-10",
-                    track: "[--start-angle:calc(min(336deg*var(--progress)-54deg,258deg)+var(--offset)*360deg)] [--end-angle:calc(258deg+var(--offset)*360deg)]",
+                    track: "[--end-angle:calc(258deg+var(--offset)*360deg)] [--start-angle:calc(min(336deg*var(--progress)-54deg,258deg)+var(--offset)*360deg)]",
                 },
                 shape: "flat",
             },
@@ -18,16 +18,16 @@
                 circular: true,
                 class: {
                     activeIndicator:
-                        "paint-arc-wave wavelength-4 amplitude-0.5 [--start-angle:calc(-80deg+var(--offset)*360deg)] [--end-angle:calc(340deg*var(--progress)-80deg+var(--offset)*360deg)]",
+                        "paint-arc-wave wavelength-4 amplitude-0.5 [--end-angle:calc(340deg*var(--progress)-80deg+var(--offset)*360deg)] [--start-angle:calc(-80deg+var(--offset)*360deg)]",
                     container: "size-12",
-                    track: "[--start-angle:calc(min(340deg*var(--progress)-60deg,260deg)+var(--offset)*360deg)] [--end-angle:calc(260deg+var(--offset)*360deg)]",
+                    track: "[--end-angle:calc(260deg+var(--offset)*360deg)] [--start-angle:calc(min(340deg*var(--progress)-60deg,260deg)+var(--offset)*360deg)]",
                 },
                 shape: "wavy",
             },
             {
                 circular: false,
                 class: {
-                    activeIndicator: "rounded-full h-1 bg-primary",
+                    activeIndicator: "bg-primary h-1 rounded-full",
                 },
                 shape: "flat",
             },
@@ -35,7 +35,7 @@
                 circular: false,
                 class: {
                     activeIndicator:
-                        "h-2.5 wavelength-10 paint-wave animate-wave",
+                        "wavelength-10 paint-wave animate-wave h-2.5",
                 },
                 shape: "wavy",
             },
@@ -47,7 +47,7 @@
         slots: {
             activeIndicator:
                 "stroke-primary stroke-4 linecap-round linejoin-round",
-            container: "relative animate-indeterminate",
+            container: "animate-indeterminate relative",
             stopIndicator: "",
             track: "stroke-secondary-container stroke-4 linecap-round linejoin-round",
         },
@@ -57,15 +57,15 @@
                     activeIndicator:
                         "w-[calc(var(--spacing)+var(--progress)*(100%-var(--spacing)))] shrink-0",
                     container:
-                        "w-full flex items-center justify-center gap-1 group/progress",
+                        "group/progress flex w-full items-center justify-center gap-1",
                     stopIndicator:
-                        "size-1 rounded-full bg-primary absolute end-0 group-ui-indeterminate/progress:hidden",
-                    track: "h-1 rounded-full bg-secondary-container grow-1",
+                        "bg-primary group-ui-indeterminate/progress:hidden absolute end-0 size-1 rounded-full",
+                    track: "bg-secondary-container grow-1 h-1 rounded-full",
                 },
                 true: {
                     activeIndicator: "absolute inset-0 z-10",
                     stopIndicator: "hidden",
-                    track: "absolute inset-0 paint-arc",
+                    track: "paint-arc absolute inset-0",
                 },
             },
             shape: {

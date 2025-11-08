@@ -4,11 +4,11 @@
     export const variantsConfig = mergeVariants({
         slots: {
             activeIndicator:
-                "group-ui-inactive/tab:hidden absolute left-0 right-0 bottom-0 mx-0.5 h-0.75 rounded-t-full bg-primary min-w-6",
+                "group-ui-inactive/tab:hidden h-0.75 bg-primary absolute bottom-0 left-0 right-0 mx-0.5 min-w-6 rounded-t-full",
             container:
-                "min-h-12 ui-active:text-primary relative group/state-layer group/tab flex-col items-center px-4 cursor-pointer",
+                "ui-active:text-primary group/state-layer group/tab relative min-h-12 cursor-pointer flex-col items-center px-4",
             content:
-                "inline-flex h-full flex-col items-center justify-center relative min-w-7",
+                "relative inline-flex h-full min-w-7 flex-col items-center justify-center",
             icon: "",
             label: "text-title-s",
             stateLayer: "absolute inset-0",

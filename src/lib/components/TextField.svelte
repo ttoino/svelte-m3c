@@ -19,7 +19,7 @@
                 "group/state-layer caret-primary group/text-field has-disabled:cursor-auto relative inline-flex cursor-text flex-col px-4",
             dummyLabel: "text-body-s text-transparent",
             dummyWrapper: "",
-            input: "text-on-surface text-body-l peer/text-field-input peer/state-layer focus:placeholder:text-on-surface-variant disabled:text-on-surface/38 z-10 outline-none transition-all placeholder:text-transparent placeholder:transition-colors text-start",
+            input: "text-on-surface text-body-l peer/text-field-input peer/state-layer focus:placeholder:text-on-surface-variant disabled:text-on-surface/38 z-10 text-start outline-none transition-all placeholder:text-transparent placeholder:transition-colors",
             stateLayer: "absolute inset-0",
             visualLabel: [
                 "text-on-surface-variant text-body-l peer-disabled/text-field-input:text-on-surface/38 absolute top-1/2 -translate-y-1/2 transition-all",
