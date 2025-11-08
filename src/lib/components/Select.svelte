@@ -49,7 +49,11 @@
     let classes = $derived(variants({ variant }));
 </script>
 
-<Select.Root onValueChange={onValueChange as never} bind:value={value as never} {...props}>
+<Select.Root
+    onValueChange={onValueChange as never}
+    bind:value={value as never}
+    {...props}
+>
     <Select.Trigger class={classes.container({ class: containerClass })}>
         <span class={classes.input({ class: inputClass })}>
             {@render input?.(value)}
