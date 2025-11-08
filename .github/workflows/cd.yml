@@ -1,6 +1,8 @@
 name: CD
 
 on:
+  push:
+    branches: [main]
   release:
     types: [published]
   workflow_dispatch:
@@ -26,12 +28,13 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: registry.toino.pt/svelte-m3c:latest
+          tags: registry.toino.pt/svelte-m3c${{ github.event_name == 'push' && '-next' || '' }}:latest
           target: prod
 
   publish:
     name: Publish
     runs-on: ubuntu-latest
+    if: github.event_name != 'push'
     steps:
       - name: Checkout
         uses: actions/checkout@v5
