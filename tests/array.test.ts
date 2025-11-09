@@ -1,42 +1,38 @@
 import { cartesian } from "$lib/array.js";
-import { describe, test } from "vitest";
+import { assert, describe, test } from "vitest";
 
 describe("cartesian product", () => {
-    test("empty input", ({ expect }) => {
-        expect(cartesian()).toEqual([]);
+    test("empty input", () => {
+        assert.sameDeepMembers(cartesian(), []);
     });
 
-    test("one array", ({ expect }) => {
-        expect(cartesian([])).toEqual([]);
+    test("one array", () => {
+        assert.sameDeepMembers(cartesian([]), []);
 
-        expect(cartesian([1])).toEqual([[1]]);
+        assert.sameDeepMembers(cartesian([1]), [[1]]);
 
-        expect(cartesian([1, 2])).toEqual([[1], [2]]);
+        assert.sameDeepMembers(cartesian([1, 2]), [[1], [2]]);
     });
 
-    test("two arrays", ({ expect }) => {
-        expect(cartesian([], [])).toEqual([]);
+    test("two arrays", () => {
+        assert.sameDeepMembers(cartesian([], []), []);
 
-        expect(cartesian([1], ["a"])).toEqual([[1, "a"]]);
+        assert.sameDeepMembers(cartesian([1], ["a"]), [[1, "a"]]);
 
-        const result = cartesian([1, 2], ["a", "b"]);
-        const expected = [
+        assert.sameDeepMembers(cartesian([1, 2], ["a", "b"]), [
             [1, "a"],
             [1, "b"],
             [2, "a"],
             [2, "b"],
-        ];
-        expect(result).toHaveLength(expected.length);
-        expect(result).toEqual(expect.arrayContaining(expected));
+        ]);
     });
 
-    test("three arrays", ({ expect }) => {
-        expect(cartesian([], [], [])).toEqual([]);
+    test("three arrays", () => {
+        assert.sameDeepMembers(cartesian([], [], []), []);
 
-        expect(cartesian([1], ["a"], ["A"])).toEqual([[1, "a", "A"]]);
+        assert.sameDeepMembers(cartesian([1], ["a"], ["A"]), [[1, "a", "A"]]);
 
-        const result = cartesian([1, 2], ["a", "b"], ["A", "B"]);
-        const expected = [
+        assert.sameDeepMembers(cartesian([1, 2], ["a", "b"], ["A", "B"]), [
             [1, "a", "A"],
             [1, "a", "B"],
             [1, "b", "A"],
@@ -45,38 +41,36 @@ describe("cartesian product", () => {
             [2, "a", "B"],
             [2, "b", "A"],
             [2, "b", "B"],
-        ];
-        expect(result).toHaveLength(expected.length);
-        expect(result).toEqual(expect.arrayContaining(expected));
+        ]);
     });
 
-    test("four arrays", ({ expect }) => {
-        expect(cartesian([], [], [], [])).toEqual([]);
+    test("four arrays", () => {
+        assert.sameDeepMembers(cartesian([], [], [], []), []);
 
-        expect(cartesian([1], ["a"], ["A"], [false])).toEqual([
+        assert.sameDeepMembers(cartesian([1], ["a"], ["A"], [false]), [
             [1, "a", "A", false],
         ]);
 
-        const result = cartesian([1, 2], ["a", "b"], ["A", "B"], [false, true]);
-        const expected = [
-            [1, "a", "A", false],
-            [1, "a", "A", true],
-            [1, "a", "B", false],
-            [1, "a", "B", true],
-            [1, "b", "A", false],
-            [1, "b", "A", true],
-            [1, "b", "B", false],
-            [1, "b", "B", true],
-            [2, "a", "A", false],
-            [2, "a", "A", true],
-            [2, "a", "B", false],
-            [2, "a", "B", true],
-            [2, "b", "A", false],
-            [2, "b", "A", true],
-            [2, "b", "B", false],
-            [2, "b", "B", true],
-        ];
-        expect(result).toHaveLength(expected.length);
-        expect(result).toEqual(expect.arrayContaining(expected));
+        assert.sameDeepMembers(
+            cartesian([1, 2], ["a", "b"], ["A", "B"], [false, true]),
+            [
+                [1, "a", "A", false],
+                [1, "a", "A", true],
+                [1, "a", "B", false],
+                [1, "a", "B", true],
+                [1, "b", "A", false],
+                [1, "b", "A", true],
+                [1, "b", "B", false],
+                [1, "b", "B", true],
+                [2, "a", "A", false],
+                [2, "a", "A", true],
+                [2, "a", "B", false],
+                [2, "a", "B", true],
+                [2, "b", "A", false],
+                [2, "b", "A", true],
+                [2, "b", "B", false],
+                [2, "b", "B", true],
+            ],
+        );
     });
 });
