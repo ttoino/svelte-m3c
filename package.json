@@ -4,7 +4,7 @@
     "license": "GPL-3.0-only",
     "scripts": {
         "dev": "vite dev",
-        "build": "vite build && npm run prepack",
+        "build": "pnpm run dev --host --strict-port & vite build && pnpm run prepack; kill \"$!\"",
         "preview": "vite preview",
         "prepare": "svelte-kit sync || echo ''",
         "prepack": "svelte-kit sync && svelte-package && publint",
