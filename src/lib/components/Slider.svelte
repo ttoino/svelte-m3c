@@ -1,4 +1,6 @@
 <script lang="ts" module>
+    import type { Orientation } from "bits-ui";
+
     // TODO: inset icon positioning
     // TODO: centered variant
     // FIXME: Handle does not go entirely to the edge of the track
@@ -222,6 +224,9 @@
 
     export const variants = tv(variantsConfig);
 
+    export type SliderSize = keyof (typeof variants)["variants"]["size"];
+    export type SliderOrientation = Orientation;
+
     const leftPattern = /left\s*:\s*([0-9.]+%)/;
     const rightPattern = /right\s*:\s*([0-9.]+%)/;
     const topPattern = /top\s*:\s*([0-9.]+%)/;
@@ -245,11 +250,13 @@
         icon,
         iconClass,
         inactiveTrackClass,
+        onValueChange,
+        onValueCommit,
         ref = $bindable(null),
         size,
         step = 1,
         stopIndicatorClass,
-        type,
+        type = "single",
         value = $bindable(),
         valueIndicatorClass,
         ...props
@@ -268,6 +275,8 @@
 
 <Slider.Root
     class={classes.container({ class: containerClass })}
+    onValueChange={onValueChange as never}
+    onValueCommit={onValueCommit as never}
     {step}
     {type}
     bind:ref
