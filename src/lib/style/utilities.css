@@ -87,28 +87,53 @@
 /* Prose */
 
 @utility prose {
-    @apply text-body-m;
+    @apply text-body-m align-baseline;
 
-    h1 {
-        @apply text-headline-l;
-    }
-    h2 {
-        @apply text-headline-m;
-    }
-    h3 {
-        @apply text-headline-s;
-    }
-    h4 {
-        @apply text-title-l;
-    }
-    h5 {
-        @apply text-title-m;
-    }
-    h6 {
-        @apply text-title-s;
-    }
+    :is(& *, &):not(.not-prose):not(.not-prose *) {
+        h1& {
+            @apply text-headline-l;
+        }
+        h2& {
+            @apply text-headline-m;
+        }
+        h3& {
+            @apply text-headline-s;
+        }
+        h4& {
+            @apply text-title-l;
+        }
+        h5& {
+            @apply text-title-m;
+        }
+        h6& {
+            @apply text-title-s;
+        }
+        h2&,
+        h3&,
+        h4&,
+        h5&,
+        h6& {
+            @apply mt-5;
+        }
 
-    a {
-        @apply text-primary;
+        a& {
+            @apply text-primary visited:text-secondary cursor-pointer hover:underline;
+        }
+
+        p& {
+            @apply my-4;
+        }
+
+        code& {
+            @apply bg-surface-variant rounded-xxs px-0.5 font-mono;
+        }
+
+        pre& {
+            @apply bg-surface-variant rounded-xs -mx-1 my-2 w-full overflow-x-auto px-1 py-0.5;
+
+            code {
+                @apply block min-w-full overflow-x-auto rounded-none bg-none p-0;
+            }
+        }
     }
 }
