@@ -2,6 +2,7 @@ import type { IconName } from "./types/icon.js";
 
 import Badge from "./components/Badge.svelte";
 import Button from "./components/Button.svelte";
+import Card from "./components/Card.svelte";
 import Checkbox from "./components/Checkbox.svelte";
 import ConnectedButtonGroup from "./components/ConnectedButtonGroup.svelte";
 import Divider from "./components/Divider.svelte";
@@ -39,6 +40,7 @@ import Tooltip from "./components/Tooltip.svelte";
 export {
     Badge,
     Button,
+    Card,
     Checkbox,
     ConnectedButtonGroup,
     Divider,
