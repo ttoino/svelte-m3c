@@ -1,0 +1,9 @@
+services:
+  test:
+    build:
+      target: test
+    volumes:
+      - .:/app
+    ipc: host
+    ports:
+      - 9323

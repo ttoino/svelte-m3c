@@ -1,4 +1,8 @@
-FROM node:24-alpine AS build
+FROM mcr.microsoft.com/playwright:v1.56.1 AS base
+
+RUN chmod 0777 /usr/bin
+
+USER 1000
 
 WORKDIR /app
 
@@ -7,6 +11,16 @@ COPY pnpm-lock.yaml .
 
 RUN corepack enable
 RUN pnpm install --frozen-lockfile
+
+FROM base AS test
+
+VOLUME "/app"
+EXPOSE 9323
+ENV CI=true
+
+ENTRYPOINT [ "pnpm", "run", "test" ]
+
+FROM base AS build
 
 COPY static static
 COPY src src
