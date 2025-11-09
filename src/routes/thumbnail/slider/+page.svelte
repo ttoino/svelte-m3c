@@ -37,7 +37,7 @@
                     <Slider value={20} />
                 </div>
             </div>
-            
+
             <div class="flex flex-row items-center gap-4 px-4">
                 <Icon icon="music_note" />
                 <div class="flex flex-1 flex-col gap-2">
