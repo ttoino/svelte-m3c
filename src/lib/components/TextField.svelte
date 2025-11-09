@@ -97,6 +97,7 @@
         {
             label?: Snippet;
             ref?: HTMLLabelElement | null;
+            value?: string;
         }
     > = $props();
 

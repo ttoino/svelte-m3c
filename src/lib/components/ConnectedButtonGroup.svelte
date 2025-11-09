@@ -44,6 +44,7 @@
     let {
         class: className,
         color,
+        onValueChange,
         ref = $bindable(null),
         shape,
         size,
@@ -73,6 +74,7 @@
 
 <ToggleGroup.Root
     class={variants({ className, size })}
+    onValueChange={onValueChange as never}
     bind:ref
     bind:value={value as never}
     {...props}
