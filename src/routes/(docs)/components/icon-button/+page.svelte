@@ -8,6 +8,7 @@
         type IconButtonWidth,
     } from "$lib/types/button.js";
 
+    import Title from "../../../Title.svelte";
     import Playground, {
         buttonGroupControl,
         iconControl,
@@ -22,7 +23,7 @@
     <title>Icon buttons</title>
 </svelte:head>
 
-<h1>Icon buttons</h1>
+<Title content="Icon buttons" />
 
 <!-- TODO -->
 

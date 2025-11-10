@@ -8,6 +8,7 @@
     } from "$lib/types/button.js";
     import { slide } from "svelte/transition";
 
+    import Title from "../../../Title.svelte";
     import Playground, {
         buttonGroupControl,
         iconControl,
@@ -19,11 +20,7 @@
     import { renderComponentCode } from "../../renderComponentCode.js";
 </script>
 
-<svelte:head>
-    <title>Common buttons</title>
-</svelte:head>
-
-<h1>Common buttons</h1>
+<Title content="Common buttons" />
 
 <!-- TODO -->
 

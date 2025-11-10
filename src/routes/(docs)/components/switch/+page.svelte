@@ -1,6 +1,7 @@
 <script lang="ts">
     import { type IconName, Switch } from "$lib/index.js";
 
+    import Title from "../../../Title.svelte";
     import Playground, {
         iconControl,
         switchControl,
@@ -9,7 +10,7 @@
     import { renderComponentCode } from "../../renderComponentCode.js";
 </script>
 
-<h1>Switches</h1>
+<Title content="Switches" />
 
 <Playground
     code={({

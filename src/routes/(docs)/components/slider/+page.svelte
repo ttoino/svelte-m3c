@@ -6,6 +6,7 @@
 
     import { type IconName, Slider } from "$lib/index.js";
 
+    import Title from "../../../Title.svelte";
     import Playground, {
         buttonGroupControl,
         iconControl,
@@ -16,7 +17,7 @@
     import { renderComponentCode } from "../../renderComponentCode.js";
 </script>
 
-<h1>Sliders</h1>
+<Title content="Sliders" />
 
 <Playground
     code={({ discrete, icon, showIcon, variant, ...props }) =>

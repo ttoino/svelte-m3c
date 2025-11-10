@@ -186,9 +186,11 @@
     import { resolve } from "$app/paths";
     import { Card } from "$lib/index.js";
     import { constEntries } from "$lib/object.js";
+
+    import Title from "../../Title.svelte";
 </script>
 
-<h1>Component directory</h1>
+<Title content="Component directory" />
 
 {#each constEntries(components) as [category, c] (category)}
     <h2>{category}</h2>
