@@ -10,9 +10,9 @@
     <Card containerClass="w-88 bg-surface" variant="outlined">
         <header class="flex flex-row items-center gap-4 p-4">
             <Avatar.Root
-                class="bg-primary inline-flex size-12 items-center justify-center rounded-full"
+                class="inline-flex size-12 items-center justify-center rounded-full bg-primary"
             >
-                <Avatar.Fallback class="text-on-primary text-title-m">
+                <Avatar.Fallback class="text-title-m text-on-primary">
                     A
                 </Avatar.Fallback>
             </Avatar.Root>
@@ -29,7 +29,7 @@
                 variant="text"
             />
         </header>
-        <div class="bg-neutral-60 aspect-video"></div>
+        <div class="aspect-video bg-neutral-60"></div>
         <div class="flex flex-col gap-8 p-4">
             <p>Buy tickets or check out the schedule.</p>
             <div class="flex flex-row gap-2 self-end">

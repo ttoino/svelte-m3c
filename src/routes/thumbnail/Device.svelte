@@ -4,8 +4,8 @@
     const variantsConfig = mergeVariants({
         slots: {
             container:
-                "bg-surface border-outline relative flex flex-col rounded-xl border-4",
-            navbar: "bg-on-surface absolute bottom-3 h-1 w-56 self-center rounded-full",
+                "relative flex flex-col rounded-xl border-4 border-outline bg-surface",
+            navbar: "absolute bottom-3 h-1 w-56 self-center rounded-full bg-on-surface",
             status: "icon-4",
             statusbar: "flex flex-row items-center justify-between p-6",
             time: "text-label-l",

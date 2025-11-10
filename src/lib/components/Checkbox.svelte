@@ -4,10 +4,10 @@
     export const variantsConfig = mergeVariants({
         slots: {
             container:
-                "group/state-layer size-4.5 border-outline rounded-xxs not-ui-unchecked:bg-primary not-ui-unchecked:border-primary text-on-surface not-ui-unchecked:text-on-primary disabled:border-on-surface/38 disabled:not-ui-unchecked:bg-on-surface/38 disabled:not-ui-unchecked:border-transparent disabled:text-surface relative inline-flex cursor-pointer items-center justify-center border-2 transition-colors *:absolute disabled:cursor-default",
-            icon: "linecap-butt linejoin-square size-3.5 fill-none stroke-current stroke-2",
+                "group/state-layer relative inline-flex size-4.5 cursor-pointer items-center justify-center rounded-xxs border-2 border-outline text-on-surface transition-colors *:absolute not-ui-unchecked:border-primary not-ui-unchecked:bg-primary not-ui-unchecked:text-on-primary disabled:cursor-default disabled:border-on-surface/38 disabled:text-surface disabled:not-ui-unchecked:border-transparent disabled:not-ui-unchecked:bg-on-surface/38",
+            icon: "linejoin-square size-3.5 fill-none stroke-current stroke-2 linecap-butt",
             stateLayer:
-                "group-not-ui-unchecked/state-layer:text-primary size-10 rounded-full",
+                "size-10 rounded-full group-not-ui-unchecked/state-layer:text-primary",
         },
     });
 

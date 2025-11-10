@@ -4,7 +4,7 @@
     import { variantsConfig as base } from "./List.svelte";
 
     export const variantsConfig = mergeVariants(base, {
-        base: "shadow-2 rounded-xs bg-surface-container z-50",
+        base: "z-50 rounded-xs bg-surface-container shadow-2",
     });
 
     export const variants = tv(variantsConfig);

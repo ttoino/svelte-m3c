@@ -195,7 +195,7 @@
 {#each constEntries(components) as [category, c] (category)}
     <h2>{category}</h2>
 
-    <div class="medium:grid-cols-2 not-prose mt-4 grid gap-2">
+    <div class="not-prose mt-4 grid gap-2 medium:grid-cols-2">
         {#each constEntries(c) as [id, { description, title }] (id)}
             <Card containerClass="relative" variant="outlined">
                 <img

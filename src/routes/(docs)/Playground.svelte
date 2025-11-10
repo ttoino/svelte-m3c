@@ -69,11 +69,11 @@
     const variantsConfig = mergeVariants({
         slots: {
             container:
-                "min-h-120 expanded:flex-row not-prose my-4 flex flex-col overflow-hidden rounded-lg",
+                "not-prose my-4 flex min-h-120 flex-col overflow-hidden rounded-lg expanded:flex-row",
             controls:
-                "expanded:w-80 max-expanded:h-80 bg-surface-container-high flex flex-col gap-4 overflow-y-auto p-4",
+                "flex flex-col gap-4 overflow-y-auto bg-surface-container-high p-4 max-expanded:h-80 expanded:w-80",
             preview:
-                "expanded:border-e-0 expanded:rounded-e-none max-expanded:rounded-b-none max-expanded:border-b-0 m-0 flex-1",
+                "m-0 flex-1 max-expanded:rounded-b-none max-expanded:border-b-0 expanded:rounded-e-none expanded:border-e-0",
         },
     });
 
@@ -187,7 +187,7 @@
     getValue: () => boolean,
     setValue: (value: boolean) => void,
 )}
-    <p class="text-label-l inline-flex flex-row items-center gap-4">
+    <p class="inline-flex flex-row items-center gap-4 text-label-l">
         <Switch bind:checked={getValue, setValue} />
         {label}
     </p>

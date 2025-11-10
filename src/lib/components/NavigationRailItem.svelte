@@ -6,7 +6,7 @@
             activeIndicator:
                 "relative flex w-14 items-center justify-center rounded-full",
             container:
-                "group/state-layer text-on-surface group/navigation-rail-item relative flex h-14 flex-col items-center justify-center gap-1",
+                "group/state-layer group/navigation-rail-item relative flex h-14 flex-col items-center justify-center gap-1 text-on-surface",
             icon: "transition-colors",
             label: "text-label-m transition-colors",
             stateLayer: "absolute inset-0 rounded-full",
@@ -14,8 +14,8 @@
         variants: {
             active: {
                 false: {
-                    icon: "text-on-surface-variant group-hover/navigation-rail-item:text-on-surface group-focus-within/navigation-rail-item:text-on-surface",
-                    label: "text-on-surface-variant group-hover/navigation-rail-item:text-on-surface group-focus-within/navigation-rail-item:text-on-surface",
+                    icon: "text-on-surface-variant group-focus-within/navigation-rail-item:text-on-surface group-hover/navigation-rail-item:text-on-surface",
+                    label: "text-on-surface-variant group-focus-within/navigation-rail-item:text-on-surface group-hover/navigation-rail-item:text-on-surface",
                 },
                 true: {
                     activeIndicator: "bg-secondary-container",

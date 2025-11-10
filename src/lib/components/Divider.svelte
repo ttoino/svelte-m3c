@@ -2,7 +2,7 @@
     import { mergeVariants, tv } from "$lib/style.js";
 
     export const variantsConfig = mergeVariants({
-        base: "bg-outline-variant h-px w-full border-none",
+        base: "h-px w-full border-none bg-outline-variant",
     });
 
     export const variants = tv(variantsConfig);

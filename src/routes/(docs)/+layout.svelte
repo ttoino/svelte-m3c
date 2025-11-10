@@ -4,6 +4,6 @@
     let { children }: LayoutProps = $props();
 </script>
 
-<div class="prose max-w-(--breakpoint-expanded) mx-auto w-full px-16 py-12">
+<div class="prose mx-auto w-full max-w-(--breakpoint-expanded) px-16 py-12">
     {@render children?.()}
 </div>

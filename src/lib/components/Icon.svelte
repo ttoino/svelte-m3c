@@ -2,7 +2,7 @@
     import { mergeVariants, tv } from "$lib/style.js";
 
     export const variantsConfig = mergeVariants({
-        base: "icon inline-block select-none align-middle",
+        base: "inline-block icon align-middle select-none",
     });
 
     export const variants = tv(variantsConfig);

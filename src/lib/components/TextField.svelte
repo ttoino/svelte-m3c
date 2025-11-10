@@ -14,53 +14,53 @@
         },
         slots: {
             activeIndicator:
-                "group-focus-within/text-field:!border-primary group-hover/text-field:border-on-surface peer-disabled/text-field-input:!border-on-surface/38 absolute inset-0 transition-all",
+                "absolute inset-0 transition-all group-focus-within/text-field:!border-primary group-hover/text-field:border-on-surface peer-disabled/text-field-input:!border-on-surface/38",
             container:
-                "group/state-layer caret-primary group/text-field has-disabled:cursor-auto relative inline-flex cursor-text flex-col px-4",
+                "group/state-layer group/text-field relative inline-flex cursor-text flex-col px-4 caret-primary has-disabled:cursor-auto",
             dummyLabel: "text-body-s text-transparent",
             dummyWrapper: "",
-            input: "text-on-surface text-body-l peer/text-field-input peer/state-layer focus:placeholder:text-on-surface-variant disabled:text-on-surface/38 z-10 text-start outline-none transition-all placeholder:text-transparent placeholder:transition-colors",
+            input: "peer/text-field-input peer/state-layer z-10 text-start text-body-l text-on-surface transition-all outline-none placeholder:text-transparent placeholder:transition-colors focus:placeholder:text-on-surface-variant disabled:text-on-surface/38",
             stateLayer: "absolute inset-0",
             visualLabel: [
-                "text-on-surface-variant text-body-l peer-disabled/text-field-input:text-on-surface/38 absolute top-1/2 -translate-y-1/2 transition-all",
-                "group-focus-within/text-field:text-primary group-focus-within/text-field:text-body-s group-focus-within/text-field:translate-y-0",
-                "peer-not-placeholder-shown/text-field-input:text-body-s peer-not-placeholder-shown/text-field-input:translate-y-0",
+                "absolute top-1/2 -translate-y-1/2 text-body-l text-on-surface-variant transition-all peer-disabled/text-field-input:text-on-surface/38",
+                "group-focus-within/text-field:translate-y-0 group-focus-within/text-field:text-body-s group-focus-within/text-field:text-primary",
+                "peer-not-placeholder-shown/text-field-input:translate-y-0 peer-not-placeholder-shown/text-field-input:text-body-s",
             ],
         },
         variants: {
             variant: {
                 filled: {
                     activeIndicator:
-                        "border-on-surface-variant border-b-1 group-focus-within/text-field:border-b-2",
+                        "border-b-1 border-on-surface-variant group-focus-within/text-field:border-b-2",
                     container:
-                        "bg-surface-container-highest has-disabled:bg-on-surface/4 rounded-t-xs py-2",
+                        "rounded-t-xs bg-surface-container-highest py-2 has-disabled:bg-on-surface/4",
                     dummyWrapper: "-order-1",
                     stateLayer: "rounded-t-xs",
                     visualLabel:
-                        "peer-not-placeholder-shown/text-field-input:top-2 group-focus-within/text-field:top-2",
+                        "group-focus-within/text-field:top-2 peer-not-placeholder-shown/text-field-input:top-2",
                 },
                 outlined: {
                     activeIndicator:
-                        "border-outline border-1 rounded-b-xs top-3 !border-t-0 group-focus-within/text-field:border-2",
+                        "top-3 rounded-b-xs border-1 !border-t-0 border-outline group-focus-within/text-field:border-2",
                     container: "rounded-xs py-4",
                     dummyLabel: [
                         "relative flex flex-row px-2",
-                        "before:bg-outline before:absolute before:left-0 before:h-px before:w-1 before:rounded-r-full",
-                        "group-focus-within/text-field:before:!bg-primary group-hover/text-field:before:bg-on-surface peer-disabled/text-field-input:before:!bg-on-surface/38 group-focus-within/text-field:before:h-[2px]",
+                        "before:absolute before:left-0 before:h-px before:w-1 before:rounded-r-full before:bg-outline",
+                        "group-focus-within/text-field:before:h-[2px] group-focus-within/text-field:before:!bg-primary group-hover/text-field:before:bg-on-surface peer-disabled/text-field-input:before:!bg-on-surface/38",
                         "",
-                        "after:bg-outline after:absolute after:right-0 after:h-px after:w-1 after:rounded-l-full",
-                        "group-focus-within/text-field:after:!bg-primary group-hover/text-field:after:bg-on-surface peer-disabled/text-field-input:after:!bg-on-surface/38 group-focus-within/text-field:after:h-[2px]",
+                        "after:absolute after:right-0 after:h-px after:w-1 after:rounded-l-full after:bg-outline",
+                        "group-focus-within/text-field:after:h-[2px] group-focus-within/text-field:after:!bg-primary group-hover/text-field:after:bg-on-surface peer-disabled/text-field-input:after:!bg-on-surface/38",
                     ],
                     dummyWrapper: [
-                        "absolute left-0 right-0 top-0 flex h-3 flex-row",
-                        "before:border-t-1 before:border-l-1 before:rounded-tl-xs before:border-outline before:h-full before:w-2",
-                        "group-focus-within/text-field:before:!border-primary group-hover/text-field:before:border-on-surface peer-disabled/text-field-input:before:!border-on-surface/38 group-focus-within/text-field:before:border-l-2 group-focus-within/text-field:before:border-t-2",
-                        "after:border-t-1 after:border-r-1 after:rounded-tr-xs after:border-outline after:h-full after:grow",
-                        "group-focus-within/text-field:after:!border-primary group-hover/text-field:after:border-on-surface peer-disabled/text-field-input:after:!border-on-surface/38 group-focus-within/text-field:after:border-r-2 group-focus-within/text-field:after:border-t-2",
+                        "absolute top-0 right-0 left-0 flex h-3 flex-row",
+                        "before:h-full before:w-2 before:rounded-tl-xs before:border-t-1 before:border-l-1 before:border-outline",
+                        "group-focus-within/text-field:before:border-t-2 group-focus-within/text-field:before:border-l-2 group-focus-within/text-field:before:!border-primary group-hover/text-field:before:border-on-surface peer-disabled/text-field-input:before:!border-on-surface/38",
+                        "after:h-full after:grow after:rounded-tr-xs after:border-t-1 after:border-r-1 after:border-outline",
+                        "group-focus-within/text-field:after:border-t-2 group-focus-within/text-field:after:border-r-2 group-focus-within/text-field:after:!border-primary group-hover/text-field:after:border-on-surface peer-disabled/text-field-input:after:!border-on-surface/38",
                     ],
                     stateLayer: "rounded-xs",
                     visualLabel:
-                        "peer-not-placeholder-shown/text-field-input:-top-2 group-focus-within/text-field:-top-2",
+                        "group-focus-within/text-field:-top-2 peer-not-placeholder-shown/text-field-input:-top-2",
                 },
             },
         },

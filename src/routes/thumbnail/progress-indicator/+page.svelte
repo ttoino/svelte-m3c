@@ -5,11 +5,11 @@
 </script>
 
 <Thumbnail class="flex-col gap-3 px-12">
-    <div class="ml-0 mr-20 flex flex-row items-center justify-center gap-12">
+    <div class="mr-20 ml-0 flex flex-row items-center justify-center gap-12">
         <Progress containerClass="w-50" value={30} />
         <Progress circular value={30} />
     </div>
-    <div class="ml-20 mr-0 flex flex-row items-center justify-center gap-12">
+    <div class="mr-0 ml-20 flex flex-row items-center justify-center gap-12">
         <Progress containerClass="w-50" shape="wavy" value={30} />
         <Progress circular shape="wavy" value={30} />
     </div>

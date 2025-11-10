@@ -4,7 +4,7 @@
     import Thumbnail from "../Thumbnail.svelte";
 </script>
 
-<Thumbnail class="pb-52 pt-8">
+<Thumbnail class="pt-8 pb-52">
     <Menu
         class="w-44"
         align="center"

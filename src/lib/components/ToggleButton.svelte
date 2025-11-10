@@ -125,7 +125,7 @@
             variant: {
                 outlined: {
                     container:
-                        "ui-on:bg-inverse-surface ui-on:outline-inverse-surface ui-on:text-inverse-on-surface",
+                        "ui-on:bg-inverse-surface ui-on:text-inverse-on-surface ui-on:outline-inverse-surface",
                 },
             },
         },

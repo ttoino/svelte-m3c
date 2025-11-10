@@ -11,7 +11,7 @@
         compoundSlots: [
             {
                 class: [
-                    "rounded-xxs absolute",
+                    "absolute rounded-xxs",
                     "group-ui-horizontal/slider:first:left-0 group-ui-horizontal/slider:last:right-0",
                     "group-ui-vertical/slider:first:bottom-0 group-ui-vertical/slider:last:top-0",
                 ],
@@ -73,8 +73,8 @@
             {
                 class: [
                     "transition-[width,height,margin,border-radius]",
-                    "group-ui-horizontal/slider:h-1 group-ui-horizontal/slider:first:-ml-0.5 group-ui-horizontal/slider:last:-mr-0.5 group-ui-horizontal/slider:mx-0.5",
-                    "group-ui-vertical/slider:w-1 group-ui-vertical/slider:first:-mb-0.5 group-ui-vertical/slider:last:-mt-0.5 group-ui-vertical/slider:my-0.5",
+                    "group-ui-horizontal/slider:mx-0.5 group-ui-horizontal/slider:h-1 group-ui-horizontal/slider:first:-ml-0.5 group-ui-horizontal/slider:last:-mr-0.5",
+                    "group-ui-vertical/slider:my-0.5 group-ui-vertical/slider:w-1 group-ui-vertical/slider:first:-mb-0.5 group-ui-vertical/slider:last:-mt-0.5",
                     "group-ui-horizontal/slider:group-hover/slider:mx-2 group-ui-horizontal/slider:group-hover/slider:first:-ml-2 group-ui-horizontal/slider:group-hover/slider:last:-mr-2",
                     "group-ui-horizontal/slider:group-focus-within/slider:mx-2 group-ui-horizontal/slider:group-focus-within/slider:first:-ml-2 group-ui-horizontal/slider:group-focus-within/slider:last:-mr-2",
                     "group-ui-vertical/slider:group-hover/slider:my-2 group-ui-vertical/slider:group-hover/slider:first:-mb-2 group-ui-vertical/slider:group-hover/slider:last:-mt-2",
@@ -148,23 +148,23 @@
             activeTrack: "bg-primary group-disabled/slider:bg-on-surface/38",
             container: [
                 "group/slider relative flex cursor-pointer items-center disabled:cursor-default",
-                "ui-horizontal:min-w-86 ui-horizontal:flex-row ui-horizontal:mx-2",
-                "ui-vertical:min-h-86 ui-vertical:flex-col ui-vertical:my-2",
+                "ui-horizontal:mx-2 ui-horizontal:min-w-86 ui-horizontal:flex-row",
+                "ui-vertical:my-2 ui-vertical:min-h-86 ui-vertical:flex-col",
             ],
             handle: [
-                "bg-primary cursor-grab rounded-full outline-none transition-[width]",
-                "group-ui-horizontal/slider:hover:w-1 group-ui-horizontal/slider:focus:w-0.5 group-ui-horizontal/slider:group-disabled/slider:!w-1",
-                "group-ui-vertical-horizontal/slider:hover:h-1 group-ui-vertical/slider:focus:h-0.5 group-ui-vertical/slider:group-disabled/slider:!h-1",
-                "group-disabled/slider:bg-on-surface/38 group-disabled/slider:!cursor-default",
+                "cursor-grab rounded-full bg-primary transition-[width] outline-none",
+                "group-ui-horizontal/slider:group-disabled/slider:!w-1 group-ui-horizontal/slider:hover:w-1 group-ui-horizontal/slider:focus:w-0.5",
+                "group-ui-vertical-horizontal/slider:hover:h-1 group-ui-vertical/slider:group-disabled/slider:!h-1 group-ui-vertical/slider:focus:h-0.5",
+                "group-disabled/slider:!cursor-default group-disabled/slider:bg-on-surface/38",
                 // "focus-visible:outline-secondary focus-visible:outline-solid focus-visible:outline focus-visible:outline-offset-2",
             ],
-            icon: "text-inverse-on-surface group-disabled/slider:data-[bounded]:bg-inverse-on-surface/38 absolute",
+            icon: "absolute text-inverse-on-surface group-disabled/slider:data-[bounded]:bg-inverse-on-surface/38",
             inactiveTrack:
                 "bg-secondary-container group-disabled/slider:bg-on-surface/12",
             stopIndicator:
-                "group-disabled/slider:bg-on-surface/38 group-disabled/slider:data-[bounded]:bg-inverse-on-surface/38 bg-on-secondary-container data-[bounded]:bg-on-primary data-[bounded]:not-has-[+.peer[data-bounded]]:!bg-transparent group-ui-horizontal/slider:!-translate-x-1/2 group-ui-vertical/slider:!translate-y-1/2 peer rounded-full transition-[width,height]",
+                "peer rounded-full bg-on-secondary-container transition-[width,height] group-disabled/slider:bg-on-surface/38 group-ui-horizontal/slider:!-translate-x-1/2 group-ui-vertical/slider:!translate-y-1/2 data-[bounded]:bg-on-primary data-[bounded]:not-has-[+.peer[data-bounded]]:!bg-transparent group-disabled/slider:data-[bounded]:bg-inverse-on-surface/38",
             valueIndicator:
-                "bg-inverse-surface text-inverse-on-surface ui-horizontal:my-1 ui-vertical:mx-1 text-label-l not-active:hidden starting:opacity-0 rounded-full px-4 py-3 transition-opacity group-disabled/slider:hidden",
+                "rounded-full bg-inverse-surface px-4 py-3 text-label-l text-inverse-on-surface transition-opacity not-active:hidden group-disabled/slider:hidden starting:opacity-0 ui-horizontal:my-1 ui-vertical:mx-1",
         },
         variants: {
             collapsible: {
@@ -177,8 +177,8 @@
                 },
                 true: {
                     handle: [
-                        "group-ui-horizontal/slider:w-0 group-ui-horizontal/slider:group-hover/slider:w-1 group-ui-horizontal/slider:group-focus-within/slider:w-1 group-ui-horizontal/slider:group-disabled/slider:!w-0",
-                        "group-ui-vertical/slider:h-0 group-ui-vertical/slider:group-hover/slider:h-1 group-ui-vertical/slider:group-focus-within/slider:h-1 group-ui-vertical/slider:group-disabled/slider:!h-0",
+                        "group-ui-horizontal/slider:w-0 group-ui-horizontal/slider:group-focus-within/slider:w-1 group-ui-horizontal/slider:group-hover/slider:w-1 group-ui-horizontal/slider:group-disabled/slider:!w-0",
+                        "group-ui-vertical/slider:h-0 group-ui-vertical/slider:group-focus-within/slider:h-1 group-ui-vertical/slider:group-hover/slider:h-1 group-ui-vertical/slider:group-disabled/slider:!h-0",
                     ],
                     icon: "opacity-0 transition-opacity group-focus-within/slider:opacity-100 group-hover/slider:opacity-100",
                     stopIndicator:

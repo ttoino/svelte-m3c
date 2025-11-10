@@ -6,7 +6,7 @@
 </script>
 
 <Thumbnail>
-    <Device containerClass="gap-8 py-48 -m-32 ml-32 w-full px-8">
+    <Device containerClass="-m-32 ml-32 w-full gap-8 px-8 py-48">
         <h2 class="text-title-l">Appearance</h2>
 
         <div class="flex flex-row items-center gap-12 text-body-l">

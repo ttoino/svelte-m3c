@@ -5,10 +5,10 @@
     export const variantsConfig = mergeVariants({
         slots: {
             container:
-                "shadow-3 bg-surface-container-highest group/state-layer max-w-180 relative flex h-14 w-full cursor-text flex-row items-center gap-4 rounded-full px-4",
-            input: "text-on-surface peer/search-bar-input outline-none",
-            label: "text-on-surface-variant peer-not-placeholder-shown/search-bar-input:opacity-0 absolute inset-0",
-            labelContainer: "text-body-l relative flex-1",
+                "group/state-layer relative flex h-14 w-full max-w-180 cursor-text flex-row items-center gap-4 rounded-full bg-surface-container-highest px-4 shadow-3",
+            input: "peer/search-bar-input text-on-surface outline-none",
+            label: "absolute inset-0 text-on-surface-variant peer-not-placeholder-shown/search-bar-input:opacity-0",
+            labelContainer: "relative flex-1 text-body-l",
             leading: "text-on-surface",
             stateLayer: "absolute inset-0 rounded-full",
             trailing: "text-on-surface-variant",

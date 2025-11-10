@@ -4,17 +4,17 @@
     export const variantsConfig = mergeVariants({
         slots: {
             container:
-                "bg-surface min-h-[calc(var(--spacing)*(10+4*var(--lines))))] group/list-item group/state-layer text-on-surface relative flex flex-row gap-4 px-4",
+                "group/list-item group/state-layer relative flex min-h-[calc(var(--spacing)*(10+4*var(--lines))))] flex-row gap-4 bg-surface px-4 text-on-surface",
             labelText:
                 "text-body-l group-disabled/list-item:text-on-surface/38",
             leading:
-                "group-disabled/list-item:text-on-surface/38 shrink-0 has-[video]:-ml-4 has-[img]:h-14 has-[video]:h-16",
+                "shrink-0 group-disabled/list-item:text-on-surface/38 has-[img]:h-14 has-[video]:-ml-4 has-[video]:h-16",
             stateLayer: "absolute inset-0",
             supportingText:
                 "text-body-m text-on-surface-variant group-disabled/list-item:text-on-surface/38",
             text: "flex flex-grow flex-col justify-center self-stretch",
             trailing:
-                "text-on-surface-variant text-label-s group-disabled/list-item:text-on-surface/38 shrink-0",
+                "shrink-0 text-label-s text-on-surface-variant group-disabled/list-item:text-on-surface/38",
         },
         variants: {
             threeOrMoreLines: {

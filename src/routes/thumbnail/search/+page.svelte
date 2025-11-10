@@ -6,7 +6,7 @@
 </script>
 
 <Thumbnail class="px-20">
-    <Device containerClass="w-120 h-full mt-12 -mb-12" statusbar>
+    <Device containerClass="mt-12 -mb-12 h-full w-120" statusbar>
         <div class="mx-6">
             <SearchBar containerClass="shadow-none">
                 {#snippet label()}

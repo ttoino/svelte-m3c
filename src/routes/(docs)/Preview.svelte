@@ -19,7 +19,7 @@
 
 <Tabs
     containerClass={[
-        "border border-outline-variant rounded-lg overflow-hidden my-4 not-prose",
+        "not-prose my-4 overflow-hidden rounded-lg border border-outline-variant",
         className,
     ]}
     value="preview"

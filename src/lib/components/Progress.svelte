@@ -18,7 +18,7 @@
                 circular: true,
                 class: {
                     activeIndicator:
-                        "paint-arc-wave wavelength-4 amplitude-0.5 [--end-angle:calc(340deg*var(--progress)-80deg+var(--offset)*360deg)] [--start-angle:calc(-80deg+var(--offset)*360deg)]",
+                        "paint-arc-wave [--end-angle:calc(340deg*var(--progress)-80deg+var(--offset)*360deg)] [--start-angle:calc(-80deg+var(--offset)*360deg)] amplitude-0.5 wavelength-4",
                     container: "size-12",
                     track: "[--end-angle:calc(260deg+var(--offset)*360deg)] [--start-angle:calc(min(340deg*var(--progress)-60deg,260deg)+var(--offset)*360deg)]",
                 },
@@ -27,7 +27,7 @@
             {
                 circular: false,
                 class: {
-                    activeIndicator: "bg-primary h-1 rounded-full",
+                    activeIndicator: "h-1 rounded-full bg-primary",
                 },
                 shape: "flat",
             },
@@ -35,7 +35,7 @@
                 circular: false,
                 class: {
                     activeIndicator:
-                        "wavelength-10 paint-wave animate-wave h-2.5",
+                        "h-2.5 animate-wave paint-wave wavelength-10",
                 },
                 shape: "wavy",
             },
@@ -59,13 +59,13 @@
                     container:
                         "group/progress flex w-full items-center justify-center gap-1",
                     stopIndicator:
-                        "bg-primary group-ui-indeterminate/progress:hidden absolute end-0 size-1 rounded-full",
-                    track: "bg-secondary-container grow-1 h-1 rounded-full",
+                        "absolute end-0 size-1 rounded-full bg-primary group-ui-indeterminate/progress:hidden",
+                    track: "h-1 grow-1 rounded-full bg-secondary-container",
                 },
                 true: {
                     activeIndicator: "absolute inset-0 z-10",
                     stopIndicator: "hidden",
-                    track: "paint-arc absolute inset-0",
+                    track: "absolute inset-0 paint-arc",
                 },
             },
             shape: {

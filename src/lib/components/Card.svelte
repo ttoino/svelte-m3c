@@ -8,13 +8,13 @@
         variants: {
             variant: {
                 elevated: {
-                    container: "shadow-1 bg-surface-container-low",
+                    container: "bg-surface-container-low shadow-1",
                 },
                 filled: {
                     container: "bg-surface-container-highest",
                 },
                 outlined: {
-                    container: "border-outline-variant border",
+                    container: "border border-outline-variant",
                 },
             },
         },

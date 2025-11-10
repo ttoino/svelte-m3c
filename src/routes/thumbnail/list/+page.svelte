@@ -7,14 +7,14 @@
 </script>
 
 <Thumbnail class="py-12">
-    <List class="bg-surface-container-lowest shadow-1 w-80">
+    <List class="w-80 bg-surface-container-lowest shadow-1">
         <ListItem containerClass="bg-transparent">
             {#snippet leading()}
                 <Avatar.Root
-                    class="bg-primary-container inline-flex size-12 items-center justify-center rounded-full"
+                    class="inline-flex size-12 items-center justify-center rounded-full bg-primary-container"
                 >
                     <Avatar.Fallback
-                        class="text-on-primary-container text-title-m"
+                        class="text-title-m text-on-primary-container"
                     >
                         A
                     </Avatar.Fallback>
@@ -30,10 +30,10 @@
         <ListItem containerClass="bg-transparent">
             {#snippet leading()}
                 <Avatar.Root
-                    class="bg-primary-container inline-flex size-12 items-center justify-center rounded-full"
+                    class="inline-flex size-12 items-center justify-center rounded-full bg-primary-container"
                 >
                     <Avatar.Fallback
-                        class="text-on-primary-container text-title-m"
+                        class="text-title-m text-on-primary-container"
                     >
                         S
                     </Avatar.Fallback>
@@ -49,10 +49,10 @@
         <ListItem containerClass="bg-transparent">
             {#snippet leading()}
                 <Avatar.Root
-                    class="bg-primary-container inline-flex size-12 items-center justify-center rounded-full"
+                    class="inline-flex size-12 items-center justify-center rounded-full bg-primary-container"
                 >
                     <Avatar.Fallback
-                        class="text-on-primary-container text-title-m"
+                        class="text-title-m text-on-primary-container"
                     >
                         A
                     </Avatar.Fallback>

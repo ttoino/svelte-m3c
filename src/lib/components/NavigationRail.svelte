@@ -4,7 +4,7 @@
     import { mergeVariants, tv } from "$lib/style.js";
 
     export const variantsConfig = mergeVariants({
-        base: "bg-surface flex w-20 flex-col justify-center gap-3",
+        base: "flex w-20 flex-col justify-center gap-3 bg-surface",
     });
 
     export const variants = tv(variantsConfig);

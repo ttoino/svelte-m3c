@@ -7,15 +7,15 @@
 
 <Thumbnail class="px-20">
     <Device
-        containerClass="w-120 h-[calc(100%+--spacing(48))] -mt-24 -mb-24"
+        containerClass="-mt-24 -mb-24 h-[calc(100%+--spacing(48))] w-120"
         statusbar
     >
         <!-- TODO: App bar -->
         <div
-            class="bg-surface-container flex h-16 flex-row items-center gap-2 px-2"
+            class="flex h-16 flex-row items-center gap-2 bg-surface-container px-2"
         >
             <IconButton color="none" icon="arrow_back" variant="text" />
-            <span class="text-title-l flex-1">Sound</span>
+            <span class="flex-1 text-title-l">Sound</span>
             <IconButton color="none" icon="more_vert" variant="text" />
         </div>
 

@@ -4,7 +4,7 @@
     export const variantsConfig = mergeVariants({
         slots: {
             container:
-                "group/state-layer text-on-surface group/navigation-rail-item relative -mx-4 flex h-14 flex-row items-center justify-start gap-3 rounded-full pl-4 pr-6",
+                "group/state-layer group/navigation-rail-item relative -mx-4 flex h-14 flex-row items-center justify-start gap-3 rounded-full pr-6 pl-4 text-on-surface",
             icon: "transition-colors",
             label: "text-label-l transition-colors after:absolute after:inset-0",
             stateLayer: "absolute inset-0 rounded-full",
@@ -12,12 +12,12 @@
         variants: {
             active: {
                 false: {
-                    icon: "text-on-surface-variant group-hover/navigation-rail-item:text-on-surface group-focus-within/navigation-rail-item:text-on-surface",
-                    label: "text-on-surface-variant group-hover/navigation-rail-item:text-on-surface group-focus-within/navigation-rail-item:text-on-surface",
+                    icon: "text-on-surface-variant group-focus-within/navigation-rail-item:text-on-surface group-hover/navigation-rail-item:text-on-surface",
+                    label: "text-on-surface-variant group-focus-within/navigation-rail-item:text-on-surface group-hover/navigation-rail-item:text-on-surface",
                 },
                 true: {
                     icon: "text-on-secondary-container icon-filled",
-                    item: "text-on-secondary-container bg-secondary-container",
+                    item: "bg-secondary-container text-on-secondary-container",
                     label: "text-on-secondary-container",
                 },
             },

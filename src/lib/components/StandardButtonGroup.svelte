@@ -2,7 +2,7 @@
     import { mergeVariants, tv } from "$lib/style.js";
 
     export const variantsConfig = mergeVariants({
-        base: "*:active:w-(--width-active) *:active:next:w-(--width-right) *:active:previous:w-(--width-left) inline-flex items-center justify-center",
+        base: "inline-flex items-center justify-center *:active:w-(--width-active) *:active:next:w-(--width-right) *:active:previous:w-(--width-left)",
         defaultVariants: {
             size: "medium",
         },

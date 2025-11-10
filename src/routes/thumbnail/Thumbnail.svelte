@@ -2,7 +2,7 @@
     import { mergeVariants, tv } from "$lib/style.js";
 
     const variantsConfig = mergeVariants({
-        base: "bg-surface-container relative flex aspect-video flex-row items-center justify-center overflow-clip",
+        base: "relative flex aspect-video flex-row items-center justify-center overflow-clip bg-surface-container",
     });
 
     const variants = tv(variantsConfig);

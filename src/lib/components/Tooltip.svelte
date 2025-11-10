@@ -8,8 +8,8 @@
         },
         variants: {
             variant: {
-                plain: "bg-inverse-surface rounded-xs text-body-s text-inverse-on-surface min-h-6 flex-row items-center px-2",
-                rich: "shadow-2 bg-surface-container text-body-m text-on-surface-variant flex-col rounded-md px-4 py-3",
+                plain: "min-h-6 flex-row items-center rounded-xs bg-inverse-surface px-2 text-body-s text-inverse-on-surface",
+                rich: "flex-col rounded-md bg-surface-container px-4 py-3 text-body-m text-on-surface-variant shadow-2",
             },
         },
     });

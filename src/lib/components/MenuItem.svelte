@@ -8,7 +8,7 @@
             threeOrMoreLines: false,
         },
         slots: {
-            container: "bg-surface-container cursor-pointer",
+            container: "cursor-pointer bg-surface-container",
         },
     });
 

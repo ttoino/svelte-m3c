@@ -111,7 +111,7 @@
             },
             {
                 class: {
-                    container: "bg-surface-container text-on-surface-container",
+                    container: "text-on-surface-container bg-surface-container",
                 },
                 color: "none",
                 variant: "tonal",
@@ -172,7 +172,7 @@
         },
         slots: {
             container:
-                "group/state-layer focus-visible:outline-secondary disabled:text-on-surface/38 relative inline-flex min-w-16 cursor-pointer items-center justify-center overflow-clip whitespace-nowrap transition-all focus-visible:outline focus-visible:outline-offset-2 disabled:pointer-events-none disabled:cursor-default disabled:shadow-none",
+                "group/state-layer relative inline-flex min-w-16 cursor-pointer items-center justify-center overflow-clip whitespace-nowrap transition-all focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-secondary disabled:pointer-events-none disabled:cursor-default disabled:text-on-surface/38 disabled:shadow-none",
             stateLayer: "absolute inset-0",
         },
         variants: {
@@ -190,23 +190,23 @@
             size: {
                 "extra-large": {
                     container:
-                        "h-34 icon-10 text-headline-l gap-4 px-16 active:rounded-lg",
+                        "h-34 gap-4 px-16 text-headline-l icon-10 active:rounded-lg",
                 },
                 "extra-small": {
                     container:
-                        "icon-5 text-label-l h-8 gap-1 px-3 active:rounded-sm",
+                        "h-8 gap-1 px-3 text-label-l icon-5 active:rounded-sm",
                 },
                 large: {
                     container:
-                        "icon-8 text-headline-s h-24 gap-3 px-12 active:rounded-lg",
+                        "h-24 gap-3 px-12 text-headline-s icon-8 active:rounded-lg",
                 },
                 medium: {
                     container:
-                        "icon-6 text-title-m h-14 gap-2 px-6 active:rounded-md",
+                        "h-14 gap-2 px-6 text-title-m icon-6 active:rounded-md",
                 },
                 small: {
                     container:
-                        "icon-5 text-label-l h-10 gap-2 px-4 active:rounded-sm",
+                        "h-10 gap-2 px-4 text-label-l icon-5 active:rounded-sm",
                 },
             },
             variant: {
@@ -216,16 +216,16 @@
                 },
                 filled: {
                     container:
-                        "hover:shadow-1 disabled:bg-on-surface/12 active:shadow-none",
+                        "hover:shadow-1 active:shadow-none disabled:bg-on-surface/12",
                 },
                 outlined: {
                     container:
-                        "border-outline disabled:border-on-surface/12 border",
+                        "border border-outline disabled:border-on-surface/12",
                 },
                 text: {},
                 tonal: {
                     container:
-                        "hover:shadow-1 disabled:bg-on-surface/12 active:shadow-none",
+                        "hover:shadow-1 active:shadow-none disabled:bg-on-surface/12",
                 },
             },
         },

@@ -87,7 +87,7 @@
 /* Prose */
 
 @utility prose {
-    @apply text-body-m align-baseline;
+    @apply align-baseline text-body-m;
 
     :is(& *, &):not(.not-prose):not(.not-prose *) {
         h1& {
@@ -117,7 +117,7 @@
         }
 
         a& {
-            @apply text-primary visited:text-secondary cursor-pointer hover:underline;
+            @apply cursor-pointer text-primary visited:text-secondary hover:underline;
         }
 
         p& {
@@ -125,11 +125,11 @@
         }
 
         code& {
-            @apply bg-surface-variant rounded-xxs px-0.5 font-mono;
+            @apply rounded-xxs bg-surface-variant px-0.5 font-mono;
         }
 
         pre& {
-            @apply bg-surface-variant rounded-xs -mx-1 my-2 w-full overflow-x-auto px-1 py-0.5;
+            @apply -mx-1 my-2 w-full overflow-x-auto rounded-xs bg-surface-variant px-1 py-0.5;
 
             code {
                 @apply block min-w-full overflow-x-auto rounded-none bg-none p-0;

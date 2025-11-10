@@ -1,6 +1,6 @@
-@import "$lib/style/imports.css";
+@import "./lib/style/imports.css";
 @import "tailwindcss";
-@import "$lib/style/index.css";
+@import "./lib/style/index.css";
 
 @theme {
     --color-primary-0: #000000;

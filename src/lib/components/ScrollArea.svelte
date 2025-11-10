@@ -6,8 +6,8 @@
             container: "size-full overflow-hidden",
             corner: "",
             scrollbar:
-                "ui-vertical:w-2 ui-horizontal:h-2 ui-vertical:hover:w-3 ui-horizontal:hover:h-3 transition-all",
-            thumb: "bg-on-surface/38 hover:bg-secondary z-40 size-full rounded-full transition-all",
+                "transition-all ui-horizontal:h-2 ui-horizontal:hover:h-3 ui-vertical:w-2 ui-vertical:hover:w-3",
+            thumb: "z-40 size-full rounded-full bg-on-surface/38 transition-all hover:bg-secondary",
             viewport: "size-full max-h-full max-w-full",
         },
     });
