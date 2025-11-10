@@ -43,7 +43,7 @@
 
     export const sliderControl = (
         label: string,
-        options: { max?: number; min?: number },
+        options?: { max?: number; min?: number },
     ) => ({
         label,
         options,
@@ -128,7 +128,10 @@
     values: Record<T, string>,
 )}
     <p class="sr-only">{label}</p>
-    <ConnectedButtonGroup type="single" bind:value={getValue, setValue}>
+    <ConnectedButtonGroup
+        type="single"
+        bind:value={getValue, (value: T) => value && setValue(value)}
+    >
         {#each Object.entries(values) as [value, label] (value)}
             <ToggleButton containerClass="flex-1" {value}>{label}</ToggleButton>
         {/each}
@@ -176,10 +179,17 @@
     label: string,
     getValue: () => number,
     setValue: (value: number) => void,
-    { max, min }: { max?: number; min?: number },
+    { max, min }: { max?: number; min?: number } = {},
 )}
-    <p class="text-label-l">{label}</p>
-    <Slider {max} {min} bind:value={getValue, setValue} />
+    <div class="inline-flex flex-col gap-2">
+        <p class="text-label-l">{label}</p>
+        <Slider
+            containerClass="!min-w-auto"
+            {max}
+            {min}
+            bind:value={getValue, setValue}
+        />
+    </div>
 {/snippet}
 
 {#snippet switchControlSnippet(

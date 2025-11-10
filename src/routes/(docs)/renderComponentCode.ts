@@ -5,7 +5,7 @@ export const renderComponentCode = (
 ) => {
     let p = Object.entries(props)
         .map(([k, v]) => {
-            if (!v) return;
+            if (v === false || v === undefined) return;
 
             if (v === true) return k;
 

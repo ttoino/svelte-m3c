@@ -105,11 +105,11 @@
             //     description:
             //         "Loading indicators show the progress of a process for a short wait time",
             // },
-            // "progress-indicator": {
-            //     title: "Progress indicators",
-            //     description:
-            //         "Progress indicators show the status of a process in real time",
-            // },
+            "progress-indicator": {
+                title: "Progress indicators",
+                description:
+                    "Progress indicators show the status of a process in real time",
+            },
         },
         Navigation: {
             // "app-bar": {
