@@ -53,11 +53,11 @@
                 description:
                     "Sliders allow users to make selections from a range of values",
             },
-            // switch: {
-            //     title: "Switch",
-            //     description:
-            //         "Switches toggle the selection of an item on and off",
-            // },
+            switch: {
+                title: "Switch",
+                description:
+                    "Switches toggle the selection of an item on and off",
+            },
             // "text-field": {
             //     title: "Text fields",
             //     description: "Text fields let users enter text into a UI",
