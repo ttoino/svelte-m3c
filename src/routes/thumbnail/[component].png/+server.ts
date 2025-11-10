@@ -8,7 +8,7 @@ export const prerender = true;
 export const GET: RequestHandler = async ({ fetch, params }) => {
     const { component } = params;
 
-    const url = `http://localhost:5173/thumbnail/${component}`;
+    const url = `http://localhost:5173/thumbnail/${component}/`;
 
     const response = await fetch(url);
     if (!response.ok) throw error(404);
