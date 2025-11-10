@@ -13,38 +13,20 @@
         switchControl,
     } from "../../Playground.svelte";
     import Preview from "../../Preview.svelte";
+    import { renderComponentCode } from "../../renderComponentCode.js";
 </script>
 
 <h1>Sliders</h1>
 
 <Playground
-    code={({ discrete, icon, showIcon, variant, ...props }) => {
-        const p = Object.entries({
+    code={({ discrete, icon, showIcon, variant, ...props }) =>
+        renderComponentCode("Slider", {
             discrete,
             icon: showIcon ? icon : undefined,
             step: discrete ? 10 : undefined,
             type: variant === "standard" ? "single" : "multiple",
             ...props,
-        })
-            .map(([k, v]) => {
-                if (!v) return;
-
-                if (v === true) return k;
-
-                const value = typeof v === "string" ? `"${v}"` : `{${v}}`;
-
-                return `${k}=${value}`;
-            })
-            .filter((v) => !!v)
-            .toSorted().join(`
-                `);
-
-        return `
-            <Slider
-                ${p}
-            />
-        `;
-    }}
+        })}
     controls={{
         /* eslint-disable perfectionist/sort-objects */
         variant: buttonGroupControl("Variant", {

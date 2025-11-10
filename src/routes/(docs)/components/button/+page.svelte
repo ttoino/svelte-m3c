@@ -16,6 +16,7 @@
         textfieldControl,
     } from "../../Playground.svelte";
     import Preview from "../../Preview.svelte";
+    import { renderComponentCode } from "../../renderComponentCode.js";
 </script>
 
 <svelte:head>
@@ -27,22 +28,12 @@
 <!-- TODO -->
 
 <Playground
-    code={({ icon, label, showIcon, toggle, ...props }) => {
-        const name = toggle ? "ToggleButton" : "Button";
-
-        const p = Object.entries(props).map(([k, v]) => `${k}="${v}"`).join(`
-                `);
-
-        const i = `<Icon icon="${icon}" /> `;
-
-        return `
-            <${name}
-                ${p}
-            >
-                ${showIcon ? i : ""}${label}
-            </${name}>
-        `;
-    }}
+    code={({ icon, label, showIcon, toggle, ...props }) =>
+        renderComponentCode(
+            toggle ? "ToggleButton" : "Button",
+            props,
+            (showIcon ? `<Icon icon="${icon}" /> ` : "") + label,
+        )}
     controls={{
         /* eslint-disable perfectionist/sort-objects */
         label: textfieldControl("Label"),
@@ -74,10 +65,12 @@
         }),
         showIcon: switchControl("Show icon"),
         toggle: switchControl("Toggleable"),
+        disabled: switchControl("Disabled"),
         /* eslint-enable perfectionist/sort-objects */
     }}
     defaults={{
         color: "primary" as ButtonColor,
+        disabled: false,
         icon: "edit" as IconName,
         label: "Button",
         shape: "round" as ButtonShape,

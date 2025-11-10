@@ -15,6 +15,7 @@
         switchControl,
     } from "../../Playground.svelte";
     import Preview from "../../Preview.svelte";
+    import { renderComponentCode } from "../../renderComponentCode.js";
 </script>
 
 <svelte:head>
@@ -26,19 +27,8 @@
 <!-- TODO -->
 
 <Playground
-    code={({ toggle, ...props }) => {
-        const name = toggle ? "ToggleIconButton" : "IconButton";
-
-        const p = Object.entries(props).map(([k, v]) => `${k}="${v}"`).join(`
-                `);
-
-        return `
-            <${name}
-                icon="edit"
-                ${p}
-            />
-        `;
-    }}
+    code={({ toggle, ...props }) =>
+        renderComponentCode(toggle ? "ToggleIconButton" : "IconButton", props)}
     controls={{
         /* eslint-disable perfectionist/sort-objects */
         icon: iconControl("Icon"),
@@ -73,10 +63,12 @@
             square: "Square",
         }),
         toggle: switchControl("Toggleable"),
+        disabled: switchControl("Disabled"),
         /* eslint-enable perfectionist/sort-objects */
     }}
     defaults={{
         color: "primary" as ButtonColor,
+        disabled: false,
         icon: "edit" as IconName,
         shape: "round" as ButtonShape,
         size: "small" as ButtonSize,
