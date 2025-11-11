@@ -13,8 +13,6 @@ import ListItem from "./components/ListItem.svelte";
 import Menu from "./components/Menu.svelte";
 import MenuDivider from "./components/MenuDivider.svelte";
 import MenuItem from "./components/MenuItem.svelte";
-import NavigationDrawer from "./components/NavigationDrawer.svelte";
-import NavigationDrawerItem from "./components/NavigationDrawerItem.svelte";
 import NavigationRail from "./components/NavigationRail.svelte";
 import NavigationRailItem from "./components/NavigationRailItem.svelte";
 import Progress from "./components/Progress.svelte";
@@ -52,8 +50,6 @@ export {
     Menu,
     MenuDivider,
     MenuItem,
-    NavigationDrawer,
-    NavigationDrawerItem,
     NavigationRail,
     NavigationRailItem,
     Progress,

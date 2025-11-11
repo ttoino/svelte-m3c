@@ -10,6 +10,10 @@
     }
 
     :focus-visible {
-        outline: none;
+        @apply outline-none;
+    }
+
+    * {
+        @apply transition-discrete;
     }
 }
