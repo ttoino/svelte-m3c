@@ -3,6 +3,8 @@ import type { IconName } from "./types/icon.js";
 import Badge from "./components/Badge.svelte";
 import Button from "./components/Button.svelte";
 import Card from "./components/Card.svelte";
+import Carousel from "./components/Carousel.svelte";
+import CarouselItem from "./components/CarouselItem.svelte";
 import Checkbox from "./components/Checkbox.svelte";
 import ConnectedButtonGroup from "./components/ConnectedButtonGroup.svelte";
 import Divider from "./components/Divider.svelte";
@@ -39,6 +41,8 @@ export {
     Badge,
     Button,
     Card,
+    Carousel,
+    CarouselItem,
     Checkbox,
     ConnectedButtonGroup,
     Divider,
