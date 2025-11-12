@@ -2,7 +2,7 @@
     import { getCarouselVariant } from "$lib/context/carousel.js";
     import { mergeVariants, tv } from "$lib/style.js";
 
-    const variantsConfig = mergeVariants({
+    export const variantsConfig = mergeVariants({
         defaultVariants: {
             variant: "uncontained",
         },
@@ -57,7 +57,7 @@
 
     const variant = getCarouselVariant();
 
-    let classes = $derived(variants({ variant: variant() }));
+    let classes = $derived(variants({ variant: variant?.() }));
 </script>
 
 <div class={classes.container({ class: containerClass })} {...props}>

@@ -27,7 +27,7 @@
     let {
         children,
         class: className,
-        expanded,
+        expanded = false,
         ...props
     }: WrapperProps<HTMLAttributes<HTMLElement>, typeof variants> = $props();
 

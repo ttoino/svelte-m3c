@@ -2,7 +2,7 @@
     import { setCarouselVariant } from "$lib/context/carousel.js";
     import { mergeVariants, tv } from "$lib/style.js";
 
-    const variantsConfig = mergeVariants({
+    export const variantsConfig = mergeVariants({
         defaultVariants: {
             variant: "uncontained",
         },
