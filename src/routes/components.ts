@@ -40,12 +40,12 @@ export const components = {
         // },
     },
     "Form elements": {
-        // checkbox: {
-        //     icon: "check_box",
-        //     title: "Checkbox",
-        //     description:
-        //         "Checkboxes let users select one or more items from a list, or turn an item on or off",
-        // },
+        checkbox: {
+            icon: "check_box",
+            title: "Checkbox",
+            description:
+                "Checkboxes let users select one or more items from a list, or turn an item on or off",
+        },
         // "date-picker": {
         //     icon: "calendar_month",
         //     title: "Date pickers",
