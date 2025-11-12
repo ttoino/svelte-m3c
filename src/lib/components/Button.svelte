@@ -1,5 +1,4 @@
 <script lang="ts" module>
-    // TODO: Material 3 Expressive
     import { mergeVariants, tv } from "$lib/style.js";
 
     export const variantsConfig = mergeVariants({
@@ -254,15 +253,24 @@
 
     let {
         children,
-        color = contextColor,
+        color: propColor,
         containerClass,
         ref = $bindable(null),
-        shape = contextShape,
-        size = contextSize,
+        shape: propShape,
+        size: propSize,
         stateLayerClass,
-        variant = contextVariant,
+        variant: propVariant,
         ...props
     }: WrapperProps<Button.RootProps, typeof variants> = $props();
+
+    let shape = $derived(propShape ?? contextShape?.() ?? "round");
+    let size = $derived(propSize ?? contextSize?.() ?? "small");
+    let variant = $derived(propVariant ?? contextVariant?.() ?? "filled");
+    let color = $derived(
+        propColor ??
+            contextColor?.() ??
+            (variant === "tonal" ? "secondary" : "primary"),
+    );
 
     let classes = $derived(variants({ color, shape, size, variant }));
 </script>

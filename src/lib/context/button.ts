@@ -22,32 +22,34 @@ export const setToggleButtonGroup = () => setContext(BUTTON_TOGGLE_GROUP, true);
 export const isInToggleButtonGroup = () =>
     !!getContext<boolean>(BUTTON_TOGGLE_GROUP);
 
-export const setButtonColor = (color?: ButtonColor) =>
-    color && setContext(BUTTON_COLOR, color);
+export const setButtonColor = (color: () => ButtonColor | undefined) =>
+    setContext(BUTTON_COLOR, color);
 
 export const getButtonColor = () =>
-    getContext<ButtonColor | undefined>(BUTTON_COLOR);
+    getContext<(() => ButtonColor | undefined) | undefined>(BUTTON_COLOR);
 
-export const setButtonShape = (shape?: ButtonShape) =>
-    shape && setContext(BUTTON_SHAPE, shape);
+export const setButtonShape = (shape: () => ButtonShape | undefined) =>
+    setContext(BUTTON_SHAPE, shape);
 
 export const getButtonShape = () =>
-    getContext<ButtonShape | undefined>(BUTTON_SHAPE);
+    getContext<(() => ButtonShape | undefined) | undefined>(BUTTON_SHAPE);
 
-export const setButtonSize = (size?: ButtonSize) =>
-    size && setContext(BUTTON_SIZE, size);
+export const setButtonSize = (size: () => ButtonSize | undefined) =>
+    setContext(BUTTON_SIZE, size);
 
 export const getButtonSize = () =>
-    getContext<ButtonSize | undefined>(BUTTON_SIZE);
+    getContext<(() => ButtonSize | undefined) | undefined>(BUTTON_SIZE);
 
-export const setButtonVariant = (variant?: ButtonVariant) =>
-    variant && setContext(BUTTON_VARIANT, variant);
+export const setButtonVariant = (variant: () => ButtonVariant | undefined) =>
+    setContext(BUTTON_VARIANT, variant);
 
 export const getButtonVariant = () =>
-    getContext<ButtonVariant | undefined>(BUTTON_VARIANT);
+    getContext<(() => ButtonVariant | undefined) | undefined>(BUTTON_VARIANT);
 
-export const setIconButtonWidth = (width?: IconButtonWidth) =>
-    width && setContext(ICON_BUTTON_WIDTH, width);
+export const setIconButtonWidth = (width: () => IconButtonWidth | undefined) =>
+    setContext(ICON_BUTTON_WIDTH, width);
 
 export const getIconButtonWidth = () =>
-    getContext<IconButtonWidth | undefined>(ICON_BUTTON_WIDTH);
+    getContext<(() => IconButtonWidth | undefined) | undefined>(
+        ICON_BUTTON_WIDTH,
+    );

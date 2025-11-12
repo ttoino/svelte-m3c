@@ -71,7 +71,7 @@
             shape: {
                 flat: {},
                 wavy: {
-                    activeIndicator: "animate-wave",
+                    activeIndicator: "motion-safe:animate-wave",
                 },
             },
         },

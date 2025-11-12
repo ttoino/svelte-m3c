@@ -44,17 +44,17 @@
     const Component = inToggleButtonGroup ? ToggleGroup.Item : Toggle.Root;
 
     let {
-        color = contextColor,
+        color: propColor,
         containerClass,
         icon,
         iconClass,
         pressed = $bindable(false),
         ref = $bindable(null),
-        shape = contextShape,
-        size = contextSize,
+        shape: propShape,
+        size: propSize,
         stateLayerClass,
-        variant = contextVariant,
-        width = contextWidth,
+        variant: propVariant,
+        width: propWidth,
         ...props
     }: WrapperProps<
         WithoutChildrenOrChild<Toggle.RootProps & ToggleGroup.ItemProps>,
@@ -64,7 +64,17 @@
         }
     > = $props();
 
-    const classes = variants({ color, shape, size, variant, width });
+    let shape = $derived(propShape ?? contextShape?.() ?? "round");
+    let size = $derived(propSize ?? contextSize?.() ?? "small");
+    let variant = $derived(propVariant ?? contextVariant?.() ?? "filled");
+    let width = $derived(propWidth ?? contextWidth?.() ?? "default");
+    let color = $derived(
+        propColor ??
+            contextColor?.() ??
+            (variant === "tonal" ? "secondary" : "primary"),
+    );
+
+    let classes = $derived(variants({ color, shape, size, variant, width }));
 </script>
 
 <Component

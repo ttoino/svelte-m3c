@@ -1,4 +1,5 @@
 <script lang="ts" module>
+    // TODO: Interaction states
     import { mergeVariants, tv } from "$lib/style.js";
 
     export const variantsConfig = mergeVariants({

@@ -9,4 +9,6 @@ export const setCarouselVariant = (
 ) => setContext(CAROUSEL_VARIANT, variant);
 
 export const getCarouselVariant = () =>
-    getContext<() => CarouselVariant | undefined>(CAROUSEL_VARIANT);
+    getContext<(() => CarouselVariant | undefined) | undefined>(
+        CAROUSEL_VARIANT,
+    );

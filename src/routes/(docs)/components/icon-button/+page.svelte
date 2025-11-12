@@ -103,14 +103,14 @@
     code={`
         <IconButton icon="elevation" variant="elevated" />
         <IconButton icon="colors" variant="filled" />
-        <IconButton color="secondary" icon="invert_colors" variant="tonal" />
+        <IconButton icon="invert_colors" variant="tonal" />
         <IconButton icon="select" variant="outlined" />
         <IconButton icon="title" variant="text" />
     `}
 >
     <IconButton icon="elevation" variant="elevated" />
     <IconButton icon="colors" variant="filled" />
-    <IconButton color="secondary" icon="invert_colors" variant="tonal" />
+    <IconButton icon="invert_colors" variant="tonal" />
     <IconButton icon="select" variant="outlined" />
     <IconButton icon="title" variant="text" />
 </Preview>

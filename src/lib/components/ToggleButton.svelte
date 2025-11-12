@@ -158,19 +158,28 @@
 
     let {
         children: baseChildren,
-        color = contextColor,
+        color: propColor,
         containerClass,
         pressed = $bindable(false),
         ref = $bindable(null),
-        shape = contextShape,
-        size = contextSize,
+        shape: propShape,
+        size: propSize,
         stateLayerClass,
-        variant = contextVariant,
+        variant: propVariant,
         ...props
     }: WrapperProps<
         Toggle.RootProps & ToggleGroup.ItemProps,
         typeof variants
     > = $props();
+
+    let shape = $derived(propShape ?? contextShape?.() ?? "round");
+    let size = $derived(propSize ?? contextSize?.() ?? "small");
+    let variant = $derived(propVariant ?? contextVariant?.() ?? "filled");
+    let color = $derived(
+        propColor ??
+            contextColor?.() ??
+            (variant === "tonal" ? "secondary" : "primary"),
+    );
 
     let classes = $derived(variants({ color, shape, size, variant }));
 </script>

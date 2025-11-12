@@ -9,7 +9,8 @@
                 "w-24 text-center text-label-m transition-[height,padding,opacity] transition-colors after:absolute after:inset-0",
             container:
                 "group/state-layer relative flex flex-col items-start justify-center",
-            expandedLabel: "text-label-l transition-[width,padding,opacity]",
+            expandedLabel:
+                "text-label-l whitespace-nowrap transition-[width,padding,opacity]",
             icon: "transition-colors",
             stateLayer: "absolute inset-0 rounded-full",
         },
@@ -81,7 +82,7 @@
 
     const expanded = isNavigationRailExpanded();
 
-    let classes = $derived(variants({ active, expanded: expanded() }));
+    let classes = $derived(variants({ active, expanded: expanded?.() }));
 
     let target: HTMLElement | null = $state(null);
 </script>

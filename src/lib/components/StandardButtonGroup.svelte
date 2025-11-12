@@ -59,11 +59,11 @@
         }
     > = $props();
 
-    setButtonColor(color);
-    setButtonShape(shape);
-    setButtonSize(size);
-    setButtonVariant(variant);
-    setIconButtonWidth(width);
+    setButtonColor(() => color);
+    setButtonShape(() => shape);
+    setButtonSize(() => size);
+    setButtonVariant(() => variant);
+    setIconButtonWidth(() => width);
 
     const onmousedown: MouseEventHandler<HTMLDivElement> = (event) => {
         baseOnmousedown?.(event);

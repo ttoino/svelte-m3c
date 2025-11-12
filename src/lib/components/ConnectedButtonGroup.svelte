@@ -65,11 +65,11 @@
 
     setToggleButtonGroup();
 
-    setButtonColor(color);
-    setButtonShape(shape);
-    setButtonSize(size);
-    setButtonVariant(variant);
-    setIconButtonWidth(width);
+    setButtonColor(() => color);
+    setButtonShape(() => shape);
+    setButtonSize(() => size);
+    setButtonVariant(() => variant);
+    setIconButtonWidth(() => width);
 </script>
 
 <ToggleGroup.Root
