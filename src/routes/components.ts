@@ -52,12 +52,12 @@ export const components = {
         //     description:
         //         "Date pickers let people select a date, or a range of dates",
         // },
-        // radio: {
-        //     icon: "radio_button_checked",
-        //     title: "Radio button",
-        //     description:
-        //         "Radio buttons let people select one option from a set of options",
-        // },
+        radio: {
+            icon: "radio_button_checked",
+            title: "Radio button",
+            description:
+                "Radio buttons let people select one option from a set of options",
+        },
         slider: {
             icon: "sliders",
             title: "Sliders",
