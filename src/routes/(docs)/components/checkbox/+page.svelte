@@ -1,10 +1,11 @@
 <script lang="ts">
     import { Checkbox } from "$lib/index.js";
+    import dedent from "dedent";
 
     import Title from "../../../Title.svelte";
     import Playground, { switchControl } from "../../Playground.svelte";
     import Preview from "../../Preview.svelte";
-    import { renderComponentCode } from "../../renderComponentCode.js";
+    import { renderComponentCode } from "../../renderCode.js";
 </script>
 
 <Title content="Checkboxes" />
@@ -40,7 +41,7 @@
 <!-- TODO -->
 
 <Preview
-    code={`
+    code={dedent`
         <Checkbox checked={false} />
         <Checkbox checked />
         <Checkbox indeterminate />

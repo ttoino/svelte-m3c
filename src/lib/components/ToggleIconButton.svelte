@@ -71,7 +71,11 @@
     let color = $derived(
         propColor ??
             contextColor?.() ??
-            (variant === "tonal" ? "secondary" : "primary"),
+            (variant === "tonal"
+                ? "secondary"
+                : variant === "filled" || variant === "text"
+                  ? "primary"
+                  : "none"),
     );
 
     let classes = $derived(variants({ color, shape, size, variant, width }));

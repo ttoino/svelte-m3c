@@ -8,7 +8,7 @@
             labelText:
                 "text-body-l group-disabled/list-item:text-on-surface/38",
             leading:
-                "shrink-0 group-disabled/list-item:text-on-surface/38 has-[img]:h-14 has-[video]:-ml-4 has-[video]:h-16",
+                "shrink-0 group-disabled/list-item:text-on-surface/38 has-[img]:h-14 has-[video]:-ml-4 has-[video]:h-16 *:[img,video]:h-full *:[img,video]:w-auto",
             stateLayer: "absolute inset-0",
             supportingText:
                 "text-body-m text-on-surface-variant group-disabled/list-item:text-on-surface/38",

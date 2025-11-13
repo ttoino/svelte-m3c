@@ -22,6 +22,36 @@
     background-image: paint(--value("arc", "arc-wave", "wave"));
 }
 
+@utility w-stretch {
+    width: -webkit-fill-available;
+    width: stretch;
+}
+@utility min-w-stretch {
+    min-width: -webkit-fill-available;
+    min-width: stretch;
+}
+@utility max-w-stretch {
+    max-width: -webkit-fill-available;
+    max-width: stretch;
+}
+
+@utility h-stretch {
+    height: -webkit-fill-available;
+    height: stretch;
+}
+@utility min-h-stretch {
+    min-height: -webkit-fill-available;
+    min-height: stretch;
+}
+@utility max-h-stretch {
+    max-height: -webkit-fill-available;
+    max-height: stretch;
+}
+
+@utility size-stretch {
+    @apply h-stretch w-stretch;
+}
+
 /* Custom Properties */
 
 @utility phase-* {

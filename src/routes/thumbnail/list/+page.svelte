@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { List, ListItem } from "$lib/index.js";
+    import { Divider, List, ListItem } from "$lib/index.js";
     // TODO
     import { Avatar } from "bits-ui";
 
@@ -27,6 +27,7 @@
                 6 messages
             {/snippet}
         </ListItem>
+        <Divider class="mx-4 my-2" />
         <ListItem containerClass="bg-transparent">
             {#snippet leading()}
                 <Avatar.Root
@@ -46,6 +47,7 @@
                 7 messages
             {/snippet}
         </ListItem>
+        <Divider class="mx-4 my-2" />
         <ListItem containerClass="bg-transparent">
             {#snippet leading()}
                 <Avatar.Root

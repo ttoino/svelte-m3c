@@ -1,12 +1,14 @@
 <script lang="ts">
-    import { IconButton, type IconName, ToggleIconButton } from "$lib/index.js";
-    import {
-        type ButtonColor,
-        type ButtonShape,
-        type ButtonSize,
-        type ButtonVariant,
-        type IconButtonWidth,
+    import type {
+        ButtonShape,
+        ButtonSize,
+        ButtonVariant,
+        IconButtonWidth,
     } from "$lib/types/button.js";
+    import type { Color } from "$lib/types/common.js";
+
+    import { IconButton, type IconName, ToggleIconButton } from "$lib/index.js";
+    import dedent from "dedent";
 
     import Title from "../../../Title.svelte";
     import Playground, {
@@ -16,7 +18,7 @@
         switchControl,
     } from "../../Playground.svelte";
     import Preview from "../../Preview.svelte";
-    import { renderComponentCode } from "../../renderComponentCode.js";
+    import { renderComponentCode } from "../../renderCode.js";
 </script>
 
 <svelte:head>
@@ -52,7 +54,7 @@
             default: "Default",
             wide: "Wide",
         }),
-        color: selectControl<ButtonColor>("Color", {
+        color: selectControl<Color>("Color", {
             primary: "Primary",
             secondary: "Secondary",
             tertiary: "Tertiary",
@@ -68,7 +70,7 @@
         /* eslint-enable perfectionist/sort-objects */
     }}
     defaults={{
-        color: "primary" as ButtonColor,
+        color: "primary" as Color,
         disabled: false,
         icon: "edit" as IconName,
         shape: "round" as ButtonShape,
@@ -100,7 +102,7 @@
 <!-- TODO -->
 
 <Preview
-    code={`
+    code={dedent`
         <IconButton icon="elevation" variant="elevated" />
         <IconButton icon="colors" variant="filled" />
         <IconButton icon="invert_colors" variant="tonal" />
@@ -120,7 +122,7 @@
 <!-- TODO -->
 
 <Preview
-    code={`
+    code={dedent`
         <IconButton icon="pen_size_1" size="extra-small" />
         <IconButton icon="pen_size_2" size="small" />
         <IconButton icon="pen_size_3" size="medium" />
@@ -140,7 +142,7 @@
 <!-- TODO -->
 
 <Preview
-    code={`
+    code={dedent`
         <IconButton icon="crop_portrait" width="narrow" />
         <IconButton icon="crop_square" width="default" />
         <IconButton icon="crop_landscape" width="wide" />
@@ -162,7 +164,7 @@
 </p>
 
 <Preview
-    code={`
+    code={dedent`
         <IconButton icon="timer_1" color="primary" />
         <IconButton icon="timer_2" color="secondary" />
         <IconButton icon="timer_3" color="tertiary" />
@@ -182,7 +184,7 @@
 <!-- TODO -->
 
 <Preview
-    code={`
+    code={dedent`
         <IconButton icon="circle" shape="round" />
         <IconButton icon="square" shape="square" />
     `}
@@ -196,7 +198,7 @@
 <!-- TODO -->
 
 <Preview
-    code={`
+    code={dedent`
         <ToggleIconButton icon="add" />
         <ToggleIconButton icon="title" variant="text" />
         <ToggleIconButton icon="pen_size_3" size="medium" />

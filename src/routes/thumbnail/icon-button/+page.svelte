@@ -9,13 +9,12 @@
     <Device containerClass="absolute -inset-10 top-12 right-8" />
 
     <IconButton
-        containerClass="text-inherit"
         icon="settings"
         size="large"
         variant="outlined"
         width="narrow"
     />
-    <IconButton color="secondary" icon="edit" size="large" variant="tonal" />
+    <IconButton icon="edit" size="large" variant="tonal" />
     <IconButton
         containerClass="icon-filled"
         icon="send"

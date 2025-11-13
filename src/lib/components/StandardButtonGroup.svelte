@@ -22,11 +22,11 @@
 
 <script lang="ts">
     import type {
-        ButtonColor,
         ButtonShape,
         ButtonVariant,
         IconButtonWidth,
     } from "$lib/types/button.js";
+    import type { Color } from "$lib/types/common.js";
     import type { WrapperProps } from "$lib/types/style.js";
     import type { HTMLAttributes, MouseEventHandler } from "svelte/elements";
 
@@ -52,7 +52,7 @@
         HTMLAttributes<HTMLDivElement>,
         typeof variants,
         {
-            color?: ButtonColor;
+            color?: Color;
             shape?: ButtonShape;
             variant?: ButtonVariant;
             width?: IconButtonWidth;

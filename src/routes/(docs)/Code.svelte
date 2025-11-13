@@ -10,8 +10,6 @@
 <script lang="ts">
     import type { BundledLanguage } from "shiki";
 
-    import dedent from "dedent";
-
     let {
         code,
         lang = "svelte",
@@ -21,7 +19,7 @@
     } = $props();
 
     let html = $derived(
-        highlighter.codeToHtml(dedent(code), {
+        highlighter.codeToHtml(code, {
             colorReplacements: {
                 "material-theme": {
                     "#263238": "invalid color",

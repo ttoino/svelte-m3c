@@ -1,5 +1,6 @@
 <script lang="ts">
     import { Progress } from "$lib/index.js";
+    import dedent from "dedent";
 
     import Title from "../../../Title.svelte";
     import Playground, {
@@ -8,7 +9,7 @@
         switchControl,
     } from "../../Playground.svelte";
     import Preview from "../../Preview.svelte";
-    import { renderComponentCode } from "../../renderComponentCode.js";
+    import { renderComponentCode } from "../../renderCode.js";
 </script>
 
 <Title content="Progress indicators" />
@@ -83,7 +84,7 @@
 <!-- TODO -->
 
 <Preview
-    code={`
+    code={dedent`
         <Progress shape="wavy" value={null} />
         <Progress circular shape="wavy" value={null} />
     `}

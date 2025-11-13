@@ -1,10 +1,3 @@
-export type ButtonColor =
-    | "error"
-    | "none"
-    | "primary"
-    | "secondary"
-    | "tertiary";
-
 export type ButtonShape = "round" | "square";
 
 export type ButtonSize =

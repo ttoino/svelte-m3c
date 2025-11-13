@@ -1,5 +1,6 @@
 <script lang="ts">
     import { type IconName, Switch } from "$lib/index.js";
+    import dedent from "dedent";
 
     import Title from "../../../Title.svelte";
     import Playground, {
@@ -7,7 +8,7 @@
         switchControl,
     } from "../../Playground.svelte";
     import Preview from "../../Preview.svelte";
-    import { renderComponentCode } from "../../renderComponentCode.js";
+    import { renderComponentCode } from "../../renderCode.js";
 </script>
 
 <Title content="Switches" />
@@ -70,7 +71,7 @@
 <!-- TODO -->
 
 <Preview
-    code={`
+    code={dedent`
         <Switch uncheckedIcon="close" />
         <Switch checkedIcon="check" />
         <Switch checkedIcon="arrow_upward" uncheckedIcon="arrow_downward" />

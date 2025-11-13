@@ -99,7 +99,7 @@
             },
             // No color
             {
-                class: { container: "text-on-surface" },
+                class: { container: "text-on-surface-variant" },
                 color: "none",
                 variant: ["elevated", "outlined", "text"],
             },

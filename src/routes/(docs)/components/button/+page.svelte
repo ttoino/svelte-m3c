@@ -1,11 +1,13 @@
 <script lang="ts">
-    import { Button, Icon, type IconName, ToggleButton } from "$lib/index.js";
-    import {
-        type ButtonColor,
-        type ButtonShape,
-        type ButtonSize,
-        type ButtonVariant,
+    import type {
+        ButtonShape,
+        ButtonSize,
+        ButtonVariant,
     } from "$lib/types/button.js";
+    import type { Color } from "$lib/types/common.js";
+
+    import { Button, Icon, type IconName, ToggleButton } from "$lib/index.js";
+    import dedent from "dedent";
     import { slide } from "svelte/transition";
 
     import Title from "../../../Title.svelte";
@@ -17,7 +19,7 @@
         textfieldControl,
     } from "../../Playground.svelte";
     import Preview from "../../Preview.svelte";
-    import { renderComponentCode } from "../../renderComponentCode.js";
+    import { renderComponentCode } from "../../renderCode.js";
 </script>
 
 <Title content="Common buttons" />
@@ -26,11 +28,10 @@
 
 <Playground
     code={({ icon, label, showIcon, toggle, ...props }) =>
-        renderComponentCode(
-            toggle ? "ToggleButton" : "Button",
-            props,
-            (showIcon ? `<Icon icon="${icon}" /> ` : "") + label,
-        )}
+        renderComponentCode(toggle ? "ToggleButton" : "Button", props, [
+            showIcon ? `<Icon icon="${icon}" /> ` : "",
+            label,
+        ])}
     controls={{
         /* eslint-disable perfectionist/sort-objects */
         label: textfieldControl("Label"),
@@ -49,7 +50,7 @@
             large: "Large",
             "extra-large": "Extra large",
         }),
-        color: selectControl<ButtonColor>("Color", {
+        color: selectControl<Color>("Color", {
             primary: "Primary",
             secondary: "Secondary",
             tertiary: "Tertiary",
@@ -66,7 +67,7 @@
         /* eslint-enable perfectionist/sort-objects */
     }}
     defaults={{
-        color: "primary" as ButtonColor,
+        color: "primary" as Color,
         disabled: false,
         icon: "edit" as IconName,
         label: "Button",
@@ -119,7 +120,7 @@
 <!-- TODO -->
 
 <Preview
-    code={`
+    code={dedent`
         <Button variant="elevated">Elevated</Button>
         <Button variant="filled">Filled</Button>
         <Button variant="tonal">Tonal</Button>
@@ -139,7 +140,7 @@
 <!-- TODO -->
 
 <Preview
-    code={`
+    code={dedent`
         <Button size="extra-small">Extra small</Button>
         <Button size="small">Small</Button>
         <Button size="medium">Medium</Button>
@@ -165,7 +166,7 @@
 </p>
 
 <Preview
-    code={`
+    code={dedent`
         <Button color="primary">Primary</Button>
         <Button color="secondary">Secondary</Button>
         <Button color="tertiary">Tertiary</Button>
@@ -185,7 +186,7 @@
 <!-- TODO -->
 
 <Preview
-    code={`
+    code={dedent`
         <Button shape="round">Round</Button>
         <Button shape="square">Square</Button>
     `}
@@ -199,7 +200,7 @@
 <!-- TODO -->
 
 <Preview
-    code={`
+    code={dedent`
         <ToggleButton>Default</ToggleButton>
         <ToggleButton variant="text">Text</ToggleButton>
         <ToggleButton size="medium">Medium</ToggleButton>
