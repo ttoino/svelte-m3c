@@ -12,11 +12,13 @@ export const getLines = (element: Element): number => {
     const lines: [number, number][] = [];
 
     for (const rect of rects) {
+        if (rect.bottom === rect.top) continue;
+
         const line = lines.find(
             ([top, bottom]) =>
-                (top <= rect.top && rect.top <= bottom) ||
-                (top <= rect.bottom && rect.bottom <= bottom) ||
-                (rect.top <= top && bottom <= rect.bottom),
+                (top < rect.top && rect.top < bottom) ||
+                (top < rect.bottom && rect.bottom < bottom) ||
+                (rect.top < top && bottom < rect.bottom),
         );
         if (line) {
             line[0] = Math.min(line[0], rect.top);
