@@ -3,12 +3,12 @@ import type { IconName } from "$lib/index.js";
 /* eslint-disable perfectionist/sort-objects */
 export const components = {
     Buttons: {
-        // "button-group": {
-        //     icon: "steppers",
-        //     title: "Button groups",
-        //     description:
-        //         "Button groups organize buttons and add interactions between them",
-        // },
+        "button-group": {
+            icon: "steppers",
+            title: "Button groups",
+            description:
+                "Button groups organize buttons and add interactions between them",
+        },
         button: {
             icon: "buttons_alt",
             title: "Common buttons",

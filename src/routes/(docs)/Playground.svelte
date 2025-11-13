@@ -73,7 +73,7 @@
             controls:
                 "flex flex-col gap-4 overflow-y-auto bg-surface-container-high p-4 max-expanded:h-80 expanded:w-80",
             preview:
-                "m-0 flex-1 max-expanded:rounded-b-none max-expanded:border-b-0 expanded:rounded-e-none expanded:border-e-0",
+                "m-0 flex-1 max-expanded:not-last:rounded-b-none max-expanded:not-last:border-b-0 expanded:not-last:rounded-e-none expanded:not-last:border-e-0",
         },
     });
 
@@ -100,9 +100,9 @@
         children,
         code,
         containerClass,
-        controls,
+        controls: baseControls = {} as Controls<T>,
         controlsClass,
-        defaults,
+        defaults = {} as T,
         previewClass,
         ...props
     }: WrapperProps<
@@ -111,14 +111,18 @@
         {
             children: Snippet<[T]>;
             code: (props: T) => string;
-            controls: Controls<T>;
-            defaults: T;
+            controls?: Controls<T>;
+            defaults?: T;
         }
     > = $props();
 
     const childProps = $state<T>(defaults);
 
     let classes = $derived(variants());
+
+    let controls = $derived(
+        Object.entries(baseControls) as [keyof T, Control<unknown>][],
+    );
 </script>
 
 {#snippet buttonGroupControlSnippet<T extends string>(
@@ -222,16 +226,18 @@
     >
         {@render children?.(childProps)}
     </Preview>
-    <div class={classes.controls({ class: controlsClass })}>
-        {#each Object.entries(controls) as [key, control] (key)}
-            {@render control.snippet(
-                control.label,
-                () => childProps[key],
-                (value: never) => {
-                    childProps[key as keyof T] = value;
-                },
-                control.options,
-            )}
-        {/each}
-    </div>
+    {#if controls.length > 0}
+        <div class={classes.controls({ class: controlsClass })}>
+            {#each controls as [key, control] (key)}
+                {@render control.snippet(
+                    control.label,
+                    () => childProps[key],
+                    (value) => {
+                        childProps[key as keyof T] = value as never;
+                    },
+                    control.options,
+                )}
+            {/each}
+        </div>
+    {/if}
 </div>
