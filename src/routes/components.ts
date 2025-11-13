@@ -182,12 +182,12 @@ export const components = {
         //     description:
         //         "Dividers are thin lines that group content in lists or other containers",
         // },
-        // list: {
-        //     icon: "list",
-        //     title: "Lists",
-        //     description:
-        //         "Lists are continuous, vertical indexes of text and images",
-        // },
+        list: {
+            icon: "list",
+            title: "Lists",
+            description:
+                "Lists are continuous, vertical indexes of text and images",
+        },
         // toolbar: {
         //     icon: "bottom_app_bar",
         //     title: "Toolbars",
