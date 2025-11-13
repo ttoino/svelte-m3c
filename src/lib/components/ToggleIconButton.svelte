@@ -73,9 +73,9 @@
             contextColor?.() ??
             (variant === "tonal"
                 ? "secondary"
-                : variant === "filled" || variant === "text"
-                  ? "primary"
-                  : "none"),
+                : variant === "outlined"
+                  ? "none"
+                  : "primary"),
     );
 
     let classes = $derived(variants({ color, shape, size, variant, width }));
