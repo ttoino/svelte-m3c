@@ -100,23 +100,23 @@ export const components = {
         //     description:
         //         "Chips help people enter information, make selections, filter content, or trigger actions",
         // },
-        // menu: {
-        //     icon: "dropdown",
-        //     title: "Menus",
-        //     description:
-        //         "Menus display a list of choices on a temporary surface",
-        // },
+        menu: {
+            icon: "dropdown",
+            title: "Menus",
+            description:
+                "Menus display a list of choices on a temporary surface",
+        },
         // snackbar: {
         //     icon: "toast",
         //     title: "Snackbar",
         //     description:
         //         "Snackbars show short updates about app processes at the bottom of the screen",
         // },
-        // tooltip: {
-        //     icon: "tooltip_2",
-        //     title: "Tooltips",
-        //     description: "Tooltips display brief labels or messages",
-        // },
+        tooltip: {
+            icon: "tooltip_2",
+            title: "Tooltips",
+            description: "Tooltips display brief labels or messages",
+        },
     },
     "Loading & progress": {
         // "loading-indicator": {
