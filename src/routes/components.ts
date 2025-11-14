@@ -176,12 +176,12 @@ export const components = {
         //     title: "Dialogs",
         //     description: "Dialogs provide important prompts in a user flow",
         // },
-        // divider: {
-        //     icon: "horizontal_rule",
-        //     title: "Dividers",
-        //     description:
-        //         "Dividers are thin lines that group content in lists or other containers",
-        // },
+        divider: {
+            icon: "horizontal_rule",
+            title: "Dividers",
+            description:
+                "Dividers are thin lines that group content in lists or other containers",
+        },
         list: {
             icon: "list",
             title: "Lists",
