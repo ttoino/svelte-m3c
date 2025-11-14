@@ -7,7 +7,7 @@ import {
 
 describe("render component code", () => {
     test("just component name", () => {
-        assert.equal(renderComponentCode("Component", {}), "<Component />");
+        assert.equal(renderComponentCode("Component"), "<Component />");
     });
 
     test("string props", () => {
