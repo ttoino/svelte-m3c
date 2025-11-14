@@ -6,7 +6,7 @@ const dedent = baseDedent.withOptions({
 
 export const renderComponentCode = (
     component: string,
-    props: Record<string, unknown>,
+    props: Record<string, unknown> = {},
     children?: (string | undefined)[] | string,
 ) => {
     const p = Object.entries(props)

@@ -69,11 +69,11 @@ export const components = {
             title: "Switch",
             description: "Switches toggle the selection of an item on and off",
         },
-        // "text-field": {
-        //     icon: "password_2",
-        //     title: "Text fields",
-        //     description: "Text fields let users enter text into a UI",
-        // },
+        "text-field": {
+            icon: "password_2",
+            title: "Text fields",
+            description: "Text fields let users enter text into a UI",
+        },
         // "time-picker": {
         //     icon: "schedule",
         //     title: "Time pickers",

@@ -17,10 +17,11 @@ export const GET: RequestHandler = async ({ fetch, params }) => {
     const context = await browser.newContext(devices["Desktop Chrome HiDPI"]);
     const page = await context.newPage();
     await page.goto(url);
-    await page.waitForTimeout(1000);
 
     const focus = page.locator("#focus");
     if ((await focus.count()) == 1) await focus.focus().catch(console.error);
+
+    await page.waitForTimeout(1000);
 
     const thumbnail = page.locator("#thumbnail");
     const screenshot = await thumbnail.screenshot({ scale: "device" });
