@@ -7,9 +7,10 @@
             variant: "uncontained",
         },
         slots: {
-            container: "@container mx-4 my-2 w-stretch overflow-clip",
+            container:
+                "@container mx-4 my-2 w-stretch overflow-clip [--basis:100%] [--gap:--spacing(2)] [--large-count:1] [--medium-count:0] [--small-count:2] [--small:--spacing(10)] @md:[--small:--spacing(14)]",
             scroller:
-                "flex h-full flex-row items-stretch gap-2 px-2 [--basis:100%] [--small:--spacing(10)] @md:[--small:--spacing(14)]",
+                "flex h-full flex-row items-stretch gap-(--gap) px-(--gap)",
         },
         variants: {
             variant: {
@@ -19,9 +20,12 @@
                     scroller: "h-auto w-full flex-col gap-4 px-0 py-4",
                 },
                 hero: {},
-                "multi-browse": {},
+                "multi-browse": {
+                    container:
+                        "[--large-count:1] [--medium-count:1] [--small-count:1]",
+                },
                 uncontained: {
-                    container: "mx-0 px-2",
+                    container: "mx-0",
                 },
             },
         },
@@ -90,22 +94,18 @@
             ...baseEmblaOptions,
             ...variantEmblaOptions[variant],
             ...emblaOptions,
+            // This triggers a reinit when the variant changes
+            variant,
         },
         plugins: emblaPlugins,
     });
 
     const onInit = (embla: EmblaCarouselType) => {
         const slideCount = embla.slideNodes().length;
+        const scroller = embla.containerNode();
 
-        if (variant === "hero") {
-            embla
-                .containerNode()
-                .style.setProperty(
-                    "--basis",
-                    `calc((var(--small) * ${slideCount - 3} + 100cqw - var(--spacing) * 4) / ${slideCount})`,
-                );
-        } else {
-            embla.containerNode().style.removeProperty("--basis");
+        if (variant === "uncontained" || variant === "full-screen") {
+            scroller.style.removeProperty("--basis");
 
             for (const container of embla.slideNodes()) {
                 const item = container.firstElementChild as HTMLElement | null;
@@ -115,57 +115,125 @@
                 item.style.removeProperty("width");
                 item.style.removeProperty("margin-left");
             }
+        } else {
+            const scrollerStyle = getComputedStyle(scroller);
+
+            const largeSlides = parseInt(
+                scrollerStyle.getPropertyValue("--large-count"),
+            );
+            const mediumSlides = parseInt(
+                scrollerStyle.getPropertyValue("--medium-count"),
+            );
+            const smallSlides = parseInt(
+                scrollerStyle.getPropertyValue("--small-count"),
+            );
+
+            const visibleSlides = largeSlides + mediumSlides + smallSlides;
+
+            embla
+                .containerNode()
+                .style.setProperty(
+                    "--basis",
+                    `calc((var(--small) * ${slideCount - visibleSlides} + 100cqw - var(--gap) * ${visibleSlides - 1}) / ${slideCount})`,
+                );
         }
 
         onScroll(embla);
     };
 
     const onScroll = (embla: EmblaCarouselType) => {
+        if (variant === "uncontained" || variant === "full-screen") return;
+
         const mod = (n: number, m: number) => ((n % m) + m) % m;
 
         const slideCount = embla.slideNodes().length;
         const scrollProgress = embla.scrollProgress() * slideCount;
 
-        if (variant === "uncontained" || variant === "full-screen") return;
+        const scrollerStyle = getComputedStyle(embla.containerNode());
+
+        const largeSlides = parseInt(
+            scrollerStyle.getPropertyValue("--large-count"),
+        );
+        const mediumSlides = parseInt(
+            scrollerStyle.getPropertyValue("--medium-count"),
+        );
+        const smallSlides = parseInt(
+            scrollerStyle.getPropertyValue("--small-count"),
+        );
+
+        const visibleSlides = largeSlides + mediumSlides + smallSlides;
+        const sizedSlides = largeSlides + mediumSlides;
+        const sizedPower = largeSlides * 2 + mediumSlides;
 
         embla.slideNodes().forEach((container, index) => {
             const item = container.firstElementChild as HTMLElement | null;
 
             if (!item) return;
 
-            if (variant === "hero") {
-                // 1 when progress == index, 0 elsewhere
-                const width = Math.max(
-                    0,
-                    1 -
-                        Math.abs(
-                            mod(index - scrollProgress + 1, slideCount) - 1,
-                        ),
-                );
-                // 0 when index <= progress, 1 when index > progress
-                const bigTranslate = Math.max(
-                    0,
-                    Math.min(index - scrollProgress, 1),
-                );
-                // Positive when index <= progress, negative when index >= progress + 1
-                const smallTranslate =
-                    index == 0 && scrollProgress >= slideCount - 1
-                        ? (slideCount - scrollProgress) * (slideCount - 1)
-                        : index <= scrollProgress
-                          ? scrollProgress - index
-                          : index >= scrollProgress + 1
-                            ? scrollProgress - index + 1
-                            : 0;
+            const myProgress = mod(index - scrollProgress, slideCount);
+            const width =
+                // Ramp up to large
+                (myProgress >= slideCount - 1
+                    ? (2 / sizedPower) *
+                      (1 - mod(scrollProgress - index, slideCount))
+                    : 0) +
+                // Constant large
+                (myProgress >= 0 && myProgress < largeSlides - 1
+                    ? 2 / sizedPower
+                    : 0) +
+                (mediumSlides > 0
+                    ? // Ramp down from large to medium
+                      (myProgress >= largeSlides - 1 && myProgress < largeSlides
+                          ? (2 -
+                                mod(
+                                    index - scrollProgress - largeSlides + 1,
+                                    slideCount,
+                                )) /
+                            sizedPower
+                          : 0) +
+                      // Constant medium
+                      (myProgress >= largeSlides && myProgress < sizedSlides - 1
+                          ? 1 / sizedPower
+                          : 0) +
+                      // Ramp down from medium to small
+                      (myProgress >= sizedSlides - 1 && myProgress < sizedSlides
+                          ? (1 -
+                                mod(
+                                    index - scrollProgress - sizedSlides + 1,
+                                    slideCount,
+                                )) /
+                            sizedPower
+                          : 0)
+                    : // Ramp down from large to small
+                      myProgress >= largeSlides - 1 && myProgress < sizedSlides
+                      ? (2 / sizedPower) *
+                        (1 -
+                            mod(
+                                index - scrollProgress - largeSlides + 1,
+                                slideCount,
+                            ))
+                      : 0);
 
-                item.style.setProperty(
-                    "width",
-                    `calc(var(--small) + (100cqw - var(--small) * 3 - var(--spacing) * 4) * ${width})`,
-                );
-                item.style.setProperty(
-                    "margin-left",
-                    `calc((100cqw - var(--small) * 2 - var(--spacing) * 4 - var(--basis)) * ${bigTranslate} + (var(--basis) - var(--small)) * ${smallTranslate})`,
-                );
-            }
+            const largeToLeft = Math.max(
+                0,
+                Math.min(index - scrollProgress, largeSlides),
+            );
+            const mediumToLeft = Math.max(
+                0,
+                Math.min(index - scrollProgress - largeSlides, mediumSlides),
+            );
+            // TODO: Not working when looping
+            const smallToLeft = index - scrollProgress;
+
+            item.style.setProperty(
+                "width",
+                `calc(var(--small) + (100cqw - var(--small) * ${visibleSlides} - var(--gap) * ${visibleSlides - 1}) * ${width})`,
+            );
+            // TODO: Centered variant
+            item.style.setProperty(
+                "margin-left",
+                `calc((100cqw - var(--small) * ${visibleSlides} - var(--gap) * ${visibleSlides - 1}) * ${(largeToLeft * 2 + mediumToLeft) / sizedPower} + var(--small) * ${smallToLeft} - var(--basis) * ${smallToLeft})`,
+            );
         });
     };
 </script>
@@ -177,6 +245,7 @@
         e.detail.on("reInit", onInit);
         e.detail.on("slidesChanged", onInit);
         e.detail.on("scroll", onScroll);
+        e.detail.on("resize", onScroll);
     }}
     use:embla={emblaConfig}
     {...props}
