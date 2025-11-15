@@ -24,27 +24,33 @@
 
 @utility w-stretch {
     width: -webkit-fill-available;
+    width: -moz-available;
     width: stretch;
 }
 @utility min-w-stretch {
     min-width: -webkit-fill-available;
+    min-width: -moz-available;
     min-width: stretch;
 }
 @utility max-w-stretch {
     max-width: -webkit-fill-available;
+    max-width: -moz-available;
     max-width: stretch;
 }
 
 @utility h-stretch {
     height: -webkit-fill-available;
+    height: -moz-available;
     height: stretch;
 }
 @utility min-h-stretch {
     min-height: -webkit-fill-available;
+    min-height: -moz-available;
     min-height: stretch;
 }
 @utility max-h-stretch {
     max-height: -webkit-fill-available;
+    max-height: -moz-available;
     max-height: stretch;
 }
 

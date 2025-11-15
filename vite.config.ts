@@ -6,6 +6,7 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
     plugins: [tailwindcss(), sveltekit()],
     test: {
+        exclude: ["node_modules", "build", "dist"],
         projects: [
             {
                 extends: "./vite.config.ts",
