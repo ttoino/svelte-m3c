@@ -9,7 +9,7 @@
         slots: {
             container:
                 "pointer-events-none flex h-full max-w-full shrink-0 basis-(--basis) flex-col items-start",
-            item: "group/state-layer absolute pointer-events-auto h-full w-full overflow-clip rounded-xl border border-outline-variant *:[img,video]:h-full *:[img,video]:w-full *:[img,video]:object-cover *:[img,video]:select-none",
+            item: "group/state-layer pointer-events-auto absolute h-full w-full overflow-clip rounded-xl border border-outline-variant *:[img,video]:h-full *:[img,video]:w-full *:[img,video]:object-cover *:[img,video]:select-none",
             stateLayer: "absolute inset-0",
         },
         variants: {
