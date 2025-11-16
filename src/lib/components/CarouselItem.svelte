@@ -8,8 +8,9 @@
         },
         slots: {
             container:
-                "flex h-full max-w-full shrink-0 basis-(--basis) flex-col items-start",
-            item: "absolute h-full w-full overflow-clip rounded-xl border border-outline-variant *:[img,video]:h-full *:[img,video]:w-full *:[img,video]:object-cover *:[img,video]:select-none",
+                "pointer-events-none flex h-full max-w-full shrink-0 basis-(--basis) flex-col items-start",
+            item: "group/state-layer absolute pointer-events-auto h-full w-full overflow-clip rounded-xl border border-outline-variant *:[img,video]:h-full *:[img,video]:w-full *:[img,video]:object-cover *:[img,video]:select-none",
+            stateLayer: "absolute inset-0",
         },
         variants: {
             variant: {
@@ -36,10 +37,13 @@
     import type { WrapperProps } from "$lib/types/style.js";
     import type { HTMLAttributes } from "svelte/elements";
 
+    import StateLayer from "./StateLayer.svelte";
+
     let {
         children,
         containerClass,
         itemClass,
+        stateLayerClass,
         ...props
     }: WrapperProps<
         HTMLAttributes<HTMLDivElement>,
@@ -54,6 +58,10 @@
 
 <div class={classes.container({ class: containerClass })} {...props}>
     <div class={classes.item({ class: itemClass })}>
+        <StateLayer
+            containerClass={classes.stateLayer({ class: stateLayerClass })}
+        />
+
         {@render children?.()}
     </div>
 </div>

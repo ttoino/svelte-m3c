@@ -7,10 +7,9 @@
             variant: "uncontained",
         },
         slots: {
-            container:
-                "@container mx-4 my-2 w-stretch overflow-clip [--basis:100%] [--gap:--spacing(2)] [--large-count:1] [--medium-count:0] [--small-count:2] [--small:--spacing(10)] @md:[--small:--spacing(14)]",
+            container: "@container/carousel mx-4 my-2 w-stretch overflow-clip",
             scroller:
-                "flex h-full flex-row items-stretch gap-(--gap) px-(--gap)",
+                "flex h-full flex-row items-stretch gap-(--gap) px-(--gap) [--basis:100%] [--gap:--spacing(2)] [--large-count:1] [--medium-count:0] [--small-count:2] [--small:--spacing(10)] @md/carousel:[--small:--spacing(14)]",
         },
         variants: {
             variant: {
@@ -21,7 +20,7 @@
                 },
                 hero: {},
                 "multi-browse": {
-                    container:
+                    scroller:
                         "[--large-count:1] [--medium-count:1] [--small-count:1]",
                 },
                 uncontained: {
@@ -130,12 +129,10 @@
 
             const visibleSlides = largeSlides + mediumSlides + smallSlides;
 
-            embla
-                .containerNode()
-                .style.setProperty(
-                    "--basis",
-                    `calc((var(--small) * ${slideCount - visibleSlides} + 100cqw - var(--gap) * ${visibleSlides - 1}) / ${slideCount})`,
-                );
+            scroller.style.setProperty(
+                "--basis",
+                `calc((var(--small) * ${slideCount - visibleSlides} + 100cqw - var(--gap) * ${visibleSlides - 1}) / ${slideCount})`,
+            );
         }
 
         onScroll(embla);
