@@ -19,12 +19,13 @@
                 },
                 "full-screen": {
                     container: "h-0",
+                    item: "relative",
                 },
                 hero: {},
                 "multi-browse": {},
                 uncontained: {
                     container: "block flex-none",
-                    item: "static w-fit *:[img,video]:w-auto",
+                    item: "relative w-fit *:[img,video]:w-auto",
                 },
             },
         },

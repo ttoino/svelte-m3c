@@ -7,16 +7,18 @@
             variant: "uncontained",
         },
         slots: {
-            container: "@container/carousel mx-4 my-2 w-stretch overflow-clip",
+            container:
+                "@container/carousel mx-4 my-2 w-stretch overflow-clip [--basis:100%] [--gap:--spacing(2)]",
             scroller:
-                "flex h-full flex-row items-stretch gap-(--gap) px-(--gap) [--basis:100%] [--gap:--spacing(2)] [--large-count:1] [--medium-count:0] [--small-count:2] [--small:--spacing(10)] @md/carousel:[--small:--spacing(14)]",
+                "flex h-stretch flex-row items-stretch gap-(--gap) px-(--gap) [--large-count:1] [--medium-count:0] [--small-count:2] [--small:--spacing(10)] @md/carousel:[--small:--spacing(14)]",
         },
         variants: {
             variant: {
                 "centered-hero": {},
                 "full-screen": {
-                    container: "m-0 h-full",
-                    scroller: "h-auto w-full flex-col gap-4 px-0 py-4",
+                    container:
+                        "@container-[size] m-0 h-stretch [--basis:100cqh] [--gap:--spacing(4)]",
+                    scroller: "w-stretch flex-col px-0 py-(--gap)",
                 },
                 hero: {},
                 "multi-browse": {
@@ -24,7 +26,7 @@
                         "[--large-count:1] [--medium-count:1] [--small-count:1]",
                 },
                 uncontained: {
-                    container: "mx-0",
+                    container: "mx-0 px-(--gap)",
                 },
             },
         },
@@ -60,6 +62,7 @@
             align: "center",
         },
         "full-screen": {
+            align: "center",
             axis: "y",
         },
         hero: {},
