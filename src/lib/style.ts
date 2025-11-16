@@ -1,5 +1,7 @@
 import {
     type ConfigExtension,
+    type DefaultClassGroupIds,
+    type DefaultThemeGroupIds,
     extendTailwindMerge,
     validators,
 } from "tailwind-merge";
@@ -11,39 +13,30 @@ import type { Mutable, Prettify } from "./types/util.js";
 const twMergeConfig = {
     extend: {
         classGroups: {
-            amplitude: [
+            duration: [
                 {
-                    amplitude: [
-                        validators.isNumber,
-                        validators.isArbitraryLength,
+                    duration: [
+                        "short1",
+                        "short2",
+                        "short3",
+                        "short4",
+                        "medium1",
+                        "medium2",
+                        "medium3",
+                        "medium4",
+                        "long1",
+                        "long2",
+                        "long3",
+                        "long4",
+                        "extra-long1",
+                        "extra-long2",
+                        "extra-long3",
+                        "extra-long4",
                     ],
                 },
             ],
-            "icon-fill": [
-                {
-                    icon: ["outline", "filled"],
-                    "icon-fill": [validators.isPercent],
-                },
-            ],
-            "icon-grade": [
-                {
-                    "-icon-grade": [validators.isInteger],
-                    "icon-grade": [
-                        "low",
-                        "normal",
-                        "high",
-                        validators.isInteger,
-                    ],
-                },
-            ],
-            "icon-size": [
-                {
-                    icon: [validators.isNumber, validators.isArbitraryLength],
-                },
-            ],
-            linecap: [{ linecap: ["butt", "round", "square"] }],
-            linejoin: [{ linejoin: ["miter", "round", "bevel"] }],
-            "mask-shape": [
+            h: ["h-stretch"],
+            "mask-image": [
                 {
                     "mask-shape": [
                         "circle",
@@ -84,6 +77,48 @@ const twMergeConfig = {
                     ],
                 },
             ],
+            "max-h": ["max-h-stretch"],
+            "max-w": ["max-w-stretch"],
+            "min-h": ["min-h-stretch"],
+            "min-w": ["min-w-stretch"],
+            size: ["size-stretch"],
+            w: ["w-stretch"],
+        },
+    },
+    override: {
+        classGroups: {
+            amplitude: [
+                {
+                    amplitude: [
+                        validators.isNumber,
+                        validators.isArbitraryLength,
+                    ],
+                },
+            ],
+            "icon-fill": [
+                {
+                    icon: ["outline", "filled"],
+                    "icon-fill": [validators.isPercent],
+                },
+            ],
+            "icon-grade": [
+                {
+                    "-icon-grade": [validators.isInteger],
+                    "icon-grade": [
+                        "low",
+                        "normal",
+                        "high",
+                        validators.isInteger,
+                    ],
+                },
+            ],
+            "icon-size": [
+                {
+                    icon: [validators.isNumber, validators.isArbitraryLength],
+                },
+            ],
+            linecap: [{ linecap: ["butt", "round", "square"] }],
+            linejoin: [{ linejoin: ["miter", "round", "bevel"] }],
             paint: [{ paint: ["arc", "arc-wave", "wave"] }],
             phase: [
                 { phase: [validators.isPercent, validators.isArbitraryNumber] },
@@ -98,9 +133,6 @@ const twMergeConfig = {
             ],
         },
         theme: {
-            animate: [],
-            aspect: [],
-            blur: [],
             breakpoint: ["compact", "medium", "expanded", "large", "xlarge"],
             color: [
                 "primary",
@@ -135,8 +167,6 @@ const twMergeConfig = {
                 "outline-variant",
                 "scrim",
             ],
-            container: [],
-            "drop-shadow": [],
             ease: [
                 "emphasized",
                 "emphasized-decelerate",
@@ -145,11 +175,6 @@ const twMergeConfig = {
                 "standard-decelerate",
                 "standard-accelerate",
             ],
-            font: [],
-            "font-weight": [],
-            "inset-shadow": [],
-            leading: [],
-            perspective: [],
             radius: [
                 "xxs",
                 "xs",
@@ -164,56 +189,42 @@ const twMergeConfig = {
             shadow: ["1", "2", "3", "4", "5"],
             text: [
                 "display-l",
+                "display-l-emphasized",
                 "display-m",
+                "display-m-emphasized",
                 "display-s",
+                "display-s-emphasized",
                 "headline-l",
+                "headline-l-emphasized",
                 "headline-m",
+                "headline-m-emphasized",
                 "headline-s",
+                "headline-s-emphasized",
                 "title-l",
+                "title-l-emphasized",
                 "title-m",
+                "title-m-emphasized",
                 "title-s",
+                "title-s-emphasized",
                 "body-l",
+                "body-l-emphasized",
                 "body-m",
+                "body-m-emphasized",
                 "body-s",
+                "body-s-emphasized",
                 "label-l",
+                "label-l-emphasized",
                 "label-m",
+                "label-m-emphasized",
                 "label-s",
-            ],
-            "text-shadow": [],
-            tracking: [],
-        },
-    },
-    override: {
-        classGroups: {
-            duration: [
-                {
-                    duration: [
-                        validators.isNumber,
-                        "initial",
-                        validators.isArbitraryVariable,
-                        validators.isArbitraryValue,
-                        "short1",
-                        "short2",
-                        "short3",
-                        "short4",
-                        "medium1",
-                        "medium2",
-                        "medium3",
-                        "medium4",
-                        "long1",
-                        "long2",
-                        "long3",
-                        "long4",
-                        "extra-long1",
-                        "extra-long2",
-                        "extra-long3",
-                        "extra-long4",
-                    ],
-                },
+                "label-s-emphasized",
             ],
         },
     },
-} satisfies ConfigExtension<ClassGroups, never>;
+} satisfies ConfigExtension<
+    ClassGroups | DefaultClassGroupIds,
+    DefaultThemeGroupIds
+>;
 
 export const twMerge = extendTailwindMerge<ClassGroups>(twMergeConfig);
 
