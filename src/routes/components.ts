@@ -201,7 +201,11 @@ export const components = {
         //     title: "Avatar",
         //     description: "Avatars represent users graphically",
         // },
-        // icon: { icon: "interests", title: "Icons", description: "" },
+        icon: {
+            icon: "interests",
+            title: "Icons",
+            description: "Icons represent ideas through an abstract pictograph",
+        },
         // "state-layer": {
         //     icon: "ripples",
         //     title: "State layer",

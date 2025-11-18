@@ -43,7 +43,7 @@
 
     export const sliderControl = (
         label: string,
-        options?: { max?: number; min?: number },
+        options?: { max?: number; min?: number; step?: number },
     ) => ({
         label,
         options,
@@ -183,14 +183,13 @@
     label: string,
     getValue: () => number,
     setValue: (value: number) => void,
-    { max, min }: { max?: number; min?: number } = {},
+    props: { max?: number; min?: number; step?: number } = {},
 )}
     <div class="inline-flex flex-col gap-2">
         <p class="text-label-l">{label}</p>
         <Slider
             containerClass="!min-w-auto"
-            {max}
-            {min}
+            {...props}
             bind:value={getValue, setValue}
         />
     </div>
