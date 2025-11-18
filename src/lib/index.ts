@@ -16,6 +16,7 @@ import Menu from "./components/Menu.svelte";
 import MenuDivider from "./components/MenuDivider.svelte";
 import MenuItem from "./components/MenuItem.svelte";
 import NavigationRail from "./components/NavigationRail.svelte";
+import NavigationRailHeader from "./components/NavigationRailHeader.svelte";
 import NavigationRailItem from "./components/NavigationRailItem.svelte";
 import Progress from "./components/Progress.svelte";
 import Provider from "./components/Provider.svelte";
@@ -55,6 +56,7 @@ export {
     MenuDivider,
     MenuItem,
     NavigationRail,
+    NavigationRailHeader,
     NavigationRailItem,
     Progress,
     Provider,
