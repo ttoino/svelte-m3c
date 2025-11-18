@@ -25,6 +25,7 @@ import ScrollArea from "./components/ScrollArea.svelte";
 import SearchBar from "./components/SearchBar.svelte";
 import Select from "./components/Select.svelte";
 import SelectItem from "./components/SelectItem.svelte";
+import Sheet from "./components/Sheet.svelte";
 import Slider from "./components/Slider.svelte";
 import StandardButtonGroup from "./components/StandardButtonGroup.svelte";
 import StateLayer from "./components/StateLayer.svelte";
@@ -64,6 +65,7 @@ export {
     SearchBar,
     Select,
     SelectItem,
+    Sheet,
     Slider,
     StandardButtonGroup,
     StateLayer,
