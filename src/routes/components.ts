@@ -157,12 +157,12 @@ export const components = {
         //     description:
         //         "Search lets people enter a keyword or phrase to get relevant information",
         // },
-        // tabs: {
-        //     icon: "tabs",
-        //     title: "Tabs",
-        //     description:
-        //         "Tabs organize content across different screens and views",
-        // },
+        tabs: {
+            icon: "tabs",
+            title: "Tabs",
+            description:
+                "Tabs organize content across different screens and views",
+        },
     },
     Structural: {
         // card: {
