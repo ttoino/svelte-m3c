@@ -27,6 +27,7 @@ import SearchBar from "./components/SearchBar.svelte";
 import Select from "./components/Select.svelte";
 import SelectItem from "./components/SelectItem.svelte";
 import Slider from "./components/Slider.svelte";
+import SplitButton from "./components/SplitButton.svelte";
 import StandardButtonGroup from "./components/StandardButtonGroup.svelte";
 import StateLayer from "./components/StateLayer.svelte";
 import Switch from "./components/Switch.svelte";
@@ -67,6 +68,7 @@ export {
     Select,
     SelectItem,
     Slider,
+    SplitButton,
     StandardButtonGroup,
     StateLayer,
     Switch,
