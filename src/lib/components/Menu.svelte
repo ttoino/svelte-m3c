@@ -4,7 +4,7 @@
     import { variantsConfig as base } from "./List.svelte";
 
     export const variantsConfig = mergeVariants(base, {
-        base: "z-50 rounded-xs bg-surface-container shadow-2",
+        base: "z-50 max-h-[min(var(--bits-floating-available-height),50vh)] overflow-y-auto rounded-xs bg-surface-container shadow-2",
     });
 
     export const variants = tv(variantsConfig);
