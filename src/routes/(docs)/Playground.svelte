@@ -95,7 +95,9 @@
         ToggleButton,
     } from "$lib/index.js";
 
+    import { icons } from "../icons.js";
     import Preview from "./Preview.svelte";
+
     let {
         children,
         code,
@@ -153,7 +155,7 @@
             {value}
         {/snippet}
         {#snippet label()}{lbl}{/snippet}
-        {#each ["edit", "add"] as const as icon (icon)}
+        {#each icons as icon (icon)}
             <SelectItem value={icon}>
                 {#snippet leading()}<Icon {icon} />{/snippet}
                 {#snippet text()}{icon}{/snippet}
