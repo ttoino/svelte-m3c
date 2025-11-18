@@ -11,7 +11,7 @@
                 false: "mx-auto mt-2 mb-1 text-center",
                 true: "mt-3 mb-2 ml-9",
             },
-        }
+        },
     });
 
     const variants = tv(variantsConfig);
