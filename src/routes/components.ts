@@ -32,12 +32,12 @@ export const components = {
             description:
                 "Icon buttons help people take actions with a single tap",
         },
-        // "split-button": {
-        //     icon: "unknown_med",
-        //     title: "Split buttons",
-        //     description:
-        //         "Split buttons open a menu to give people more options related to an action",
-        // },
+        "split-button": {
+            icon: "unknown_med",
+            title: "Split buttons",
+            description:
+                "Split buttons open a menu to give people more options related to an action",
+        },
     },
     "Form elements": {
         checkbox: {

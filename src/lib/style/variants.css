@@ -19,6 +19,10 @@
 @custom-variant ui-active (&[data-state="active"]);
 @custom-variant ui-inactive (&[data-state="inactive"]);
 
+/* Menu */
+@custom-variant ui-open (&[data-state="open"]);
+@custom-variant ui-closed (&[data-state="closed"]);
+
 /* General */
 @custom-variant next (& + *);
 @custom-variant previous (:has(+ &));

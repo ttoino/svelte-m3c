@@ -22,6 +22,7 @@ import { variants as searchBar } from "./components/SearchBar.svelte";
 import { variants as select } from "./components/Select.svelte";
 import { variants as selectItem } from "./components/SelectItem.svelte";
 import { variants as slider } from "./components/Slider.svelte";
+import { variants as splitButton } from "./components/SplitButton.svelte";
 import { variants as standardButtonGroup } from "./components/StandardButtonGroup.svelte";
 import { variants as stateLayer } from "./components/StateLayer.svelte";
 import { variants as switchComponent } from "./components/Switch.svelte";
@@ -57,6 +58,7 @@ export {
     select,
     selectItem,
     slider,
+    splitButton,
     standardButtonGroup,
     stateLayer,
     switchComponent,
