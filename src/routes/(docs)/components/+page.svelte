@@ -14,7 +14,11 @@
 
     <div class="not-prose mt-4 grid gap-2 medium:grid-cols-2">
         {#each constEntries(c) as [id, { description, title }] (id)}
-            <Card containerClass="relative flex flex-col" variant="outlined">
+            <Card
+                containerClass="relative flex flex-col"
+                interactive
+                variant="outlined"
+            >
                 <img
                     class="aspect-video rounded-md object-cover"
                     alt=""

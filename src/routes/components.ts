@@ -165,12 +165,12 @@ export const components = {
         },
     },
     Structural: {
-        // card: {
-        //     icon: "cards",
-        //     title: "Cards",
-        //     description:
-        //         "Cards display content and actions about a single subject",
-        // },
+        card: {
+            icon: "cards",
+            title: "Cards",
+            description:
+                "Cards display content and actions about a single subject",
+        },
         // dialog: {
         //     icon: "dialogs",
         //     title: "Dialogs",
