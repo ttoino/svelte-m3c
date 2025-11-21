@@ -83,9 +83,9 @@
 <script lang="ts">
     import type { WrapperProps } from "$lib/types/style.js";
 
-    import arcWavePaintWorklet from "$lib/paints/arc-wave.js?url";
-    import arcPaintWorklet from "$lib/paints/arc.js?url";
-    import wavePaintWorklet from "$lib/paints/wave.js?url";
+    import arcWavePaintWorklet from "$lib/paints/arc-wave.js?worker&url";
+    import arcPaintWorklet from "$lib/paints/arc.js?worker&url";
+    import wavePaintWorklet from "$lib/paints/wave.js?worker&url";
     import { Progress } from "bits-ui";
     import { onMount } from "svelte";
 
