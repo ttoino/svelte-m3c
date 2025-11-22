@@ -145,12 +145,12 @@ export const components = {
         //     description:
         //         "Navigation bars let people switch between UI views on smaller devices",
         // },
-        // "navigation-rail": {
-        //     icon: "side_navigation",
-        //     title: "Navigation rail",
-        //     description:
-        //         "Navigation rails let people switch between UI views on mid-sized and larger devices",
-        // },
+        "navigation-rail": {
+            icon: "side_navigation",
+            title: "Navigation rail",
+            description:
+                "Navigation rails let people switch between UI views on mid-sized and larger devices",
+        },
         // search: {
         //     icon: "pageview",
         //     title: "Search",

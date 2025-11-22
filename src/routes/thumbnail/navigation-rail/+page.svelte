@@ -1,5 +1,7 @@
 <script lang="ts">
     import {
+        Button,
+        Icon,
         IconButton,
         NavigationRail,
         NavigationRailItem,
@@ -23,12 +25,28 @@
                 />
 
                 <!-- TODO: FAB -->
-                <IconButton
-                    containerClass="mx-5 mb-12 self-start"
-                    icon="edit"
-                    shape="square"
-                    size="medium"
-                />
+                {#if expanded}
+                    <Button
+                        color="primary"
+                        containerClass="mx-5 mb-12 self-start px-4"
+                        icon="edit"
+                        shape="square"
+                        size="medium"
+                        variant="tonal"
+                    >
+                        <Icon icon="edit" />
+                        Label
+                    </Button>
+                {:else}
+                    <IconButton
+                        color="primary"
+                        containerClass="mx-5 mb-12 self-start"
+                        icon="edit"
+                        shape="square"
+                        size="medium"
+                        variant="tonal"
+                    />
+                {/if}
 
                 <NavigationRailItem active href="" icon="stars">
                     Label
