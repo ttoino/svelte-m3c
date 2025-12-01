@@ -1,4 +1,5 @@
 <script lang="ts" module>
+    import { browser } from "$app/environment";
     // TODO: Linear indeterminate
     import { mergeVariants, tv } from "$lib/style.js";
 
@@ -78,24 +79,39 @@
     });
 
     export const variants = tv(variantsConfig);
+
+    if (browser) {
+        // eslint-disable-next-line svelte/@typescript-eslint/no-unnecessary-condition
+        if (!CSS.paintWorklet) await import("css-paint-polyfill");
+
+        if (import.meta.env.DEV) {
+            CSS.paintWorklet.addModule(
+                (await import("$lib/paints/arc-wave.js?url")).default,
+            );
+            CSS.paintWorklet.addModule(
+                (await import("$lib/paints/arc.js?url")).default,
+            );
+            CSS.paintWorklet.addModule(
+                (await import("$lib/paints/wave.js?url")).default,
+            );
+        } else {
+            CSS.paintWorklet.addModule(
+                (await import("$lib/paints/arc-wave.js?worker&url")).default,
+            );
+            CSS.paintWorklet.addModule(
+                (await import("$lib/paints/arc.js?worker&url")).default,
+            );
+            CSS.paintWorklet.addModule(
+                (await import("$lib/paints/wave.js?worker&url")).default,
+            );
+        }
+    }
 </script>
 
 <script lang="ts">
     import type { WrapperProps } from "$lib/types/style.js";
 
-    import arcWavePaintWorklet from "$lib/paints/arc-wave.js?worker&url";
-    import arcPaintWorklet from "$lib/paints/arc.js?worker&url";
-    import wavePaintWorklet from "$lib/paints/wave.js?worker&url";
     import { Progress } from "bits-ui";
-    import { onMount } from "svelte";
-
-    onMount(async () => {
-        // eslint-disable-next-line svelte/@typescript-eslint/no-unnecessary-condition
-        if (!CSS.paintWorklet) await import("css-paint-polyfill");
-        CSS.paintWorklet.addModule(arcPaintWorklet);
-        CSS.paintWorklet.addModule(arcWavePaintWorklet);
-        CSS.paintWorklet.addModule(wavePaintWorklet);
-    });
 
     let {
         activeIndicatorClass,
