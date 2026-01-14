@@ -2,13 +2,11 @@ import type { ClassValue, VariantProps } from "tailwind-variants";
 
 export type ClassGroups =
     | "amplitude"
-    | "duration"
     | "icon-fill"
     | "icon-grade"
     | "icon-size"
     | "linecap"
     | "linejoin"
-    | "mask-shape"
     | "paint"
     | "phase"
     | "wavelength";

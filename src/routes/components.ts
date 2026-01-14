@@ -88,12 +88,12 @@ export const components = {
         //     description:
         //         "Badges show notifications, counts, or status information on navigation items and icons",
         // },
-        // carousel: {
-        //     icon: "view_carousel",
-        //     title: "Carousel",
-        //     description:
-        //         "Carousels show a collection of items that can be scrolled on and off the screen",
-        // },
+        carousel: {
+            icon: "view_carousel",
+            title: "Carousel",
+            description:
+                "Carousels show a collection of items that can be scrolled on and off the screen",
+        },
         // chip: {
         //     icon: "location_chip",
         //     title: "Chips",
