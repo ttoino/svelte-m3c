@@ -1,0 +1,23 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "svelte-m3c",
+    "main": ".svelte-kit/cloudflare/_worker.js",
+    "assets": {
+        "binding": "ASSETS",
+        "directory": ".svelte-kit/cloudflare",
+        "not_found_handling": "none",
+    },
+    "compatibility_date": "2026-05-24",
+    "compatibility_flags": ["nodejs_compat"],
+    "workers_dev": true,
+    "preview_urls": true,
+    "observability": {
+        "enabled": true,
+        "logs": {
+            "enabled": true,
+        },
+        "traces": {
+            "enabled": true,
+        },
+    },
+}
