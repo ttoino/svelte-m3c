@@ -1,18 +1,18 @@
 name: CD
 
 on:
-  release:
-    types: [published]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  id-token: write
+  push:
+    tags:
+      - "v*"
 
 jobs:
   publish:
-    name: Publish
+    name: Publish to npm
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
     steps:
       - uses: ./.github/actions/setup-project
 
@@ -25,7 +25,14 @@ jobs:
               echo "::error::tag ${GITHUB_REF_NAME} does not match svelte-m3c@${pkg}"
               exit 1
           fi
-      - name: Publish to npm
+
+      - name: Build package
+        run: pnpm run build
+
+      - name: Configure npm auth
+        run: pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish
         run: |
           pkg=$(node -p "require('./package.json').version")
           if pnpm view "svelte-m3c@${pkg}" version > /dev/null 2>&1; then
@@ -33,3 +40,5 @@ jobs:
               exit 0
           fi
           pnpm publish --access public --no-git-checks
+        env:
+          NPM_CONFIG_PROVENANCE: "true"

@@ -1,10 +1,10 @@
-import { sveltekit } from "@sveltejs/kit/vite";
+import { svelte } from "@sveltejs/vite-plugin-svelte";
 import tailwindcss from "@tailwindcss/vite";
 import { playwright } from "@vitest/browser-playwright";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-    plugins: [tailwindcss(), sveltekit()],
+    plugins: [tailwindcss(), svelte()],
     test: {
         projects: [
             {

@@ -7,4 +7,4 @@
 
 <Title class="text-display-l-emphasized" />
 
-<Button href={resolve("/components")}>Components</Button>
+<Button href={resolve("/(docs)/components")}>Components</Button>

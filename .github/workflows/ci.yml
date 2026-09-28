@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-project
       - run: pnpm run format
 
@@ -20,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-project
       - run: pnpm run lint
 
@@ -28,8 +30,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-project
-      - run: pnpm run gen:cf-types
       - run: pnpm run check
 
   test:
@@ -37,6 +39,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-project
 
       - run: pnpm exec playwright install --with-deps
@@ -48,5 +51,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-project
       - run: pnpm run build
