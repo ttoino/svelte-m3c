@@ -46,12 +46,14 @@
         menu,
         menuClass,
         size = "small",
+        type = "single",
         ...props
     }: WrapperProps<
         ComponentProps<typeof ConnectedButtonGroup>,
         typeof variants,
         {
             menu?: Snippet;
+            type?: "multiple" | "single";
         }
     > = $props();
 
@@ -61,6 +63,7 @@
 <ConnectedButtonGroup
     class={classes.container({ class: containerClass })}
     {size}
+    {type}
     {...props}
 >
     {@render children?.()}

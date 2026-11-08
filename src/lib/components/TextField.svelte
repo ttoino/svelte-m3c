@@ -71,7 +71,7 @@
 
 <script lang="ts">
     import type { Snippet } from "svelte";
-    import type { HTMLAttributes } from "svelte/elements";
+    import type { HTMLInputAttributes } from "svelte/elements";
 
     import { type WrapperProps } from "$lib/types/style.js";
 
@@ -87,16 +87,18 @@
         placeholder = "",
         ref = $bindable(null),
         stateLayerClass,
+        trailing,
         value = $bindable(""),
         variant,
         visualLabelClass,
         ...props
     }: WrapperProps<
-        HTMLAttributes<HTMLInputElement>,
+        HTMLInputAttributes,
         typeof variants,
         {
             label?: Snippet;
             ref?: HTMLLabelElement | null;
+            trailing?: Snippet;
             value?: string;
         }
     > = $props();
@@ -111,6 +113,7 @@
         bind:value
         {...props}
     />
+    {@render trailing?.()}
     <div class={classes.dummyWrapper({ class: dummyWrapperClass })}>
         <span class={classes.dummyLabel({ class: dummyLabelClass })}>
             {@render label?.()}

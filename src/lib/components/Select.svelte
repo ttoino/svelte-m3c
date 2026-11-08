@@ -31,6 +31,7 @@
         input,
         inputClass,
         label,
+        leading,
         onValueChange,
         stateLayerClass,
         value = $bindable(),
@@ -43,6 +44,7 @@
         {
             input?: Snippet<[string | string[] | undefined]>;
             label?: Snippet;
+            leading?: Snippet;
         }
     > = $props();
 
@@ -55,6 +57,7 @@
     {...props}
 >
     <Select.Trigger class={classes.container({ class: containerClass })}>
+        {@render leading?.()}
         <span class={classes.input({ class: inputClass })}>
             {@render input?.(value)}
         </span>
