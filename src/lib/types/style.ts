@@ -14,8 +14,7 @@ export type ClassGroups =
     | "wavelength";
 
 export type MergeVariants<Parent, Child> = Parent extends
-    | readonly unknown[]
-    | unknown[]
+    readonly unknown[] | unknown[]
     ? Child extends readonly unknown[] | unknown[]
         ? [...Parent, ...Child]
         : Child extends boolean | number | string

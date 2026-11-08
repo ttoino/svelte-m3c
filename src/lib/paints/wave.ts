@@ -58,12 +58,10 @@ registerPaint(
                 (properties.get("stroke") as string | undefined) ?? "black";
             ctx.lineCap =
                 (properties.get("stroke-linecap") as
-                    | CanvasLineCap
-                    | undefined) ?? "butt";
+                    CanvasLineCap | undefined) ?? "butt";
             ctx.lineJoin =
                 (properties.get("stroke-linejoin") as
-                    | CanvasLineJoin
-                    | undefined) ?? "miter";
+                    CanvasLineJoin | undefined) ?? "miter";
             ctx.lineWidth =
                 to(properties.get("stroke-width"), "px")?.value ?? 1;
 

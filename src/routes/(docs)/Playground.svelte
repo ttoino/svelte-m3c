@@ -4,15 +4,15 @@
 
     import { mergeVariants, tv } from "$lib/style.js";
 
-    type Controls<T extends Record<string, unknown>> = {
-        [K in keyof T]: Control<T[K]>;
-    };
-
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     type Control<T, Options = any> = {
         label: string;
         options: Options;
         snippet: Snippet<[string, () => T, (value: T) => void, Options]>;
+    };
+
+    type Controls<T extends Record<string, unknown>> = {
+        [K in keyof T]: Control<T[K]>;
     };
 
     export const buttonGroupControl = <T extends string>(

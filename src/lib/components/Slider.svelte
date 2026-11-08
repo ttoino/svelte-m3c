@@ -224,8 +224,8 @@
 
     export const variants = tv(variantsConfig);
 
-    export type SliderSize = keyof (typeof variants)["variants"]["size"];
     export type SliderOrientation = Orientation;
+    export type SliderSize = keyof (typeof variants)["variants"]["size"];
 
     const leftPattern = /left\s*:\s*([0-9.]+%)/;
     const rightPattern = /right\s*:\s*([0-9.]+%)/;
