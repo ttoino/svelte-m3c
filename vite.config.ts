@@ -1,17 +1,22 @@
-import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { sveltekit } from "@sveltejs/kit/vite";
 import tailwindcss from "@tailwindcss/vite";
 import { playwright } from "@vitest/browser-playwright";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-    plugins: [tailwindcss(), svelte()],
+    plugins: [tailwindcss(), sveltekit()],
     test: {
         projects: [
             {
                 extends: "./vite.config.ts",
                 resolve: { conditions: ["browser"] },
                 test: {
-                    exclude: ["**/*.svelte.test.ts"],
+                    exclude: [
+                        "**/*.svelte.test.ts",
+                        "**/node_modules/**",
+                        ".opencode/**",
+                        ".direnv/**",
+                    ],
                     include: ["**/*.test.ts"],
                     name: "unit",
                     sequence: {
@@ -25,6 +30,7 @@ export default defineConfig({
                 test: {
                     browser: {
                         enabled: true,
+                        headless: true,
                         instances: [
                             { browser: "chromium" },
                             { browser: "firefox" },
@@ -37,6 +43,11 @@ export default defineConfig({
                         },
                     },
                     css: true,
+                    exclude: [
+                        "**/node_modules/**",
+                        ".opencode/**",
+                        ".direnv/**",
+                    ],
                     include: ["**/*.svelte.test.ts"],
                     name: "browser",
                 },
