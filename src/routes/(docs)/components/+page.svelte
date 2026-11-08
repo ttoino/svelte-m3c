@@ -31,7 +31,7 @@
                     <h3 class="text-title-l">
                         <a
                             class="after:absolute after:inset-0 hover:underline"
-                            href={resolve(`/components/${id}`)}
+                            href={resolve(`/(docs)/components/${id}`)}
                         >
                             {title}
                         </a>
