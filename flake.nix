@@ -2,7 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     playwright = {
-      url = "github:pietdevries94/playwright-web-flake/1.56.1";
+      url = "github:pietdevries94/playwright-web-flake/1.63.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
