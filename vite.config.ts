@@ -30,6 +30,17 @@ export default defineConfig({
                 test: {
                     browser: {
                         enabled: true,
+                        expect: {
+                            toMatchScreenshot: {
+                                comparatorName: "pixelmatch",
+                                comparatorOptions: {
+                                    allowedMismatchedPixelRatio: 0.05,
+                                },
+                                screenshotOptions: {
+                                    animations: "disabled",
+                                },
+                            },
+                        },
                         headless: true,
                         instances: [
                             { browser: "chromium" },

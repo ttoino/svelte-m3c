@@ -3,3 +3,10 @@
 @import "../src/lib/style/index.css";
 
 @source "../src/lib";
+
+*,
+*::before,
+*::after {
+    animation: none !important;
+    transition: none !important;
+}
