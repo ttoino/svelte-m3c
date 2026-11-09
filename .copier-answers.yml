@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier
-_commit: 459145c
+_commit: 7abbe6d
 _src_path: gh:ttoino/templates
 browser_tests: true
 description: Svelte 5 component library implementing Material Design 3

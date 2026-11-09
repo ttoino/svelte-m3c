@@ -4,8 +4,8 @@
 
 Svelte 5 component library implementing Material Design 3. Uses Tailwind CSS v4, TypeScript, bits-ui primitives, and tailwind-variants for styling.
 
-**Type**: Svelte library + Tailwind CSS v4
-**Package Manager**: pnpm 11.2.2
+**Type**: Svelte library + Tailwind CSS
+**Package Manager**: pnpm
 
 ## Development Environment
 
@@ -43,7 +43,7 @@ GitHub Actions runs independent jobs on PRs/pushes to `main`/`develop`:
 4. `test` — Vitest (including browser tests)
 5. `build` — Package the library
 
-All jobs use `pnpm install --frozen-lockfile`.
+All jobs use the `./.github/actions/setup-project` composite action.
 
 ## Architecture Notes
 
@@ -110,4 +110,4 @@ This project uses **Renovate** for dependency updates. Renovate opens a single m
 
 ## Deployment
 
-Published as an npm package. The GitHub Actions `cd.yml` workflow handles publishing on version tags.
+Published as an npm package. The GitHub Actions `cd.yml` workflow publishes on version tags.
