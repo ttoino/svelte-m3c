@@ -1,0 +1,821 @@
+{
+  "componentId": "0045edb815f2325e",
+  "componentName": "Sliders",
+  "dsdbVersion": "38.2.9",
+  "tokens": {
+    "md.comp.slider.active.handle.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.primary": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.ref.palette.primary95": {
+      "type": "COLOR",
+      "value": "rgba(246, 237, 255, 1)"
+    },
+    "md.ref.palette.primary20": {
+      "type": "COLOR",
+      "value": "rgba(56, 30, 114, 1)"
+    },
+    "md.ref.palette.primary90": {
+      "type": "COLOR",
+      "value": "rgba(234, 221, 255, 1)"
+    },
+    "md.ref.palette.primary30": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.ref.palette.primary80": {
+      "type": "COLOR",
+      "value": "rgba(208, 188, 255, 1)"
+    },
+    "md.ref.palette.primary40": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.comp.slider.xlarge.icon.padding": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.slider.xlarge.icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 32
+    },
+    "md.comp.slider.large.icon.padding": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 6
+    },
+    "md.comp.slider.large.icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.slider.medium.icon.padding": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 6
+    },
+    "md.comp.slider.medium.icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.slider.xlarge.active.handle.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 108
+    },
+    "md.comp.slider.xlarge.inactive.track.shape.trailing": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 28
+    },
+    "md.comp.slider.xlarge.inactive.track.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 96
+    },
+    "md.comp.slider.xlarge.active.track.shape.leading": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 28
+    },
+    "md.comp.slider.xlarge.active.track.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 96
+    },
+    "md.comp.slider.large.active.handle.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 68
+    },
+    "md.comp.slider.large.inactive.track.shape.trailing": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.slider.large.inactive.track.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 56
+    },
+    "md.comp.slider.large.active.track.shape.leading": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.slider.large.active.track.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 56
+    },
+    "md.comp.slider.medium.active.handle.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 44
+    },
+    "md.comp.slider.medium.inactive.track.shape.trailing": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 12
+    },
+    "md.comp.slider.medium.inactive.track.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.slider.medium.active.track.shape.leading": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 12
+    },
+    "md.comp.slider.medium.active.track.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.slider.small.inactive.track.shape.trailing": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.slider.small.inactive.track.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.slider.small.active.handle.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 44
+    },
+    "md.comp.slider.small.active.track.shape.leading": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.slider.small.active.track.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.slider.xsmall.inactive.track.shape.trailing": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.slider.xsmall.active.handle.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 44
+    },
+    "md.comp.slider.xsmall.inactive.track.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.slider.xsmall.active.track.shape.leading": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.slider.xsmall.active.track.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.slider.active.track.outer-corner.corner-size": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.sys.shape.corner.full": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.slider.active.track.inner-corner.corner-size": {
+      "type": "SHAPE",
+      "value": "rounded"
+    },
+    "md.comp.slider.disabled.stop-indicator.container.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.slider.disabled.stop-indicator.container.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.ref.palette.neutral100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral90": {
+      "type": "COLOR",
+      "value": "rgba(230, 224, 233, 1)"
+    },
+    "md.ref.palette.neutral10": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.comp.slider.disabled.stop-indicator.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.slider.disabled.stop-indicator.color-selected": {
+      "ref": "md.sys.color.inverse-on-surface",
+      "type": "COLOR"
+    },
+    "md.sys.color.inverse-on-surface": {
+      "type": "COLOR",
+      "value": "rgba(242, 242, 242, 1)"
+    },
+    "md.ref.palette.neutral20": {
+      "type": "COLOR",
+      "value": "rgba(48, 48, 48, 1)"
+    },
+    "md.ref.palette.neutral95": {
+      "type": "COLOR",
+      "value": "rgba(242, 242, 242, 1)"
+    },
+    "md.comp.slider.disabled.inactive.stop-indicator.container.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.slider.disabled.active.stop-indicator.container.color": {
+      "ref": "md.sys.color.inverse-on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.slider.inactive.stop-indicator.container.opacity": {
+      "type": "OPACITY",
+      "value": 1
+    },
+    "md.comp.slider.inactive.stop-indicator.container.color": {
+      "ref": "md.sys.color.on-secondary-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-secondary-container": {
+      "type": "COLOR",
+      "value": "rgba(0, 74, 119, 1)"
+    },
+    "md.ref.palette.secondary0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.secondary100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.secondary90": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    },
+    "md.ref.palette.secondary30": {
+      "type": "COLOR",
+      "value": "rgba(0, 74, 119, 1)"
+    },
+    "md.comp.slider.active.stop-indicator.container.opacity": {
+      "type": "OPACITY",
+      "value": 1
+    },
+    "md.comp.slider.active.stop-indicator.container.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-primary": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.primary0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.primary10": {
+      "type": "COLOR",
+      "value": "rgba(4, 30, 73, 1)"
+    },
+    "md.ref.palette.primary100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.comp.slider.stop-indicator.color-selected": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.with-tick-marks.inactive.container.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.slider.with-tick-marks.inactive.container.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface-variant": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.ref.palette.neutral-variant100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral-variant90": {
+      "type": "COLOR",
+      "value": "rgba(225, 227, 225, 1)"
+    },
+    "md.ref.palette.neutral-variant0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral-variant20": {
+      "type": "COLOR",
+      "value": "rgba(45, 49, 47, 1)"
+    },
+    "md.ref.palette.neutral-variant80": {
+      "type": "COLOR",
+      "value": "rgba(196, 199, 197, 1)"
+    },
+    "md.ref.palette.neutral-variant30": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.comp.slider.with-tick-marks.active.container.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.slider.with-tick-marks.active.container.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.label.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 28
+    },
+    "md.comp.slider.label.container.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.active.container.opacity": {
+      "type": "OPACITY",
+      "value": 1
+    },
+    "md.comp.slider.inactive.container.opacity": {
+      "type": "OPACITY",
+      "value": 1
+    },
+    "md.comp.slider.label.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level0"
+    },
+    "md.sys.elevation.level0": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level0"
+    },
+    "md.comp.slider.with-tick-marks.disabled.container.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.slider.with-tick-marks.disabled.container.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.slider.focus.stop.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.label.label-text.color": {
+      "ref": "md.sys.color.inverse-on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.slider.value-indicator.label.label-text.color": {
+      "ref": "md.sys.color.inverse-on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.slider.value-indicator.container.color": {
+      "ref": "md.sys.color.inverse-surface",
+      "type": "COLOR"
+    },
+    "md.sys.color.inverse-surface": {
+      "type": "COLOR",
+      "value": "rgba(48, 48, 48, 1)"
+    },
+    "md.comp.slider.pressed.stop.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.pressed.inactive.track.color": {
+      "ref": "md.sys.color.secondary-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.secondary-container": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    },
+    "md.ref.palette.secondary80": {
+      "type": "COLOR",
+      "value": "rgba(127, 207, 255, 1)"
+    },
+    "md.ref.palette.secondary60": {
+      "type": "COLOR",
+      "value": "rgba(57, 152, 211, 1)"
+    },
+    "md.ref.palette.secondary40": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.comp.slider.pressed.active.track.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.focus.inactive.track.color": {
+      "ref": "md.sys.color.secondary-container",
+      "type": "COLOR"
+    },
+    "md.comp.slider.focus.active.track.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.hover.stop.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.active.handle.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.slider.stop-indicator.color": {
+      "ref": "md.sys.color.on-secondary-container",
+      "type": "COLOR"
+    },
+    "md.comp.slider.stop-indicator.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.slider.hover.handle.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.disabled.handle.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.slider.disabled.inactive.track.opacity": {
+      "type": "OPACITY",
+      "value": 0.12
+    },
+    "md.comp.slider.disabled.active.track.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.slider.value-indicator.label.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.sys.typescale.label-large.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.slider.value-indicator.label.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.sys.typescale.label-large.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.slider.value-indicator.label.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.sys.typescale.body-large.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.slider.value-indicator.active.bottom-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 12
+    },
+    "md.sys.measurement.space150": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 12
+    },
+    "md.comp.slider.value-indicator.label.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.body-large.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.ref.typeface.weight-regular": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.slider.label.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 12,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 16
+    },
+    "md.comp.slider.label.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.label-medium.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.ref.typeface.plain": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.slider.label.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.sys.typescale.label-medium.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.ref.typeface.weight-medium": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.slider.label.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.sys.typescale.label-medium.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.slider.label.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.sys.typescale.label-medium.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.slider.label.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-medium.tracking"
+    },
+    "md.sys.typescale.label-medium.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-medium.tracking"
+    },
+    "md.comp.slider.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.sys.state.pressed.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.slider.pressed.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.sys.state.focus.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.slider.focus.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.focus.handle.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.sys.state.hover.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.slider.hover.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.disabled.handle.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level0"
+    },
+    "md.comp.slider.with-tick-marks.container.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.slider.with-tick-marks.container.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.slider.with-overlap.handle.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.slider.with-overlap.handle.outline.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.handle.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level1"
+    },
+    "md.sys.elevation.level1": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level1"
+    },
+    "md.comp.slider.handle.shadow-color": {
+      "ref": "md.sys.color.shadow",
+      "type": "COLOR"
+    },
+    "md.sys.color.shadow": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.comp.slider.state-layer.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.slider.track.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level0"
+    },
+    "md.comp.slider.stop-indicator.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.slider.disabled.handle.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.slider.focus.handle.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.slider.value-indicator.label.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.label-large.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.ref.typeface.brand": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.slider.pressed.handle.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.slider.hover.handle.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.slider.stop-indicator.trailing-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.sys.measurement.space50": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.slider.label.label-text.font-size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.slider.inactive.track.color": {
+      "ref": "md.sys.color.secondary-container",
+      "type": "COLOR"
+    },
+    "md.comp.slider.inactive.track.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.slider.active.track.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.active.handle.padding": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 6
+    },
+    "md.sys.measurement.space75": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 6
+    },
+    "md.comp.slider.active.handle.trailing-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 6
+    },
+    "md.comp.slider.active.handle.leading-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 6
+    },
+    "md.comp.slider.active.handle.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.slider.active.handle.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 44
+    },
+    "md.comp.slider.active.track.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.slider.handle.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.handle.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.slider.handle.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.slider.handle.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 44
+    },
+    "md.comp.slider.inactive.track.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.slider.active.track.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.slider.disabled.inactive.track.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.slider.disabled.active.track.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.slider.pressed.handle.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.slider.disabled.handle.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    }
+  }
+}

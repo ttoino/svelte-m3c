@@ -1,0 +1,660 @@
+{
+  "componentId": "07341534518f78d0",
+  "componentName": "Search",
+  "dsdbVersion": "38.2.9",
+  "tokens": {
+    "md.comp.search-view.contained.background.color": {
+      "ref": "md.sys.color.surface-container-low",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-container-low": {
+      "type": "COLOR",
+      "value": "rgba(247, 242, 250, 1)"
+    },
+    "md.ref.palette.neutral10": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.ref.palette.neutral96": {
+      "type": "COLOR",
+      "value": "rgba(247, 242, 250, 1)"
+    },
+    "md.comp.search-view.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.sys.elevation.level3": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.comp.search-view.header.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.ref.palette.neutral100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral90": {
+      "type": "COLOR",
+      "value": "rgba(230, 224, 233, 1)"
+    },
+    "md.comp.search-view.header.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface-variant": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.ref.palette.neutral-variant100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral-variant90": {
+      "type": "COLOR",
+      "value": "rgba(225, 227, 225, 1)"
+    },
+    "md.ref.palette.neutral-variant0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral-variant20": {
+      "type": "COLOR",
+      "value": "rgba(45, 49, 47, 1)"
+    },
+    "md.ref.palette.neutral-variant80": {
+      "type": "COLOR",
+      "value": "rgba(196, 199, 197, 1)"
+    },
+    "md.ref.palette.neutral-variant30": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.comp.search-view.header.leading-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.search-view.contained.docked.results.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 12
+    },
+    "md.sys.shape.corner.medium": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 12
+    },
+    "md.comp.search-bar.supporting-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.search-bar.supporting-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.body-large.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.ref.typeface.plain": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.search-bar.supporting-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.body-large.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.ref.typeface.weight-regular": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.search-bar.supporting-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.sys.typescale.body-large.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.search-bar.supporting-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.sys.typescale.body-large.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.search-bar.supporting-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.sys.typescale.body-large.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.search-view.contained.icon-label.gap": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.sys.measurement.space50": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.search-view.contained.full-screen.bar.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 56
+    },
+    "md.comp.search-view.contained.docked.bar.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.sys.shape.corner.full": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.search-view.contained.docked.bar-results.gap": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.sys.measurement.space25": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.search-view.contained.trailing-margin": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 12
+    },
+    "md.sys.measurement.space150": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 12
+    },
+    "md.comp.search-view.contained.leading-margin": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 12
+    },
+    "md.comp.search-view.header.input-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.search-view.header.input-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.search-view.header.input-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.search-view.header.input-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.search-view.header.input-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.search-view.header.input-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.search-view.header.supporting-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.search-view.header.supporting-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.search-view.header.supporting-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.search-view.header.supporting-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.search-view.header.supporting-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.search-view.header.supporting-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.search-view.full-screen.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.sys.shape.corner.none": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.comp.search-view.trailing-icon.label-trailing-icon-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.sys.measurement.space200": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.search-view.leading-icon.leading-icon-label-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.search-view.trailing-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.search-view.leading-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.search-view.docked.header.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 56
+    },
+    "md.comp.search-view.full-screen.header.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 72
+    },
+    "md.comp.search-view.docked.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 28
+    },
+    "md.sys.shape.corner.extra-large": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 28
+    },
+    "md.comp.search-view.divider.color": {
+      "ref": "md.sys.color.outline",
+      "type": "COLOR"
+    },
+    "md.sys.color.outline": {
+      "type": "COLOR",
+      "value": "rgba(116, 119, 117, 1)"
+    },
+    "md.ref.palette.neutral-variant95": {
+      "type": "COLOR",
+      "value": "rgba(239, 242, 239, 1)"
+    },
+    "md.ref.palette.neutral-variant70": {
+      "type": "COLOR",
+      "value": "rgba(169, 172, 170, 1)"
+    },
+    "md.ref.palette.neutral-variant60": {
+      "type": "COLOR",
+      "value": "rgba(142, 145, 143, 1)"
+    },
+    "md.ref.palette.neutral-variant50": {
+      "type": "COLOR",
+      "value": "rgba(116, 119, 117, 1)"
+    },
+    "md.comp.search-view.header.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.search-view.container.color": {
+      "ref": "md.sys.color.surface-container-high",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-container-high": {
+      "type": "COLOR",
+      "value": "rgba(236, 230, 240, 1)"
+    },
+    "md.ref.palette.neutral17": {
+      "type": "COLOR",
+      "value": "rgba(43, 41, 48, 1)"
+    },
+    "md.ref.palette.neutral92": {
+      "type": "COLOR",
+      "value": "rgba(236, 230, 240, 1)"
+    },
+    "md.comp.search-view.container.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-tint": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.primary": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.ref.palette.primary95": {
+      "type": "COLOR",
+      "value": "rgba(246, 237, 255, 1)"
+    },
+    "md.ref.palette.primary90": {
+      "type": "COLOR",
+      "value": "rgba(234, 221, 255, 1)"
+    },
+    "md.ref.palette.primary80": {
+      "type": "COLOR",
+      "value": "rgba(208, 188, 255, 1)"
+    },
+    "md.ref.palette.primary20": {
+      "type": "COLOR",
+      "value": "rgba(56, 30, 114, 1)"
+    },
+    "md.ref.palette.primary30": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.ref.palette.primary40": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.comp.search-bar.contained.motion.spring": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.motion.spring.fast.spatial"
+    },
+    "md.sys.motion.spring.fast.spatial": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.motion.spring.fast.spatial"
+    },
+    "md.sys.motion.spring.fast.spatial.damping": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.motion.spring.fast.spatial.damping"
+    },
+    "md.sys.motion.spring.fast.spatial.stiffness": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.motion.spring.fast.spatial.stiffness"
+    },
+    "md.comp.search-bar.contained.trailing-actions.trailing-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.search-bar.contained.trailing-actions.leading-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.search-bar.contained.trailing-actions.gap": {
+      "type": "LENGTH",
+      "unit": "DIPS"
+    },
+    "md.sys.measurement.space0": {
+      "type": "LENGTH",
+      "unit": "DIPS"
+    },
+    "md.comp.search-bar.contained.avatar.target-size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    },
+    "md.comp.search-bar.contained.no-actions.trailing-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.search-bar.contained.icon-label.gap": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.search-bar.contained.no-actions.leading-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.search-bar.contained.trailing-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.search-bar.contained.leading-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.search-bar.contained.trailing-margin": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.sys.measurement.space300": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.search-bar.contained.leading-margin": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.search-bar.trailing-icon.label-trailing-icon-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.search-bar.leading-icon.leading-icon-label-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.search-bar.trailing-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.search-bar.leading-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.search-bar.input-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.search-bar.input-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.search-bar.input-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.search-bar.input-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.search-bar.input-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.search-bar.input-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.search-bar.icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.search-bar.container.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.comp.search-bar.avatar.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 30
+    },
+    "md.comp.search-bar.avatar.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.search-bar.container.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.search-bar.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 56
+    },
+    "md.comp.search-bar.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.search-bar.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.search-bar.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.comp.search-bar.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.search-bar.leading-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.search-bar.container.color": {
+      "ref": "md.sys.color.surface-container-high",
+      "type": "COLOR"
+    },
+    "md.comp.search-bar.focus.indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.sys.state.focus-indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.comp.search-bar.focus.indicator.outline.offset": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.sys.state.focus-indicator.outer-offset": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.search-bar.focus.indicator.color": {
+      "ref": "md.sys.color.secondary",
+      "type": "COLOR"
+    },
+    "md.sys.color.secondary": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.ref.palette.secondary95": {
+      "type": "COLOR",
+      "value": "rgba(223, 243, 255, 1)"
+    },
+    "md.ref.palette.secondary90": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    },
+    "md.ref.palette.secondary20": {
+      "type": "COLOR",
+      "value": "rgba(0, 51, 85, 1)"
+    },
+    "md.ref.palette.secondary30": {
+      "type": "COLOR",
+      "value": "rgba(0, 74, 119, 1)"
+    },
+    "md.ref.palette.secondary80": {
+      "type": "COLOR",
+      "value": "rgba(127, 207, 255, 1)"
+    },
+    "md.ref.palette.secondary40": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.comp.search-bar.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.sys.state.pressed.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.search-bar.pressed.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.search-bar.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.search-bar.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.sys.state.hover.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.search-bar.hover.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.search-bar.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    }
+  }
+}

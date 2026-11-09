@@ -1,0 +1,118 @@
+{
+  "componentId": "68895be451a51c31",
+  "componentName": "Loading indicator",
+  "dsdbVersion": "38.2.9",
+  "tokens": {
+    "md.comp.loading-indicator.active-indicator.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.primary": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.ref.palette.primary95": {
+      "type": "COLOR",
+      "value": "rgba(246, 237, 255, 1)"
+    },
+    "md.ref.palette.primary20": {
+      "type": "COLOR",
+      "value": "rgba(56, 30, 114, 1)"
+    },
+    "md.ref.palette.primary90": {
+      "type": "COLOR",
+      "value": "rgba(234, 221, 255, 1)"
+    },
+    "md.ref.palette.primary30": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.ref.palette.primary80": {
+      "type": "COLOR",
+      "value": "rgba(208, 188, 255, 1)"
+    },
+    "md.ref.palette.primary40": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.comp.loading-indicator.active-indicator.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 38
+    },
+    "md.comp.loading-indicator.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    },
+    "md.comp.loading-indicator.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    },
+    "md.comp.loading-indicator.container.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.sys.shape.corner.full": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.loading-indicator.contained.container.color": {
+      "ref": "md.sys.color.primary-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.primary-container": {
+      "type": "COLOR",
+      "value": "rgba(234, 221, 255, 1)"
+    },
+    "md.ref.palette.primary60": {
+      "type": "COLOR",
+      "value": "rgba(154, 130, 219, 1)"
+    },
+    "md.comp.loading-indicator.contained.active-indicator.color": {
+      "ref": "md.sys.color.on-primary-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-primary-container": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.ref.palette.primary0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.primary100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.comp.loading-indicator.container.color": {
+      "ref": "md.sys.color.secondary-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.secondary-container": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    },
+    "md.ref.palette.secondary80": {
+      "type": "COLOR",
+      "value": "rgba(127, 207, 255, 1)"
+    },
+    "md.ref.palette.secondary60": {
+      "type": "COLOR",
+      "value": "rgba(57, 152, 211, 1)"
+    },
+    "md.ref.palette.secondary30": {
+      "type": "COLOR",
+      "value": "rgba(0, 74, 119, 1)"
+    },
+    "md.ref.palette.secondary40": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.ref.palette.secondary90": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    }
+  }
+}

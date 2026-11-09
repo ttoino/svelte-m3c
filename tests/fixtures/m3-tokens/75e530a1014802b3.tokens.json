@@ -1,0 +1,189 @@
+{
+  "componentId": "75e530a1014802b3",
+  "componentName": "Bottom sheets",
+  "dsdbVersion": "38.2.9",
+  "tokens": {
+    "md.comp.sheet.bottom.focus.indicator.outline.offset": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.sys.state.focus-indicator.outer-offset": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.sheet.bottom.focus.indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.sys.state.focus-indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.comp.sheet.bottom.focus.indicator.color": {
+      "ref": "md.sys.color.secondary",
+      "type": "COLOR"
+    },
+    "md.sys.color.secondary": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.ref.palette.secondary95": {
+      "type": "COLOR",
+      "value": "rgba(223, 243, 255, 1)"
+    },
+    "md.ref.palette.secondary90": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    },
+    "md.ref.palette.secondary20": {
+      "type": "COLOR",
+      "value": "rgba(0, 51, 85, 1)"
+    },
+    "md.ref.palette.secondary30": {
+      "type": "COLOR",
+      "value": "rgba(0, 74, 119, 1)"
+    },
+    "md.ref.palette.secondary80": {
+      "type": "COLOR",
+      "value": "rgba(127, 207, 255, 1)"
+    },
+    "md.ref.palette.secondary40": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.comp.sheet.bottom.docked.drag-handle.opacity": {
+      "type": "OPACITY",
+      "value": 0.4
+    },
+    "md.comp.sheet.bottom.docked.container.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-tint": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.primary": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.ref.palette.primary95": {
+      "type": "COLOR",
+      "value": "rgba(246, 237, 255, 1)"
+    },
+    "md.ref.palette.primary90": {
+      "type": "COLOR",
+      "value": "rgba(234, 221, 255, 1)"
+    },
+    "md.ref.palette.primary80": {
+      "type": "COLOR",
+      "value": "rgba(208, 188, 255, 1)"
+    },
+    "md.ref.palette.primary20": {
+      "type": "COLOR",
+      "value": "rgba(56, 30, 114, 1)"
+    },
+    "md.ref.palette.primary30": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.ref.palette.primary40": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.comp.sheet.bottom.docked.drag-handle.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.sheet.bottom.docked.drag-handle.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 32
+    },
+    "md.comp.sheet.bottom.docked.drag-handle.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface-variant": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.ref.palette.neutral-variant100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral-variant90": {
+      "type": "COLOR",
+      "value": "rgba(225, 227, 225, 1)"
+    },
+    "md.ref.palette.neutral-variant0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral-variant20": {
+      "type": "COLOR",
+      "value": "rgba(45, 49, 47, 1)"
+    },
+    "md.ref.palette.neutral-variant80": {
+      "type": "COLOR",
+      "value": "rgba(196, 199, 197, 1)"
+    },
+    "md.ref.palette.neutral-variant30": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.comp.sheet.bottom.docked.minimized.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.sys.shape.corner.none": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.comp.sheet.bottom.docked.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.sys.shape.corner.extra-large.top": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.comp.sheet.bottom.docked.standard.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level1"
+    },
+    "md.sys.elevation.level1": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level1"
+    },
+    "md.comp.sheet.bottom.docked.modal.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level1"
+    },
+    "md.comp.sheet.bottom.docked.container.color": {
+      "ref": "md.sys.color.surface-container-low",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-container-low": {
+      "type": "COLOR",
+      "value": "rgba(247, 242, 250, 1)"
+    },
+    "md.ref.palette.neutral10": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.ref.palette.neutral96": {
+      "type": "COLOR",
+      "value": "rgba(247, 242, 250, 1)"
+    }
+  }
+}

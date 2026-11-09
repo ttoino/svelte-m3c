@@ -1,0 +1,764 @@
+{
+  "componentId": "0b1e39a67d5bafdc",
+  "componentName": "Dialogs",
+  "dsdbVersion": "38.2.9",
+  "tokens": {
+    "md.comp.dialog.action.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.sys.state.focus.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.full-screen-dialog.header.on-scroll.container.color": {
+      "ref": "md.sys.color.surface-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-container": {
+      "type": "COLOR",
+      "value": "rgba(243, 237, 247, 1)"
+    },
+    "md.ref.palette.neutral12": {
+      "type": "COLOR",
+      "value": "rgba(33, 31, 38, 1)"
+    },
+    "md.ref.palette.neutral94": {
+      "type": "COLOR",
+      "value": "rgba(243, 237, 247, 1)"
+    },
+    "md.comp.full-screen-dialog.header.container.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-tint": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.primary": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.ref.palette.primary95": {
+      "type": "COLOR",
+      "value": "rgba(246, 237, 255, 1)"
+    },
+    "md.ref.palette.primary90": {
+      "type": "COLOR",
+      "value": "rgba(234, 221, 255, 1)"
+    },
+    "md.ref.palette.primary80": {
+      "type": "COLOR",
+      "value": "rgba(208, 188, 255, 1)"
+    },
+    "md.ref.palette.primary20": {
+      "type": "COLOR",
+      "value": "rgba(56, 30, 114, 1)"
+    },
+    "md.ref.palette.primary30": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.ref.palette.primary40": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.comp.dialog.container.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.comp.dialog.with-divider.divider.color": {
+      "ref": "md.sys.color.outline",
+      "type": "COLOR"
+    },
+    "md.sys.color.outline": {
+      "type": "COLOR",
+      "value": "rgba(116, 119, 117, 1)"
+    },
+    "md.ref.palette.neutral-variant95": {
+      "type": "COLOR",
+      "value": "rgba(239, 242, 239, 1)"
+    },
+    "md.ref.palette.neutral-variant70": {
+      "type": "COLOR",
+      "value": "rgba(169, 172, 170, 1)"
+    },
+    "md.ref.palette.neutral-variant20": {
+      "type": "COLOR",
+      "value": "rgba(45, 49, 47, 1)"
+    },
+    "md.ref.palette.neutral-variant30": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.ref.palette.neutral-variant60": {
+      "type": "COLOR",
+      "value": "rgba(142, 145, 143, 1)"
+    },
+    "md.ref.palette.neutral-variant50": {
+      "type": "COLOR",
+      "value": "rgba(116, 119, 117, 1)"
+    },
+    "md.comp.full-screen-dialog.with-divider.divider.color": {
+      "ref": "md.sys.color.surface-variant",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-variant": {
+      "type": "COLOR",
+      "value": "rgba(225, 227, 225, 1)"
+    },
+    "md.ref.palette.neutral-variant90": {
+      "type": "COLOR",
+      "value": "rgba(225, 227, 225, 1)"
+    },
+    "md.comp.full-screen-dialog.with-divider.divider.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.dialog.with-divider.divider.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.dialog.subhead.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.ref.palette.neutral100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral90": {
+      "type": "COLOR",
+      "value": "rgba(230, 224, 233, 1)"
+    },
+    "md.ref.palette.neutral10": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.comp.dialog.subhead.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 24,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 32
+    },
+    "md.comp.dialog.subhead.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.sys.typescale.headline-small.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.ref.typeface.brand": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.dialog.subhead.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.headline-small.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.ref.typeface.weight-regular": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.dialog.subhead.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.sys.typescale.headline-small.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.dialog.subhead.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 32
+    },
+    "md.sys.typescale.headline-small.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 32
+    },
+    "md.comp.dialog.subhead.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.headline-small.tracking"
+    },
+    "md.sys.typescale.headline-small.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.headline-small.tracking"
+    },
+    "md.ref.typeface.weight-medium": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.dialog.headline.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.dialog.headline.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 24,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 32
+    },
+    "md.comp.dialog.headline.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.dialog.headline.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.dialog.headline.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.dialog.headline.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 32
+    },
+    "md.comp.dialog.headline.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.headline-small.tracking"
+    },
+    "md.comp.full-screen-dialog.action-bar.pressed.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.action-bar.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.sys.state.pressed.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.full-screen-dialog.action-bar.pressed.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.action-bar.focus.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.action-bar.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.full-screen-dialog.action-bar.focus.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.action-bar.hover.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.action-bar.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.sys.state.hover.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.full-screen-dialog.action-bar.hover.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.action-bar.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.action-bar.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 20
+    },
+    "md.comp.full-screen-dialog.action-bar.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.label-large.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.full-screen-dialog.action-bar.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.sys.typescale.label-large.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.full-screen-dialog.action-bar.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.sys.typescale.label-large.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.full-screen-dialog.action-bar.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.sys.typescale.label-large.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.full-screen-dialog.action-bar.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.sys.typescale.label-large.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.ref.typeface.weight-bold": {
+      "type": "FONT_WEIGHT",
+      "value": 700
+    },
+    "md.ref.typeface.plain": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.full-screen-dialog.action-bar.on-scroll.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level2"
+    },
+    "md.sys.elevation.level2": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level2"
+    },
+    "md.comp.full-screen-dialog.action-bar.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level0"
+    },
+    "md.sys.elevation.level0": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level0"
+    },
+    "md.comp.full-screen-dialog.action-bar.container.color": {
+      "ref": "md.sys.color.surface",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface": {
+      "type": "COLOR",
+      "value": "rgba(254, 247, 255, 1)"
+    },
+    "md.ref.palette.neutral6": {
+      "type": "COLOR",
+      "value": "rgba(20, 18, 24, 1)"
+    },
+    "md.ref.palette.neutral98": {
+      "type": "COLOR",
+      "value": "rgba(254, 247, 255, 1)"
+    },
+    "md.comp.full-screen-dialog.action-bar.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 56
+    },
+    "md.comp.full-screen-dialog.header.headline.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 22,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 28
+    },
+    "md.comp.full-screen-dialog.header.headline.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.sys.typescale.title-large.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.full-screen-dialog.header.headline.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.title-large.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.full-screen-dialog.header.headline.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 22
+    },
+    "md.sys.typescale.title-large.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 22
+    },
+    "md.comp.full-screen-dialog.header.headline.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 28
+    },
+    "md.sys.typescale.title-large.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 28
+    },
+    "md.comp.full-screen-dialog.header.headline.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.title-large.tracking"
+    },
+    "md.sys.typescale.title-large.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.title-large.tracking"
+    },
+    "md.comp.dialog.action.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 20
+    },
+    "md.comp.dialog.action.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.dialog.action.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.dialog.action.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.dialog.action.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.dialog.action.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.comp.dialog.supporting-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 20
+    },
+    "md.comp.dialog.supporting-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.body-medium.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.dialog.supporting-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.body-medium.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.dialog.supporting-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.sys.typescale.body-medium.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.dialog.supporting-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.sys.typescale.body-medium.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.dialog.supporting-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-medium.tracking"
+    },
+    "md.sys.typescale.body-medium.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-medium.tracking"
+    },
+    "md.comp.dialog.action.focus.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.dialog.action.focus.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.dialog.action.hover.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.dialog.action.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.dialog.action.hover.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.dialog.action.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.dialog.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface-variant": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.ref.palette.neutral-variant100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral-variant0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral-variant80": {
+      "type": "COLOR",
+      "value": "rgba(196, 199, 197, 1)"
+    },
+    "md.comp.dialog.with-icon.icon.color": {
+      "ref": "md.sys.color.secondary",
+      "type": "COLOR"
+    },
+    "md.sys.color.secondary": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.ref.palette.secondary95": {
+      "type": "COLOR",
+      "value": "rgba(223, 243, 255, 1)"
+    },
+    "md.ref.palette.secondary90": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    },
+    "md.ref.palette.secondary20": {
+      "type": "COLOR",
+      "value": "rgba(0, 51, 85, 1)"
+    },
+    "md.ref.palette.secondary30": {
+      "type": "COLOR",
+      "value": "rgba(0, 74, 119, 1)"
+    },
+    "md.ref.palette.secondary80": {
+      "type": "COLOR",
+      "value": "rgba(127, 207, 255, 1)"
+    },
+    "md.ref.palette.secondary40": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.comp.dialog.with-icon.icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.dialog.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 28
+    },
+    "md.sys.shape.corner.extra-large": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 28
+    },
+    "md.comp.dialog.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.sys.elevation.level3": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.comp.dialog.container.color": {
+      "ref": "md.sys.color.surface-container-high",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-container-high": {
+      "type": "COLOR",
+      "value": "rgba(236, 230, 240, 1)"
+    },
+    "md.ref.palette.neutral17": {
+      "type": "COLOR",
+      "value": "rgba(43, 41, 48, 1)"
+    },
+    "md.ref.palette.neutral92": {
+      "type": "COLOR",
+      "value": "rgba(236, 230, 240, 1)"
+    },
+    "md.comp.full-screen-dialog.header.action.focus.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.header.action.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.full-screen-dialog.header.action.focus.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.header.action.hover.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.header.action.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.full-screen-dialog.header.action.hover.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.header.action.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.header.action.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 20
+    },
+    "md.comp.full-screen-dialog.header.action.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.full-screen-dialog.header.action.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.full-screen-dialog.header.action.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.full-screen-dialog.header.action.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.full-screen-dialog.header.action.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.comp.full-screen-dialog.header.headline.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.header.icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.full-screen-dialog.header.icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.header.on-scroll.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level2"
+    },
+    "md.comp.full-screen-dialog.header.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level0"
+    },
+    "md.comp.full-screen-dialog.header.container.color": {
+      "ref": "md.sys.color.surface",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.header.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 56
+    },
+    "md.comp.full-screen-dialog.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.sys.shape.corner.none": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.comp.full-screen-dialog.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level0"
+    },
+    "md.comp.full-screen-dialog.container.color": {
+      "ref": "md.sys.color.surface",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.header.action.pressed.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.full-screen-dialog.header.action.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.full-screen-dialog.header.action.pressed.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.dialog.action.pressed.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.dialog.action.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.dialog.action.pressed.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    }
+  }
+}

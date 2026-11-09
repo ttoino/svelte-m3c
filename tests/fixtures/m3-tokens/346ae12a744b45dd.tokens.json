@@ -1,0 +1,322 @@
+{
+  "componentId": "346ae12a744b45dd",
+  "componentName": "Snackbar",
+  "dsdbVersion": "38.2.9",
+  "tokens": {
+    "md.comp.snackbar.supporting-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 20
+    },
+    "md.comp.snackbar.supporting-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.body-medium.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.ref.typeface.plain": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.snackbar.supporting-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.body-medium.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.ref.typeface.weight-regular": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.snackbar.supporting-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.sys.typescale.body-medium.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.snackbar.supporting-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.sys.typescale.body-medium.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.snackbar.supporting-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-medium.tracking"
+    },
+    "md.sys.typescale.body-medium.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-medium.tracking"
+    },
+    "md.comp.snackbar.action.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 20
+    },
+    "md.comp.snackbar.action.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.label-large.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.ref.typeface.brand": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.snackbar.action.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.sys.typescale.label-large.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.ref.typeface.weight-medium": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.snackbar.action.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.sys.typescale.label-large.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.snackbar.action.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.sys.typescale.label-large.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.snackbar.action.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.sys.typescale.label-large.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.ref.typeface.weight-bold": {
+      "type": "FONT_WEIGHT",
+      "value": 700
+    },
+    "md.comp.snackbar.icon.pressed.icon.color": {
+      "ref": "md.sys.color.inverse-on-surface",
+      "type": "COLOR"
+    },
+    "md.sys.color.inverse-on-surface": {
+      "type": "COLOR",
+      "value": "rgba(242, 242, 242, 1)"
+    },
+    "md.ref.palette.neutral0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral10": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.ref.palette.neutral100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral20": {
+      "type": "COLOR",
+      "value": "rgba(48, 48, 48, 1)"
+    },
+    "md.ref.palette.neutral95": {
+      "type": "COLOR",
+      "value": "rgba(242, 242, 242, 1)"
+    },
+    "md.comp.snackbar.icon.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.sys.state.pressed.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.snackbar.icon.pressed.state-layer.color": {
+      "ref": "md.sys.color.inverse-on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.snackbar.icon.focus.icon.color": {
+      "ref": "md.sys.color.inverse-on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.snackbar.icon.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.sys.state.focus.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.snackbar.icon.focus.state-layer.color": {
+      "ref": "md.sys.color.inverse-on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.snackbar.icon.hover.icon.color": {
+      "ref": "md.sys.color.inverse-on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.snackbar.icon.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.sys.state.hover.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.snackbar.icon.hover.state-layer.color": {
+      "ref": "md.sys.color.inverse-on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.snackbar.icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.snackbar.icon.color": {
+      "ref": "md.sys.color.inverse-on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.snackbar.with-two-lines.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 68
+    },
+    "md.comp.snackbar.with-single-line.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    },
+    "md.comp.snackbar.action.pressed.label-text.color": {
+      "ref": "md.sys.color.inverse-primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.inverse-primary": {
+      "type": "COLOR",
+      "value": "rgba(208, 188, 255, 1)"
+    },
+    "md.ref.palette.primary20": {
+      "type": "COLOR",
+      "value": "rgba(56, 30, 114, 1)"
+    },
+    "md.ref.palette.primary30": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.ref.palette.primary40": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.ref.palette.primary80": {
+      "type": "COLOR",
+      "value": "rgba(208, 188, 255, 1)"
+    },
+    "md.comp.snackbar.action.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.snackbar.action.pressed.state-layer.color": {
+      "ref": "md.sys.color.inverse-primary",
+      "type": "COLOR"
+    },
+    "md.comp.snackbar.action.focus.label-text.color": {
+      "ref": "md.sys.color.inverse-primary",
+      "type": "COLOR"
+    },
+    "md.comp.snackbar.action.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.snackbar.action.focus.state-layer.color": {
+      "ref": "md.sys.color.inverse-primary",
+      "type": "COLOR"
+    },
+    "md.comp.snackbar.action.hover.label-text.color": {
+      "ref": "md.sys.color.inverse-primary",
+      "type": "COLOR"
+    },
+    "md.comp.snackbar.action.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.snackbar.action.hover.state-layer.color": {
+      "ref": "md.sys.color.inverse-primary",
+      "type": "COLOR"
+    },
+    "md.comp.snackbar.action.label-text.color": {
+      "ref": "md.sys.color.inverse-primary",
+      "type": "COLOR"
+    },
+    "md.comp.snackbar.supporting-text.color": {
+      "ref": "md.sys.color.inverse-on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.snackbar.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.sys.shape.corner.extra-small": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.snackbar.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.sys.elevation.level3": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.comp.snackbar.container.shadow-color": {
+      "ref": "md.sys.color.shadow",
+      "type": "COLOR"
+    },
+    "md.sys.color.shadow": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.comp.snackbar.container.color": {
+      "ref": "md.sys.color.inverse-surface",
+      "type": "COLOR"
+    },
+    "md.sys.color.inverse-surface": {
+      "type": "COLOR",
+      "value": "rgba(48, 48, 48, 1)"
+    },
+    "md.ref.palette.neutral90": {
+      "type": "COLOR",
+      "value": "rgba(230, 224, 233, 1)"
+    }
+  }
+}

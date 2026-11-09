@@ -26,6 +26,8 @@ vite.config.ts.timestamp-*
 
 # Vitest
 .vitest-attachments
+tests/benchmarks/__screenshots__
+tests/fixtures/m3-tokens/raw/
 
 # Cloudflare Types
 worker-configuration.d.ts

@@ -1,0 +1,1344 @@
+{
+  "componentId": "01c5310367774eb8",
+  "componentName": "Date pickers",
+  "dsdbVersion": "38.2.9",
+  "tokens": {
+    "md.comp.date-picker.docked.date.unselected.outside-month.label-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.date-picker.docked.menu.list-item.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.body-large.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.ref.typeface.plain": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.date-picker.docked.menu-button.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.sys.typescale.label-large.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.date-picker.docked.menu-button.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.sys.typescale.label-large.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.comp.date-picker.docked.menu-button.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface-variant": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.ref.palette.neutral-variant100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral-variant90": {
+      "type": "COLOR",
+      "value": "rgba(225, 227, 225, 1)"
+    },
+    "md.ref.palette.neutral-variant0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral-variant20": {
+      "type": "COLOR",
+      "value": "rgba(45, 49, 47, 1)"
+    },
+    "md.ref.palette.neutral-variant80": {
+      "type": "COLOR",
+      "value": "rgba(196, 199, 197, 1)"
+    },
+    "md.ref.palette.neutral-variant30": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.comp.date-picker.docked.menu-button.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 20
+    },
+    "md.comp.date-picker.docked.menu-button.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.label-large.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.ref.typeface.brand": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.date-picker.docked.menu-button.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.sys.typescale.label-large.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.ref.typeface.weight-medium": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.date-picker.docked.menu-button.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.sys.typescale.label-large.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.ref.typeface.weight-bold": {
+      "type": "FONT_WEIGHT",
+      "value": 700
+    },
+    "md.comp.date-picker.docked.date.today.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.primary": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.ref.palette.primary95": {
+      "type": "COLOR",
+      "value": "rgba(246, 237, 255, 1)"
+    },
+    "md.ref.palette.primary20": {
+      "type": "COLOR",
+      "value": "rgba(56, 30, 114, 1)"
+    },
+    "md.ref.palette.primary90": {
+      "type": "COLOR",
+      "value": "rgba(234, 221, 255, 1)"
+    },
+    "md.ref.palette.primary30": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.ref.palette.primary80": {
+      "type": "COLOR",
+      "value": "rgba(208, 188, 255, 1)"
+    },
+    "md.ref.palette.primary40": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.comp.date-picker.docked.date.selected.label-text.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-primary": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.primary0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.primary10": {
+      "type": "COLOR",
+      "value": "rgba(4, 30, 73, 1)"
+    },
+    "md.ref.palette.primary100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.comp.date-picker.docked.menu.list-item.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.date-picker.docked.menu.list-item.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.body-large.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.ref.typeface.weight-regular": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.date-picker.docked.menu.list-item.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.sys.typescale.body-large.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.date-picker.docked.menu.list-item.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.sys.typescale.body-large.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.date-picker.docked.menu.list-item.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.sys.typescale.body-large.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.date-picker.docked.menu.list-item.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.ref.palette.neutral100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral90": {
+      "type": "COLOR",
+      "value": "rgba(230, 224, 233, 1)"
+    },
+    "md.ref.palette.neutral10": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.comp.date-picker.docked.date.unselected.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.date.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.date-picker.docked.date.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.date-picker.docked.date.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.date-picker.docked.date.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.date-picker.docked.date.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.date-picker.docked.date.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.date-picker.docked.date.unselected.outside-month.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.date.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    },
+    "md.comp.date-picker.docked.menu.list-item.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    },
+    "md.comp.date-picker.docked.menu-button.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.date-input.modal.container.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-tint": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.container.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.container.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.range-selection.date.in-range.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.sys.state.hover.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.date-picker.modal.range-selection.date.in-range.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.sys.state.focus.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-picker.modal.range-selection.date.in-range.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.sys.state.pressed.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-picker.modal.range-selection.date.in-range.hover.state-layer.opcaity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.date-picker.modal.range-selection.date.in-range.focus.state-layer.opcaity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-picker.modal.range-selection.date.in-range.pressed.state-layer.opcaity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-input.modal.header.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 120
+    },
+    "md.comp.date-input.modal.header.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 328
+    },
+    "md.comp.date-input.modal.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 512
+    },
+    "md.comp.date-input.modal.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 328
+    },
+    "md.comp.date-input.modal.header.headline.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 32,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 40
+    },
+    "md.comp.date-input.modal.header.headline.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.sys.typescale.headline-large.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.date-input.modal.header.headline.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.headline-large.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.date-input.modal.header.headline.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 32
+    },
+    "md.sys.typescale.headline-large.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 32
+    },
+    "md.comp.date-input.modal.header.headline.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 40
+    },
+    "md.sys.typescale.headline-large.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 40
+    },
+    "md.comp.date-input.modal.header.headline.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.headline-large.tracking"
+    },
+    "md.sys.typescale.headline-large.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.headline-large.tracking"
+    },
+    "md.comp.date-input.modal.header.headline.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-input.modal.header.supporting-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 20
+    },
+    "md.comp.date-input.modal.header.supporting-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.date-input.modal.header.supporting-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.date-input.modal.header.supporting-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.date-input.modal.header.supporting-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.date-input.modal.header.supporting-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.comp.date-input.modal.header.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-input.modal.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 28
+    },
+    "md.sys.shape.corner.extra-large": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 28
+    },
+    "md.comp.date-input.modal.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.sys.elevation.level3": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.comp.date-input.modal.container.color": {
+      "ref": "md.sys.color.surface-container-high",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-container-high": {
+      "type": "COLOR",
+      "value": "rgba(236, 230, 240, 1)"
+    },
+    "md.ref.palette.neutral17": {
+      "type": "COLOR",
+      "value": "rgba(43, 41, 48, 1)"
+    },
+    "md.ref.palette.neutral92": {
+      "type": "COLOR",
+      "value": "rgba(236, 230, 240, 1)"
+    },
+    "md.comp.date-picker.modal.range-selection.active-indicator.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.date-picker.modal.year-selection.year.state-layer.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 36
+    },
+    "md.comp.date-picker.modal.year-selection.year.state-layer.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 72
+    },
+    "md.comp.date-picker.modal.year-selection.year.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 36
+    },
+    "md.comp.date-picker.modal.year-selection.year.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 72
+    },
+    "md.comp.date-picker.modal.date.state-layer.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.date-picker.modal.date.state-layer.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.date-picker.modal.date.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.date-picker.modal.date.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.date-picker.modal.range-selection.header.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 128
+    },
+    "md.comp.date-picker.modal.header.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 120
+    },
+    "md.comp.date-picker.modal.header.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 360
+    },
+    "md.comp.date-picker.modal.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 524
+    },
+    "md.comp.date-picker.modal.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 360
+    },
+    "md.comp.date-picker.modal.year-selection.year.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-picker.modal.year-selection.year.selected.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.year-selection.year.unselected.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.range-selection.date.in-range.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-primary-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-primary-container": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.comp.date-picker.modal.date.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-picker.modal.date.today.pressed.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.date.selected.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.date.unselected.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.year-selection.year.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-picker.modal.year-selection.year.selected.focus.state-layer.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.year-selection.year.unselected.focus.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.range-selection.date.in-range.focus.state-layer.color": {
+      "ref": "md.sys.color.on-primary-container",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.date.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-picker.modal.date.today.focus.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.date.selected.focus.state-layer.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.date.unselected.focus.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.year-selection.year.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.date-picker.modal.year-selection.year.selected.hover.state-layer.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.year-selection.year.unselected.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.range-selection.date.in-range.hover.state-layer.color": {
+      "ref": "md.sys.color.on-primary-container",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.date.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.date-picker.modal.date.today.hover.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.date.selected.hover.state-layer.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.date.unselected.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.year-selection.year.state-layer.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.sys.shape.corner.full": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.date-picker.modal.year-selection.year.unselected.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.year-selection.year.selected.label-text.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.year-selection.year.selected.container.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.year-selection.year.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.date-picker.modal.year-selection.year.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.date-picker.modal.year-selection.year.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.date-picker.modal.year-selection.year.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.date-picker.modal.year-selection.year.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.date-picker.modal.year-selection.year.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.date-picker.modal.range-selection.month.subhead.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 20
+    },
+    "md.comp.date-picker.modal.range-selection.month.subhead.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.title-small.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.date-picker.modal.range-selection.month.subhead.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.sys.typescale.title-small.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.date-picker.modal.range-selection.month.subhead.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.sys.typescale.title-small.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.date-picker.modal.range-selection.month.subhead.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.sys.typescale.title-small.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.date-picker.modal.range-selection.month.subhead.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.title-small.tracking"
+    },
+    "md.sys.typescale.title-small.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.title-small.tracking"
+    },
+    "md.comp.date-picker.modal.range-selection.month.subhead.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.range-selection.active-indicator.container.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.date-picker.modal.range-selection.active-indicator.container.color": {
+      "ref": "md.sys.color.secondary-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.secondary-container": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    },
+    "md.ref.palette.secondary80": {
+      "type": "COLOR",
+      "value": "rgba(127, 207, 255, 1)"
+    },
+    "md.ref.palette.secondary60": {
+      "type": "COLOR",
+      "value": "rgba(57, 152, 211, 1)"
+    },
+    "md.ref.palette.secondary30": {
+      "type": "COLOR",
+      "value": "rgba(0, 74, 119, 1)"
+    },
+    "md.ref.palette.secondary40": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.ref.palette.secondary90": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    },
+    "md.comp.date-picker.modal.range-selection.date.in-range.label-text.color": {
+      "ref": "md.sys.color.on-secondary-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-secondary-container": {
+      "type": "COLOR",
+      "value": "rgba(0, 74, 119, 1)"
+    },
+    "md.ref.palette.secondary0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.secondary100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.comp.date-picker.modal.date.selected.container.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.date.selected.label-text.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.date.today.container.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.date-picker.modal.date.today.container.outline.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.date.today.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.date.unselected.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.date.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.date-picker.modal.date.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.date-picker.modal.date.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.date-picker.modal.date.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.date-picker.modal.date.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.date-picker.modal.date.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.date-picker.modal.date.state-layer.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.date-picker.modal.date.container.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.date-picker.modal.weekdays.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.date-picker.modal.weekdays.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.date-picker.modal.weekdays.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.date-picker.modal.weekdays.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.date-picker.modal.weekdays.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.date-picker.modal.weekdays.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.date-picker.modal.weekdays.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.range-selection.header.headline.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 22,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 28
+    },
+    "md.comp.date-picker.modal.range-selection.header.headline.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.sys.typescale.title-large.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.date-picker.modal.range-selection.header.headline.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.title-large.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.date-picker.modal.range-selection.header.headline.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 22
+    },
+    "md.sys.typescale.title-large.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 22
+    },
+    "md.comp.date-picker.modal.range-selection.header.headline.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 28
+    },
+    "md.sys.typescale.title-large.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 28
+    },
+    "md.comp.date-picker.modal.range-selection.header.headline.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.title-large.tracking"
+    },
+    "md.sys.typescale.title-large.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.title-large.tracking"
+    },
+    "md.comp.date-picker.modal.header.headline.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 32,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 40
+    },
+    "md.comp.date-picker.modal.header.headline.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.date-picker.modal.header.headline.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.date-picker.modal.header.headline.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 32
+    },
+    "md.comp.date-picker.modal.header.headline.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 40
+    },
+    "md.comp.date-picker.modal.header.headline.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.headline-large.tracking"
+    },
+    "md.comp.date-picker.modal.header.headline.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.header.supporting-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 20
+    },
+    "md.comp.date-picker.modal.header.supporting-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.date-picker.modal.header.supporting-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.date-picker.modal.header.supporting-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.date-picker.modal.header.supporting-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.date-picker.modal.header.supporting-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.comp.date-picker.modal.header.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.modal.range-selection.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.sys.shape.corner.none": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.comp.date-picker.modal.range-selection.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level0"
+    },
+    "md.sys.elevation.level0": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level0"
+    },
+    "md.comp.date-picker.modal.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 28
+    },
+    "md.comp.date-picker.modal.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.comp.date-picker.modal.container.color": {
+      "ref": "md.sys.color.surface-container-high",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu.list-item.selected.leading-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.date-picker.docked.date.state-layer.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.date-picker.docked.date.state-layer.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.date-picker.docked.date.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    },
+    "md.comp.date-picker.docked.header.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 64
+    },
+    "md.comp.date-picker.docked.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 456
+    },
+    "md.comp.date-picker.docked.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 360
+    },
+    "md.comp.date-picker.docked.menu.list-item.selected.pressed.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu.list-item.pressed.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu.list-item.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-picker.docked.menu.list-item.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu-button.pressed.icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu-button.pressed.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu-button.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-picker.docked.menu-button.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.date.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-picker.docked.date.today.pressed.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.date.selected.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.date.unselected.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu.list-item.selected.focus.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu.list-item.focus.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu.list-item.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-picker.docked.menu.list-item.focus.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu-button.focus.icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu-button.focus.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu-button.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-picker.docked.menu-button.focus.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.date.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.date-picker.docked.date.today.focus.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.date.selected.focus.state-layer.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.date.unselected.focus.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu.list-item.selected.hover.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu.list-item.hover.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu.list-item.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.date-picker.docked.menu.list-item.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu-button.hover.icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu-button.hover.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu-button.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.date-picker.docked.menu-button.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.date.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.date-picker.docked.date.today.hover.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.date.selected.hover.state-layer.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.date.unselected.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu-button.disabled.icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.date-picker.docked.menu-button.disabled.icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu-button.disabled.label-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.date-picker.docked.menu-button.disabled.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu.list-item.selected.leading-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu.list-item.selected.container.color": {
+      "ref": "md.sys.color.surface-variant",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-variant": {
+      "type": "COLOR",
+      "value": "rgba(225, 227, 225, 1)"
+    },
+    "md.comp.date-picker.docked.menu-button.icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 18
+    },
+    "md.comp.date-picker.docked.menu-button.icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.menu-button.container.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.date-picker.docked.date.selected.container.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.date.today.container.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.date-picker.docked.date.today.container.outline.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.date.state-layer.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.date-picker.docked.date.container.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.date-picker.docked.weekdays.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.date-picker.docked.weekdays.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.date-picker.docked.weekdays.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.date-picker.docked.weekdays.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.date-picker.docked.weekdays.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.date-picker.docked.weekdays.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.date-picker.docked.weekdays.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.date-picker.docked.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.sys.shape.corner.large": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.date-picker.docked.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.comp.date-picker.docked.container.color": {
+      "ref": "md.sys.color.surface-container-high",
+      "type": "COLOR"
+    }
+  }
+}
