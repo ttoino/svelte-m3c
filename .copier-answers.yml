@@ -1,8 +1,9 @@
 # Changes here will be overwritten by Copier
-_commit: 7abbe6d
+_commit: 25e6769
 _src_path: gh:ttoino/templates
 browser_tests: true
 description: Svelte 5 component library implementing Material Design 3
+github_user: ttoino
 name: svelte-m3c
 project_type: svelte-library
 svelte_m3c: false

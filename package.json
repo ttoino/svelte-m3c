@@ -2,19 +2,14 @@
     "name": "svelte-m3c",
     "version": "0.0.5",
     "description": "Svelte 5 component library implementing Material Design 3",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ttoino/svelte-m3c.git"
+    },
+    "homepage": "https://github.com/ttoino/svelte-m3c",
+    "bugs": "https://github.com/ttoino/svelte-m3c/issues",
     "type": "module",
     "license": "GPL-3.0-or-later",
-    "files": [
-        "dist",
-        "!dist/**/*.test.*",
-        "!dist/**/*.spec.*"
-    ],
-    "sideEffects": [
-        "**/*.css"
-    ],
-    "svelte": "./dist/index.js",
-    "types": "./dist/index.d.ts",
-    "style": "./dist/style/index.css",
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
@@ -52,8 +47,7 @@
     "scripts": {
         "dev": "vite dev",
         "build": "vite build && pnpm run prepack",
-        "preview": "vite preview",
-        "prepare": "svelte-kit sync || echo ''",
+        "preview": "pnpm run build && wrangler dev",
         "prepack": "svelte-kit sync && svelte-package && publint",
         "check": "svelte-kit sync && tsc --noEmit -p scripts/tsconfig.json && svelte-check --tsconfig ./tsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -77,6 +71,15 @@
         "tailwind-variants": "^3.1.1",
         "tailwindcss": "^4.1.14"
     },
+    "files": [
+        "dist"
+    ],
+    "svelte": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "sideEffects": [
+        "**/*.css"
+    ],
+    "style": "./dist/style/index.css",
     "devDependencies": {
         "@eslint/compat": "^2.1.0",
         "@eslint/js": "^10.0.1",

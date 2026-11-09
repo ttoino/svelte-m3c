@@ -14,17 +14,21 @@ jobs:
       id-token: write
 
     steps:
+      - uses: actions/checkout@v6
+
       - uses: ./.github/actions/setup-project
 
-      - name: Check the tag matches the package version
-        if: github.event_name == 'release'
+      - name: Verify tag matches package version
         run: |
-          tag="${GITHUB_REF_NAME#v}"
-          pkg=$(node -p "require('./package.json').version")
-          if [ "$tag" != "$pkg" ]; then
-              echo "::error::tag ${GITHUB_REF_NAME} does not match svelte-m3c@${pkg}"
-              exit 1
+          TAG_VERSION=${GITHUB_REF_NAME#v}
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          if [ "$TAG_VERSION" != "$PKG_VERSION" ]; then
+            echo "Tag v$TAG_VERSION does not match package.json version $PKG_VERSION"
+            exit 1
           fi
+
+      - name: Generate Cloudflare types
+        run: pnpm run gen:cf-types
 
       - name: Build package
         run: pnpm run build
