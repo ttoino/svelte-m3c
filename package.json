@@ -55,10 +55,13 @@
         "lint:fix": "eslint --fix .",
         "format": "prettier --check .",
         "format:fix": "prettier --write .",
-        "gen": "pnpm run gen:cf-types && pnpm run gen:thumbnails",
+        "gen": "pnpm run gen:cf-types && pnpm run gen:thumbnails && pnpm run gen:m3-tokens",
         "gen:cf-types": "wrangler types src/worker-configuration.d.ts",
+        "gen:m3-tokens": "tsx scripts/fetch-m3-tokens.ts && pnpm run gen:m3-tokens:compact",
+        "gen:m3-tokens:compact": "tsx scripts/compact-m3-tokens.ts",
         "gen:thumbnails": "tsx scripts/generate-thumbnails.ts",
-        "test": "vitest"
+        "test": "vitest",
+        "test:benchmarks": "RUN_BENCHMARKS=1 vitest --project browser tests/benchmarks"
     },
     "dependencies": {
         "@fontsource-variable/roboto": "^5.2.8",

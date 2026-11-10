@@ -1,0 +1,395 @@
+{
+  "componentId": "6f51f7ab7775a392",
+  "componentName": "Progress indicators",
+  "dsdbVersion": "38.2.9",
+  "tokens": {
+    "md.comp.progress-indicator.linear.indeterminate.active-indicator.wave.wavelength": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 20
+    },
+    "md.comp.progress-indicator.active-indicator.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.primary": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.ref.palette.primary95": {
+      "type": "COLOR",
+      "value": "rgba(246, 237, 255, 1)"
+    },
+    "md.ref.palette.primary20": {
+      "type": "COLOR",
+      "value": "rgba(56, 30, 114, 1)"
+    },
+    "md.ref.palette.primary90": {
+      "type": "COLOR",
+      "value": "rgba(234, 221, 255, 1)"
+    },
+    "md.ref.palette.primary30": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.ref.palette.primary80": {
+      "type": "COLOR",
+      "value": "rgba(208, 188, 255, 1)"
+    },
+    "md.ref.palette.primary40": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.comp.progress-indicator.track.color": {
+      "ref": "md.sys.color.secondary-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.secondary-container": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    },
+    "md.ref.palette.secondary80": {
+      "type": "COLOR",
+      "value": "rgba(127, 207, 255, 1)"
+    },
+    "md.ref.palette.secondary60": {
+      "type": "COLOR",
+      "value": "rgba(57, 152, 211, 1)"
+    },
+    "md.ref.palette.secondary30": {
+      "type": "COLOR",
+      "value": "rgba(0, 74, 119, 1)"
+    },
+    "md.ref.palette.secondary40": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.ref.palette.secondary90": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    },
+    "md.comp.progress-indicator.stop-indicator.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.progress-indicator.active-indicator.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.sys.shape.corner.full": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.progress-indicator.track.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.progress-indicator.stop-indicator.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.progress-indicator.active-indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.track.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.stop-indicator.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.active-indicator-track-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.linear.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.linear.with-wave.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 10
+    },
+    "md.comp.progress-indicator.linear.active-indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.linear.track.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.linear.stop-indicator.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.linear.stop-indicator.trailing-space": {
+      "type": "LENGTH",
+      "unit": "DIPS"
+    },
+    "md.sys.measurement.space0": {
+      "type": "LENGTH",
+      "unit": "DIPS"
+    },
+    "md.comp.progress-indicator.linear.active-indicator.wave.amplitude": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.comp.progress-indicator.linear.active-indicator.wave.wavelength": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.progress-indicator.linear.track-active-indicator-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.sys.measurement.space50": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.linear.thick.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.progress-indicator.linear.thick.with-wave.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 14
+    },
+    "md.comp.progress-indicator.linear.thick.active-indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.progress-indicator.linear.thick.track.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.progress-indicator.linear.thick.stop-indicator.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.linear.thick.track-active-indicator-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.linear.thick.stop-indicator.trailing-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.progress-indicator.circular.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.progress-indicator.circular.active-indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.circular.active-indicator.wave.amplitude": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1.6
+    },
+    "md.comp.progress-indicator.circular.active-indicator.wave.wavelength": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 15
+    },
+    "md.comp.progress-indicator.circular.track-active-indicator-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.circular.track.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.progress-indicator.circular.with-wave.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    },
+    "md.comp.progress-indicator.circular.thick.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 52
+    },
+    "md.comp.progress-indicator.circular.thick.active-indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.progress-indicator.circular.thick.track.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.progress-indicator.circular.thick.track-active-indicator-space": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.linear-progress-indicator.four-color.active-indicator.four.color": {
+      "type": "ERROR",
+      "value": "missing: goog.ref.brand-color.green"
+    },
+    "md.sys.color.tertiary-container": {
+      "type": "COLOR",
+      "value": "rgba(255, 216, 228, 1)"
+    },
+    "md.ref.palette.tertiary80": {
+      "type": "COLOR",
+      "value": "rgba(239, 184, 200, 1)"
+    },
+    "md.ref.palette.tertiary60": {
+      "type": "COLOR",
+      "value": "rgba(181, 131, 146, 1)"
+    },
+    "md.ref.palette.tertiary30": {
+      "type": "COLOR",
+      "value": "rgba(99, 59, 72, 1)"
+    },
+    "md.ref.palette.tertiary40": {
+      "type": "COLOR",
+      "value": "rgba(125, 82, 96, 1)"
+    },
+    "md.ref.palette.tertiary90": {
+      "type": "COLOR",
+      "value": "rgba(255, 216, 228, 1)"
+    },
+    "md.comp.linear-progress-indicator.four-color.active-indicator.three.color": {
+      "type": "ERROR",
+      "value": "missing: goog.ref.brand-color.yellow"
+    },
+    "md.sys.color.tertiary": {
+      "type": "COLOR",
+      "value": "rgba(125, 82, 96, 1)"
+    },
+    "md.ref.palette.tertiary95": {
+      "type": "COLOR",
+      "value": "rgba(255, 236, 241, 1)"
+    },
+    "md.ref.palette.tertiary20": {
+      "type": "COLOR",
+      "value": "rgba(73, 37, 50, 1)"
+    },
+    "md.comp.linear-progress-indicator.four-color.active-indicator.two.color": {
+      "type": "ERROR",
+      "value": "missing: goog.ref.brand-color.red"
+    },
+    "md.sys.color.primary-container": {
+      "type": "COLOR",
+      "value": "rgba(234, 221, 255, 1)"
+    },
+    "md.ref.palette.primary60": {
+      "type": "COLOR",
+      "value": "rgba(154, 130, 219, 1)"
+    },
+    "md.comp.linear-progress-indicator.four-color.active-indicator.one.color": {
+      "type": "ERROR",
+      "value": "missing: goog.ref.brand-color.blue"
+    },
+    "md.comp.linear-progress-indicator.active-indicator.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.linear-progress-indicator.active-indicator.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.sys.shape.corner.none": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.comp.linear-progress-indicator.active-indicator.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.linear-progress-indicator.track.color": {
+      "ref": "md.sys.color.surface-container-highest",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-container-highest": {
+      "type": "COLOR",
+      "value": "rgba(230, 224, 233, 1)"
+    },
+    "md.ref.palette.neutral22": {
+      "type": "COLOR",
+      "value": "rgba(54, 52, 59, 1)"
+    },
+    "md.ref.palette.neutral90": {
+      "type": "COLOR",
+      "value": "rgba(230, 224, 233, 1)"
+    },
+    "md.comp.linear-progress-indicator.track.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.comp.linear-progress-indicator.track.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.circular-progress-indicator.four-color.active-indicator.four.color": {
+      "type": "ERROR",
+      "value": "missing: goog.ref.brand-color.green"
+    },
+    "md.comp.circular-progress-indicator.four-color.active-indicator.three.color": {
+      "type": "ERROR",
+      "value": "missing: goog.ref.brand-color.yellow"
+    },
+    "md.comp.circular-progress-indicator.four-color.active-indicator.two.color": {
+      "type": "ERROR",
+      "value": "missing: goog.ref.brand-color.red"
+    },
+    "md.comp.circular-progress-indicator.four-color.active-indicator.one.color": {
+      "type": "ERROR",
+      "value": "missing: goog.ref.brand-color.blue"
+    },
+    "md.comp.circular-progress-indicator.active-indicator.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.circular-progress-indicator.active-indicator.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.comp.circular-progress-indicator.active-indicator.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.circular-progress-indicator.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    }
+  }
+}

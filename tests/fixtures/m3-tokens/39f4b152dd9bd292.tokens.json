@@ -1,0 +1,1183 @@
+{
+  "componentId": "39f4b152dd9bd292",
+  "componentName": "Time pickers",
+  "dsdbVersion": "38.2.9",
+  "tokens": {
+    "md.comp.time-input.focus.indicator.outline.offset": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.sys.state.focus-indicator.outer-offset": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.time-input.focus.indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.sys.state.focus-indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.comp.time-input.focus.indicator.color": {
+      "ref": "md.sys.color.secondary",
+      "type": "COLOR"
+    },
+    "md.sys.color.secondary": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.ref.palette.secondary95": {
+      "type": "COLOR",
+      "value": "rgba(223, 243, 255, 1)"
+    },
+    "md.ref.palette.secondary90": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    },
+    "md.ref.palette.secondary20": {
+      "type": "COLOR",
+      "value": "rgba(0, 51, 85, 1)"
+    },
+    "md.ref.palette.secondary30": {
+      "type": "COLOR",
+      "value": "rgba(0, 74, 119, 1)"
+    },
+    "md.ref.palette.secondary80": {
+      "type": "COLOR",
+      "value": "rgba(127, 207, 255, 1)"
+    },
+    "md.ref.palette.secondary40": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.comp.time-input.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-tint": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.primary": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.ref.palette.primary95": {
+      "type": "COLOR",
+      "value": "rgba(246, 237, 255, 1)"
+    },
+    "md.ref.palette.primary90": {
+      "type": "COLOR",
+      "value": "rgba(234, 221, 255, 1)"
+    },
+    "md.ref.palette.primary80": {
+      "type": "COLOR",
+      "value": "rgba(208, 188, 255, 1)"
+    },
+    "md.ref.palette.primary20": {
+      "type": "COLOR",
+      "value": "rgba(56, 30, 114, 1)"
+    },
+    "md.ref.palette.primary30": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.ref.palette.primary40": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.comp.time-picker.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.clock-dial.color": {
+      "ref": "md.sys.color.surface-container-highest",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-container-highest": {
+      "type": "COLOR",
+      "value": "rgba(230, 224, 233, 1)"
+    },
+    "md.ref.palette.neutral22": {
+      "type": "COLOR",
+      "value": "rgba(54, 52, 59, 1)"
+    },
+    "md.ref.palette.neutral90": {
+      "type": "COLOR",
+      "value": "rgba(230, 224, 233, 1)"
+    },
+    "md.comp.time-picker.clock-dial.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.sys.shape.corner.full": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.time-picker.clock-dial.shape.ignore": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.time-picker.clock-dial.color.ignore": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface-variant": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.ref.palette.neutral-variant100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral-variant90": {
+      "type": "COLOR",
+      "value": "rgba(225, 227, 225, 1)"
+    },
+    "md.ref.palette.neutral-variant0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral-variant20": {
+      "type": "COLOR",
+      "value": "rgba(45, 49, 47, 1)"
+    },
+    "md.ref.palette.neutral-variant80": {
+      "type": "COLOR",
+      "value": "rgba(196, 199, 197, 1)"
+    },
+    "md.ref.palette.neutral-variant30": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.comp.time-picker.clock-dial.selector.track.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.time-picker.clock-dial.selector.center.container.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.time-picker.clock-dial.selector.handle.container.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    },
+    "md.comp.time-picker.clock-dial.container.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 256
+    },
+    "md.comp.time-picker.period-selector.horizontal.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 38
+    },
+    "md.comp.time-picker.period-selector.horizontal.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 216
+    },
+    "md.comp.time-picker.period-selector.vertical.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 80
+    },
+    "md.comp.time-picker.period-selector.vertical.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 52
+    },
+    "md.comp.time-picker.time-selector.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 80
+    },
+    "md.comp.time-picker.time-selector.24h-vertical.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 114
+    },
+    "md.comp.time-picker.time-selector.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 96
+    },
+    "md.comp.time-picker.period-selector.unselected.pressed.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.period-selector.selected.pressed.label-text.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-tertiary-container": {
+      "type": "COLOR",
+      "value": "rgba(99, 59, 72, 1)"
+    },
+    "md.ref.palette.tertiary0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.tertiary100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.tertiary90": {
+      "type": "COLOR",
+      "value": "rgba(255, 216, 228, 1)"
+    },
+    "md.ref.palette.tertiary30": {
+      "type": "COLOR",
+      "value": "rgba(99, 59, 72, 1)"
+    },
+    "md.comp.time-picker.period-selector.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.sys.state.pressed.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.time-picker.period-selector.unselected.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.period-selector.selected.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.unselected.pressed.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.ref.palette.neutral100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral10": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.comp.time-picker.time-selector.selected.pressed.label-text.color": {
+      "ref": "md.sys.color.on-primary-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-primary-container": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.ref.palette.primary0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.primary100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.comp.time-picker.time-selector.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.time-picker.time-selector.unselected.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.selected.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-primary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.period-selector.unselected.focus.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.period-selector.selected.focus.label-text.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.period-selector.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.sys.state.focus.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.time-picker.period-selector.unselected.focus.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.period-selector.selected.focus.state-layer.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.unselected.focus.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.selected.focus.label-text.color": {
+      "ref": "md.sys.color.on-primary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.time-picker.time-selector.unselected.focus.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.selected.focus.state-layer.color": {
+      "ref": "md.sys.color.on-primary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.period-selector.unselected.hover.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.period-selector.selected.hover.label-text.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.period-selector.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.sys.state.hover.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.time-picker.period-selector.unselected.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.period-selector.selected.hover.state-layer.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.unselected.hover.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.selected.hover.label-text.color": {
+      "ref": "md.sys.color.on-primary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.time-picker.time-selector.unselected.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.selected.hover.state-layer.color": {
+      "ref": "md.sys.color.on-primary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.clock-dial.selector.track.container.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.clock-dial.selector.center.container.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.time-picker.clock-dial.selector.center.container.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.clock-dial.selector.handle.container.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.time-picker.clock-dial.selector.handle.container.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.clock-dial.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.time-picker.clock-dial.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.body-large.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.ref.typeface.plain": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.time-picker.clock-dial.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.body-large.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.ref.typeface.weight-regular": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.time-picker.clock-dial.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.sys.typescale.body-large.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.time-picker.clock-dial.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.sys.typescale.body-large.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.time-picker.clock-dial.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.sys.typescale.body-large.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.time-picker.clock-dial.unselected.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.clock-dial.selected.label-text.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-primary": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.primary10": {
+      "type": "COLOR",
+      "value": "rgba(4, 30, 73, 1)"
+    },
+    "md.comp.time-picker.period-selector.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    "md.comp.time-picker.period-selector.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.title-medium.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.ref.typeface.brand": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.time-picker.period-selector.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.sys.typescale.title-medium.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.ref.typeface.weight-medium": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.time-picker.period-selector.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.sys.typescale.title-medium.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.time-picker.period-selector.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.sys.typescale.title-medium.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.time-picker.period-selector.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.title-medium.tracking"
+    },
+    "md.sys.typescale.title-medium.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.title-medium.tracking"
+    },
+    "md.ref.typeface.weight-bold": {
+      "type": "FONT_WEIGHT",
+      "value": 700
+    },
+    "md.comp.time-picker.period-selector.unselected.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.period-selector.selected.label-text.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.period-selector.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.time-picker.period-selector.outline.color": {
+      "ref": "md.sys.color.outline",
+      "type": "COLOR"
+    },
+    "md.sys.color.outline": {
+      "type": "COLOR",
+      "value": "rgba(116, 119, 117, 1)"
+    },
+    "md.ref.palette.neutral-variant95": {
+      "type": "COLOR",
+      "value": "rgba(239, 242, 239, 1)"
+    },
+    "md.ref.palette.neutral-variant70": {
+      "type": "COLOR",
+      "value": "rgba(169, 172, 170, 1)"
+    },
+    "md.ref.palette.neutral-variant60": {
+      "type": "COLOR",
+      "value": "rgba(142, 145, 143, 1)"
+    },
+    "md.ref.palette.neutral-variant50": {
+      "type": "COLOR",
+      "value": "rgba(116, 119, 117, 1)"
+    },
+    "md.comp.time-picker.period-selector.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.sys.shape.corner.small": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.time-picker.period-selector.selected.container.color": {
+      "ref": "md.sys.color.tertiary-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.tertiary-container": {
+      "type": "COLOR",
+      "value": "rgba(255, 216, 228, 1)"
+    },
+    "md.ref.palette.tertiary80": {
+      "type": "COLOR",
+      "value": "rgba(239, 184, 200, 1)"
+    },
+    "md.ref.palette.tertiary60": {
+      "type": "COLOR",
+      "value": "rgba(181, 131, 146, 1)"
+    },
+    "md.ref.palette.tertiary40": {
+      "type": "COLOR",
+      "value": "rgba(125, 82, 96, 1)"
+    },
+    "md.comp.time-picker.time-selector.separator.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 57,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 64
+    },
+    "md.comp.time-picker.time-selector.separator.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.sys.typescale.display-large.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.time-picker.time-selector.separator.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.display-large.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.time-picker.time-selector.separator.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 57
+    },
+    "md.sys.typescale.display-large.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 57
+    },
+    "md.comp.time-picker.time-selector.separator.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 64
+    },
+    "md.sys.typescale.display-large.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 64
+    },
+    "md.comp.time-picker.time-selector.separator.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.display-large.tracking"
+    },
+    "md.sys.typescale.display-large.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.display-large.tracking"
+    },
+    "md.comp.time-picker.time-selector.separator.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 57,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 64
+    },
+    "md.comp.time-picker.time-selector.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.time-picker.time-selector.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.time-picker.time-selector.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 57
+    },
+    "md.comp.time-picker.time-selector.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 64
+    },
+    "md.comp.time-picker.time-selector.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.display-large.tracking"
+    },
+    "md.comp.time-picker.time-selector.unselected.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.selected.label-text.color": {
+      "ref": "md.sys.color.on-primary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.time-picker.time-selector.unselected.container.color": {
+      "ref": "md.sys.color.surface-container-highest",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.time-selector.selected.container.color": {
+      "ref": "md.sys.color.primary-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.primary-container": {
+      "type": "COLOR",
+      "value": "rgba(234, 221, 255, 1)"
+    },
+    "md.ref.palette.primary60": {
+      "type": "COLOR",
+      "value": "rgba(154, 130, 219, 1)"
+    },
+    "md.comp.time-picker.headline.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 12,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 16
+    },
+    "md.comp.time-picker.headline.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.label-medium.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.time-picker.headline.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.sys.typescale.label-medium.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.time-picker.headline.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.sys.typescale.label-medium.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.time-picker.headline.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.sys.typescale.label-medium.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.time-picker.headline.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-medium.tracking"
+    },
+    "md.sys.typescale.label-medium.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-medium.tracking"
+    },
+    "md.comp.time-picker.headline.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-picker.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 28
+    },
+    "md.sys.shape.corner.extra-large": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 28
+    },
+    "md.comp.time-picker.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.sys.elevation.level3": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.comp.time-picker.container.color": {
+      "ref": "md.sys.color.surface-container-high",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-container-high": {
+      "type": "COLOR",
+      "value": "rgba(236, 230, 240, 1)"
+    },
+    "md.ref.palette.neutral17": {
+      "type": "COLOR",
+      "value": "rgba(43, 41, 48, 1)"
+    },
+    "md.ref.palette.neutral92": {
+      "type": "COLOR",
+      "value": "rgba(236, 230, 240, 1)"
+    },
+    "md.comp.time-input.period-selector.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 72
+    },
+    "md.comp.time-input.period-selector.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 52
+    },
+    "md.comp.time-input.time-input-field.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 72
+    },
+    "md.comp.time-input.time-input-field.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 96
+    },
+    "md.comp.time-input.period-selector.unselected.pressed.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.selected.pressed.label-text.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.time-input.period-selector.unselected.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.selected.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.unselected.focus.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.selected.focus.label-text.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.time-input.period-selector.unselected.focus.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.selected.focus.state-layer.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.time-input-field.focus.label-text.color": {
+      "ref": "md.sys.color.on-primary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.time-input-field.focus.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.time-input.time-input-field.focus.outline.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.time-input-field.focus.container.color": {
+      "ref": "md.sys.color.primary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.unselected.hover.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.selected.hover.label-text.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.time-input.period-selector.unselected.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.selected.hover.state-layer.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.time-input-field.hover.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.time-input-field.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.time-input.time-input-field.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    "md.comp.time-input.period-selector.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.time-input.period-selector.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.time-input.period-selector.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.time-input.period-selector.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.time-input.period-selector.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.title-medium.tracking"
+    },
+    "md.comp.time-input.period-selector.unselected.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.selected.label-text.color": {
+      "ref": "md.sys.color.on-tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.time-input.period-selector.outline.color": {
+      "ref": "md.sys.color.outline",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.period-selector.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.time-input.period-selector.selected.container.color": {
+      "ref": "md.sys.color.tertiary-container",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.time-input-field.supporting-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 12,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 16
+    },
+    "md.comp.time-input.time-input-field.supporting-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.body-small.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.time-input.time-input-field.supporting-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.body-small.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.time-input.time-input-field.supporting-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.sys.typescale.body-small.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.time-input.time-input-field.supporting-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.sys.typescale.body-small.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.time-input.time-input-field.supporting-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-small.tracking"
+    },
+    "md.sys.typescale.body-small.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-small.tracking"
+    },
+    "md.comp.time-input.time-input-field.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.time-input-field.separator.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 57,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 64
+    },
+    "md.comp.time-input.time-input-field.separator.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.time-input.time-input-field.separator.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.time-input.time-input-field.separator.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 57
+    },
+    "md.comp.time-input.time-input-field.separator.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 64
+    },
+    "md.comp.time-input.time-input-field.separator.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.display-large.tracking"
+    },
+    "md.comp.time-input.time-input-field.separator.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.time-input-field.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 45,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 52
+    },
+    "md.comp.time-input.time-input-field.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.sys.typescale.display-medium.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.time-input.time-input-field.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.display-medium.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.time-input.time-input-field.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 45
+    },
+    "md.sys.typescale.display-medium.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 45
+    },
+    "md.comp.time-input.time-input-field.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 52
+    },
+    "md.sys.typescale.display-medium.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 52
+    },
+    "md.comp.time-input.time-input-field.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.display-medium.tracking"
+    },
+    "md.sys.typescale.display-medium.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.display-medium.tracking"
+    },
+    "md.comp.time-input.time-input-field.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.time-input-field.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 8
+    },
+    "md.comp.time-input.time-input-field.container.color": {
+      "ref": "md.sys.color.surface-container-highest",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.headline.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 12,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 16
+    },
+    "md.comp.time-input.headline.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.time-input.headline.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.time-input.headline.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.time-input.headline.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.time-input.headline.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-medium.tracking"
+    },
+    "md.comp.time-input.headline.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.time-input.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 28
+    },
+    "md.comp.time-input.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level3"
+    },
+    "md.comp.time-input.container.color": {
+      "ref": "md.sys.color.surface-container-high",
+      "type": "COLOR"
+    }
+  }
+}

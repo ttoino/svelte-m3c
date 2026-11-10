@@ -35,6 +35,7 @@ nix develop
 - `pnpm format:fix`: Prettier write
 - `pnpm gen:cf-types`: Regenerate Cloudflare types from `wrangler.jsonc`
 - `pnpm test`: Run tests (including browser tests)
+- `pnpm test:benchmarks`: Run spec-accuracy benchmarks (browser-only, gated by `RUN_BENCHMARKS=1`)
 
 ## CI Pipeline
 
@@ -68,6 +69,7 @@ This is a library with multiple entry points:
 
 - **Unit tests:** `*.test.ts` (excludes `*.svelte.test.ts`), run concurrently
 - **Browser/visual tests:** `*.svelte.test.ts`, uses Playwright (chromium, firefox, webkit) + vitest-browser-svelte, viewport 512x512, screenshot comparison
+- **Spec benchmarks:** `tests/benchmarks/**/*.svelte.test.ts`, token-level assertions against the Material 3 spec; excluded from `pnpm test` unless `RUN_BENCHMARKS=1` is set
 
 ### TypeScript / Build Config
 

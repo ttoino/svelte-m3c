@@ -4,6 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 import { playwright } from "@vitest/browser-playwright";
 import { defineConfig } from "vitest/config";
 
+const includeBenchmarks = process.env.RUN_BENCHMARKS === "1";
+
 export default defineConfig({
     plugins: [enhancedImages(), tailwindcss(), sveltekit()],
     test: {
@@ -17,6 +19,7 @@ export default defineConfig({
                         "**/node_modules/**",
                         ".opencode/**",
                         ".direnv/**",
+                        ...(includeBenchmarks ? [] : ["tests/benchmarks/**"]),
                     ],
                     include: ["**/*.test.ts"],
                     name: "unit",
@@ -59,6 +62,7 @@ export default defineConfig({
                         "**/node_modules/**",
                         ".opencode/**",
                         ".direnv/**",
+                        ...(includeBenchmarks ? [] : ["tests/benchmarks/**"]),
                     ],
                     include: ["**/*.svelte.test.ts"],
                     name: "browser",

@@ -1,0 +1,2860 @@
+{
+  "componentId": "60990dd98dea0998",
+  "componentName": "Text fields",
+  "dsdbVersion": "38.2.9",
+  "tokens": {
+    "md.comp.outlined-text-field.focus.indicator.outline.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.sys.state.focus-indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.comp.outlined-text-field.error.focus.indicator.outline.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.sys.color.error": {
+      "type": "COLOR",
+      "value": "rgba(179, 38, 30, 1)"
+    },
+    "md.ref.palette.error95": {
+      "type": "COLOR",
+      "value": "rgba(252, 238, 238, 1)"
+    },
+    "md.ref.palette.error90": {
+      "type": "COLOR",
+      "value": "rgba(249, 222, 220, 1)"
+    },
+    "md.ref.palette.error20": {
+      "type": "COLOR",
+      "value": "rgba(96, 20, 16, 1)"
+    },
+    "md.ref.palette.error30": {
+      "type": "COLOR",
+      "value": "rgba(140, 29, 24, 1)"
+    },
+    "md.ref.palette.error80": {
+      "type": "COLOR",
+      "value": "rgba(242, 184, 181, 1)"
+    },
+    "md.ref.palette.error40": {
+      "type": "COLOR",
+      "value": "rgba(179, 38, 30, 1)"
+    },
+    "md.comp.outlined-text-field.focus.indicator.outline.color": {
+      "ref": "md.sys.color.secondary",
+      "type": "COLOR"
+    },
+    "md.sys.color.secondary": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.ref.palette.secondary95": {
+      "type": "COLOR",
+      "value": "rgba(223, 243, 255, 1)"
+    },
+    "md.ref.palette.secondary90": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    },
+    "md.ref.palette.secondary20": {
+      "type": "COLOR",
+      "value": "rgba(0, 51, 85, 1)"
+    },
+    "md.ref.palette.secondary30": {
+      "type": "COLOR",
+      "value": "rgba(0, 74, 119, 1)"
+    },
+    "md.ref.palette.secondary80": {
+      "type": "COLOR",
+      "value": "rgba(127, 207, 255, 1)"
+    },
+    "md.ref.palette.secondary40": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.comp.filled-text-field.focus.active-indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.comp.outlined-autocomplete.menu.list-item.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 20
+    },
+    "md.comp.outlined-autocomplete.menu.list-item.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.label-large.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.ref.typeface.brand": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.brand"
+    },
+    "md.comp.outlined-autocomplete.menu.list-item.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.sys.typescale.label-large.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.ref.typeface.weight-medium": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.outlined-autocomplete.menu.list-item.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.sys.typescale.label-large.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.outlined-autocomplete.menu.list-item.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.sys.typescale.label-large.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.outlined-autocomplete.menu.list-item.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.sys.typescale.label-large.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.ref.typeface.weight-bold": {
+      "type": "FONT_WEIGHT",
+      "value": 700
+    },
+    "md.ref.typeface.plain": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.filled-autocomplete.menu.list-item.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 20
+    },
+    "md.comp.filled-autocomplete.menu.list-item.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.filled-autocomplete.menu.list-item.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.filled-autocomplete.menu.list-item.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.filled-autocomplete.menu.list-item.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.filled-autocomplete.menu.list-item.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.comp.outlined-autocomplete.menu.divider.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.outlined-autocomplete.menu.divider.color": {
+      "ref": "md.sys.color.surface-variant",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-variant": {
+      "type": "COLOR",
+      "value": "rgba(225, 227, 225, 1)"
+    },
+    "md.ref.palette.neutral-variant30": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.ref.palette.neutral-variant90": {
+      "type": "COLOR",
+      "value": "rgba(225, 227, 225, 1)"
+    },
+    "md.comp.outlined-autocomplete.menu.list-item.selected.container.color": {
+      "ref": "md.sys.color.surface-container-highest",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-container-highest": {
+      "type": "COLOR",
+      "value": "rgba(230, 224, 233, 1)"
+    },
+    "md.ref.palette.neutral22": {
+      "type": "COLOR",
+      "value": "rgba(54, 52, 59, 1)"
+    },
+    "md.ref.palette.neutral90": {
+      "type": "COLOR",
+      "value": "rgba(230, 224, 233, 1)"
+    },
+    "md.comp.outlined-autocomplete.menu.list-item.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.ref.palette.neutral100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral10": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.comp.outlined-autocomplete.menu.list-item.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    },
+    "md.comp.filled-autocomplete.menu.divider.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.filled-autocomplete.menu.divider.color": {
+      "ref": "md.sys.color.surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.menu.list-item.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.menu.list-item.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    },
+    "md.comp.filled-autocomplete.menu.list-item.selected.container.color": {
+      "ref": "md.sys.color.surface-container-highest",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.menu.container.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-tint": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.primary": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.ref.palette.primary95": {
+      "type": "COLOR",
+      "value": "rgba(246, 237, 255, 1)"
+    },
+    "md.ref.palette.primary90": {
+      "type": "COLOR",
+      "value": "rgba(234, 221, 255, 1)"
+    },
+    "md.ref.palette.primary80": {
+      "type": "COLOR",
+      "value": "rgba(208, 188, 255, 1)"
+    },
+    "md.ref.palette.primary20": {
+      "type": "COLOR",
+      "value": "rgba(56, 30, 114, 1)"
+    },
+    "md.ref.palette.primary30": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.ref.palette.primary40": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.comp.filled-select.menu.container.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.menu.container.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.menu.container.surface-tint-layer.color": {
+      "ref": "md.sys.color.surface-tint",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.caret.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.focus.caret.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.caret.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.focus.caret.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.supporting-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 12,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 16
+    },
+    "md.comp.filled-text-field.supporting-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.body-small.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.filled-text-field.supporting-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.body-small.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.ref.typeface.weight-regular": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.filled-text-field.supporting-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.sys.typescale.body-small.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.filled-text-field.supporting-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.sys.typescale.body-small.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.filled-text-field.supporting-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-small.tracking"
+    },
+    "md.sys.typescale.body-small.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-small.tracking"
+    },
+    "md.comp.outlined-select.text-field.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 56
+    },
+    "md.comp.filled-select.text-field.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 56
+    },
+    "md.comp.outlined-autocomplete.text-field.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 56
+    },
+    "md.comp.filled-autocomplete.text-field.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 56
+    },
+    "md.comp.outlined-text-field.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 56
+    },
+    "md.comp.filled-text-field.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 56
+    },
+    "md.comp.filled-text-field.input-text.placeholder.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface-variant": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.ref.palette.neutral-variant100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral-variant0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral-variant20": {
+      "type": "COLOR",
+      "value": "rgba(45, 49, 47, 1)"
+    },
+    "md.ref.palette.neutral-variant80": {
+      "type": "COLOR",
+      "value": "rgba(196, 199, 197, 1)"
+    },
+    "md.comp.filled-text-field.input-text.suffix.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.input-text.prefix.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.input-text.placeholder.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.input-text.prefix.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.input-text.suffix.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.sys.state.hover.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.outlined-select.text-field.error.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.hover.trailing-icon.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-error-container": {
+      "type": "COLOR",
+      "value": "rgba(140, 29, 24, 1)"
+    },
+    "md.ref.palette.error0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.error100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.comp.outlined-select.text-field.error.hover.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.hover.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.hover.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.hover.label-text.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.hover.outline.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.focus.trailing-icon.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.focus.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.focus.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.focus.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.focus.label-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.focus.outline.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.trailing-icon.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.label-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.error.outline.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.outlined-select.text-field.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.hover.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.hover.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.hover.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.hover.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.hover.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.hover.outline.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.hover.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.outlined-select.text-field.focus.trailing-icon.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.focus.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.focus.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.focus.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.focus.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.focus.outline.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.focus.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.comp.outlined-select.text-field.disabled.trailing-icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-select.text-field.disabled.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.disabled.leading-icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-select.text-field.disabled.leading-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.disabled.supporting-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-select.text-field.disabled.supporting-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.disabled.input-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-select.text-field.disabled.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.disabled.label-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-select.text-field.disabled.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.disabled.outline.opacity": {
+      "type": "OPACITY",
+      "value": 0.12
+    },
+    "md.comp.outlined-select.text-field.disabled.outline.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.disabled.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.outlined-select.menu.cascading-menu-indicator.icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.outlined-select.menu.cascading-menu-indicator.icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.menu.divider.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.outlined-select.menu.divider.color": {
+      "ref": "md.sys.color.surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.menu.list-item.with-trailing-icon.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.menu.list-item.with-trailing-icon.trailing-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.outlined-select.menu.list-item.with-leading-icon.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.menu.list-item.with-leading-icon.leading-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.outlined-select.menu.list-item.selected.container.color": {
+      "ref": "md.sys.color.surface-container-highest",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.menu.list-item.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 20
+    },
+    "md.comp.outlined-select.menu.list-item.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.outlined-select.menu.list-item.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.outlined-select.menu.list-item.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.outlined-select.menu.list-item.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.outlined-select.menu.list-item.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.comp.outlined-select.menu.list-item.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    },
+    "md.comp.outlined-select.menu.list-item.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.menu.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.sys.shape.corner.extra-small": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.outlined-select.menu.container.shadow-color": {
+      "ref": "md.sys.color.shadow",
+      "type": "COLOR"
+    },
+    "md.sys.color.shadow": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.comp.outlined-select.menu.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level2"
+    },
+    "md.sys.elevation.level2": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level2"
+    },
+    "md.comp.outlined-select.menu.container.color": {
+      "ref": "md.sys.color.surface-container",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface-container": {
+      "type": "COLOR",
+      "value": "rgba(243, 237, 247, 1)"
+    },
+    "md.ref.palette.neutral12": {
+      "type": "COLOR",
+      "value": "rgba(33, 31, 38, 1)"
+    },
+    "md.ref.palette.neutral94": {
+      "type": "COLOR",
+      "value": "rgba(243, 237, 247, 1)"
+    },
+    "md.comp.outlined-select.text-field.trailing-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.outlined-select.text-field.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.leading-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.outlined-select.text-field.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.supporting-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 12,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 16
+    },
+    "md.comp.outlined-select.text-field.supporting-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.outlined-select.text-field.supporting-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.outlined-select.text-field.supporting-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.outlined-select.text-field.supporting-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.outlined-select.text-field.supporting-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-small.tracking"
+    },
+    "md.comp.outlined-select.text-field.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.label-text.populated.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.outlined-select.text-field.label-text.populated.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.outlined-select.text-field.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.outlined-select.text-field.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.body-large.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.outlined-select.text-field.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.sys.typescale.body-large.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.outlined-select.text-field.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.sys.typescale.body-large.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.outlined-select.text-field.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.sys.typescale.body-large.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.outlined-select.text-field.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.sys.typescale.body-large.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.outlined-select.text-field.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.input-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.outlined-select.text-field.input-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.outlined-select.text-field.input-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.outlined-select.text-field.input-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.outlined-select.text-field.input-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.outlined-select.text-field.input-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.outlined-select.text-field.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-select.text-field.outline.color": {
+      "ref": "md.sys.color.outline",
+      "type": "COLOR"
+    },
+    "md.sys.color.outline": {
+      "type": "COLOR",
+      "value": "rgba(116, 119, 117, 1)"
+    },
+    "md.ref.palette.neutral-variant95": {
+      "type": "COLOR",
+      "value": "rgba(239, 242, 239, 1)"
+    },
+    "md.ref.palette.neutral-variant70": {
+      "type": "COLOR",
+      "value": "rgba(169, 172, 170, 1)"
+    },
+    "md.ref.palette.neutral-variant60": {
+      "type": "COLOR",
+      "value": "rgba(142, 145, 143, 1)"
+    },
+    "md.ref.palette.neutral-variant50": {
+      "type": "COLOR",
+      "value": "rgba(116, 119, 117, 1)"
+    },
+    "md.comp.outlined-select.text-field.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.outlined-select.text-field.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.outlined-select.text-field.container.color": {
+      "ref": "md.sys.color.surface-container-highest",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.filled-autocomplete.text-field.error.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.hover.trailing-icon.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.hover.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.hover.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.hover.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.hover.label-text.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.hover.active-indicator.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.focus.caret.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.focus.trailing-icon.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.focus.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.focus.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.focus.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.focus.label-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.focus.active-indicator.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.trailing-icon.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.label-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.error.active-indicator.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.filled-autocomplete.text-field.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.hover.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.hover.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.hover.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.hover.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.hover.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.hover.active-indicator.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.hover.active-indicator.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.filled-autocomplete.text-field.focus.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.focus.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.focus.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.focus.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.focus.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.focus.active-indicator.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.focus.active-indicator.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.trailing-icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.leading-icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.leading-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.supporting-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.supporting-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.input-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.label-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.active-indicator.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.active-indicator.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.active-indicator.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.container.opacity": {
+      "type": "OPACITY",
+      "value": 0.04
+    },
+    "md.comp.filled-autocomplete.text-field.disabled.container.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.menu.cascading-menu-indicator.icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.filled-autocomplete.menu.cascading-menu-indicator.icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.menu.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.filled-autocomplete.menu.container.shadow-color": {
+      "ref": "md.sys.color.shadow",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.menu.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level2"
+    },
+    "md.comp.filled-autocomplete.menu.container.color": {
+      "ref": "md.sys.color.surface-container",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.caret.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.trailing-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.filled-autocomplete.text-field.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.leading-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 20
+    },
+    "md.comp.filled-autocomplete.text-field.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.supporting-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 12,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 16
+    },
+    "md.comp.filled-autocomplete.text-field.supporting-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.filled-autocomplete.text-field.supporting-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.filled-autocomplete.text-field.supporting-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.filled-autocomplete.text-field.supporting-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.filled-autocomplete.text-field.supporting-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-small.tracking"
+    },
+    "md.comp.filled-autocomplete.text-field.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.label-text.populated.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.filled-autocomplete.text-field.label-text.populated.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.filled-autocomplete.text-field.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.filled-autocomplete.text-field.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.filled-autocomplete.text-field.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.filled-autocomplete.text-field.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.filled-autocomplete.text-field.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.filled-autocomplete.text-field.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.filled-autocomplete.text-field.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.input-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.filled-autocomplete.text-field.input-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.filled-autocomplete.text-field.input-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.filled-autocomplete.text-field.input-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.filled-autocomplete.text-field.input-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.filled-autocomplete.text-field.input-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.filled-autocomplete.text-field.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.active-indicator.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-autocomplete.text-field.active-indicator.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.filled-autocomplete.text-field.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.sys.shape.corner.extra-small.top": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.comp.filled-autocomplete.text-field.container.color": {
+      "ref": "md.sys.color.surface-container-highest",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.outlined-autocomplete.text-field.error.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.hover.trailing-icon.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.hover.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.hover.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.hover.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.hover.label-text.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.hover.outline.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.focus.caret.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.focus.trailing-icon.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.focus.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.focus.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.focus.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.focus.label-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.focus.outline.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.trailing-icon.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.label-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.error.outline.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.outlined-autocomplete.text-field.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.hover.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.hover.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.hover.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.hover.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.hover.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.hover.outline.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.hover.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.outlined-autocomplete.text-field.focus.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.focus.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.focus.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.focus.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.focus.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.focus.outline.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.focus.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.outlined-autocomplete.text-field.disabled.trailing-icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-autocomplete.text-field.disabled.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.disabled.leading-icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-autocomplete.text-field.disabled.leading-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.disabled.supporting-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-autocomplete.text-field.disabled.supporting-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.disabled.input-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-autocomplete.text-field.disabled.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.disabled.label-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-autocomplete.text-field.disabled.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.disabled.outline.opacity": {
+      "type": "OPACITY",
+      "value": 0.12
+    },
+    "md.comp.outlined-autocomplete.text-field.disabled.outline.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.disabled.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.outlined-autocomplete.menu.cascading-menu-indicator.icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.outlined-autocomplete.menu.cascading-menu-indicator.icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.menu.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.outlined-autocomplete.menu.container.shadow-color": {
+      "ref": "md.sys.color.shadow",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.menu.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level2"
+    },
+    "md.comp.outlined-autocomplete.menu.container.color": {
+      "ref": "md.sys.color.surface-container",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.caret.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.trailing-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.outlined-autocomplete.text-field.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.leading-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.outlined-autocomplete.text-field.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.supporting-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 12,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 16
+    },
+    "md.comp.outlined-autocomplete.text-field.supporting-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.outlined-autocomplete.text-field.supporting-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.outlined-autocomplete.text-field.supporting-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.outlined-autocomplete.text-field.supporting-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.outlined-autocomplete.text-field.supporting-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-small.tracking"
+    },
+    "md.comp.outlined-autocomplete.text-field.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.label-text.populated.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.outlined-autocomplete.text-field.label-text.populated.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.outlined-autocomplete.text-field.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.outlined-autocomplete.text-field.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.outlined-autocomplete.text-field.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.outlined-autocomplete.text-field.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.outlined-autocomplete.text-field.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.outlined-autocomplete.text-field.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.outlined-autocomplete.text-field.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.input-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.outlined-autocomplete.text-field.input-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.outlined-autocomplete.text-field.input-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.outlined-autocomplete.text-field.input-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.outlined-autocomplete.text-field.input-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.outlined-autocomplete.text-field.input-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.outlined-autocomplete.text-field.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.outline.color": {
+      "ref": "md.sys.color.outline",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-autocomplete.text-field.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.outlined-autocomplete.text-field.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.outlined-autocomplete.text-field.container.color": {
+      "ref": "md.sys.color.surface-container-highest",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.filled-select.text-field.error.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.hover.trailing-icon.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.hover.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.hover.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.hover.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.hover.label-text.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.hover.active-indicator.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.focus.trailing-icon.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.focus.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.focus.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.focus.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.focus.label-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.focus.active-indicator.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.trailing-icon.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.label-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.error.active-indicator.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.filled-select.text-field.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.hover.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.hover.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.hover.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.hover.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.hover.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.hover.active-indicator.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.hover.active-indicator.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.filled-select.text-field.focus.trailing-icon.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.focus.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.focus.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.focus.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.focus.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.focus.active-indicator.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.focus.active-indicator.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.filled-select.text-field.disabled.trailing-icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-select.text-field.disabled.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.disabled.leading-icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-select.text-field.disabled.leading-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.disabled.supporting-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-select.text-field.disabled.supporting-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.disabled.input-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-select.text-field.disabled.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.disabled.label-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-select.text-field.disabled.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.disabled.active-indicator.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-select.text-field.disabled.active-indicator.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.disabled.active-indicator.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.filled-select.text-field.disabled.container.opacity": {
+      "type": "OPACITY",
+      "value": 0.04
+    },
+    "md.comp.filled-select.text-field.disabled.container.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.menu.cascading-menu-indicator.icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.filled-select.menu.cascading-menu-indicator.icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.menu.divider.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.filled-select.menu.divider.color": {
+      "ref": "md.sys.color.surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.menu.list-item.with-trailing-icon.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.menu.list-item.with-trailing-icon.trailing-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.filled-select.menu.list-item.with-leading-icon.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.menu.list-item.with-leading-icon.leading-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.filled-select.menu.list-item.selected.container.color": {
+      "ref": "md.sys.color.surface-container-highest",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.menu.list-item.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 14,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 20
+    },
+    "md.comp.filled-select.menu.list-item.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.filled-select.menu.list-item.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.filled-select.menu.list-item.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 14
+    },
+    "md.comp.filled-select.menu.list-item.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 20
+    },
+    "md.comp.filled-select.menu.list-item.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-large.tracking"
+    },
+    "md.comp.filled-select.menu.list-item.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 48
+    },
+    "md.comp.filled-select.menu.list-item.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.menu.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 4
+    },
+    "md.comp.filled-select.menu.container.shadow-color": {
+      "ref": "md.sys.color.shadow",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.menu.container.elevation": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.elevation.level2"
+    },
+    "md.comp.filled-select.menu.container.color": {
+      "ref": "md.sys.color.surface-container",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.trailing-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.filled-select.text-field.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.leading-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.filled-select.text-field.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.supporting-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 12,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 16
+    },
+    "md.comp.filled-select.text-field.supporting-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.filled-select.text-field.supporting-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.filled-select.text-field.supporting-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.filled-select.text-field.supporting-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.filled-select.text-field.supporting-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-small.tracking"
+    },
+    "md.comp.filled-select.text-field.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.label-text.populated.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.filled-select.text-field.label-text.populated.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.filled-select.text-field.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.filled-select.text-field.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.filled-select.text-field.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.filled-select.text-field.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.filled-select.text-field.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.filled-select.text-field.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.filled-select.text-field.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.input-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.filled-select.text-field.input-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.filled-select.text-field.input-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.filled-select.text-field.input-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.filled-select.text-field.input-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.filled-select.text-field.input-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.filled-select.text-field.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.active-indicator.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-select.text-field.active-indicator.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.filled-select.text-field.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.comp.filled-select.text-field.container.color": {
+      "ref": "md.sys.color.surface-container-highest",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.filled-text-field.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.filled-text-field.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.filled-text-field.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.filled-text-field.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.filled-text-field.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.filled-text-field.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.filled-text-field.error.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.hover.trailing-icon.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.hover.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.hover.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.hover.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.hover.label-text.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.hover.active-indicator.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.focus.caret.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.focus.trailing-icon.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.focus.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.focus.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.focus.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.focus.label-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.focus.active-indicator.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.trailing-icon.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.label-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.error.active-indicator.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.filled-text-field.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.hover.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.hover.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.hover.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.hover.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.hover.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.hover.active-indicator.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.hover.active-indicator.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.filled-text-field.focus.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.focus.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.focus.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.focus.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.focus.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.focus.active-indicator.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.focus.active-indicator.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.filled-text-field.disabled.trailing-icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-text-field.disabled.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.disabled.leading-icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-text-field.disabled.leading-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.disabled.supporting-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-text-field.disabled.supporting-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.disabled.input-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-text-field.disabled.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.disabled.label-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-text-field.disabled.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.disabled.active-indicator.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.filled-text-field.disabled.active-indicator.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.disabled.active-indicator.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.filled-text-field.disabled.container.opacity": {
+      "type": "OPACITY",
+      "value": 0.04
+    },
+    "md.comp.filled-text-field.disabled.container.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.caret.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.trailing-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.filled-text-field.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.leading-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.filled-text-field.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.label-text.populated.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.filled-text-field.label-text.populated.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.filled-text-field.input-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.filled-text-field.input-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.filled-text-field.input-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.filled-text-field.input-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.filled-text-field.input-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.filled-text-field.input-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.filled-text-field.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.active-indicator.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.filled-text-field.active-indicator.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.filled-text-field.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": "rounded"
+    },
+    "md.comp.filled-text-field.container.color": {
+      "ref": "md.sys.color.surface-container-highest",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.hover.trailing-icon.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.hover.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.hover.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.hover.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.hover.label-text.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.hover.outline.color": {
+      "ref": "md.sys.color.on-error-container",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.focus.caret.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.focus.trailing-icon.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.focus.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.focus.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.focus.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.focus.label-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.focus.outline.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.trailing-icon.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.supporting-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.label-text.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.error.outline.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.hover.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.hover.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.hover.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.hover.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.hover.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.hover.outline.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.hover.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.outlined-text-field.focus.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.focus.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.focus.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.focus.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.focus.label-text.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.focus.outline.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.focus.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.comp.outlined-text-field.disabled.trailing-icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-text-field.disabled.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.disabled.leading-icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-text-field.disabled.leading-icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.disabled.supporting-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-text-field.disabled.supporting-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.disabled.input-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-text-field.disabled.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.disabled.label-text.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.outlined-text-field.disabled.label-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.disabled.outline.opacity": {
+      "type": "OPACITY",
+      "value": 0.12
+    },
+    "md.comp.outlined-text-field.disabled.outline.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.disabled.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.outlined-text-field.caret.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.trailing-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.outlined-text-field.trailing-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.leading-icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 24
+    },
+    "md.comp.outlined-text-field.leading-icon.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.supporting-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 12,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 16
+    },
+    "md.comp.outlined-text-field.supporting-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.outlined-text-field.supporting-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.outlined-text-field.supporting-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.outlined-text-field.supporting-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.outlined-text-field.supporting-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-small.tracking"
+    },
+    "md.comp.outlined-text-field.supporting-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.label-text.populated.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 12
+    },
+    "md.comp.outlined-text-field.label-text.populated.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.outlined-text-field.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.outlined-text-field.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.outlined-text-field.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.outlined-text-field.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.outlined-text-field.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.outlined-text-field.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.outlined-text-field.label-text.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.input-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 16,
+      "unit": "POINTS",
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    "md.comp.outlined-text-field.input-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.outlined-text-field.input-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 400
+    },
+    "md.comp.outlined-text-field.input-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.outlined-text-field.input-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 24
+    },
+    "md.comp.outlined-text-field.input-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.body-large.tracking"
+    },
+    "md.comp.outlined-text-field.input-text.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.outline.color": {
+      "ref": "md.sys.color.outline",
+      "type": "COLOR"
+    },
+    "md.comp.outlined-text-field.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    },
+    "md.comp.outlined-text-field.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 4
+    }
+  }
+}

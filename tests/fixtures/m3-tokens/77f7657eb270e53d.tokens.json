@@ -1,0 +1,36 @@
+{
+  "componentId": "77f7657eb270e53d",
+  "componentName": "Divider",
+  "dsdbVersion": "38.2.9",
+  "tokens": {
+    "md.comp.divider.color": {
+      "ref": "md.sys.color.outline-variant",
+      "type": "COLOR"
+    },
+    "md.sys.color.outline-variant": {
+      "type": "COLOR",
+      "value": "rgba(196, 199, 197, 1)"
+    },
+    "md.ref.palette.neutral-variant80": {
+      "type": "COLOR",
+      "value": "rgba(196, 199, 197, 1)"
+    },
+    "md.ref.palette.neutral-variant60": {
+      "type": "COLOR",
+      "value": "rgba(142, 145, 143, 1)"
+    },
+    "md.ref.palette.neutral-variant30": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.ref.palette.neutral-variant50": {
+      "type": "COLOR",
+      "value": "rgba(116, 119, 117, 1)"
+    },
+    "md.comp.divider.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 1
+    }
+  }
+}

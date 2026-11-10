@@ -1,0 +1,144 @@
+{
+  "componentId": "59a1b3a9a90ca8b3",
+  "componentName": "Badges",
+  "dsdbVersion": "38.2.9",
+  "tokens": {
+    "md.comp.badge.large.label-text.type": {
+      "type": "TYPOGRAPHY",
+      "fontSize": 11,
+      "unit": "POINTS",
+      "fontWeight": 500,
+      "lineHeight": 16
+    },
+    "md.comp.badge.large.label-text.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.sys.typescale.label-small.font": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.ref.typeface.plain": {
+      "type": "ERROR",
+      "value": "unhandled: md.ref.typeface.plain"
+    },
+    "md.comp.badge.large.label-text.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.sys.typescale.label-small.weight": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.ref.typeface.weight-medium": {
+      "type": "FONT_WEIGHT",
+      "value": 500
+    },
+    "md.comp.badge.large.label-text.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 11
+    },
+    "md.sys.typescale.label-small.size": {
+      "type": "FONT_SIZE",
+      "unit": "POINTS",
+      "value": 11
+    },
+    "md.comp.badge.large.label-text.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.sys.typescale.label-small.line-height": {
+      "type": "LINE_HEIGHT",
+      "unit": "POINTS",
+      "value": 16
+    },
+    "md.comp.badge.large.label-text.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-small.tracking"
+    },
+    "md.sys.typescale.label-small.tracking": {
+      "type": "ERROR",
+      "value": "unhandled: md.sys.typescale.label-small.tracking"
+    },
+    "md.comp.badge.large.label-text.color": {
+      "ref": "md.sys.color.on-error",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-error": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.error0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.error10": {
+      "type": "COLOR",
+      "value": "rgba(65, 14, 11, 1)"
+    },
+    "md.ref.palette.error100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.error20": {
+      "type": "COLOR",
+      "value": "rgba(96, 20, 16, 1)"
+    },
+    "md.comp.badge.large.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 16
+    },
+    "md.comp.badge.large.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.sys.shape.corner.full": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.badge.large.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.sys.color.error": {
+      "type": "COLOR",
+      "value": "rgba(179, 38, 30, 1)"
+    },
+    "md.ref.palette.error95": {
+      "type": "COLOR",
+      "value": "rgba(252, 238, 238, 1)"
+    },
+    "md.ref.palette.error90": {
+      "type": "COLOR",
+      "value": "rgba(249, 222, 220, 1)"
+    },
+    "md.ref.palette.error30": {
+      "type": "COLOR",
+      "value": "rgba(140, 29, 24, 1)"
+    },
+    "md.ref.palette.error80": {
+      "type": "COLOR",
+      "value": "rgba(242, 184, 181, 1)"
+    },
+    "md.ref.palette.error40": {
+      "type": "COLOR",
+      "value": "rgba(179, 38, 30, 1)"
+    },
+    "md.comp.badge.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 6
+    },
+    "md.comp.badge.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.badge.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    }
+  }
+}

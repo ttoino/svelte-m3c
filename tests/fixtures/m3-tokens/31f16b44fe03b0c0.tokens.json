@@ -1,0 +1,549 @@
+{
+  "componentId": "31f16b44fe03b0c0",
+  "componentName": "Checkbox",
+  "dsdbVersion": "38.2.9",
+  "tokens": {
+    "md.comp.checkbox.unselected.error.focus.outline.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.sys.color.error": {
+      "type": "COLOR",
+      "value": "rgba(179, 38, 30, 1)"
+    },
+    "md.ref.palette.error95": {
+      "type": "COLOR",
+      "value": "rgba(252, 238, 238, 1)"
+    },
+    "md.ref.palette.error90": {
+      "type": "COLOR",
+      "value": "rgba(249, 222, 220, 1)"
+    },
+    "md.ref.palette.error20": {
+      "type": "COLOR",
+      "value": "rgba(96, 20, 16, 1)"
+    },
+    "md.ref.palette.error30": {
+      "type": "COLOR",
+      "value": "rgba(140, 29, 24, 1)"
+    },
+    "md.ref.palette.error80": {
+      "type": "COLOR",
+      "value": "rgba(242, 184, 181, 1)"
+    },
+    "md.ref.palette.error40": {
+      "type": "COLOR",
+      "value": "rgba(179, 38, 30, 1)"
+    },
+    "md.comp.checkbox.focus.indicator.outline.offset": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.sys.state.focus-indicator.outer-offset": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.checkbox.focus.indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.sys.state.focus-indicator.thickness": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 3
+    },
+    "md.comp.checkbox.focus.indicator.color": {
+      "ref": "md.sys.color.secondary",
+      "type": "COLOR"
+    },
+    "md.sys.color.secondary": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.ref.palette.secondary95": {
+      "type": "COLOR",
+      "value": "rgba(223, 243, 255, 1)"
+    },
+    "md.ref.palette.secondary90": {
+      "type": "COLOR",
+      "value": "rgba(194, 231, 255, 1)"
+    },
+    "md.ref.palette.secondary20": {
+      "type": "COLOR",
+      "value": "rgba(0, 51, 85, 1)"
+    },
+    "md.ref.palette.secondary30": {
+      "type": "COLOR",
+      "value": "rgba(0, 74, 119, 1)"
+    },
+    "md.ref.palette.secondary80": {
+      "type": "COLOR",
+      "value": "rgba(127, 207, 255, 1)"
+    },
+    "md.ref.palette.secondary40": {
+      "type": "COLOR",
+      "value": "rgba(0, 99, 155, 1)"
+    },
+    "md.comp.checkbox.container.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 18
+    },
+    "md.comp.checkbox.container.height": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 18
+    },
+    "md.comp.checkbox.container.shape": {
+      "type": "SHAPE",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.checkbox.unselected.error.outline.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.error.container.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.unselected.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.checkbox.selected.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS"
+    },
+    "md.comp.checkbox.unselected.outline.color": {
+      "ref": "md.sys.color.on-surface-variant",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface-variant": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.ref.palette.neutral-variant100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral-variant90": {
+      "type": "COLOR",
+      "value": "rgba(225, 227, 225, 1)"
+    },
+    "md.ref.palette.neutral-variant0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral-variant20": {
+      "type": "COLOR",
+      "value": "rgba(45, 49, 47, 1)"
+    },
+    "md.ref.palette.neutral-variant80": {
+      "type": "COLOR",
+      "value": "rgba(196, 199, 197, 1)"
+    },
+    "md.ref.palette.neutral-variant30": {
+      "type": "COLOR",
+      "value": "rgba(68, 71, 70, 1)"
+    },
+    "md.comp.checkbox.container.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 18
+    },
+    "md.comp.checkbox.selected.container.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.primary": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.ref.palette.primary95": {
+      "type": "COLOR",
+      "value": "rgba(246, 237, 255, 1)"
+    },
+    "md.ref.palette.primary20": {
+      "type": "COLOR",
+      "value": "rgba(56, 30, 114, 1)"
+    },
+    "md.ref.palette.primary90": {
+      "type": "COLOR",
+      "value": "rgba(234, 221, 255, 1)"
+    },
+    "md.ref.palette.primary30": {
+      "type": "COLOR",
+      "value": "rgba(79, 55, 139, 1)"
+    },
+    "md.ref.palette.primary80": {
+      "type": "COLOR",
+      "value": "rgba(208, 188, 255, 1)"
+    },
+    "md.ref.palette.primary40": {
+      "type": "COLOR",
+      "value": "rgba(103, 80, 164, 1)"
+    },
+    "md.comp.checkbox.unselected.error.pressed.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.checkbox.selected.error.pressed.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS"
+    },
+    "md.comp.checkbox.selected.error.focus.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS"
+    },
+    "md.comp.checkbox.unselected.error.focus.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.checkbox.selected.error.hover.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS"
+    },
+    "md.comp.checkbox.unselected.error.hover.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.checkbox.error.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.sys.state.focus.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.checkbox.unselected.pressed.icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-surface": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.ref.palette.neutral100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.neutral0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.neutral90": {
+      "type": "COLOR",
+      "value": "rgba(230, 224, 233, 1)"
+    },
+    "md.ref.palette.neutral10": {
+      "type": "COLOR",
+      "value": "rgba(29, 27, 32, 1)"
+    },
+    "md.comp.checkbox.unselected.focus.icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.unselected.hover.icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.disabled.unselected.icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.checkbox.disabled.unselected.icon.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.disabled.selected.icon.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.checkbox.disabled.selected.icon.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.unselected.icon.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.error.pressed.icon.color": {
+      "ref": "md.sys.color.on-error",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-error": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.error0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.error10": {
+      "type": "COLOR",
+      "value": "rgba(65, 14, 11, 1)"
+    },
+    "md.ref.palette.error100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.comp.checkbox.selected.error.pressed.container.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.unselected.error.pressed.outline.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.error.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.sys.state.pressed.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.checkbox.error.pressed.state-layer.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.pressed.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS"
+    },
+    "md.comp.checkbox.selected.pressed.container.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.checkbox.selected.pressed.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.unselected.pressed.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.checkbox.unselected.pressed.outline.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.unselected.pressed.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.checkbox.unselected.pressed.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.error.focus.icon.color": {
+      "ref": "md.sys.color.on-error",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.error.focus.container.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.error.focus.state-layer.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.focus.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS"
+    },
+    "md.comp.checkbox.selected.focus.container.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.unselected.focus.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.checkbox.unselected.focus.outline.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.error.hover.icon.color": {
+      "ref": "md.sys.color.on-error",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.error.hover.container.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.unselected.error.hover.outline.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.error.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.sys.state.hover.state-layer-opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.checkbox.error.hover.state-layer.color": {
+      "ref": "md.sys.color.error",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.hover.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS"
+    },
+    "md.comp.checkbox.selected.hover.container.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.unselected.hover.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.checkbox.unselected.hover.outline.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.disabled.icon.color": {
+      "ref": "md.sys.color.surface",
+      "type": "COLOR"
+    },
+    "md.sys.color.surface": {
+      "type": "COLOR",
+      "value": "rgba(254, 247, 255, 1)"
+    },
+    "md.ref.palette.neutral6": {
+      "type": "COLOR",
+      "value": "rgba(20, 18, 24, 1)"
+    },
+    "md.ref.palette.neutral98": {
+      "type": "COLOR",
+      "value": "rgba(254, 247, 255, 1)"
+    },
+    "md.comp.checkbox.selected.disabled.container.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS"
+    },
+    "md.comp.checkbox.selected.disabled.container.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.checkbox.selected.disabled.container.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.unselected.disabled.container.opacity": {
+      "type": "OPACITY",
+      "value": 0.38
+    },
+    "md.comp.checkbox.unselected.disabled.outline.width": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 2
+    },
+    "md.comp.checkbox.unselected.disabled.outline.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.state-layer.shape": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.sys.shape.corner.full": {
+      "type": "SHAPE",
+      "value": "circular"
+    },
+    "md.comp.checkbox.selected.error.icon.color": {
+      "ref": "md.sys.color.on-error",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.icon.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.sys.color.on-primary": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.ref.palette.primary0": {
+      "type": "COLOR",
+      "value": "rgba(0, 0, 0, 1)"
+    },
+    "md.ref.palette.primary10": {
+      "type": "COLOR",
+      "value": "rgba(4, 30, 73, 1)"
+    },
+    "md.ref.palette.primary100": {
+      "type": "COLOR",
+      "value": "rgba(255, 255, 255, 1)"
+    },
+    "md.comp.checkbox.icon.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 18
+    },
+    "md.comp.checkbox.unselected.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.checkbox.unselected.focus.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.focus.icon.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.focus.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.1
+    },
+    "md.comp.checkbox.selected.focus.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.unselected.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.checkbox.unselected.hover.state-layer.color": {
+      "ref": "md.sys.color.on-surface",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.hover.icon.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.selected.hover.state-layer.opacity": {
+      "type": "OPACITY",
+      "value": 0.08
+    },
+    "md.comp.checkbox.selected.hover.state-layer.color": {
+      "ref": "md.sys.color.primary",
+      "type": "COLOR"
+    },
+    "md.comp.checkbox.state-layer.size": {
+      "type": "LENGTH",
+      "unit": "DIPS",
+      "value": 40
+    },
+    "md.comp.checkbox.selected.pressed.icon.color": {
+      "ref": "md.sys.color.on-primary",
+      "type": "COLOR"
+    }
+  }
+}

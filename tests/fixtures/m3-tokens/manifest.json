@@ -1,0 +1,188 @@
+{
+  "carbonVersion": "2026-10-13_06-10-19",
+  "components": [
+    {
+      "file": "0045edb815f2325e.tokens.json",
+      "id": "0045edb815f2325e",
+      "name": "Sliders"
+    },
+    {
+      "file": "01c5310367774eb8.tokens.json",
+      "id": "01c5310367774eb8",
+      "name": "Date pickers"
+    },
+    {
+      "file": "06c2c925cf96adca.tokens.json",
+      "id": "06c2c925cf96adca",
+      "name": "Side sheets"
+    },
+    {
+      "file": "07341534518f78d0.tokens.json",
+      "id": "07341534518f78d0",
+      "name": "Search"
+    },
+    {
+      "file": "082d7fd6e058b011.tokens.json",
+      "id": "082d7fd6e058b011",
+      "name": "Button groups"
+    },
+    {
+      "file": "0b1e39a67d5bafdc.tokens.json",
+      "id": "0b1e39a67d5bafdc",
+      "name": "Dialogs"
+    },
+    {
+      "file": "0fe2282006ae098b.tokens.json",
+      "id": "0fe2282006ae098b",
+      "name": "Icon buttons"
+    },
+    {
+      "file": "100ebfb4332adab1.tokens.json",
+      "id": "100ebfb4332adab1",
+      "name": "Cards"
+    },
+    {
+      "file": "1a076cec8bc202c2.tokens.json",
+      "id": "1a076cec8bc202c2",
+      "name": "FAB menu"
+    },
+    {
+      "file": "1c4257f8804f9478.tokens.json",
+      "id": "1c4257f8804f9478",
+      "name": "Buttons"
+    },
+    {
+      "file": "2956a7939bf0879c.tokens.json",
+      "id": "2956a7939bf0879c",
+      "name": "Toolbars"
+    },
+    {
+      "file": "31f16b44fe03b0c0.tokens.json",
+      "id": "31f16b44fe03b0c0",
+      "name": "Checkbox"
+    },
+    {
+      "file": "33b1b2925d9ff561.tokens.json",
+      "id": "33b1b2925d9ff561",
+      "name": "Switch"
+    },
+    {
+      "file": "346ae12a744b45dd.tokens.json",
+      "id": "346ae12a744b45dd",
+      "name": "Snackbar"
+    },
+    {
+      "file": "36500f77b86d20a5.tokens.json",
+      "id": "36500f77b86d20a5",
+      "name": "Extended FAB"
+    },
+    {
+      "file": "376969f91547be8e.tokens.json",
+      "id": "376969f91547be8e",
+      "name": "Navigation drawer"
+    },
+    {
+      "file": "37697297db0555a6.tokens.json",
+      "id": "37697297db0555a6",
+      "name": "Tooltips"
+    },
+    {
+      "file": "385a28e5d3bb3dd0.tokens.json",
+      "id": "385a28e5d3bb3dd0",
+      "name": "Menus"
+    },
+    {
+      "file": "39f4b152dd9bd292.tokens.json",
+      "id": "39f4b152dd9bd292",
+      "name": "Time pickers"
+    },
+    {
+      "file": "3ec622835c7987b5.tokens.json",
+      "id": "3ec622835c7987b5",
+      "name": "App bars"
+    },
+    {
+      "file": "41587918e51cca98.tokens.json",
+      "id": "41587918e51cca98",
+      "name": "Floating action buttons (FABs)"
+    },
+    {
+      "file": "43a124d2adc8a2ef.tokens.json",
+      "id": "43a124d2adc8a2ef",
+      "name": "Carousel"
+    },
+    {
+      "file": "484a63be03b01a17.tokens.json",
+      "id": "484a63be03b01a17",
+      "name": "Chips"
+    },
+    {
+      "file": "52865380210a9b69.tokens.json",
+      "id": "52865380210a9b69",
+      "name": "Navigation bar"
+    },
+    {
+      "file": "59a1b3a9a90ca8b3.tokens.json",
+      "id": "59a1b3a9a90ca8b3",
+      "name": "Badges"
+    },
+    {
+      "file": "5b55bd7cc1ea6e29.tokens.json",
+      "id": "5b55bd7cc1ea6e29",
+      "name": "Navigation rail"
+    },
+    {
+      "file": "6039f0080a95df1e.tokens.json",
+      "id": "6039f0080a95df1e",
+      "name": "Tabs"
+    },
+    {
+      "file": "60990dd98dea0998.tokens.json",
+      "id": "60990dd98dea0998",
+      "name": "Text fields"
+    },
+    {
+      "file": "624e8f2da4007fc8.tokens.json",
+      "id": "624e8f2da4007fc8",
+      "name": "Split buttons"
+    },
+    {
+      "file": "67e2613d87ca6f98.tokens.json",
+      "id": "67e2613d87ca6f98",
+      "name": "Segmented buttons"
+    },
+    {
+      "file": "68895be451a51c31.tokens.json",
+      "id": "68895be451a51c31",
+      "name": "Loading indicator"
+    },
+    {
+      "file": "6acb269a58d5f93f.tokens.json",
+      "id": "6acb269a58d5f93f",
+      "name": "Radio button"
+    },
+    {
+      "file": "6c818a16475113bd.tokens.json",
+      "id": "6c818a16475113bd",
+      "name": "Lists"
+    },
+    {
+      "file": "6f51f7ab7775a392.tokens.json",
+      "id": "6f51f7ab7775a392",
+      "name": "Progress indicators"
+    },
+    {
+      "file": "75e530a1014802b3.tokens.json",
+      "id": "75e530a1014802b3",
+      "name": "Bottom sheets"
+    },
+    {
+      "file": "77f7657eb270e53d.tokens.json",
+      "id": "77f7657eb270e53d",
+      "name": "Divider"
+    }
+  ],
+  "designSystemId": "20543ce18892f7d9",
+  "dsdbVersion": "38.2.9",
+  "generatedAt": "2026-11-10T20:33:10.397Z"
+}
